@@ -1,0 +1,3207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4299C4D1-321F-422F-8F86-B6A104EC2923}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ՀԴՄ_App.My.MyApplication</StartupObject>
+    <RootNamespace>ՀԴՄ_App</RootNamespace>
+    <AssemblyName>ՀԴՄ App</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3940</ApplicationRevision>
+    <ApplicationVersion>6.4.20.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ՀԴՄ App.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ՀԴՄ App.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\MF-2351.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Docs.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.SpellChecker.v15.2.Core, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Reporting.Extensions, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Core, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Extensions, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraSpellChecker.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.10.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>PDF_DLL\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="JamaaTech.Smpp.Net.Client.v1.4">
+      <HintPath>SMS_DLL\JamaaTech.Smpp.Net.Client.v1.4.dll</HintPath>
+    </Reference>
+    <Reference Include="JamaaTech.Smpp.Net.Lib.v1.4">
+      <HintPath>SMS_DLL\JamaaTech.Smpp.Net.Lib.v1.4.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>D:\SOFT\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="App\AboutApp.Designer.vb">
+      <DependentUpon>AboutApp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\AboutApp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="App\downloader.Designer.vb">
+      <DependentUpon>downloader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="App\downloader.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\ConnectionString.vb" />
+    <Compile Include="Classes\CustomClasses.vb" />
+    <Compile Include="Classes\DB.vb" />
+    <Compile Include="Classes\DB2.vb" />
+    <Compile Include="Classes\DB3.vb" />
+    <Compile Include="Classes\ExceptionClass.vb" />
+    <Compile Include="Classes\MailSending.vb" />
+    <Compile Include="Classes\ModuleInvoise.vb" />
+    <Compile Include="Classes\MySQLDB.vb" />
+    <Compile Include="DateExtend\DExt1.Designer.vb">
+      <DependentUpon>DExt1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DateExtend\DExt1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DateExtend\DExt2.designer.vb">
+      <DependentUpon>DExt2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DateExtend\DExt2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginWindow.Designer.vb">
+      <DependentUpon>LoginWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.vb">
+      <DependentUpon>MainWindow.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messages\AddPersonalMessage.designer.vb">
+      <DependentUpon>AddPersonalMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\AddPersonalMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messages\CustomMseeageShow.Designer.vb">
+      <DependentUpon>CustomMseeageShow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\CustomMseeageShow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messages\MessageArchive.designer.vb">
+      <DependentUpon>MessageArchive.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\MessageArchive.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Properties\CorrectMiddleDB.Designer.vb">
+      <DependentUpon>CorrectMiddleDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\CorrectMiddleDB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\ExcelToSQLWindow.Designer.vb">
+      <DependentUpon>ExcelToSQLWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\ExcelToSQLWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\PermFromTo.Designer.vb">
+      <DependentUpon>PermFromTo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\PermFromTo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\SelectPrinter.designer.vb">
+      <DependentUpon>SelectPrinter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\SelectPrinter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\SharedInfo.vb" />
+    <Compile Include="Properties\Working.designer.vb">
+      <DependentUpon>Working.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Working.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service References\OrangeServiceReference\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\ActiveHaytWin.Designer.vb">
+      <DependentUpon>ActiveHaytWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\ActiveHaytWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\CallEcrForReplace.Designer.vb">
+      <DependentUpon>CallEcrForReplace.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\CallEcrForReplace.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\CallHaytActivate.Designer.vb">
+      <DependentUpon>CallHaytActivate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\CallHaytActivate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\CallHaytGeneral.designer.vb">
+      <DependentUpon>CallHaytGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\CallHaytGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\CallSmsActivate.Designer.vb">
+      <DependentUpon>CallSmsActivate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\CallSmsActivate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\CallSmsGeneral.designer.vb">
+      <DependentUpon>CallSmsGeneral.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\CallSmsGeneral.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\CCPayWin.Designer.vb">
+      <DependentUpon>CCPayWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\CCPayWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\changeActivHaytInfo.designer.vb">
+      <DependentUpon>changeActivHaytInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\changeActivHaytInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\changeGeneralHaytInfo.designer.vb">
+      <DependentUpon>changeGeneralHaytInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\changeGeneralHaytInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\ClosedPropSelect.Designer.vb">
+      <DependentUpon>ClosedPropSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\ClosedPropSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\ClosedPropView.Designer.vb">
+      <DependentUpon>ClosedPropView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\ClosedPropView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\EditActivateHayt.Designer.vb">
+      <DependentUpon>EditActivateHayt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\EditActivateHayt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\EditGeneralHayt.designer.vb">
+      <DependentUpon>EditGeneralHayt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\EditGeneralHayt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\GeneralHaytWin.designer.vb">
+      <DependentUpon>GeneralHaytWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\GeneralHaytWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\GPSforProp.Designer.vb">
+      <DependentUpon>GPSforProp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\GPSforProp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\HaytActivateEdit.designer.vb">
+      <DependentUpon>HaytActivateEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\HaytActivateEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\HaytGeneralEdit.designer.vb">
+      <DependentUpon>HaytGeneralEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\HaytGeneralEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\OpenPropList.Designer.vb">
+      <DependentUpon>OpenPropList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\OpenPropList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\OpenPropSelector.Designer.vb">
+      <DependentUpon>OpenPropSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\OpenPropSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\PropAnalitics.Designer.vb">
+      <DependentUpon>PropAnalitics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\PropAnalitics.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\SelectPropAnalitics.Designer.vb">
+      <DependentUpon>SelectPropAnalitics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\SelectPropAnalitics.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\SMSPervCallCenter.Designer.vb">
+      <DependentUpon>SMSPervCallCenter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\SMSPervCallCenter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\UniCallCenterPanel.Designer.vb">
+      <DependentUpon>UniCallCenterPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\UniCallCenterPanel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\ViewActivateHaytSelector.Designer.vb">
+      <DependentUpon>ViewActivateHaytSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\ViewActivateHaytSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\ViewGeneralHaytSelector.designer.vb">
+      <DependentUpon>ViewGeneralHaytSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\ViewGeneralHaytSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\GPRS\AddShowGprs.designer.vb">
+      <DependentUpon>AddShowGprs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\GPRS\AddShowGprs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\GPRS\DeleteGPRSWindow.Designer.vb">
+      <DependentUpon>DeleteGPRSWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\GPRS\DeleteGPRSWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\GPRS\GprsFileSelecter.Designer.vb">
+      <DependentUpon>GprsFileSelecter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\GPRS\GprsFileSelecter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\GPRS\NewGprs.Designer.vb">
+      <DependentUpon>NewGprs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\GPRS\NewGprs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\POS\AddBank.designer.vb">
+      <DependentUpon>AddBank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\POS\AddBank.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\POS\BankWin.designer.vb">
+      <DependentUpon>BankWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\POS\BankWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\POS\LicAdd.designer.vb">
+      <DependentUpon>LicAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\POS\LicAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\POS\LicUpd.designer.vb">
+      <DependentUpon>LicUpd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\POS\LicUpd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\POS\LicWin.designer.vb">
+      <DependentUpon>LicWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\POS\LicWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\POS\UpdateBank.designer.vb">
+      <DependentUpon>UpdateBank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\POS\UpdateBank.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\CustomSMS.Designer.vb">
+      <DependentUpon>CustomSMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\CustomSMS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\disabledEcrWindow.designer.vb">
+      <DependentUpon>disabledEcrWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\disabledEcrWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\EditPremiumClients.designer.vb">
+      <DependentUpon>EditPremiumClients.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\EditPremiumClients.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\EmailViewerWindow.designer.vb">
+      <DependentUpon>EmailViewerWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\EmailViewerWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\enagleSIMByHvhhWindow.designer.vb">
+      <DependentUpon>enagleSIMByHvhhWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\enagleSIMByHvhhWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\ErrorPhoneNumber.Designer.vb">
+      <DependentUpon>ErrorPhoneNumber.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\ErrorPhoneNumber.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\GprsIntermediate.Designer.vb">
+      <DependentUpon>GprsIntermediate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\GprsIntermediate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\mustBeDisabledEcrWindow.designer.vb">
+      <DependentUpon>mustBeDisabledEcrWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\mustBeDisabledEcrWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\PrepareMailSendWindow.designer.vb">
+      <DependentUpon>PrepareMailSendWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\PrepareMailSendWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\SendEmailWindow.designer.vb">
+      <DependentUpon>SendEmailWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\SendEmailWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\SendHVHHSMSWindow.designer.vb">
+      <DependentUpon>SendHVHHSMSWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\SendHVHHSMSWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\SendSMSWindow.designer.vb">
+      <DependentUpon>SendSMSWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\SendSMSWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\SendTesuchSMSWindow.designer.vb">
+      <DependentUpon>SendTesuchSMSWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\SendTesuchSMSWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\smsViewerWindow.designer.vb">
+      <DependentUpon>smsViewerWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արգելափակել ՀԴՄ\smsViewerWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\CloseRemakeMessage.Designer.vb">
+      <DependentUpon>CloseRemakeMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\CloseRemakeMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\EcrMessageWindow.Designer.vb">
+      <DependentUpon>EcrMessageWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\EcrMessageWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\ListOfWorkShopItems.designer.vb">
+      <DependentUpon>ListOfWorkShopItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\ListOfWorkShopItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\RemakeClosedMessageViewer.Designer.vb">
+      <DependentUpon>RemakeClosedMessageViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\RemakeClosedMessageViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\RemNewProblem.Designer.vb">
+      <DependentUpon>RemNewProblem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\RemNewProblem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\RemoveEquipmentFromWorkshop.Designer.vb">
+      <DependentUpon>RemoveEquipmentFromWorkshop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\RemoveEquipmentFromWorkshop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\WorkShopMessages.Designer.vb">
+      <DependentUpon>WorkShopMessages.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\WorkShopMessages.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\WorkShopMessagesAnswer.designer.vb">
+      <DependentUpon>WorkShopMessagesAnswer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\WorkShopMessagesAnswer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\WorkShopProposalWindow.designer.vb">
+      <DependentUpon>WorkShopProposalWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Արհեստանոց\WorkShopProposalWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Գործընկեր\AddHVHHWindow.designer.vb">
+      <DependentUpon>AddHVHHWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Գործընկեր\AddHVHHWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Գործընկեր\GPRS History.Designer.vb">
+      <DependentUpon>GPRS History.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Գործընկեր\GPRS History.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Գործընկեր\GpsForEcr.Designer.vb">
+      <DependentUpon>GpsForEcr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Գործընկեր\GpsForEcr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Գործընկեր\PaymentHistoryWin.designer.vb">
+      <DependentUpon>PaymentHistoryWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Գործընկեր\PaymentHistoryWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Գործընկեր\RepPartnerPercent.designer.vb">
+      <DependentUpon>RepPartnerPercent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Գործընկեր\RepPartnerPercent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Գործընկեր\SearchHVHH.designer.vb">
+      <DependentUpon>SearchHVHH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Գործընկեր\SearchHVHH.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Գործընկեր\UpdateHVHHWindow.Designer.vb">
+      <DependentUpon>UpdateHVHHWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Գործընկեր\UpdateHVHHWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ Առաքում\hdmAraqumOnRemontWindow.designer.vb">
+      <DependentUpon>hdmAraqumOnRemontWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ Առաքում\hdmAraqumOnRemontWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ Առաքում\hdmAraqumReadyWindow.designer.vb">
+      <DependentUpon>hdmAraqumReadyWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ Առաքում\hdmAraqumReadyWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ Առաքում\hdmAraqumSentWindow.designer.vb">
+      <DependentUpon>hdmAraqumSentWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ Առաքում\hdmAraqumSentWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ Առաքում\hdmAraqumWindow.designer.vb">
+      <DependentUpon>hdmAraqumWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ Առաքում\hdmAraqumWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ Առաքում\hdmOnRoadWindow.designer.vb">
+      <DependentUpon>hdmOnRoadWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ Առաքում\hdmOnRoadWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\AddHDMWindow.designer.vb">
+      <DependentUpon>AddHDMWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\AddHDMWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\BlockedGPRS.designer.vb">
+      <DependentUpon>BlockedGPRS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\BlockedGPRS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\Bulk GPS.Designer.vb">
+      <DependentUpon>Bulk GPS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\Bulk GPS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\changeGPRSCode.Designer.vb">
+      <DependentUpon>changeGPRSCode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\changeGPRSCode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\garantHDM.designer.vb">
+      <DependentUpon>garantHDM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\garantHDM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\GPSForEcrRep.Designer.vb">
+      <DependentUpon>GPSForEcrRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\GPSForEcrRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\htsByInterval.Designer.vb">
+      <DependentUpon>htsByInterval.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\htsByInterval.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\htsCodeChangeWin.designer.vb">
+      <DependentUpon>htsCodeChangeWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\htsCodeChangeWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\htsCodeSelector.Designer.vb">
+      <DependentUpon>htsCodeSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\htsCodeSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\IUNetList.designer.vb">
+      <DependentUpon>IUNetList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\IUNetList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\NotgarantHDM.designer.vb">
+      <DependentUpon>NotgarantHDM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\NotgarantHDM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\PoakHdmStatus.designer.vb">
+      <DependentUpon>PoakHdmStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\PoakHdmStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\RemakeHDMByCompanyWin.designer.vb">
+      <DependentUpon>RemakeHDMByCompanyWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\RemakeHDMByCompanyWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\RemakeHistoryByHDMWin.designer.vb">
+      <DependentUpon>RemakeHistoryByHDMWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\RemakeHistoryByHDMWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\ReplacedHdmWin.designer.vb">
+      <DependentUpon>ReplacedHdmWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\ReplacedHdmWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\ReRegisterHDMWindow.designer.vb">
+      <DependentUpon>ReRegisterHDMWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\ReRegisterHDMWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\SearchHDMOnly.designer.vb">
+      <DependentUpon>SearchHDMOnly.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\SearchHDMOnly.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\SendToIUNetworks.designer.vb">
+      <DependentUpon>SendToIUNetworks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\SendToIUNetworks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\UpdateHDMWindow.designer.vb">
+      <DependentUpon>UpdateHDMWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՀԴՄ\UpdateHDMWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\AppNewCountWindow.designer.vb">
+      <DependentUpon>AppNewCountWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\AppNewCountWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\ApprContractDateSelect.Designer.vb">
+      <DependentUpon>ApprContractDateSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\ApprContractDateSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\BazaPoak.designer.vb">
+      <DependentUpon>BazaPoak.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\BazaPoak.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\ChangeEcrStatus.Designer.vb">
+      <DependentUpon>ChangeEcrStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\ChangeEcrStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\ContractCounterWindow.designer.vb">
+      <DependentUpon>ContractCounterWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\ContractCounterWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\CStatus.Designer.vb">
+      <DependentUpon>CStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\CStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\HdmCountByContractWindow.designer.vb">
+      <DependentUpon>HdmCountByContractWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\HdmCountByContractWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\PoakToDB.designer.vb">
+      <DependentUpon>PoakToDB.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\PoakToDB.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\PoakToDBSelector.Designer.vb">
+      <DependentUpon>PoakToDBSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\PoakToDBSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\PoakToMGH.designer.vb">
+      <DependentUpon>PoakToMGH.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\PoakToMGH.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\PoakToRegister.Designer.vb">
+      <DependentUpon>PoakToRegister.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\PoakToRegister.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\PrintedContractApplicationsWin.designer.vb">
+      <DependentUpon>PrintedContractApplicationsWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\PrintedContractApplicationsWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\PrintedDissolveList.designer.vb">
+      <DependentUpon>PrintedDissolveList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\PrintedDissolveList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\StatusHistory.Designer.vb">
+      <DependentUpon>StatusHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\StatusHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\TarifChangeContract.Designer.vb">
+      <DependentUpon>TarifChangeContract.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\TarifChangeContract.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\TarifContractMaker.Designer.vb">
+      <DependentUpon>TarifContractMaker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\TarifContractMaker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\WorkingClientsDisolved.Designer.vb">
+      <DependentUpon>WorkingClientsDisolved.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\WorkingClientsDisolved.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՊՈԱԿ-ից Ստացված ՀԴՄ\AddEcr.Designer.vb">
+      <DependentUpon>AddEcr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՊՈԱԿ-ից Ստացված ՀԴՄ\AddEcr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՊՈԱԿ-ից Ստացված ՀԴՄ\PoakToOffice.Designer.vb">
+      <DependentUpon>PoakToOffice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՊՈԱԿ-ից Ստացված ՀԴՄ\PoakToOffice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՊՈԱԿ-ից Ստացված ՀԴՄ\TakeTesuch.Designer.vb">
+      <DependentUpon>TakeTesuch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\ՊՈԱԿ-ից Ստացված ՀԴՄ\TakeTesuch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\aktForCloseHayt.designer.vb">
+      <DependentUpon>aktForCloseHayt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\aktForCloseHayt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\AktRefuse.designer.vb">
+      <DependentUpon>AktRefuse.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\AktRefuse.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\ApproveProposal.Designer.vb">
+      <DependentUpon>ApproveProposal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\ApproveProposal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\changeProposal.designer.vb">
+      <DependentUpon>changeProposal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\changeProposal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\CloseBranchWindow.designer.vb">
+      <DependentUpon>CloseBranchWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\CloseBranchWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\CloseBranchWorkshopWindow.designer.vb">
+      <DependentUpon>CloseBranchWorkshopWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\CloseBranchWorkshopWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\CloseCenterWindow.designer.vb">
+      <DependentUpon>CloseCenterWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\CloseCenterWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\CloseCenterWorkshopWindow.designer.vb">
+      <DependentUpon>CloseCenterWorkshopWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\CloseCenterWorkshopWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\CreateRemakeInvoiceInfo.Designer.vb">
+      <DependentUpon>CreateRemakeInvoiceInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\CreateRemakeInvoiceInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\EcrFunctional.Designer.vb">
+      <DependentUpon>EcrFunctional.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\EcrFunctional.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\EcrSelecterForRemake.designer.vb">
+      <DependentUpon>EcrSelecterForRemake.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\EcrSelecterForRemake.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\EnterBranchClicker.designer.vb">
+      <DependentUpon>EnterBranchClicker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\EnterBranchClicker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\EnterBranchWorkshop.designer.vb">
+      <DependentUpon>EnterBranchWorkshop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\EnterBranchWorkshop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\EnterCenterClicker.designer.vb">
+      <DependentUpon>EnterCenterClicker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\EnterCenterClicker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\EnterCenterWorkshop.designer.vb">
+      <DependentUpon>EnterCenterWorkshop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\EnterCenterWorkshop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\EquipmentRemakeChangePrice.Designer.vb">
+      <DependentUpon>EquipmentRemakeChangePrice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\EquipmentRemakeChangePrice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\NewProblem.designer.vb">
+      <DependentUpon>NewProblem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\NewProblem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\OpenRemakeAkt.designer.vb">
+      <DependentUpon>OpenRemakeAkt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\OpenRemakeAkt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\PoxarinoxEcr.designer.vb">
+      <DependentUpon>PoxarinoxEcr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\PoxarinoxEcr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\RemakeWindow.designer.vb">
+      <DependentUpon>RemakeWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\RemakeWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\ReturnPoxarinoxECR.designer.vb">
+      <DependentUpon>ReturnPoxarinoxECR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Վերանորոգում\ReturnPoxarinoxECR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տարիֆ\changeTarifWindow.Designer.vb">
+      <DependentUpon>changeTarifWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տարիֆ\changeTarifWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տարիֆ\CheckPoakTariff.Designer.vb">
+      <DependentUpon>CheckPoakTariff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տարիֆ\CheckPoakTariff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տարիֆ\ListOfCurrentTarifWindow.Designer.vb">
+      <DependentUpon>ListOfCurrentTarifWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տարիֆ\ListOfCurrentTarifWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տարիֆ\MissedTariff.Designer.vb">
+      <DependentUpon>MissedTariff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տարիֆ\MissedTariff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տարիֆ\PoakTariff.Designer.vb">
+      <DependentUpon>PoakTariff.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տարիֆ\PoakTariff.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տարիֆ\TarifHistoryWindow.Designer.vb">
+      <DependentUpon>TarifHistoryWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տարիֆ\TarifHistoryWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տարիֆ\UpcomingTarifWindow.Designer.vb">
+      <DependentUpon>UpcomingTarifWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տարիֆ\UpcomingTarifWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\AddressAddWindow.designer.vb">
+      <DependentUpon>AddressAddWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\AddressAddWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\AddressUpdateWindow.designer.vb">
+      <DependentUpon>AddressUpdateWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\AddressUpdateWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\AddressWindow.designer.vb">
+      <DependentUpon>AddressWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\AddressWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ContractAddWindow.designer.vb">
+      <DependentUpon>ContractAddWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ContractAddWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ContractUpdateWindow.designer.vb">
+      <DependentUpon>ContractUpdateWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ContractUpdateWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ContractWindow.designer.vb">
+      <DependentUpon>ContractWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ContractWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ObjTypeAddWin.designer.vb">
+      <DependentUpon>ObjTypeAddWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ObjTypeAddWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ObjTypeUpWin.designer.vb">
+      <DependentUpon>ObjTypeUpWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ObjTypeUpWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ObjTypeWin.designer.vb">
+      <DependentUpon>ObjTypeWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ObjTypeWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\RegionAddWindow.Designer.vb">
+      <DependentUpon>RegionAddWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\RegionAddWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\RegionUpdateWindow.Designer.vb">
+      <DependentUpon>RegionUpdateWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\RegionUpdateWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\RegionWindow.Designer.vb">
+      <DependentUpon>RegionWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\RegionWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ReplaceEcrTesuch.designer.vb">
+      <DependentUpon>ReplaceEcrTesuch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ReplaceEcrTesuch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ReplaceEcrTesuchAdd.designer.vb">
+      <DependentUpon>ReplaceEcrTesuchAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ReplaceEcrTesuchAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ReplaceEcrTesuchReturn.designer.vb">
+      <DependentUpon>ReplaceEcrTesuchReturn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ReplaceEcrTesuchReturn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TarifAddWin.Designer.vb">
+      <DependentUpon>TarifAddWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TarifAddWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TarifUpWin.Designer.vb">
+      <DependentUpon>TarifUpWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TarifUpWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TarifWin.Designer.vb">
+      <DependentUpon>TarifWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TarifWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TesuchAddWindow.Designer.vb">
+      <DependentUpon>TesuchAddWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TesuchAddWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TesuchInfoAddWindow.designer.vb">
+      <DependentUpon>TesuchInfoAddWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TesuchInfoAddWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TesuchInfoUpdateWindow.designer.vb">
+      <DependentUpon>TesuchInfoUpdateWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TesuchInfoUpdateWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TesuchInfoWindow.Designer.vb">
+      <DependentUpon>TesuchInfoWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TesuchInfoWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TesuchRegion.Designer.vb">
+      <DependentUpon>TesuchRegion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TesuchRegion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TesuchUpdateWindow.Designer.vb">
+      <DependentUpon>TesuchUpdateWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TesuchUpdateWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TesuchWindow.Designer.vb">
+      <DependentUpon>TesuchWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\TesuchWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users Forms\Change Password.Designer.vb">
+      <DependentUpon>Change Password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Users Forms\Change Password.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ThtAddWin.designer.vb">
+      <DependentUpon>ThtAddWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ThtAddWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ThtUpWin.designer.vb">
+      <DependentUpon>ThtUpWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ThtUpWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ThtWin.designer.vb">
+      <DependentUpon>ThtWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեղեկատուներ\ThtWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեսուչի Այց\TesuchVisitAddWin.designer.vb">
+      <DependentUpon>TesuchVisitAddWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեսուչի Այց\TesuchVisitAddWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեսուչի Այց\TesuchVisitWin.designer.vb">
+      <DependentUpon>TesuchVisitWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Տեսուչի Այց\TesuchVisitWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\InnerInvoiceXMLSelector.Designer.vb">
+      <DependentUpon>InnerInvoiceXMLSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\InnerInvoiceXMLSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MakeInnerInvoiceXML.Designer.vb">
+      <DependentUpon>MakeInnerInvoiceXML.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MakeInnerInvoiceXML.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MakeRemakeInvoiceXML.designer.vb">
+      <DependentUpon>MakeRemakeInvoiceXML.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MakeRemakeInvoiceXML.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MakeSellInvoiceXML.designer.vb">
+      <DependentUpon>MakeSellInvoiceXML.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MakeSellInvoiceXML.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MatakararDateWindow.Designer.vb">
+      <DependentUpon>MatakararDateWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MatakararDateWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\RemakeInvoiceXMLSelector.designer.vb">
+      <DependentUpon>RemakeInvoiceXMLSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\RemakeInvoiceXMLSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\SellInvoiceXMLSelector.designer.vb">
+      <DependentUpon>SellInvoiceXMLSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\SellInvoiceXMLSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\ChangeInvoiceData.Designer.vb">
+      <DependentUpon>ChangeInvoiceData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\ChangeInvoiceData.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\DeleteInvoiceWindow.designer.vb">
+      <DependentUpon>DeleteInvoiceWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\DeleteInvoiceWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\NotPrintedSupportInvoiceWindow.Designer.vb">
+      <DependentUpon>NotPrintedSupportInvoiceWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\NotPrintedSupportInvoiceWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\notRetInvocie.Designer.vb">
+      <DependentUpon>notRetInvocie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\notRetInvocie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\ReturnedInv.designer.vb">
+      <DependentUpon>ReturnedInv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\ReturnedInv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\printNoPrintInvoiceSelect.Designer.vb">
+      <DependentUpon>printNoPrintInvoiceSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\printNoPrintInvoiceSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\ReRegInvoice.designer.vb">
+      <DependentUpon>ReRegInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\ReRegInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\ReturnNotRetInvoice.Designer.vb">
+      <DependentUpon>ReturnNotRetInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\ReturnNotRetInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\SetInvoiceReturnDate.Designer.vb">
+      <DependentUpon>SetInvoiceReturnDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\SetInvoiceReturnDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\SupportInvoice.designer.vb">
+      <DependentUpon>SupportInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\SupportInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\UpdateInvoiceWindow.designer.vb">
+      <DependentUpon>UpdateInvoiceWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\UpdateInvoiceWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Վճարներ\ChangePaymentWin.designer.vb">
+      <DependentUpon>ChangePaymentWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Վճարներ\ChangePaymentWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Վճարներ\payWindow.designer.vb">
+      <DependentUpon>payWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Վճարներ\payWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Վճարներ\RepBank.designer.vb">
+      <DependentUpon>RepBank.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Վճարներ\RepBank.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Վճարներ\SelectBankFile.designer.vb">
+      <DependentUpon>SelectBankFile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Վճարներ\SelectBankFile.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Վճարներ\TelCellFileSelecter.designer.vb">
+      <DependentUpon>TelCellFileSelecter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Վճարներ\TelCellFileSelecter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Վճարներ\TelCellSetter.designer.vb">
+      <DependentUpon>TelCellSetter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Վճարներ\TelCellSetter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\AccRepWarehouseExisting.designer.vb">
+      <DependentUpon>AccRepWarehouseExisting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\AccRepWarehouseExisting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\AcountWarhExSel.designer.vb">
+      <DependentUpon>AcountWarhExSel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\AcountWarhExSel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\NotSuppClientHistory.Designer.vb">
+      <DependentUpon>NotSuppClientHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\NotSuppClientHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\NotSupportedClientsDetails.Designer.vb">
+      <DependentUpon>NotSupportedClientsDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\NotSupportedClientsDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\pahanj.Designer.vb">
+      <DependentUpon>pahanj.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\pahanj.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\PDF-ի Կարգաբերում\PdfMerge.vb" />
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\PDF-ի Կարգաբերում\PdfRegionPageFounder.vb" />
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\PDF-ի Կարգաբերում\PDF_Searcher.designer.vb">
+      <DependentUpon>PDF_Searcher.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\PDF-ի Կարգաբերում\PDF_Searcher.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\RepNoNDS.designer.vb">
+      <DependentUpon>RepNoNDS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\RepNoNDS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\RepNoSupport.designer.vb">
+      <DependentUpon>RepNoSupport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\RepNoSupport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\XML Dublicate Checker.Designer.vb">
+      <DependentUpon>XML Dublicate Checker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Տեղեկատուներ\XML Dublicate Checker.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\GPRS\GprsRealStatus.Designer.vb">
+      <DependentUpon>GprsRealStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\GPRS\GprsRealStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\GPRS\RepGprsAll.designer.vb">
+      <DependentUpon>RepGprsAll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\GPRS\RepGprsAll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\GPRS\RepGprsChanges.designer.vb">
+      <DependentUpon>RepGprsChanges.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\GPRS\RepGprsChanges.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\GPRS\repNotApprovedGPRS.designer.vb">
+      <DependentUpon>repNotApprovedGPRS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\GPRS\repNotApprovedGPRS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Լոգ\LogEventsAll.Designer.vb">
+      <DependentUpon>LogEventsAll.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Լոգ\LogEventsAll.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Կոորդինատ\MapProp.Designer.vb">
+      <DependentUpon>MapProp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Կոորդինատ\MapProp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DateNotRetInvoice.designer.vb">
+      <DependentUpon>DateNotRetInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DateNotRetInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DateRemakeInvoice.designer.vb">
+      <DependentUpon>DateRemakeInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DateRemakeInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DateServiceInvoice.designer.vb">
+      <DependentUpon>DateServiceInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DateServiceInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DateShrjikInvoice.designer.vb">
+      <DependentUpon>DateShrjikInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DateShrjikInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DateSoldInvoice.designer.vb">
+      <DependentUpon>DateSoldInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DateSoldInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DSLate.designer.vb">
+      <DependentUpon>DSLate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DSLate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\ExcludedHvhhForInvoice.designer.vb">
+      <DependentUpon>ExcludedHvhhForInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\ExcludedHvhhForInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\LateInvoiceWindow.Designer.vb">
+      <DependentUpon>LateInvoiceWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\LateInvoiceWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\RepAllInvoice.designer.vb">
+      <DependentUpon>RepAllInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\RepAllInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\RepNotRetInvoice.designer.vb">
+      <DependentUpon>RepNotRetInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\RepNotRetInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\SelDateRepAllInv.Designer.vb">
+      <DependentUpon>SelDateRepAllInv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\SelDateRepAllInv.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\ՀԴՄ Արգելափակ\RepmustBeDisabled.designer.vb">
+      <DependentUpon>RepmustBeDisabled.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\ՀԴՄ Արգելափակ\RepmustBeDisabled.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\ՀԴՄ Վիճակագրություն\EcrStatistics.Designer.vb">
+      <DependentUpon>EcrStatistics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\ՀԴՄ Վիճակագրություն\EcrStatistics.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հեռախոս\RepHvhhForTel.Designer.vb">
+      <DependentUpon>RepHvhhForTel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հեռախոս\RepHvhhForTel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հեռախոս\ShowTell.Designer.vb">
+      <DependentUpon>ShowTell.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Հեռախոս\ShowTell.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Չտպված Հավելվածներ\DateSelect.designer.vb">
+      <DependentUpon>DateSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Չտպված Հավելվածներ\DateSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Չտպված Հավելվածներ\NotPrintedApplicationsForm.Designer.vb">
+      <DependentUpon>NotPrintedApplicationsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Չտպված Հավելվածներ\NotPrintedApplicationsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Սպասարկող\QerySelectToolRegEcrCount.Designer.vb">
+      <DependentUpon>QerySelectToolRegEcrCount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Սպասարկող\QerySelectToolRegEcrCount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Սպասարկող\SupporterRegionEcrCount.designer.vb">
+      <DependentUpon>SupporterRegionEcrCount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Սպասարկող\SupporterRegionEcrCount.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերագրանցում\RepReRegisterList.designer.vb">
+      <DependentUpon>RepReRegisterList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերագրանցում\RepReRegisterList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\MultiRemakeSelect.Designer.vb">
+      <DependentUpon>MultiRemakeSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\MultiRemakeSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\MultiRepRemakeEcr.designer.vb">
+      <DependentUpon>MultiRepRemakeEcr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\MultiRepRemakeEcr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\NonPayedRemakeSelTool.Designer.vb">
+      <DependentUpon>NonPayedRemakeSelTool.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\NonPayedRemakeSelTool.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\NotPayedRemakeWindow.Designer.vb">
+      <DependentUpon>NotPayedRemakeWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\NotPayedRemakeWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\QerySelectToolEcrLocation.designer.vb">
+      <DependentUpon>QerySelectToolEcrLocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\QerySelectToolEcrLocation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\QerySelectToolRemakeRep.designer.vb">
+      <DependentUpon>QerySelectToolRemakeRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\QerySelectToolRemakeRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\RemakeDayCounterWindow.Designer.vb">
+      <DependentUpon>RemakeDayCounterWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\RemakeDayCounterWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\RemakeSendSMS.Designer.vb">
+      <DependentUpon>RemakeSendSMS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\RemakeSendSMS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\RemTimeWindow.designer.vb">
+      <DependentUpon>RemTimeWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\RemTimeWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\RepEcrLocation.designer.vb">
+      <DependentUpon>RepEcrLocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\RepEcrLocation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\RepLocationListViewer.Designer.vb">
+      <DependentUpon>RepLocationListViewer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\RepLocationListViewer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\RepRemakeEcr.designer.vb">
+      <DependentUpon>RepRemakeEcr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\RepRemakeEcr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\RepRemakeTimeCounter.designer.vb">
+      <DependentUpon>RepRemakeTimeCounter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\RepRemakeTimeCounter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\RepSelRemakeDayCounter.Designer.vb">
+      <DependentUpon>RepSelRemakeDayCounter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\RepSelRemakeDayCounter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\TesuchRemRep.Designer.vb">
+      <DependentUpon>TesuchRemRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\TesuchRemRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\TesuchRemSelect.Designer.vb">
+      <DependentUpon>TesuchRemSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վերանորոգում\TesuchRemSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\DateDebetKredet.designer.vb">
+      <DependentUpon>DateDebetKredet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\DateDebetKredet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\DatePartqHavelavchar.designer.vb">
+      <DependentUpon>DatePartqHavelavchar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\DatePartqHavelavchar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\DateSelecterPayment.designer.vb">
+      <DependentUpon>DateSelecterPayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\DateSelecterPayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\FiveMonthsReport.Designer.vb">
+      <DependentUpon>FiveMonthsReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\FiveMonthsReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\PartqHavelavcharWindow.designer.vb">
+      <DependentUpon>PartqHavelavcharWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\PartqHavelavcharWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\PartqSelSupporter.designer.vb">
+      <DependentUpon>PartqSelSupporter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\PartqSelSupporter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\QerySelectToolPaymentAmpop.designer.vb">
+      <DependentUpon>QerySelectToolPaymentAmpop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\QerySelectToolPaymentAmpop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\RepBankEnter.Designer.vb">
+      <DependentUpon>RepBankEnter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\RepBankEnter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\RepDebetKredet.designer.vb">
+      <DependentUpon>RepDebetKredet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\RepDebetKredet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\repPayInvAmpop.designer.vb">
+      <DependentUpon>repPayInvAmpop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\repPayInvAmpop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\RepPayWindow.designer.vb">
+      <DependentUpon>RepPayWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\RepPayWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\SelectBankEnter.Designer.vb">
+      <DependentUpon>SelectBankEnter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Վճարներ\SelectBankEnter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Տեսուչ ՀԴՄ Վիճակագրություն\EcrTesuchRep.designer.vb">
+      <DependentUpon>EcrTesuchRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Տեսուչ ՀԴՄ Վիճակագրություն\EcrTesuchRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Տեսուչ\DateTesuch.designer.vb">
+      <DependentUpon>DateTesuch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Տեսուչ\DateTesuch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Տեսուչ\RepTesuch.designer.vb">
+      <DependentUpon>RepTesuch.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Տեսուչ\RepTesuch.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Տեսուչ\RepTesuchEcr.designer.vb">
+      <DependentUpon>RepTesuchEcr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Տեսուչ\RepTesuchEcr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Փոխարինման\EcrRepChanges.Designer.vb">
+      <DependentUpon>EcrRepChanges.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Փոխարինման\EcrRepChanges.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Փոխարինման\EcrRepChangesReport.Designer.vb">
+      <DependentUpon>EcrRepChangesReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Փոխարինման\EcrRepChangesReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Փոխարինման\RepDateSelecter.Designer.vb">
+      <DependentUpon>RepDateSelecter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Փոխարինման\RepDateSelecter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Փոխարինման\RepEcrForReplace.designer.vb">
+      <DependentUpon>RepEcrForReplace.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Փոխարինման\RepEcrForReplace.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Փոխարինման\TesuchEcrRep.Designer.vb">
+      <DependentUpon>TesuchEcrRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Փոխարինման\TesuchEcrRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Փոխարինման\TesuchFreeEcrRep.Designer.vb">
+      <DependentUpon>TesuchFreeEcrRep.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվետվություն\Փոխարինման\TesuchFreeEcrRep.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Հաշվետվություն\DateSelecterForSoldEquipment.Designer.vb">
+      <DependentUpon>DateSelecterForSoldEquipment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Հաշվետվություն\DateSelecterForSoldEquipment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Հաշվետվություն\InnerWarehouseSold.Designer.vb">
+      <DependentUpon>InnerWarehouseSold.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Հաշվետվություն\InnerWarehouseSold.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Հաշվետվություն\InnerWarhowseExists.Designer.vb">
+      <DependentUpon>InnerWarhowseExists.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Հաշվետվություն\InnerWarhowseExists.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Հաշվետվություն\POAKWarehouseWin.designer.vb">
+      <DependentUpon>POAKWarehouseWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Հաշվետվություն\POAKWarehouseWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Հաշվետվություն\RejectWarehouseWin.designer.vb">
+      <DependentUpon>RejectWarehouseWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Հաշվետվություն\RejectWarehouseWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Հաշվետվություն\RepWarehouseExisting.Designer.vb">
+      <DependentUpon>RepWarehouseExisting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Հաշվետվություն\RepWarehouseExisting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Հաշվետվություն\SoldEquipmentWin2.designer.vb">
+      <DependentUpon>SoldEquipmentWin2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Հաշվետվություն\SoldEquipmentWin2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Հաշվետվություն\WarHouseExistSelector.Designer.vb">
+      <DependentUpon>WarHouseExistSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Հաշվետվություն\WarHouseExistSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Շարժ\ShtrikhCodeGenerator.Designer.vb">
+      <DependentUpon>ShtrikhCodeGenerator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Շարժ\ShtrikhCodeGenerator.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Պատկան ՀԴՄ\DateSelecterForPatkanEcr.designer.vb">
+      <DependentUpon>DateSelecterForPatkanEcr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Պատկան ՀԴՄ\DateSelecterForPatkanEcr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Պատկան ՀԴՄ\DateSelecterPoxarinumHistory.designer.vb">
+      <DependentUpon>DateSelecterPoxarinumHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Պատկան ՀԴՄ\DateSelecterPoxarinumHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Պատկան ՀԴՄ\PoxarinumHistory.designer.vb">
+      <DependentUpon>PoxarinumHistory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Պատկան ՀԴՄ\PoxarinumHistory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Պատկան ՀԴՄ\SupporterEcrInOffice.designer.vb">
+      <DependentUpon>SupporterEcrInOffice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Պատկան ՀԴՄ\SupporterEcrInOffice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Սարքավորումներ\AddNyutPrice.designer.vb">
+      <DependentUpon>AddNyutPrice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Սարքավորումներ\AddNyutPrice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Սարքավորումներ\AddSetEquipmentPrice.Designer.vb">
+      <DependentUpon>AddSetEquipmentPrice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Սարքավորումներ\AddSetEquipmentPrice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Սարքավորումներ\ChangeSetEquipmentPrice.designer.vb">
+      <DependentUpon>ChangeSetEquipmentPrice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Սարքավորումներ\ChangeSetEquipmentPrice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Սարքավորումներ\SetEquipmentPrice.designer.vb">
+      <DependentUpon>SetEquipmentPrice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Սարքավորումներ\SetEquipmentPrice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Սարքավորումներ\TarifSelecter.designer.vb">
+      <DependentUpon>TarifSelecter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Սարքավորումներ\TarifSelecter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Վաճառք\ChangeSellInvoiceSelect.designer.vb">
+      <DependentUpon>ChangeSellInvoiceSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Վաճառք\ChangeSellInvoiceSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Վաճառք\DeleteSellInvoiceSelect.Designer.vb">
+      <DependentUpon>DeleteSellInvoiceSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Վաճառք\DeleteSellInvoiceSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Վաճառք\InnerTransfer.Designer.vb">
+      <DependentUpon>InnerTransfer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Վաճառք\InnerTransfer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Վաճառք\ReturnSoldItem.Designer.vb">
+      <DependentUpon>ReturnSoldItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Վաճառք\ReturnSoldItem.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Վաճառք\SelectEquipmentSellType.designer.vb">
+      <DependentUpon>SelectEquipmentSellType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Վաճառք\SelectEquipmentSellType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Վաճառք\SellWindow.Designer.vb">
+      <DependentUpon>SellWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Վաճառք\SellWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\AddPaySelect.Designer.vb">
+      <DependentUpon>AddPaySelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\AddPaySelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\AddPayWin.designer.vb">
+      <DependentUpon>AddPayWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\AddPayWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\EquipmentAddWin.designer.vb">
+      <DependentUpon>EquipmentAddWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\EquipmentAddWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\EquipmentItems.vb" />
+    <Compile Include="Պահեստ\Տեղեկատու\EquipmentUpWin.designer.vb">
+      <DependentUpon>EquipmentUpWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\EquipmentUpWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\EquipmentWin.designer.vb">
+      <DependentUpon>EquipmentWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\EquipmentWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\IntermediateWarehouseWin.designer.vb">
+      <DependentUpon>IntermediateWarehouseWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\IntermediateWarehouseWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\MnacordSelector.designer.vb">
+      <DependentUpon>MnacordSelector.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\MnacordSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\NewAddPay.Designer.vb">
+      <DependentUpon>NewAddPay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\NewAddPay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\PurchaseInsert.Designer.vb">
+      <DependentUpon>PurchaseInsert.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\PurchaseInsert.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\PurchaseInsert2.Designer.vb">
+      <DependentUpon>PurchaseInsert2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\PurchaseInsert2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\PurchaseWarehouseAddWin.designer.vb">
+      <DependentUpon>PurchaseWarehouseAddWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\PurchaseWarehouseAddWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\PurchaseWarehouseWin.designer.vb">
+      <DependentUpon>PurchaseWarehouseWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\PurchaseWarehouseWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\TransferToPoakWin.designer.vb">
+      <DependentUpon>TransferToPoakWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\TransferToPoakWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\TransferToRejectedWin.designer.vb">
+      <DependentUpon>TransferToRejectedWin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\TransferToRejectedWin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\xotanpoakmarka.Designer.vb">
+      <DependentUpon>xotanpoakmarka.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Տեղեկատու\xotanpoakmarka.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="App\AboutApp.resx">
+      <DependentUpon>AboutApp.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App\downloader.resx">
+      <DependentUpon>downloader.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DateExtend\DExt1.resx">
+      <DependentUpon>DExt1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DateExtend\DExt2.resx">
+      <DependentUpon>DExt2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginWindow.resx">
+      <DependentUpon>LoginWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages\AddPersonalMessage.resx">
+      <DependentUpon>AddPersonalMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages\CustomMseeageShow.resx">
+      <DependentUpon>CustomMseeageShow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages\MessageArchive.resx">
+      <DependentUpon>MessageArchive.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\CorrectMiddleDB.resx">
+      <DependentUpon>CorrectMiddleDB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\ExcelToSQLWindow.resx">
+      <DependentUpon>ExcelToSQLWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\PermFromTo.resx">
+      <DependentUpon>PermFromTo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\SelectPrinter.resx">
+      <DependentUpon>SelectPrinter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Working.resx">
+      <DependentUpon>Working.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\ActiveHaytWin.resx">
+      <DependentUpon>ActiveHaytWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\CallEcrForReplace.resx">
+      <DependentUpon>CallEcrForReplace.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\CallHaytActivate.resx">
+      <DependentUpon>CallHaytActivate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\CallHaytGeneral.resx">
+      <DependentUpon>CallHaytGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\CallSmsActivate.resx">
+      <DependentUpon>CallSmsActivate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\CallSmsGeneral.resx">
+      <DependentUpon>CallSmsGeneral.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\CCPayWin.resx">
+      <DependentUpon>CCPayWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\changeActivHaytInfo.resx">
+      <DependentUpon>changeActivHaytInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\changeGeneralHaytInfo.resx">
+      <DependentUpon>changeGeneralHaytInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\ClosedPropSelect.resx">
+      <DependentUpon>ClosedPropSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\ClosedPropView.resx">
+      <DependentUpon>ClosedPropView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\EditActivateHayt.resx">
+      <DependentUpon>EditActivateHayt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\EditGeneralHayt.resx">
+      <DependentUpon>EditGeneralHayt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\GeneralHaytWin.resx">
+      <DependentUpon>GeneralHaytWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\GPSforProp.resx">
+      <DependentUpon>GPSforProp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\HaytActivateEdit.resx">
+      <DependentUpon>HaytActivateEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\HaytGeneralEdit.resx">
+      <DependentUpon>HaytGeneralEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\OpenPropList.resx">
+      <DependentUpon>OpenPropList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\OpenPropSelector.resx">
+      <DependentUpon>OpenPropSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\PropAnalitics.resx">
+      <DependentUpon>PropAnalitics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\SelectPropAnalitics.resx">
+      <DependentUpon>SelectPropAnalitics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\SMSPervCallCenter.resx">
+      <DependentUpon>SMSPervCallCenter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\UniCallCenterPanel.resx">
+      <DependentUpon>UniCallCenterPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\ViewActivateHaytSelector.resx">
+      <DependentUpon>ViewActivateHaytSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\ViewGeneralHaytSelector.resx">
+      <DependentUpon>ViewGeneralHaytSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\GPRS\AddShowGprs.resx">
+      <DependentUpon>AddShowGprs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\GPRS\DeleteGPRSWindow.resx">
+      <DependentUpon>DeleteGPRSWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\GPRS\GprsFileSelecter.resx">
+      <DependentUpon>GprsFileSelecter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\GPRS\NewGprs.resx">
+      <DependentUpon>NewGprs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\POS\AddBank.resx">
+      <DependentUpon>AddBank.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\POS\BankWin.resx">
+      <DependentUpon>BankWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\POS\LicAdd.resx">
+      <DependentUpon>LicAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\POS\LicUpd.resx">
+      <DependentUpon>LicUpd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\POS\LicWin.resx">
+      <DependentUpon>LicWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\POS\UpdateBank.resx">
+      <DependentUpon>UpdateBank.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արգելափակել ՀԴՄ\CustomSMS.resx">
+      <DependentUpon>CustomSMS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արգելափակել ՀԴՄ\disabledEcrWindow.resx">
+      <DependentUpon>disabledEcrWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արգելափակել ՀԴՄ\EditPremiumClients.resx">
+      <DependentUpon>EditPremiumClients.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արգելափակել ՀԴՄ\EmailViewerWindow.resx">
+      <DependentUpon>EmailViewerWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արգելափակել ՀԴՄ\enagleSIMByHvhhWindow.resx">
+      <DependentUpon>enagleSIMByHvhhWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արգելափակել ՀԴՄ\ErrorPhoneNumber.resx">
+      <DependentUpon>ErrorPhoneNumber.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արգելափակել ՀԴՄ\GprsIntermediate.resx">
+      <DependentUpon>GprsIntermediate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արգելափակել ՀԴՄ\mustBeDisabledEcrWindow.resx">
+      <DependentUpon>mustBeDisabledEcrWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արգելափակել ՀԴՄ\PrepareMailSendWindow.resx">
+      <DependentUpon>PrepareMailSendWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արգելափակել ՀԴՄ\SendEmailWindow.resx">
+      <DependentUpon>SendEmailWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արգելափակել ՀԴՄ\SendHVHHSMSWindow.resx">
+      <DependentUpon>SendHVHHSMSWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արգելափակել ՀԴՄ\SendSMSWindow.resx">
+      <DependentUpon>SendSMSWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արգելափակել ՀԴՄ\SendTesuchSMSWindow.resx">
+      <DependentUpon>SendTesuchSMSWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արգելափակել ՀԴՄ\smsViewerWindow.resx">
+      <DependentUpon>smsViewerWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արհեստանոց\CloseRemakeMessage.resx">
+      <DependentUpon>CloseRemakeMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արհեստանոց\EcrMessageWindow.resx">
+      <DependentUpon>EcrMessageWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արհեստանոց\ListOfWorkShopItems.resx">
+      <DependentUpon>ListOfWorkShopItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արհեստանոց\RemakeClosedMessageViewer.resx">
+      <DependentUpon>RemakeClosedMessageViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արհեստանոց\RemNewProblem.resx">
+      <DependentUpon>RemNewProblem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արհեստանոց\RemoveEquipmentFromWorkshop.resx">
+      <DependentUpon>RemoveEquipmentFromWorkshop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արհեստանոց\WorkShopMessages.resx">
+      <DependentUpon>WorkShopMessages.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արհեստանոց\WorkShopMessagesAnswer.resx">
+      <DependentUpon>WorkShopMessagesAnswer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Արհեստանոց\WorkShopProposalWindow.resx">
+      <DependentUpon>WorkShopProposalWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Գործընկեր\AddHVHHWindow.resx">
+      <DependentUpon>AddHVHHWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Գործընկեր\GPRS History.resx">
+      <DependentUpon>GPRS History.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Գործընկեր\GpsForEcr.resx">
+      <DependentUpon>GpsForEcr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Գործընկեր\PaymentHistoryWin.resx">
+      <DependentUpon>PaymentHistoryWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Գործընկեր\RepPartnerPercent.resx">
+      <DependentUpon>RepPartnerPercent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Գործընկեր\SearchHVHH.resx">
+      <DependentUpon>SearchHVHH.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Գործընկեր\UpdateHVHHWindow.resx">
+      <DependentUpon>UpdateHVHHWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ Առաքում\hdmAraqumOnRemontWindow.resx">
+      <DependentUpon>hdmAraqumOnRemontWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ Առաքում\hdmAraqumReadyWindow.resx">
+      <DependentUpon>hdmAraqumReadyWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ Առաքում\hdmAraqumSentWindow.resx">
+      <DependentUpon>hdmAraqumSentWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ Առաքում\hdmAraqumWindow.resx">
+      <DependentUpon>hdmAraqumWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ Առաքում\hdmOnRoadWindow.resx">
+      <DependentUpon>hdmOnRoadWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\AddHDMWindow.resx">
+      <DependentUpon>AddHDMWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\BlockedGPRS.resx">
+      <DependentUpon>BlockedGPRS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\Bulk GPS.resx">
+      <DependentUpon>Bulk GPS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\changeGPRSCode.resx">
+      <DependentUpon>changeGPRSCode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\garantHDM.resx">
+      <DependentUpon>garantHDM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\GPSForEcrRep.resx">
+      <DependentUpon>GPSForEcrRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\htsByInterval.resx">
+      <DependentUpon>htsByInterval.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\htsCodeChangeWin.resx">
+      <DependentUpon>htsCodeChangeWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\htsCodeSelector.resx">
+      <DependentUpon>htsCodeSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\IUNetList.resx">
+      <DependentUpon>IUNetList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\NotgarantHDM.resx">
+      <DependentUpon>NotgarantHDM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\PoakHdmStatus.resx">
+      <DependentUpon>PoakHdmStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\RemakeHDMByCompanyWin.resx">
+      <DependentUpon>RemakeHDMByCompanyWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\RemakeHistoryByHDMWin.resx">
+      <DependentUpon>RemakeHistoryByHDMWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\ReplacedHdmWin.resx">
+      <DependentUpon>ReplacedHdmWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\ReRegisterHDMWindow.resx">
+      <DependentUpon>ReRegisterHDMWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\SearchHDMOnly.resx">
+      <DependentUpon>SearchHDMOnly.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\SendToIUNetworks.resx">
+      <DependentUpon>SendToIUNetworks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՀԴՄ\UpdateHDMWindow.resx">
+      <DependentUpon>UpdateHDMWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\AppNewCountWindow.resx">
+      <DependentUpon>AppNewCountWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\ApprContractDateSelect.resx">
+      <DependentUpon>ApprContractDateSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\BazaPoak.resx">
+      <DependentUpon>BazaPoak.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\ChangeEcrStatus.resx">
+      <DependentUpon>ChangeEcrStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\ContractCounterWindow.resx">
+      <DependentUpon>ContractCounterWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\CStatus.resx">
+      <DependentUpon>CStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\HdmCountByContractWindow.resx">
+      <DependentUpon>HdmCountByContractWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\PoakToDB.resx">
+      <DependentUpon>PoakToDB.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\PoakToDBSelector.resx">
+      <DependentUpon>PoakToDBSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\PoakToMGH.resx">
+      <DependentUpon>PoakToMGH.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\PoakToRegister.resx">
+      <DependentUpon>PoakToRegister.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\PrintedContractApplicationsWin.resx">
+      <DependentUpon>PrintedContractApplicationsWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\PrintedDissolveList.resx">
+      <DependentUpon>PrintedDissolveList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\StatusHistory.resx">
+      <DependentUpon>StatusHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\TarifChangeContract.resx">
+      <DependentUpon>TarifChangeContract.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\TarifContractMaker.resx">
+      <DependentUpon>TarifContractMaker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\WorkingClientsDisolved.resx">
+      <DependentUpon>WorkingClientsDisolved.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՊՈԱԿ-ից Ստացված ՀԴՄ\AddEcr.resx">
+      <DependentUpon>AddEcr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՊՈԱԿ-ից Ստացված ՀԴՄ\PoakToOffice.resx">
+      <DependentUpon>PoakToOffice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\ՊՈԱԿ-ից Ստացված ՀԴՄ\TakeTesuch.resx">
+      <DependentUpon>TakeTesuch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\aktForCloseHayt.resx">
+      <DependentUpon>aktForCloseHayt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\AktRefuse.resx">
+      <DependentUpon>AktRefuse.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\ApproveProposal.resx">
+      <DependentUpon>ApproveProposal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\changeProposal.resx">
+      <DependentUpon>changeProposal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\CloseBranchWindow.resx">
+      <DependentUpon>CloseBranchWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\CloseBranchWorkshopWindow.resx">
+      <DependentUpon>CloseBranchWorkshopWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\CloseCenterWindow.resx">
+      <DependentUpon>CloseCenterWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\CloseCenterWorkshopWindow.resx">
+      <DependentUpon>CloseCenterWorkshopWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\CreateRemakeInvoiceInfo.resx">
+      <DependentUpon>CreateRemakeInvoiceInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\EcrFunctional.resx">
+      <DependentUpon>EcrFunctional.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\EcrSelecterForRemake.resx">
+      <DependentUpon>EcrSelecterForRemake.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\EnterBranchClicker.resx">
+      <DependentUpon>EnterBranchClicker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\EnterBranchWorkshop.resx">
+      <DependentUpon>EnterBranchWorkshop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\EnterCenterClicker.resx">
+      <DependentUpon>EnterCenterClicker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\EnterCenterWorkshop.resx">
+      <DependentUpon>EnterCenterWorkshop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\EquipmentRemakeChangePrice.resx">
+      <DependentUpon>EquipmentRemakeChangePrice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\NewProblem.resx">
+      <DependentUpon>NewProblem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\OpenRemakeAkt.resx">
+      <DependentUpon>OpenRemakeAkt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\PoxarinoxEcr.resx">
+      <DependentUpon>PoxarinoxEcr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\RemakeWindow.resx">
+      <DependentUpon>RemakeWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Վերանորոգում\ReturnPoxarinoxECR.resx">
+      <DependentUpon>ReturnPoxarinoxECR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տարիֆ\changeTarifWindow.resx">
+      <DependentUpon>changeTarifWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տարիֆ\CheckPoakTariff.resx">
+      <DependentUpon>CheckPoakTariff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տարիֆ\ListOfCurrentTarifWindow.resx">
+      <DependentUpon>ListOfCurrentTarifWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տարիֆ\MissedTariff.resx">
+      <DependentUpon>MissedTariff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տարիֆ\PoakTariff.resx">
+      <DependentUpon>PoakTariff.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տարիֆ\TarifHistoryWindow.resx">
+      <DependentUpon>TarifHistoryWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տարիֆ\UpcomingTarifWindow.resx">
+      <DependentUpon>UpcomingTarifWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\AddressAddWindow.resx">
+      <DependentUpon>AddressAddWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\AddressUpdateWindow.resx">
+      <DependentUpon>AddressUpdateWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\AddressWindow.resx">
+      <DependentUpon>AddressWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\ContractAddWindow.resx">
+      <DependentUpon>ContractAddWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\ContractUpdateWindow.resx">
+      <DependentUpon>ContractUpdateWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\ContractWindow.resx">
+      <DependentUpon>ContractWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\ObjTypeAddWin.resx">
+      <DependentUpon>ObjTypeAddWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\ObjTypeUpWin.resx">
+      <DependentUpon>ObjTypeUpWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\ObjTypeWin.resx">
+      <DependentUpon>ObjTypeWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\RegionAddWindow.resx">
+      <DependentUpon>RegionAddWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\RegionUpdateWindow.resx">
+      <DependentUpon>RegionUpdateWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\RegionWindow.resx">
+      <DependentUpon>RegionWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\ReplaceEcrTesuch.resx">
+      <DependentUpon>ReplaceEcrTesuch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\ReplaceEcrTesuchAdd.resx">
+      <DependentUpon>ReplaceEcrTesuchAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\ReplaceEcrTesuchReturn.resx">
+      <DependentUpon>ReplaceEcrTesuchReturn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\TarifAddWin.resx">
+      <DependentUpon>TarifAddWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\TarifUpWin.resx">
+      <DependentUpon>TarifUpWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\TarifWin.resx">
+      <DependentUpon>TarifWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\TesuchAddWindow.resx">
+      <DependentUpon>TesuchAddWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\TesuchInfoAddWindow.resx">
+      <DependentUpon>TesuchInfoAddWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\TesuchInfoUpdateWindow.resx">
+      <DependentUpon>TesuchInfoUpdateWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\TesuchInfoWindow.resx">
+      <DependentUpon>TesuchInfoWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\TesuchRegion.resx">
+      <DependentUpon>TesuchRegion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\TesuchUpdateWindow.resx">
+      <DependentUpon>TesuchUpdateWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\TesuchWindow.resx">
+      <DependentUpon>TesuchWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users Forms\Change Password.resx">
+      <DependentUpon>Change Password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\ThtAddWin.resx">
+      <DependentUpon>ThtAddWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\ThtUpWin.resx">
+      <DependentUpon>ThtUpWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\ThtWin.resx">
+      <DependentUpon>ThtWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեսուչի Այց\TesuchVisitAddWin.resx">
+      <DependentUpon>TesuchVisitAddWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Տեսուչի Այց\TesuchVisitWin.resx">
+      <DependentUpon>TesuchVisitWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\InnerInvoiceXMLSelector.resx">
+      <DependentUpon>InnerInvoiceXMLSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MakeInnerInvoiceXML.resx">
+      <DependentUpon>MakeInnerInvoiceXML.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MakeRemakeInvoiceXML.resx">
+      <DependentUpon>MakeRemakeInvoiceXML.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MakeSellInvoiceXML.resx">
+      <DependentUpon>MakeSellInvoiceXML.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MatakararDateWindow.resx">
+      <DependentUpon>MatakararDateWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\RemakeInvoiceXMLSelector.resx">
+      <DependentUpon>RemakeInvoiceXMLSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\SellInvoiceXMLSelector.resx">
+      <DependentUpon>SellInvoiceXMLSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\ChangeInvoiceData.resx">
+      <DependentUpon>ChangeInvoiceData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\DeleteInvoiceWindow.resx">
+      <DependentUpon>DeleteInvoiceWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\NotPrintedSupportInvoiceWindow.resx">
+      <DependentUpon>NotPrintedSupportInvoiceWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\notRetInvocie.resx">
+      <DependentUpon>notRetInvocie.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\ReturnedInv.resx">
+      <DependentUpon>ReturnedInv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\printNoPrintInvoiceSelect.resx">
+      <DependentUpon>printNoPrintInvoiceSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\ReRegInvoice.resx">
+      <DependentUpon>ReRegInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\ReturnNotRetInvoice.resx">
+      <DependentUpon>ReturnNotRetInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\SetInvoiceReturnDate.resx">
+      <DependentUpon>SetInvoiceReturnDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\SupportInvoice.resx">
+      <DependentUpon>SupportInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\UpdateInvoiceWindow.resx">
+      <DependentUpon>UpdateInvoiceWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Վճարներ\ChangePaymentWin.resx">
+      <DependentUpon>ChangePaymentWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Վճարներ\payWindow.resx">
+      <DependentUpon>payWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Վճարներ\RepBank.resx">
+      <DependentUpon>RepBank.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Վճարներ\SelectBankFile.resx">
+      <DependentUpon>SelectBankFile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Վճարներ\TelCellFileSelecter.resx">
+      <DependentUpon>TelCellFileSelecter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Վճարներ\TelCellSetter.resx">
+      <DependentUpon>TelCellSetter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Տեղեկատուներ\AccRepWarehouseExisting.resx">
+      <DependentUpon>AccRepWarehouseExisting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Տեղեկատուներ\AcountWarhExSel.resx">
+      <DependentUpon>AcountWarhExSel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Տեղեկատուներ\NotSuppClientHistory.resx">
+      <DependentUpon>NotSuppClientHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Տեղեկատուներ\NotSupportedClientsDetails.resx">
+      <DependentUpon>NotSupportedClientsDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Տեղեկատուներ\pahanj.resx">
+      <DependentUpon>pahanj.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Տեղեկատուներ\PDF-ի Կարգաբերում\PDF_Searcher.resx">
+      <DependentUpon>PDF_Searcher.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Տեղեկատուներ\RepNoNDS.resx">
+      <DependentUpon>RepNoNDS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Տեղեկատուներ\RepNoSupport.resx">
+      <DependentUpon>RepNoSupport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Տեղեկատուներ\XML Dublicate Checker.resx">
+      <DependentUpon>XML Dublicate Checker.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\GPRS\GprsRealStatus.resx">
+      <DependentUpon>GprsRealStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\GPRS\RepGprsAll.resx">
+      <DependentUpon>RepGprsAll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\GPRS\RepGprsChanges.resx">
+      <DependentUpon>RepGprsChanges.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\GPRS\repNotApprovedGPRS.resx">
+      <DependentUpon>repNotApprovedGPRS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Լոգ\LogEventsAll.resx">
+      <DependentUpon>LogEventsAll.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Կոորդինատ\MapProp.resx">
+      <DependentUpon>MapProp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DateNotRetInvoice.resx">
+      <DependentUpon>DateNotRetInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DateRemakeInvoice.resx">
+      <DependentUpon>DateRemakeInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DateServiceInvoice.resx">
+      <DependentUpon>DateServiceInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DateShrjikInvoice.resx">
+      <DependentUpon>DateShrjikInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DateSoldInvoice.resx">
+      <DependentUpon>DateSoldInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\DSLate.resx">
+      <DependentUpon>DSLate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\ExcludedHvhhForInvoice.resx">
+      <DependentUpon>ExcludedHvhhForInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\LateInvoiceWindow.resx">
+      <DependentUpon>LateInvoiceWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\RepAllInvoice.resx">
+      <DependentUpon>RepAllInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\RepNotRetInvoice.resx">
+      <DependentUpon>RepNotRetInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Հաշիվ Ապրանքագիր\SelDateRepAllInv.resx">
+      <DependentUpon>SelDateRepAllInv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\ՀԴՄ Արգելափակ\RepmustBeDisabled.resx">
+      <DependentUpon>RepmustBeDisabled.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\ՀԴՄ Վիճակագրություն\EcrStatistics.resx">
+      <DependentUpon>EcrStatistics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Հեռախոս\RepHvhhForTel.resx">
+      <DependentUpon>RepHvhhForTel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Հեռախոս\ShowTell.resx">
+      <DependentUpon>ShowTell.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Չտպված Հավելվածներ\DateSelect.resx">
+      <DependentUpon>DateSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Չտպված Հավելվածներ\NotPrintedApplicationsForm.resx">
+      <DependentUpon>NotPrintedApplicationsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Սպասարկող\QerySelectToolRegEcrCount.resx">
+      <DependentUpon>QerySelectToolRegEcrCount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Սպասարկող\SupporterRegionEcrCount.resx">
+      <DependentUpon>SupporterRegionEcrCount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վերագրանցում\RepReRegisterList.resx">
+      <DependentUpon>RepReRegisterList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վերանորոգում\MultiRemakeSelect.resx">
+      <DependentUpon>MultiRemakeSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վերանորոգում\MultiRepRemakeEcr.resx">
+      <DependentUpon>MultiRepRemakeEcr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վերանորոգում\NonPayedRemakeSelTool.resx">
+      <DependentUpon>NonPayedRemakeSelTool.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վերանորոգում\NotPayedRemakeWindow.resx">
+      <DependentUpon>NotPayedRemakeWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վերանորոգում\QerySelectToolEcrLocation.resx">
+      <DependentUpon>QerySelectToolEcrLocation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վերանորոգում\QerySelectToolRemakeRep.resx">
+      <DependentUpon>QerySelectToolRemakeRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վերանորոգում\RemakeDayCounterWindow.resx">
+      <DependentUpon>RemakeDayCounterWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վերանորոգում\RemakeSendSMS.resx">
+      <DependentUpon>RemakeSendSMS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վերանորոգում\RemTimeWindow.resx">
+      <DependentUpon>RemTimeWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վերանորոգում\RepEcrLocation.resx">
+      <DependentUpon>RepEcrLocation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վերանորոգում\RepLocationListViewer.resx">
+      <DependentUpon>RepLocationListViewer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վերանորոգում\RepRemakeEcr.resx">
+      <DependentUpon>RepRemakeEcr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վերանորոգում\RepRemakeTimeCounter.resx">
+      <DependentUpon>RepRemakeTimeCounter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վերանորոգում\RepSelRemakeDayCounter.resx">
+      <DependentUpon>RepSelRemakeDayCounter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վերանորոգում\TesuchRemRep.resx">
+      <DependentUpon>TesuchRemRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վերանորոգում\TesuchRemSelect.resx">
+      <DependentUpon>TesuchRemSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վճարներ\DateDebetKredet.resx">
+      <DependentUpon>DateDebetKredet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վճարներ\DatePartqHavelavchar.resx">
+      <DependentUpon>DatePartqHavelavchar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վճարներ\DateSelecterPayment.resx">
+      <DependentUpon>DateSelecterPayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վճարներ\FiveMonthsReport.resx">
+      <DependentUpon>FiveMonthsReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վճարներ\PartqHavelavcharWindow.resx">
+      <DependentUpon>PartqHavelavcharWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վճարներ\PartqSelSupporter.resx">
+      <DependentUpon>PartqSelSupporter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վճարներ\QerySelectToolPaymentAmpop.resx">
+      <DependentUpon>QerySelectToolPaymentAmpop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վճարներ\RepBankEnter.resx">
+      <DependentUpon>RepBankEnter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վճարներ\RepDebetKredet.resx">
+      <DependentUpon>RepDebetKredet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վճարներ\repPayInvAmpop.resx">
+      <DependentUpon>repPayInvAmpop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վճարներ\RepPayWindow.resx">
+      <DependentUpon>RepPayWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Վճարներ\SelectBankEnter.resx">
+      <DependentUpon>SelectBankEnter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Տեսուչ ՀԴՄ Վիճակագրություն\EcrTesuchRep.resx">
+      <DependentUpon>EcrTesuchRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Տեսուչ\DateTesuch.resx">
+      <DependentUpon>DateTesuch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Տեսուչ\RepTesuch.resx">
+      <DependentUpon>RepTesuch.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Տեսուչ\RepTesuchEcr.resx">
+      <DependentUpon>RepTesuchEcr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Փոխարինման\EcrRepChanges.resx">
+      <DependentUpon>EcrRepChanges.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Փոխարինման\EcrRepChangesReport.resx">
+      <DependentUpon>EcrRepChangesReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Փոխարինման\RepDateSelecter.resx">
+      <DependentUpon>RepDateSelecter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Փոխարինման\RepEcrForReplace.resx">
+      <DependentUpon>RepEcrForReplace.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Փոխարինման\TesuchEcrRep.resx">
+      <DependentUpon>TesuchEcrRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվետվություն\Փոխարինման\TesuchFreeEcrRep.resx">
+      <DependentUpon>TesuchFreeEcrRep.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Հաշվետվություն\DateSelecterForSoldEquipment.resx">
+      <DependentUpon>DateSelecterForSoldEquipment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Հաշվետվություն\InnerWarehouseSold.resx">
+      <DependentUpon>InnerWarehouseSold.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Հաշվետվություն\InnerWarhowseExists.resx">
+      <DependentUpon>InnerWarhowseExists.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Հաշվետվություն\POAKWarehouseWin.resx">
+      <DependentUpon>POAKWarehouseWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Հաշվետվություն\RejectWarehouseWin.resx">
+      <DependentUpon>RejectWarehouseWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Հաշվետվություն\RepWarehouseExisting.resx">
+      <DependentUpon>RepWarehouseExisting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Հաշվետվություն\SoldEquipmentWin2.resx">
+      <DependentUpon>SoldEquipmentWin2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Հաշվետվություն\WarHouseExistSelector.resx">
+      <DependentUpon>WarHouseExistSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Շարժ\ShtrikhCodeGenerator.resx">
+      <DependentUpon>ShtrikhCodeGenerator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Պատկան ՀԴՄ\DateSelecterForPatkanEcr.resx">
+      <DependentUpon>DateSelecterForPatkanEcr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Պատկան ՀԴՄ\DateSelecterPoxarinumHistory.resx">
+      <DependentUpon>DateSelecterPoxarinumHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Պատկան ՀԴՄ\PoxarinumHistory.resx">
+      <DependentUpon>PoxarinumHistory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Պատկան ՀԴՄ\SupporterEcrInOffice.resx">
+      <DependentUpon>SupporterEcrInOffice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Սարքավորումներ\AddNyutPrice.resx">
+      <DependentUpon>AddNyutPrice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Սարքավորումներ\AddSetEquipmentPrice.resx">
+      <DependentUpon>AddSetEquipmentPrice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Սարքավորումներ\ChangeSetEquipmentPrice.resx">
+      <DependentUpon>ChangeSetEquipmentPrice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Սարքավորումներ\SetEquipmentPrice.resx">
+      <DependentUpon>SetEquipmentPrice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Սարքավորումներ\TarifSelecter.resx">
+      <DependentUpon>TarifSelecter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Վաճառք\ChangeSellInvoiceSelect.resx">
+      <DependentUpon>ChangeSellInvoiceSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Վաճառք\DeleteSellInvoiceSelect.resx">
+      <DependentUpon>DeleteSellInvoiceSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Վաճառք\InnerTransfer.resx">
+      <DependentUpon>InnerTransfer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Վաճառք\ReturnSoldItem.resx">
+      <DependentUpon>ReturnSoldItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Վաճառք\SelectEquipmentSellType.resx">
+      <DependentUpon>SelectEquipmentSellType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Վաճառք\SellWindow.resx">
+      <DependentUpon>SellWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Տեղեկատու\AddPaySelect.resx">
+      <DependentUpon>AddPaySelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Տեղեկատու\AddPayWin.resx">
+      <DependentUpon>AddPayWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Տեղեկատու\EquipmentAddWin.resx">
+      <DependentUpon>EquipmentAddWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Տեղեկատու\EquipmentUpWin.resx">
+      <DependentUpon>EquipmentUpWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Տեղեկատու\EquipmentWin.resx">
+      <DependentUpon>EquipmentWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Տեղեկատու\IntermediateWarehouseWin.resx">
+      <DependentUpon>IntermediateWarehouseWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Տեղեկատու\MnacordSelector.resx">
+      <DependentUpon>MnacordSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Տեղեկատու\NewAddPay.resx">
+      <DependentUpon>NewAddPay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Տեղեկատու\PurchaseInsert.resx">
+      <DependentUpon>PurchaseInsert.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Տեղեկատու\PurchaseInsert2.resx">
+      <DependentUpon>PurchaseInsert2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Տեղեկատու\PurchaseWarehouseAddWin.resx">
+      <DependentUpon>PurchaseWarehouseAddWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Տեղեկատու\PurchaseWarehouseWin.resx">
+      <DependentUpon>PurchaseWarehouseWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Տեղեկատու\TransferToPoakWin.resx">
+      <DependentUpon>TransferToPoakWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Տեղեկատու\TransferToRejectedWin.resx">
+      <DependentUpon>TransferToRejectedWin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Տեղեկատու\xotanpoakmarka.resx">
+      <DependentUpon>xotanpoakmarka.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Excel Files\akt1.xlsx" />
+    <None Include="Excel Files\aktAnvjarLast.xlsx" />
+    <None Include="Excel Files\AktInvoiceItems.xlsx" />
+    <None Include="Excel Files\AktInvoiceItemsLast.xlsx" />
+    <None Include="Excel Files\aktmerjel.xlsx" />
+    <None Include="Excel Files\aktpox2.xlsx" />
+    <None Include="Excel Files\aktpox3.xlsx" />
+    <None Include="Excel Files\aktZero.xlsx" />
+    <None Include="Excel Files\aktZeroLast.xlsx" />
+    <None Include="Excel Files\Ecr Rep Akt 1.xlsx" />
+    <None Include="Excel Files\Ecr Rep Akt 2.xlsx" />
+    <None Include="Excel Files\gprsAkt.xlsx" />
+    <None Include="Excel Files\havelvac.xls" />
+    <None Include="Excel Files\InnerTransferDoc.xlsx" />
+    <None Include="Excel Files\lucum.xls" />
+    <None Include="Excel Files\pakmanakt.xlsx" />
+    <None Include="Excel Files\pdfPages.xlsx" />
+    <None Include="Excel Files\PoakEcrAkt.xlsx" />
+    <None Include="Excel Files\Rem Invoise.xlsx" />
+    <None Include="Excel Files\report.xls" />
+    <None Include="Excel Files\Shtrikh Code Prit form.xlsx" />
+    <None Include="Excel Files\TarifHavelvac.xls" />
+    <None Include="Excel Files\TarifHavelvacZero.xls" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\OrangeServiceReference\ClientServerConnecter.wsdl" />
+    <None Include="Service References\OrangeServiceReference\ClientServerConnecter.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrangeServiceReference\ClientServerConnecter1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="WordFiles\1.docx" />
+    <None Include="WordFiles\2.doc" />
+    <None Include="WordFiles\2.docx" />
+    <None Include="WordFiles\3.docx" />
+    <None Include="WordFiles\4.docx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_16x16.png" />
+    <None Include="Resources\cancel_32x32.png" />
+    <None Include="Service References\OrangeServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Service References\OrangeServiceReference\configuration.svcinfo" />
+    <None Include="Service References\OrangeServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\OrangeServiceReference\ClientServerConnecter.disco" />
+    <None Include="Icons\InfoMessage.ico" />
+    <None Include="Icons\infoWarning.ico" />
+    <Content Include="Images\MF-2351.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\OrangeServiceReference\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
