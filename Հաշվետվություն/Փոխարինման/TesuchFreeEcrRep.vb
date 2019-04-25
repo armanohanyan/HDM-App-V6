@@ -36,6 +36,9 @@ Public Class TesuchFreeEcrRep
                 .OptionsSelection.MultiSelect = False
                 .OptionsSelection.EnableAppearanceFocusedCell = False
                 .BestFitColumns(True)
+                For i As Integer = 0 To .Columns.Count - 1
+                    .Columns(i).OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList
+                Next
             End With
             If GridView1.RowCount > 0 Then
                 If GridView1.Columns("ՊատկանՀԴՄ").Summary.ActiveCount = 0 Then
