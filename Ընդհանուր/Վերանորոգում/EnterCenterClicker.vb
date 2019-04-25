@@ -8,6 +8,7 @@ Public Class EnterCenterClicker
     End Sub
     Private Sub AddEnterClick()
         iDB.AddEnterClickForCenter(txtEcr.Text.Trim, iUser.LoginName)
+        iDB.AddEnterCenterWorkshop(txtEcr.Text.Trim, iUser.LoginName)
     End Sub
     Private Sub txtEcr_TextChanged(sender As Object, e As EventArgs) Handles txtEcr.TextChanged
 
