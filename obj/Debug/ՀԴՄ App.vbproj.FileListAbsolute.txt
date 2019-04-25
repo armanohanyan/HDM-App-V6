@@ -6856,7 +6856,6 @@ C:\Users\Arman\Documents\Projects\GIT\HDM-App-V6\bin\Debug\JamaaTech.Smpp.Net.Cl
 C:\Users\Arman\Documents\Projects\GIT\HDM-App-V6\bin\Debug\JamaaTech.Smpp.Net.Lib.v1.4.dll
 C:\Users\Arman\Documents\Projects\GIT\HDM-App-V6\bin\Debug\MySql.Data.dll
 C:\Users\Arman\Documents\Projects\GIT\HDM-App-V6\obj\Debug\ՀԴՄ App.vbprojResolveAssemblyReference.cache
-C:\Users\Arman\Documents\Projects\GIT\HDM-App-V6\obj\Debug\ՀԴՄ App.vbproj.ResolveComReference.cache
 C:\Users\Arman\Documents\Projects\GIT\HDM-App-V6\obj\Debug\ՀԴՄ_App.AboutApp.resources
 C:\Users\Arman\Documents\Projects\GIT\HDM-App-V6\obj\Debug\ՀԴՄ_App.downloader.resources
 C:\Users\Arman\Documents\Projects\GIT\HDM-App-V6\obj\Debug\ՀԴՄ_App.DExt1.resources
