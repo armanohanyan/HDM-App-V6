@@ -8,6 +8,7 @@ Public Class EnterBranchClicker
     End Sub
     Private Sub AddEnterClick()
         iDB.AddEnterClickForBranch(txtEcr.Text.Trim, iUser.LoginName)
+        iDB.AddEnterBranchWorkshop(txtEcr.Text.Trim, iUser.LoginName)
     End Sub
     Private Sub txtEcr_TextChanged(sender As Object, e As EventArgs) Handles txtEcr.TextChanged
 
