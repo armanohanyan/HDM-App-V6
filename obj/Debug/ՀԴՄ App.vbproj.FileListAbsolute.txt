@@ -6844,3 +6844,8 @@ C:\Users\Arman\Documents\Projects\ՀԴՄ App\19.04.2019\ՀԴՄ App V6\obj\Debug\
 C:\Users\Arman\Documents\Projects\ՀԴՄ App\19.04.2019\ՀԴՄ App V6\obj\Debug\ՀԴՄ App.exe
 C:\Users\Arman\Documents\Projects\ՀԴՄ App\19.04.2019\ՀԴՄ App V6\obj\Debug\ՀԴՄ App.xml
 C:\Users\Arman\Documents\Projects\ՀԴՄ App\19.04.2019\ՀԴՄ App V6\obj\Debug\ՀԴՄ App.pdb
+C:\Users\Arman\Documents\Projects\GIT\HDM-App-V6\bin\Debug\ՀԴՄ App.exe.config
+C:\Users\Arman\Documents\Projects\GIT\HDM-App-V6\obj\Debug\ՀԴՄ App.vbproj.ResolveComReference.cache
+C:\Users\Arman\Documents\Projects\GIT\HDM-App-V6\obj\Debug\ՀԴՄ App.exe
+C:\Users\Arman\Documents\Projects\GIT\HDM-App-V6\obj\Debug\ՀԴՄ App.xml
+C:\Users\Arman\Documents\Projects\GIT\HDM-App-V6\obj\Debug\ՀԴՄ App.pdb
