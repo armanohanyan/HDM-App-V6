@@ -2139,12 +2139,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DateExtend\DExt1.resx">
       <DependentUpon>DExt1.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="DateExtend\DExt2.resx">
       <DependentUpon>DExt2.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginWindow.resx">
       <DependentUpon>LoginWindow.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWindow.resx">
       <DependentUpon>MainWindow.vb</DependentUpon>
@@ -2152,12 +2155,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Messages\AddPersonalMessage.resx">
       <DependentUpon>AddPersonalMessage.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Messages\CustomMseeageShow.resx">
       <DependentUpon>CustomMseeageShow.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Messages\MessageArchive.resx">
       <DependentUpon>MessageArchive.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -2168,9 +2174,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\CorrectMiddleDB.resx">
       <DependentUpon>CorrectMiddleDB.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\ExcelToSQLWindow.resx">
       <DependentUpon>ExcelToSQLWindow.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\PermFromTo.resx">
       <DependentUpon>PermFromTo.vb</DependentUpon>
@@ -2178,81 +2186,105 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\SelectPrinter.resx">
       <DependentUpon>SelectPrinter.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Working.resx">
       <DependentUpon>Working.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\ActiveHaytWin.resx">
       <DependentUpon>ActiveHaytWin.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\CallEcrForReplace.resx">
       <DependentUpon>CallEcrForReplace.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\CallHaytActivate.resx">
       <DependentUpon>CallHaytActivate.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\CallHaytGeneral.resx">
       <DependentUpon>CallHaytGeneral.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\CallSmsActivate.resx">
       <DependentUpon>CallSmsActivate.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\CallSmsGeneral.resx">
       <DependentUpon>CallSmsGeneral.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\CCPayWin.resx">
       <DependentUpon>CCPayWin.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\changeActivHaytInfo.resx">
       <DependentUpon>changeActivHaytInfo.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\changeGeneralHaytInfo.resx">
       <DependentUpon>changeGeneralHaytInfo.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\ClosedPropSelect.resx">
       <DependentUpon>ClosedPropSelect.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\ClosedPropView.resx">
       <DependentUpon>ClosedPropView.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\EditActivateHayt.resx">
       <DependentUpon>EditActivateHayt.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\EditGeneralHayt.resx">
       <DependentUpon>EditGeneralHayt.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\GeneralHaytWin.resx">
       <DependentUpon>GeneralHaytWin.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\GPSforProp.resx">
       <DependentUpon>GPSforProp.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\HaytActivateEdit.resx">
       <DependentUpon>HaytActivateEdit.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\HaytGeneralEdit.resx">
       <DependentUpon>HaytGeneralEdit.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\OpenPropList.resx">
       <DependentUpon>OpenPropList.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\OpenPropSelector.resx">
       <DependentUpon>OpenPropSelector.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\PropAnalitics.resx">
       <DependentUpon>PropAnalitics.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\SelectPropAnalitics.resx">
       <DependentUpon>SelectPropAnalitics.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\SMSPervCallCenter.resx">
       <DependentUpon>SMSPervCallCenter.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\UniCallCenterPanel.resx">
       <DependentUpon>UniCallCenterPanel.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\ViewActivateHaytSelector.resx">
       <DependentUpon>ViewActivateHaytSelector.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\ViewGeneralHaytSelector.resx">
       <DependentUpon>ViewGeneralHaytSelector.vb</DependentUpon>
@@ -2670,6 +2702,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Users Forms\Change Password.resx">
       <DependentUpon>Change Password.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Ընդհանուր\Տեղեկատուներ\ThtAddWin.resx">
       <DependentUpon>ThtAddWin.vb</DependentUpon>
