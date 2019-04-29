@@ -4230,7 +4230,7 @@ Public Class MainWindow
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 22 Then
-            If CheckPermission("3AF665F049BF4DDFBA8ADEF761A09AE9") = False Then
+            If CheckPermission("2CA29F587BE640C0A20DC88744434FB5") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
