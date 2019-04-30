@@ -5,6 +5,7 @@ Imports JamaaTech.Smpp.Net.Client
 Public Class CallHaytGeneral
 
     Dim RepEcr As String = String.Empty
+    Dim RepEcrID As Integer = 0
 
 
     Private Sub getInf()
@@ -121,6 +122,7 @@ Public Class CallHaytGeneral
             End If
 
             With cbEcr
+                '.SelectedIndex = -1
                 .DataSource = dt
                 .DisplayMember = "ECR"
                 .ValueMember = "ecrID"
@@ -457,7 +459,11 @@ Public Class CallHaytGeneral
             Dim dt As DataTable = iDB.AddGeneralProp(txtEcr.Text.Trim, txtHVHH.Text.Trim, txtAddress.Text.Trim, txtClient.Text.Trim,
                                  txtTel.Text.Trim, cbRegion.Text, txtTesuch.Text, False, iUser.LoginName, False, propDate, cbSupporter.SelectedValue, False, txtProblem.Text.Trim,
                                  Loc, cProb.SelectedIndex)
-
+            ''''''''''''''''''''''''''''
+            If RepEcrID > 0 Then
+                iDB.QueueEcr(txtEcr.Text.Trim, RepEcrID, iUser.LoginName)
+            End If
+            ''''''''''''''''''''''''''''
             If dt.Rows.Count > 0 Then
                 Dim ID As Integer = dt.Rows(0)("ID")
 
@@ -568,6 +574,18 @@ Public Class CallHaytGeneral
 
         End Select
     End Sub
+    Private Sub cbEcr_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEcr.SelectedIndexChanged
+        'If cbEcr.SelectedIndex > -1 Then
+        '    RepEcr = cbEcr.Text
+        '    If RepEcr <> String.Empty Then
+        '        If cbRemProblem.Enabled = True AndAlso cbRemProblem.Items.Count > 0 Then
+        '            txtProblem.Text = cbRemProblem.Text & vbCrLf & "Փոխարինող ՀԴՄ` " & RepEcr
+        '        Else
+        '            txtProblem.Text &= vbCrLf & "Փոխարինող ՀԴՄ` " & RepEcr
+        '        End If
+        '    End If
+        'End If
+    End Sub
     Private Sub txtTesuch_EditValueChanged(sender As Object, e As EventArgs) Handles txtTesuch.EditValueChanged
         On Error Resume Next
 
@@ -631,9 +649,10 @@ Public Class CallHaytGeneral
     End Sub
     Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
         Try
-            iDB.QueueEcr(txtEcr.Text.Trim, cbEcr.SelectedValue, iUser.LoginName)
+            'iDB.QueueEcr(txtEcr.Text.Trim, cbEcr.SelectedValue, iUser.LoginName)
 
             RepEcr = cbEcr.Text
+            RepEcrID = cbEcr.SelectedValue
 
             MsgBox("Գործողությունը կատարվեց", MsgBoxStyle.Information, My.Application.Info.Title)
 
@@ -754,5 +773,4 @@ Public Class CallHaytGeneral
         End Try
     End Function
 #End Region
-
 End Class
