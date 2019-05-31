@@ -441,7 +441,7 @@ Public Class UniCallCenterPanel
     End Sub
     Private Sub RepEcr_Click(sender As Object, e As EventArgs) Handles RepEcr.Click
         Try
-            iDB.CheckClientEcr(Phrase)
+            iDB.CheckClientEcr(Phrase, iUser.LoginName)
 
             Dim f As New CallEcrForReplace With {.ClientEcr = Phrase}
             f.ShowDialog()

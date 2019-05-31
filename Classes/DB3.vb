@@ -5,10 +5,11 @@ Partial Public Class DB
 #Region "Procedure"
 
     'CheckClientEcr
-    Friend Sub CheckClientEcr(ByVal ECR As String)
+    Friend Sub CheckClientEcr(ByVal ECR As String, ByVal user As String)
         Using connection As New SqlConnection(SQLString)
-            Dim cmdSQLcom As New SqlCommand("EXEC tesuch.CheckClientEcr @Ecr", connection)
+            Dim cmdSQLcom As New SqlCommand("EXEC tesuch.CheckClientEcr @Ecr, @User", connection)
             cmdSQLcom.Parameters.Add("@Ecr", Data.SqlDbType.VarChar).Value = ECR
+            cmdSQLcom.Parameters.Add("@User", Data.SqlDbType.VarChar).Value = user
             connection.Open()
             cmdSQLcom.ExecuteNonQuery()
             connection.Close()
