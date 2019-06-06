@@ -35,6 +35,10 @@ Partial Class SendSMSWindow
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.cAllClients = New DevExpress.XtraEditors.CheckEdit()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cbSMonth = New System.Windows.Forms.ComboBox()
+        Me.cbSYear = New System.Windows.Forms.ComboBox()
         Me.TimeX = New DevExpress.XtraEditors.DateEdit()
         Me.cbMonth = New System.Windows.Forms.ComboBox()
         Me.cbYear = New System.Windows.Forms.ComboBox()
@@ -127,7 +131,7 @@ Partial Class SendSMSWindow
         '
         'cAllClients
         '
-        Me.cAllClients.Location = New System.Drawing.Point(12, 334)
+        Me.cAllClients.Location = New System.Drawing.Point(12, 346)
         Me.cAllClients.Name = "cAllClients"
         Me.cAllClients.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.cAllClients.Properties.Appearance.ForeColor = System.Drawing.Color.RoyalBlue
@@ -141,6 +145,10 @@ Partial Class SendSMSWindow
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.Label3)
+        Me.GroupBox3.Controls.Add(Me.Label2)
+        Me.GroupBox3.Controls.Add(Me.cbSMonth)
+        Me.GroupBox3.Controls.Add(Me.cbSYear)
         Me.GroupBox3.Controls.Add(Me.TimeX)
         Me.GroupBox3.Controls.Add(Me.cbMonth)
         Me.GroupBox3.Controls.Add(Me.cbYear)
@@ -149,15 +157,53 @@ Partial Class SendSMSWindow
         Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Top
         Me.GroupBox3.Location = New System.Drawing.Point(0, 185)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(198, 134)
+        Me.GroupBox3.Size = New System.Drawing.Size(198, 151)
         Me.GroupBox3.TabIndex = 9
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Պարամետրեր"
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label3.Location = New System.Drawing.Point(167, 76)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(24, 16)
+        Me.Label3.TabIndex = 18
+        Me.Label3.Text = "- ը"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label2.Location = New System.Drawing.Point(167, 49)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(31, 16)
+        Me.Label2.TabIndex = 17
+        Me.Label2.Text = "- ից"
+        '
+        'cbSMonth
+        '
+        Me.cbSMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbSMonth.FormattingEnabled = True
+        Me.cbSMonth.Location = New System.Drawing.Point(102, 46)
+        Me.cbSMonth.Name = "cbSMonth"
+        Me.cbSMonth.Size = New System.Drawing.Size(57, 21)
+        Me.cbSMonth.TabIndex = 16
+        '
+        'cbSYear
+        '
+        Me.cbSYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbSYear.FormattingEnabled = True
+        Me.cbSYear.Location = New System.Drawing.Point(14, 46)
+        Me.cbSYear.Name = "cbSYear"
+        Me.cbSYear.Size = New System.Drawing.Size(79, 21)
+        Me.cbSYear.TabIndex = 15
+        '
         'TimeX
         '
         Me.TimeX.EditValue = Nothing
-        Me.TimeX.Location = New System.Drawing.Point(12, 93)
+        Me.TimeX.Location = New System.Drawing.Point(12, 123)
         Me.TimeX.Name = "TimeX"
         Me.TimeX.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.[False]
         Me.TimeX.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -170,24 +216,24 @@ Partial Class SendSMSWindow
         '
         Me.cbMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbMonth.FormattingEnabled = True
-        Me.cbMonth.Location = New System.Drawing.Point(115, 46)
+        Me.cbMonth.Location = New System.Drawing.Point(102, 75)
         Me.cbMonth.Name = "cbMonth"
-        Me.cbMonth.Size = New System.Drawing.Size(75, 21)
+        Me.cbMonth.Size = New System.Drawing.Size(57, 21)
         Me.cbMonth.TabIndex = 9
         '
         'cbYear
         '
         Me.cbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbYear.FormattingEnabled = True
-        Me.cbYear.Location = New System.Drawing.Point(14, 46)
+        Me.cbYear.Location = New System.Drawing.Point(14, 75)
         Me.cbYear.Name = "cbYear"
-        Me.cbYear.Size = New System.Drawing.Size(95, 21)
+        Me.cbYear.Size = New System.Drawing.Size(79, 21)
         Me.cbYear.TabIndex = 8
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(11, 77)
+        Me.Label1.Location = New System.Drawing.Point(11, 107)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(111, 13)
         Me.Label1.TabIndex = 14
@@ -297,7 +343,7 @@ Partial Class SendSMSWindow
         '
         Me.btnSent.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSent.Image = CType(resources.GetObject("btnSent.Image"), System.Drawing.Image)
-        Me.btnSent.Location = New System.Drawing.Point(6, 442)
+        Me.btnSent.Location = New System.Drawing.Point(6, 454)
         Me.btnSent.Name = "btnSent"
         Me.btnSent.Size = New System.Drawing.Size(182, 27)
         Me.btnSent.TabIndex = 12
@@ -307,7 +353,7 @@ Partial Class SendSMSWindow
         '
         Me.btnLoad.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnLoad.Image = CType(resources.GetObject("btnLoad.Image"), System.Drawing.Image)
-        Me.btnLoad.Location = New System.Drawing.Point(6, 399)
+        Me.btnLoad.Location = New System.Drawing.Point(6, 411)
         Me.btnLoad.Name = "btnLoad"
         Me.btnLoad.Size = New System.Drawing.Size(182, 27)
         Me.btnLoad.TabIndex = 11
@@ -396,4 +442,8 @@ Partial Class SendSMSWindow
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents ckByPeriod As DevExpress.XtraEditors.CheckEdit
     Friend WithEvents cAllClients As DevExpress.XtraEditors.CheckEdit
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents cbSMonth As System.Windows.Forms.ComboBox
+    Friend WithEvents cbSYear As System.Windows.Forms.ComboBox
 End Class

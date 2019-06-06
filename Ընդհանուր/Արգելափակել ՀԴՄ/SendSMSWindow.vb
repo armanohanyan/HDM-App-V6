@@ -220,7 +220,7 @@ Public Class SendSMSWindow
             Else
                 iType = False
                 If ckByPeriod.Checked = True Then
-                    dt = iDB.SmsForBlockingByYearAndMonth(o, cbYear.SelectedItem, cbMonth.SelectedItem)
+                    dt = iDB.SmsForBlockingByYearAndMonth(o, cbYear.SelectedItem, cbMonth.SelectedItem, cbSYear.SelectedItem, cbSMonth.SelectedItem)
                 Else
                     dt = iDB.SmsForBlockingByInterval(o)
                 End If
@@ -308,6 +308,18 @@ Public Class SendSMSWindow
             .SelectedItem = Now.Year
         End With
         With cbMonth
+            For i As Integer = 1 To 12
+                .Items.Add(i)
+            Next
+            .SelectedItem = Now.Month
+        End With
+        With cbSYear
+            For i As Integer = 2014 To 2030
+                .Items.Add(i)
+            Next
+            .SelectedItem = Now.Year
+        End With
+        With cbSMonth
             For i As Integer = 1 To 12
                 .Items.Add(i)
             Next

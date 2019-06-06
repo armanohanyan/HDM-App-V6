@@ -1943,17 +1943,20 @@ Partial Public Class DB
     End Function
 
     'SmsForBlockingByYearAndMonth
-    Friend Function SmsForBlockingByYearAndMonth(ByVal owner As Byte, ByVal Y As Short, ByVal M As Byte) As DataTable
+    Friend Function SmsForBlockingByYearAndMonth(ByVal owner As Byte, ByVal Y As Short, ByVal M As Byte, ByVal SY As Short, ByVal SM As Byte) As DataTable
         Dim dt As DataTable
         Using cnn As New SqlConnection(SQLString)
             cnn.Open()
             Using cmd As New SqlCommand
                 cmd.Connection = cnn
                 cmd.CommandType = CommandType.Text
-                cmd.CommandText = "EXEC Client.SmsForBlockingByYearAndMonth @O,@Y,@M"
+                cmd.CommandText = "EXEC Client.SmsForBlockingByYearAndMonth @O,@Y,@M,@SY,@SM"
                 cmd.Parameters.Add("@O", SqlDbType.TinyInt).Value = owner
                 cmd.Parameters.Add("@Y", SqlDbType.SmallInt).Value = Y
                 cmd.Parameters.Add("@M", SqlDbType.TinyInt).Value = M
+                cmd.Parameters.Add("@SY", SqlDbType.SmallInt).Value = SY
+                cmd.Parameters.Add("@SM", SqlDbType.TinyInt).Value = SM
+                cmd.CommandTimeout = 120
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)
