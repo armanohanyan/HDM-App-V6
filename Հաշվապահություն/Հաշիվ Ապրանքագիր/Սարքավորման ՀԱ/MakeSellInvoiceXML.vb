@@ -109,7 +109,11 @@ Public Class MakeSellInvoiceXML
             xw.WriteStartElement("BuyerInfo")
             'Start Taxpayer
             xw.WriteStartElement("Taxpayer")
-            xw.WriteElementString("TIN", dt2.Rows(0)("ՀՎՀՀ"))
+            Dim buyerHVHH As String = dt2.Rows(0)("ՀՎՀՀ")
+            If buyerHVHH.Length = 9 AndAlso buyerHVHH.EndsWith("S") Then
+                buyerHVHH = buyerHVHH.Substring(0, 8)
+            End If
+            xw.WriteElementString("TIN", buyerHVHH)
             xw.WriteElementString("Name", dt2.Rows(0)("Կազմակերպություն"))
             xw.WriteElementString("Address", dt2.Rows(0)("ԻրավաբանականՀասցե"))
             'Start BankAccount
