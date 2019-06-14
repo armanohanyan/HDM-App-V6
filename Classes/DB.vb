@@ -195,7 +195,7 @@ Partial Public Class DB
             Using cmd As New SqlCommand
                 cmd.Connection = cnn
                 cmd.CommandType = CommandType.Text
-                cmd.CommandText = "SELECT ՀՀ,Տեսուչ,Կարգավիճակ,ԷլՓոստ,Հեռախոս FROM Tesuch.GetTesuchList() WHERE Կարգավիճակ=1"
+                cmd.CommandText = "SELECT ՀՀ,Տեսուչ,Կարգավիճակ,ԷլՓոստ,Հեռախոս FROM Tesuch.GetTesuchList() WHERE Կարգավիճակ=1 ORDER BY Տեսուչ"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)

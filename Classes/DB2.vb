@@ -2955,6 +2955,26 @@ Partial Public Class DB
         Return s
     End Function
 
+    'GetCustomRegionByTesuch
+    Friend Function GetCustomRegionByTesuch(tesuch As Short) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandTimeout = 20
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.Add("@TesuchID", SqlDbType.SmallInt).Value = tesuch
+                cmd.CommandText = "SELECT * from tesuch.GetCustomRegionByTesuch(@TesuchID)"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
     'HdmShtrikhIsLocalTransferDone
     Friend Function HdmShtrikhIsLocalTransferDone(ShtrikhCode As String) As Integer
         Dim s As Integer

@@ -26,6 +26,8 @@ Partial Class CallHaytGeneral
         Me.FormAssistant1 = New DevExpress.XtraBars.FormAssistant()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtRegion = New DevExpress.XtraEditors.TextEdit()
+        Me.cbTesuch = New System.Windows.Forms.ComboBox()
         Me.btnOK = New DevExpress.XtraEditors.SimpleButton()
         Me.cbEcr = New System.Windows.Forms.ComboBox()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -75,6 +77,7 @@ Partial Class CallHaytGeneral
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.txtRegion.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtProps.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtGPRS.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtPartq.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -110,6 +113,10 @@ Partial Class CallHaytGeneral
         'Panel1
         '
         Me.Panel1.AutoScroll = True
+        Me.Panel1.Controls.Add(Me.txtTesuch)
+        Me.Panel1.Controls.Add(Me.cbRegion)
+        Me.Panel1.Controls.Add(Me.txtRegion)
+        Me.Panel1.Controls.Add(Me.cbTesuch)
         Me.Panel1.Controls.Add(Me.btnOK)
         Me.Panel1.Controls.Add(Me.cbEcr)
         Me.Panel1.Controls.Add(Me.Label17)
@@ -136,8 +143,6 @@ Partial Class CallHaytGeneral
         Me.Panel1.Controls.Add(Me.btnAdd)
         Me.Panel1.Controls.Add(Me.cbSupporter)
         Me.Panel1.Controls.Add(Me.sDate)
-        Me.Panel1.Controls.Add(Me.txtTesuch)
-        Me.Panel1.Controls.Add(Me.cbRegion)
         Me.Panel1.Controls.Add(Me.txtTel)
         Me.Panel1.Controls.Add(Me.txtClient)
         Me.Panel1.Controls.Add(Me.txtAddress)
@@ -158,13 +163,31 @@ Partial Class CallHaytGeneral
         Me.Panel1.Size = New System.Drawing.Size(294, 655)
         Me.Panel1.TabIndex = 0
         '
+        'txtRegion
+        '
+        Me.txtRegion.Location = New System.Drawing.Point(53, 192)
+        Me.txtRegion.Name = "txtRegion"
+        Me.txtRegion.Properties.ReadOnly = True
+        Me.txtRegion.Size = New System.Drawing.Size(227, 20)
+        Me.txtRegion.TabIndex = 69
+        Me.txtRegion.TabStop = False
+        '
+        'cbTesuch
+        '
+        Me.cbTesuch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbTesuch.FormattingEnabled = True
+        Me.cbTesuch.Location = New System.Drawing.Point(53, 165)
+        Me.cbTesuch.Name = "cbTesuch"
+        Me.cbTesuch.Size = New System.Drawing.Size(128, 21)
+        Me.cbTesuch.TabIndex = 68
+        '
         'btnOK
         '
         Me.btnOK.Location = New System.Drawing.Point(111, 354)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(166, 29)
         Me.btnOK.TabIndex = 67
-        Me.btnOK.Text = "Տրամադրել"
+        Me.btnOK.Text = "Կցել Փոխարինող ՀԴՄ"
         '
         'cbEcr
         '
@@ -227,7 +250,7 @@ Partial Class CallHaytGeneral
         'txtProps
         '
         Me.txtProps.EditValue = "0"
-        Me.txtProps.Location = New System.Drawing.Point(240, 192)
+        Me.txtProps.Location = New System.Drawing.Point(240, 166)
         Me.txtProps.Name = "txtProps"
         Me.txtProps.Properties.ReadOnly = True
         Me.txtProps.RightToLeft = System.Windows.Forms.RightToLeft.Yes
@@ -238,7 +261,7 @@ Partial Class CallHaytGeneral
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(189, 195)
+        Me.Label11.Location = New System.Drawing.Point(189, 169)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(45, 13)
         Me.Label11.TabIndex = 59
@@ -389,7 +412,7 @@ Partial Class CallHaytGeneral
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(272, 32)
         Me.btnAdd.TabIndex = 9
-        Me.btnAdd.Text = "Ավելացնել"
+        Me.btnAdd.Text = "Ավելացնել հայտ / տրամադրել փոխարինող"
         '
         'cbSupporter
         '
@@ -404,7 +427,7 @@ Partial Class CallHaytGeneral
         'sDate
         '
         Me.sDate.EditValue = Nothing
-        Me.sDate.Location = New System.Drawing.Point(71, 218)
+        Me.sDate.Location = New System.Drawing.Point(82, 218)
         Me.sDate.Name = "sDate"
         Me.sDate.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.[False]
         Me.sDate.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!)
@@ -414,12 +437,12 @@ Partial Class CallHaytGeneral
         Me.sDate.Properties.Mask.EditMask = "g"
         Me.sDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret
         Me.sDate.Properties.Mask.UseMaskAsDisplayFormat = True
-        Me.sDate.Size = New System.Drawing.Size(210, 26)
+        Me.sDate.Size = New System.Drawing.Size(199, 26)
         Me.sDate.TabIndex = 6
         '
         'txtTesuch
         '
-        Me.txtTesuch.Location = New System.Drawing.Point(52, 192)
+        Me.txtTesuch.Location = New System.Drawing.Point(35, 398)
         Me.txtTesuch.Name = "txtTesuch"
         Me.txtTesuch.Properties.ReadOnly = True
         Me.txtTesuch.Size = New System.Drawing.Size(131, 20)
@@ -430,7 +453,7 @@ Partial Class CallHaytGeneral
         '
         Me.cbRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbRegion.FormattingEnabled = True
-        Me.cbRegion.Location = New System.Drawing.Point(53, 165)
+        Me.cbRegion.Location = New System.Drawing.Point(35, 424)
         Me.cbRegion.Name = "cbRegion"
         Me.cbRegion.Size = New System.Drawing.Size(227, 21)
         Me.cbRegion.TabIndex = 5
@@ -486,7 +509,7 @@ Partial Class CallHaytGeneral
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(11, 221)
+        Me.Label8.Location = New System.Drawing.Point(19, 226)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(54, 13)
         Me.Label8.TabIndex = 31
@@ -495,7 +518,7 @@ Partial Class CallHaytGeneral
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(5, 168)
+        Me.Label7.Location = New System.Drawing.Point(1, 195)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(42, 13)
         Me.Label7.TabIndex = 30
@@ -504,7 +527,7 @@ Partial Class CallHaytGeneral
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(7, 195)
+        Me.Label6.Location = New System.Drawing.Point(7, 168)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(41, 13)
         Me.Label6.TabIndex = 29
@@ -622,6 +645,7 @@ Partial Class CallHaytGeneral
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.txtRegion.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtProps.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtGPRS.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtPartq.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -690,4 +714,6 @@ Partial Class CallHaytGeneral
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents cbEcr As System.Windows.Forms.ComboBox
     Friend WithEvents btnOK As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents cbTesuch As System.Windows.Forms.ComboBox
+    Friend WithEvents txtRegion As DevExpress.XtraEditors.TextEdit
 End Class

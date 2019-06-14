@@ -62,6 +62,25 @@ Public Class CallHaytGeneral
             Call SoftException(ex)
         End Try
     End Sub
+    Private Sub LoadTesuch()
+        Try
+
+            Dim dtT As DataTable = iDB.GetWorkingTesuchList
+
+            With cbTesuch
+                .DataSource = dtT
+                .DisplayMember = "Տեսուչ"
+                .ValueMember = "ՀՀ"
+            End With
+
+        Catch ex As ExceptionClass
+        Catch ex As System.Data.SqlClient.SqlException
+            Call SQLException(ex)
+        Catch ex As Exception
+            Call SoftException(ex)
+        End Try
+    End Sub
+
     Private Function isHDMExists(hdm As String) As Boolean
         Try
             Dim icount As Object = iDB.ProposalGeneralEcrCount(hdm)
@@ -148,7 +167,10 @@ Public Class CallHaytGeneral
 
     Private Sub CallHaytGeneral_Load(sender As Object, e As EventArgs) Handles Me.Load
         On Error Resume Next
-
+        cbRegion.Enabled = False
+        cbRegion.Visible = False
+        txtTesuch.Enabled = False
+        txtTesuch.Visible = False
         'Dim d1 As Date
         'If Now.Date.DayOfWeek = DayOfWeek.Saturday Then
         '    d1 = DateAdd(DateInterval.Day, 2, Now.Date)
@@ -159,6 +181,7 @@ Public Class CallHaytGeneral
 
         Call LoadSupporter()
         Call LoadRegion()
+        Call LoadTesuch()
 
         cProb.SelectedIndex = 0
 
@@ -214,7 +237,7 @@ Public Class CallHaytGeneral
                 txtClient.Text = dt.Rows(0)("Գործընկեր")
                 'txtTel.Text = dt.Rows(0)("Հեռ")
                 If dt.Rows(0)("Տարածաշրջան") <> "-" Then cbRegion.Text = dt.Rows(0)("Տարածաշրջան")
-
+                cbTesuch.Text = iDB.GetCustomTesuchByRegin(cbRegion.SelectedValue)
                 txtProblem.Focus()
             End If
 
@@ -358,6 +381,7 @@ Public Class CallHaytGeneral
         txtClient.Text = ""
         txtTel.Text = ""
         txtTesuch.Text = ""
+        'cbTesuch.Text = ""
         txtProblem.Text = ""
 
         txtStatus.Text = ""
@@ -503,11 +527,23 @@ Public Class CallHaytGeneral
     End Sub
     Private Sub cbRegion_SelectedValueChanged(sender As Object, e As EventArgs) Handles cbRegion.SelectedValueChanged
         On Error Resume Next
-
         If IsNothing(cbRegion.SelectedValue) Then txtTesuch.Text = String.Empty : Exit Sub
         Dim s As String = iDB.GetCustomTesuchByRegin(cbRegion.SelectedValue)
         txtTesuch.Text = s
-
+    End Sub
+    Private Sub cbTesuch_SelectedValueChanged(sender As Object, e As EventArgs) Handles cbTesuch.SelectedValueChanged
+        On Error Resume Next
+        If IsNothing(cbTesuch.SelectedValue) Then txtTesuch.Text = String.Empty : Exit Sub
+        Dim dt As DataTable = iDB.GetCustomRegionByTesuch(cbTesuch.SelectedValue)
+        Dim regionID As Short = dt.Rows(0)("RegionID")
+        Dim region As String = dt.Rows(0)("Region")
+        If dt.Rows.Count > 1 Then
+            For i = 1 To dt.Rows.Count - 1
+                region = region & ", " & dt.Rows(i)("Region")
+            Next
+        End If
+        txtRegion.Text = region
+        cbRegion.SelectedValue = regionID
     End Sub
     Private Sub CallHaytGeneral_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Call cbRegion_SelectedValueChanged(cbRegion, Nothing)
