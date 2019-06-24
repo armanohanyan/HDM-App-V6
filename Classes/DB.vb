@@ -195,7 +195,7 @@ Partial Public Class DB
             Using cmd As New SqlCommand
                 cmd.Connection = cnn
                 cmd.CommandType = CommandType.Text
-                cmd.CommandText = "SELECT ՀՀ,Տեսուչ,Կարգավիճակ,ԷլՓոստ,Հեռախոս FROM Tesuch.GetTesuchList() WHERE Կարգավիճակ=1 ORDER BY Տեսուչ"
+                cmd.CommandText = "SELECT ՀՀ,Տեսուչ,Կարգավիճակ,ԷլՓոստ,Հեռախոս FROM Tesuch.GetTesuchList() WHERE Կարգավիճակ=1 ORDER BY Ռեգիոն, Տեսուչ"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)
@@ -7088,6 +7088,16 @@ Partial Public Class DB
         End Using
     End Sub
 
+    'SetRemakePropSold
+    Friend Sub SetRemakePropSold(ByVal hvhh As String)
+        Using connection As New SqlConnection(SQLString)
+            Dim cmdSQLcom As New SqlCommand("EXEC Client.SetRemakePropSold @hvhh", connection)
+            cmdSQLcom.Parameters.Add("@hvhh", Data.SqlDbType.NVarChar).Value = hvhh
+            connection.Open()
+            cmdSQLcom.ExecuteNonQuery()
+            connection.Close()
+        End Using
+    End Sub
 #End Region
 
 #Region "Auto Complete"

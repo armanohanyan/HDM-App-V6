@@ -26,6 +26,8 @@ Partial Class CallHaytGeneral
         Me.FormAssistant1 = New DevExpress.XtraBars.FormAssistant()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.txtTesuch = New DevExpress.XtraEditors.TextEdit()
+        Me.cbRegion = New System.Windows.Forms.ComboBox()
         Me.txtRegion = New DevExpress.XtraEditors.TextEdit()
         Me.cbTesuch = New System.Windows.Forms.ComboBox()
         Me.btnOK = New DevExpress.XtraEditors.SimpleButton()
@@ -54,8 +56,6 @@ Partial Class CallHaytGeneral
         Me.btnAdd = New DevExpress.XtraEditors.SimpleButton()
         Me.cbSupporter = New System.Windows.Forms.ComboBox()
         Me.sDate = New DevExpress.XtraEditors.DateEdit()
-        Me.txtTesuch = New DevExpress.XtraEditors.TextEdit()
-        Me.cbRegion = New System.Windows.Forms.ComboBox()
         Me.txtTel = New DevExpress.XtraEditors.TextEdit()
         Me.txtClient = New DevExpress.XtraEditors.TextEdit()
         Me.txtAddress = New DevExpress.XtraEditors.TextEdit()
@@ -77,6 +77,7 @@ Partial Class CallHaytGeneral
         Me.WebBrowser1 = New System.Windows.Forms.WebBrowser()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.txtTesuch.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtRegion.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtProps.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtGPRS.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,7 +85,6 @@ Partial Class CallHaytGeneral
         CType(Me.txtStatus.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.sDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.sDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTesuch.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTel.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtClient.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtAddress.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -162,6 +162,24 @@ Partial Class CallHaytGeneral
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(294, 655)
         Me.Panel1.TabIndex = 0
+        '
+        'txtTesuch
+        '
+        Me.txtTesuch.Location = New System.Drawing.Point(35, 398)
+        Me.txtTesuch.Name = "txtTesuch"
+        Me.txtTesuch.Properties.ReadOnly = True
+        Me.txtTesuch.Size = New System.Drawing.Size(131, 20)
+        Me.txtTesuch.TabIndex = 40
+        Me.txtTesuch.TabStop = False
+        '
+        'cbRegion
+        '
+        Me.cbRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbRegion.FormattingEnabled = True
+        Me.cbRegion.Location = New System.Drawing.Point(35, 424)
+        Me.cbRegion.Name = "cbRegion"
+        Me.cbRegion.Size = New System.Drawing.Size(227, 21)
+        Me.cbRegion.TabIndex = 5
         '
         'txtRegion
         '
@@ -440,24 +458,6 @@ Partial Class CallHaytGeneral
         Me.sDate.Size = New System.Drawing.Size(199, 26)
         Me.sDate.TabIndex = 6
         '
-        'txtTesuch
-        '
-        Me.txtTesuch.Location = New System.Drawing.Point(35, 398)
-        Me.txtTesuch.Name = "txtTesuch"
-        Me.txtTesuch.Properties.ReadOnly = True
-        Me.txtTesuch.Size = New System.Drawing.Size(131, 20)
-        Me.txtTesuch.TabIndex = 40
-        Me.txtTesuch.TabStop = False
-        '
-        'cbRegion
-        '
-        Me.cbRegion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbRegion.FormattingEnabled = True
-        Me.cbRegion.Location = New System.Drawing.Point(35, 424)
-        Me.cbRegion.Name = "cbRegion"
-        Me.cbRegion.Size = New System.Drawing.Size(227, 21)
-        Me.cbRegion.TabIndex = 5
-        '
         'txtTel
         '
         Me.txtTel.Location = New System.Drawing.Point(54, 139)
@@ -645,6 +645,7 @@ Partial Class CallHaytGeneral
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.txtTesuch.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtRegion.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtProps.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtGPRS.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -652,7 +653,6 @@ Partial Class CallHaytGeneral
         CType(Me.txtStatus.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.sDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.sDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTesuch.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTel.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtClient.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtAddress.Properties, System.ComponentModel.ISupportInitialize).EndInit()

@@ -416,7 +416,7 @@ Public Class CallHaytGeneral
             txtAddress.Text = GridView1.GetFocusedDataRow.Item("Հասցե").ToString
             'txtTel.Text = GridView1.GetFocusedDataRow.Item("Հեռ").ToString
             If GridView1.GetFocusedDataRow.Item("Տարածաշրջան").ToString <> "-" Then cbRegion.Text = GridView1.GetFocusedDataRow.Item("Տարածաշրջան").ToString
-
+            cbTesuch.Text = iDB.GetCustomTesuchByRegin(cbRegion.SelectedValue)
             If txtHVHH.Text <> String.Empty Then
                 Dim dt2 As DataTable = iDB.ActivatePropGetSupporter(txtHVHH.Text.Trim)
                 If dt2.Rows.Count = 1 Then
@@ -690,7 +690,7 @@ Public Class CallHaytGeneral
             RepEcr = cbEcr.Text
             RepEcrID = cbEcr.SelectedValue
 
-            MsgBox("Գործողությունը կատարվեց", MsgBoxStyle.Information, My.Application.Info.Title)
+            'MsgBox("Գործողությունը կատարվեց", MsgBoxStyle.Information, My.Application.Info.Title)
 
             Call cbRemProblem_SelectedIndexChanged(cbRemProblem, Nothing)
         Catch ex As ExceptionClass
@@ -809,4 +809,5 @@ Public Class CallHaytGeneral
         End Try
     End Function
 #End Region
+
 End Class
