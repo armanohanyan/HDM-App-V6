@@ -15,10 +15,10 @@
 
             Dim r As Decimal = iDB.GetCustomPriceForRemake(ID, tarifID)
 
-            If txtAmount.Text <> 0 Then
-                Dim z As Double = 100 * txtAmount.Text / r
-                If z < 80 OrElse z > 120 Then Throw New Exception("Գրված գումարը շեղվել է 20 %-ից: Սարքավորման արժեքը " & r & " դրամ է")
-            End If
+            'If txtAmount.Text <> 0 Then
+            '    Dim z As Double = 100 * txtAmount.Text / r
+            '    If z < 80 OrElse z > 120 Then Throw New Exception("Գրված գումարը շեղվել է 20 %-ից: Սարքավորման արժեքը " & r & " դրամ է")
+            'End If
 
             iDB.UpdateSoldEquipmentPrice(ID, txtAmount.Text)
 
