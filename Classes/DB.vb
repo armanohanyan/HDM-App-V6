@@ -4540,7 +4540,7 @@ Partial Public Class DB
     End Function
 
     'GetSupporterToClientInfo
-    Friend Function GetSupporterToClientInfo(ByVal ShtrikhCode As String, ByVal SupporterID As Byte, isRemote As Boolean) As DataTable
+    Friend Function GetSupporterToClientInfo(ByVal ShtrikhCode As String, ByVal SupporterID As Byte, isRemote As Boolean, ClientID As Integer) As DataTable
         Dim dt As DataTable
         Using cnn As New SqlConnection(SQLString)
             cnn.Open()
@@ -4550,7 +4550,8 @@ Partial Public Class DB
                 cmd.Parameters.Add("@ShtrikhCode", SqlDbType.Char).Value = ShtrikhCode
                 cmd.Parameters.Add("@SupporterID", SqlDbType.TinyInt).Value = SupporterID
                 cmd.Parameters.Add("@isRemote", SqlDbType.Bit).Value = isRemote
-                cmd.CommandText = "EXEC warehouse.GetSupporterToClientInfo @ShtrikhCode,@SupporterID,@isRemote"
+                cmd.Parameters.Add("@ClientID", SqlDbType.Int).Value = ClientID
+                cmd.CommandText = "EXEC warehouse.GetSupporterToClientInfo @ShtrikhCode,@SupporterID,@isRemote,@ClientID"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)

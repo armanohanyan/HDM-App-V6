@@ -63,10 +63,10 @@ Partial Class ListOfWorkShopItems
         Me.mnuDelete = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnuDeleteShtrikhCode = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.TmTimer = New System.Windows.Forms.Timer(Me.components)
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnuMessage = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.TmTimer = New System.Windows.Forms.Timer(Me.components)
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -476,7 +476,7 @@ Partial Class ListOfWorkShopItems
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuDelete, Me.ToolStripMenuItem1, Me.mnuDeleteShtrikhCode, Me.ToolStripMenuItem2, Me.mnuMessage})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(228, 104)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(228, 82)
         '
         'mnuDelete
         '
@@ -496,6 +496,17 @@ Partial Class ListOfWorkShopItems
         Me.mnuDeleteShtrikhCode.Name = "mnuDeleteShtrikhCode"
         Me.mnuDeleteShtrikhCode.Size = New System.Drawing.Size(227, 22)
         Me.mnuDeleteShtrikhCode.Text = "Ջնջել Շտրիխ Կոդով"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(224, 6)
+        '
+        'mnuMessage
+        '
+        Me.mnuMessage.Name = "mnuMessage"
+        Me.mnuMessage.Size = New System.Drawing.Size(227, 22)
+        Me.mnuMessage.Text = "Տեղեկացնել ՀԴՄ-ի Մասին"
         '
         'GridView1
         '
@@ -518,17 +529,6 @@ Partial Class ListOfWorkShopItems
         'TmTimer
         '
         Me.TmTimer.Interval = 1000
-        '
-        'ToolStripMenuItem2
-        '
-        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(224, 6)
-        '
-        'mnuMessage
-        '
-        Me.mnuMessage.Name = "mnuMessage"
-        Me.mnuMessage.Size = New System.Drawing.Size(227, 22)
-        Me.mnuMessage.Text = "Տեղեկացնել ՀԴՄ-ի Մասին"
         '
         'ListOfWorkShopItems
         '

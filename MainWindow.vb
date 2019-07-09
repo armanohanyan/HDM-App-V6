@@ -2693,23 +2693,19 @@ Public Class MainWindow
 
             If hi.Node IsNot Nothing Then
                 Select Case hi.Node.Id
-                    Case 0
-                        'Հայտեր
+                    Case 0  'Հայտեր
                         '////////////////////////////////////////////////////////////////////////
-                        'Ակտիվացման Հայտ
-                    Case 1
+                    Case 1  'Ակտիվացման Հայտ
                         If CheckPermission("868D1C12CC42465BA7DCAE2B279CD58F") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nCallHaytActivate")
                         Dim f As New CallHaytActivate
                         AddChildForm("nCallHaytActivate", f)
-                        'Ընդհանուր Հայտ
-                    Case 2
+                    Case 2  'Ընդհանուր Հայտ
                         If CheckPermission("3B90FF27CB3F484493120D340DC196C7") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nCallHaytGeneral")
                         Dim f As New CallHaytGeneral
                         AddChildForm("nCallHaytGeneral", f)
-                        'Խմբագրել Ակտիվացման Հայտերը
-                    Case 3
+                    Case 3  'Խմբագրել Ակտիվացման Հայտերը
                         If CheckPermission("E4060F573FE342B496EC629A3E7FCD33") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         'Call CloseWindow("nActiveHaytWin")
                         'Dim f As New ActiveHaytWin
@@ -2717,44 +2713,37 @@ Public Class MainWindow
                         Dim f As New EditActivateHayt
                         f.ShowDialog()
                         f.Dispose()
-                        'Խմբագրել Ընդհանուր Հայտերը
-                    Case 4
+                    Case 4  'Խմբագրել Ընդհանուր Հայտերը
                         If CheckPermission("7D0D71A6422748108546B1AEB559B2F7") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim f As New EditGeneralHayt
                         f.ShowDialog()
                         f.Dispose()
-                        'Դիտել Ակտիվացման Հայտերը
-                    Case 5
+                    Case 5  'Դիտել Ակտիվացման Հայտերը
                         If CheckPermission("A2ADDECDE9034B91A442C5707C428D20") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim f As New ViewActivateHaytSelector
                         f.ShowDialog()
                         f.Dispose()
-                        'Դիտել Ընդհանուր Հայտերը
-                    Case 6
+                    Case 6  'Դիտել Ընդհանուր Հայտերը
                         If CheckPermission("77AECB3F04294AD499F19BE5CA500ECB") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim f As New ViewGeneralHaytSelector
                         f.ShowDialog()
                         f.Dispose()
-                        'Ուղրկել Անհատական SMS
-                    Case 7
+                    Case 7  'Ուղրկել Անհատական SMS
                         If CheckPermission("DFF9FC21F14049A6BAF6EF28CD3D407C") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim f As New CustomSMS
                         f.ShowDialog()
                         f.Dispose()
-                        'Փակ Հայտեր
-                    Case 8
+                    Case 8  'Փակ Հայտեր
                         If CheckPermission("8F4410403E1840749FF38A9432E52718") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim f As New ClosedPropSelect
                         f.ShowDialog()
                         f.Dispose()
-                        'Բաց Հայտեր
-                    Case 9
+                    Case 9  'Բաց Հայտեր
                         If CheckPermission("A944BA07C90846CF89FE2CB08C2AF7AC") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim f As New OpenPropSelector
                         f.ShowDialog()
                         f.Dispose()
-                        'Հայտի Վերլուծություն
-                    Case 10
+                    Case 10 'Հայտի Վերլուծություն
                         If CheckPermission("6E2805538310451AB4DEBE862115E6A5") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim f As New SelectPropAnalitics
                         f.ShowDialog()

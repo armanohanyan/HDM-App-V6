@@ -287,6 +287,25 @@ Partial Class MainWindow
         Me.txtMessage = New System.Windows.Forms.TextBox()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.panelContainer2 = New DevExpress.XtraBars.Docking.DockPanel()
+        Me.DockPanel1 = New DevExpress.XtraBars.Docking.DockPanel()
+        Me.ControlContainer3 = New DevExpress.XtraBars.Docking.ControlContainer()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.GridControl4 = New DevExpress.XtraGrid.GridControl()
+        Me.ContextMenuStrip3 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.mnuRef1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.mnuChangeExpireDate1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.mnuDelete = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GridView4 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.GridControl5 = New DevExpress.XtraGrid.GridControl()
+        Me.ContextMenuStrip4 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.mnuRef2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.mnuChangeTime2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GridView5 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.MenuPanel = New DevExpress.XtraBars.Docking.DockPanel()
         Me.DockPanel1_Container = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.NavBarControl1 = New DevExpress.XtraNavBar.NavBarControl()
@@ -311,25 +330,6 @@ Partial Class MainWindow
         Me.NavBarGroup2 = New DevExpress.XtraNavBar.NavBarGroup()
         Me.NavBarGroup3 = New DevExpress.XtraNavBar.NavBarGroup()
         Me.NavBarGroup5 = New DevExpress.XtraNavBar.NavBarGroup()
-        Me.DockPanel1 = New DevExpress.XtraBars.Docking.DockPanel()
-        Me.ControlContainer3 = New DevExpress.XtraBars.Docking.ControlContainer()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.GridControl4 = New DevExpress.XtraGrid.GridControl()
-        Me.ContextMenuStrip3 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.mnuRef1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
-        Me.mnuChangeExpireDate1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.mnuDelete = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GridView4 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.GridControl5 = New DevExpress.XtraGrid.GridControl()
-        Me.ContextMenuStrip4 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.mnuRef2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripSeparator()
-        Me.mnuChangeTime2 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GridView5 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.DockPanel2 = New DevExpress.XtraBars.Docking.DockPanel()
         Me.ControlContainer4 = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
@@ -438,6 +438,17 @@ Partial Class MainWindow
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.panelContainer2.SuspendLayout()
+        Me.DockPanel1.SuspendLayout()
+        Me.ControlContainer3.SuspendLayout()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        CType(Me.GridControl4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip3.SuspendLayout()
+        CType(Me.GridView4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel5.SuspendLayout()
+        CType(Me.GridControl5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip4.SuspendLayout()
+        CType(Me.GridView5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuPanel.SuspendLayout()
         Me.DockPanel1_Container.SuspendLayout()
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -453,17 +464,6 @@ Partial Class MainWindow
         CType(Me.AcountTreeList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NavBarGroupControlContainer5.SuspendLayout()
         CType(Me.CallCenterTreeList, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.DockPanel1.SuspendLayout()
-        Me.ControlContainer3.SuspendLayout()
-        Me.TableLayoutPanel1.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        CType(Me.GridControl4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ContextMenuStrip3.SuspendLayout()
-        CType(Me.GridView4, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel5.SuspendLayout()
-        CType(Me.GridControl5, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ContextMenuStrip4.SuspendLayout()
-        CType(Me.GridView5, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DockPanel2.SuspendLayout()
         Me.ControlContainer4.SuspendLayout()
         Me.TableLayoutPanel2.SuspendLayout()
@@ -2291,10 +2291,10 @@ Partial Class MainWindow
         Me.panelContainer1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Right
         Me.panelContainer1.FloatSize = New System.Drawing.Size(311, 379)
         Me.panelContainer1.ID = New System.Guid("a06e1f3b-ab42-41a2-a737-0097cca0f308")
-        Me.panelContainer1.Location = New System.Drawing.Point(783, 146)
+        Me.panelContainer1.Location = New System.Drawing.Point(783, 170)
         Me.panelContainer1.Name = "panelContainer1"
         Me.panelContainer1.OriginalSize = New System.Drawing.Size(317, 200)
-        Me.panelContainer1.Size = New System.Drawing.Size(317, 572)
+        Me.panelContainer1.Size = New System.Drawing.Size(317, 548)
         Me.panelContainer1.Text = "panelContainer1"
         '
         'panelContainer3
@@ -2308,8 +2308,8 @@ Partial Class MainWindow
         Me.panelContainer3.ID = New System.Guid("fcaf2345-728e-495c-8aae-e113652435ed")
         Me.panelContainer3.Location = New System.Drawing.Point(0, 0)
         Me.panelContainer3.Name = "panelContainer3"
-        Me.panelContainer3.OriginalSize = New System.Drawing.Size(317, 160)
-        Me.panelContainer3.Size = New System.Drawing.Size(317, 160)
+        Me.panelContainer3.OriginalSize = New System.Drawing.Size(317, 153)
+        Me.panelContainer3.Size = New System.Drawing.Size(317, 153)
         Me.panelContainer3.Tabbed = True
         Me.panelContainer3.Text = "panelContainer3"
         '
@@ -2321,8 +2321,8 @@ Partial Class MainWindow
         Me.CallPanel.ID = New System.Guid("12b361b2-2874-4ffb-a625-b97ff1606508")
         Me.CallPanel.Location = New System.Drawing.Point(4, 23)
         Me.CallPanel.Name = "CallPanel"
-        Me.CallPanel.OriginalSize = New System.Drawing.Size(309, 106)
-        Me.CallPanel.Size = New System.Drawing.Size(309, 106)
+        Me.CallPanel.OriginalSize = New System.Drawing.Size(309, 99)
+        Me.CallPanel.Size = New System.Drawing.Size(309, 99)
         Me.CallPanel.Text = "Զանգերի Կենտրոն"
         '
         'ControlContainer2
@@ -2330,7 +2330,7 @@ Partial Class MainWindow
         Me.ControlContainer2.Controls.Add(Me.Panel3)
         Me.ControlContainer2.Location = New System.Drawing.Point(0, 0)
         Me.ControlContainer2.Name = "ControlContainer2"
-        Me.ControlContainer2.Size = New System.Drawing.Size(309, 106)
+        Me.ControlContainer2.Size = New System.Drawing.Size(309, 99)
         Me.ControlContainer2.TabIndex = 0
         '
         'Panel3
@@ -2341,7 +2341,7 @@ Partial Class MainWindow
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(309, 106)
+        Me.Panel3.Size = New System.Drawing.Size(309, 99)
         Me.Panel3.TabIndex = 0
         '
         'lblHVHHP
@@ -2379,8 +2379,8 @@ Partial Class MainWindow
         Me.RemakePanel.ID = New System.Guid("54d900e7-d775-4047-b781-e239943ce2e3")
         Me.RemakePanel.Location = New System.Drawing.Point(4, 23)
         Me.RemakePanel.Name = "RemakePanel"
-        Me.RemakePanel.OriginalSize = New System.Drawing.Size(309, 106)
-        Me.RemakePanel.Size = New System.Drawing.Size(309, 106)
+        Me.RemakePanel.OriginalSize = New System.Drawing.Size(309, 99)
+        Me.RemakePanel.Size = New System.Drawing.Size(309, 99)
         Me.RemakePanel.Text = "Մուտք Կենտրոնի Արհեստանոց"
         '
         'ControlContainer1
@@ -2388,7 +2388,7 @@ Partial Class MainWindow
         Me.ControlContainer1.Controls.Add(Me.Panel1)
         Me.ControlContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ControlContainer1.Name = "ControlContainer1"
-        Me.ControlContainer1.Size = New System.Drawing.Size(309, 106)
+        Me.ControlContainer1.Size = New System.Drawing.Size(309, 99)
         Me.ControlContainer1.TabIndex = 0
         '
         'Panel1
@@ -2399,7 +2399,7 @@ Partial Class MainWindow
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(309, 106)
+        Me.Panel1.Size = New System.Drawing.Size(309, 99)
         Me.Panel1.TabIndex = 0
         '
         'GridControl3
@@ -2414,7 +2414,7 @@ Partial Class MainWindow
         Me.GridControl3.MainView = Me.GridView3
         Me.GridControl3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridControl3.Name = "GridControl3"
-        Me.GridControl3.Size = New System.Drawing.Size(294, 57)
+        Me.GridControl3.Size = New System.Drawing.Size(294, 50)
         Me.GridControl3.TabIndex = 17
         Me.GridControl3.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView3})
         '
@@ -2473,8 +2473,8 @@ Partial Class MainWindow
         Me.PartqPanel.ID = New System.Guid("52d346a8-c7d1-4857-801d-cfe242307b5f")
         Me.PartqPanel.Location = New System.Drawing.Point(4, 23)
         Me.PartqPanel.Name = "PartqPanel"
-        Me.PartqPanel.OriginalSize = New System.Drawing.Size(309, 106)
-        Me.PartqPanel.Size = New System.Drawing.Size(309, 106)
+        Me.PartqPanel.OriginalSize = New System.Drawing.Size(309, 99)
+        Me.PartqPanel.Size = New System.Drawing.Size(309, 99)
         Me.PartqPanel.Text = "ՀԴՄ Կարգավիճակի Ստուգում"
         '
         'DockPanel3_Container
@@ -2482,7 +2482,7 @@ Partial Class MainWindow
         Me.DockPanel3_Container.Controls.Add(Me.Panel2)
         Me.DockPanel3_Container.Location = New System.Drawing.Point(0, 0)
         Me.DockPanel3_Container.Name = "DockPanel3_Container"
-        Me.DockPanel3_Container.Size = New System.Drawing.Size(309, 106)
+        Me.DockPanel3_Container.Size = New System.Drawing.Size(309, 99)
         Me.DockPanel3_Container.TabIndex = 0
         '
         'Panel2
@@ -2494,7 +2494,7 @@ Partial Class MainWindow
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(309, 106)
+        Me.Panel2.Size = New System.Drawing.Size(309, 99)
         Me.Panel2.TabIndex = 0
         '
         'txtPayRes
@@ -2540,11 +2540,11 @@ Partial Class MainWindow
         Me.InfoPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill
         Me.InfoPanel.FloatSize = New System.Drawing.Size(311, 379)
         Me.InfoPanel.ID = New System.Guid("d55d7518-5b5c-45b1-9b4c-2522c8641fab")
-        Me.InfoPanel.Location = New System.Drawing.Point(0, 160)
+        Me.InfoPanel.Location = New System.Drawing.Point(0, 153)
         Me.InfoPanel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.InfoPanel.Name = "InfoPanel"
-        Me.InfoPanel.OriginalSize = New System.Drawing.Size(317, 412)
-        Me.InfoPanel.Size = New System.Drawing.Size(317, 412)
+        Me.InfoPanel.OriginalSize = New System.Drawing.Size(317, 395)
+        Me.InfoPanel.Size = New System.Drawing.Size(317, 395)
         Me.InfoPanel.Text = "Տեղեկատու"
         '
         'DockPanel2_Container
@@ -2553,7 +2553,7 @@ Partial Class MainWindow
         Me.DockPanel2_Container.Location = New System.Drawing.Point(4, 23)
         Me.DockPanel2_Container.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DockPanel2_Container.Name = "DockPanel2_Container"
-        Me.DockPanel2_Container.Size = New System.Drawing.Size(309, 385)
+        Me.DockPanel2_Container.Size = New System.Drawing.Size(309, 368)
         Me.DockPanel2_Container.TabIndex = 0
         '
         'PanelControl1
@@ -2567,7 +2567,7 @@ Partial Class MainWindow
         Me.PanelControl1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PanelControl1.Location = New System.Drawing.Point(0, 0)
         Me.PanelControl1.Name = "PanelControl1"
-        Me.PanelControl1.Size = New System.Drawing.Size(309, 385)
+        Me.PanelControl1.Size = New System.Drawing.Size(309, 368)
         Me.PanelControl1.TabIndex = 0
         '
         'GridControl1
@@ -2581,7 +2581,7 @@ Partial Class MainWindow
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(295, 266)
+        Me.GridControl1.Size = New System.Drawing.Size(295, 249)
         Me.GridControl1.TabIndex = 14
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -2645,18 +2645,191 @@ Partial Class MainWindow
         '
         'panelContainer2
         '
-        Me.panelContainer2.ActiveChild = Me.MenuPanel
+        Me.panelContainer2.ActiveChild = Me.DockPanel1
         Me.panelContainer2.Controls.Add(Me.MenuPanel)
         Me.panelContainer2.Controls.Add(Me.DockPanel1)
         Me.panelContainer2.Controls.Add(Me.DockPanel2)
         Me.panelContainer2.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left
         Me.panelContainer2.ID = New System.Guid("4d4ddedd-3b71-4ad2-8ee6-050984838a05")
-        Me.panelContainer2.Location = New System.Drawing.Point(0, 146)
+        Me.panelContainer2.Location = New System.Drawing.Point(0, 170)
         Me.panelContainer2.Name = "panelContainer2"
         Me.panelContainer2.OriginalSize = New System.Drawing.Size(275, 200)
-        Me.panelContainer2.Size = New System.Drawing.Size(275, 572)
+        Me.panelContainer2.Size = New System.Drawing.Size(275, 548)
         Me.panelContainer2.Tabbed = True
         Me.panelContainer2.Text = "panelContainer2"
+        '
+        'DockPanel1
+        '
+        Me.DockPanel1.Controls.Add(Me.ControlContainer3)
+        Me.DockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill
+        Me.DockPanel1.ID = New System.Guid("b63c07df-8b92-4348-bf24-8a207e5c1745")
+        Me.DockPanel1.Location = New System.Drawing.Point(4, 23)
+        Me.DockPanel1.Name = "DockPanel1"
+        Me.DockPanel1.OriginalSize = New System.Drawing.Size(267, 494)
+        Me.DockPanel1.Size = New System.Drawing.Size(267, 494)
+        Me.DockPanel1.Text = "Փոխարինված ՀԴՄ"
+        '
+        'ControlContainer3
+        '
+        Me.ControlContainer3.Controls.Add(Me.TableLayoutPanel1)
+        Me.ControlContainer3.Location = New System.Drawing.Point(0, 0)
+        Me.ControlContainer3.Name = "ControlContainer3"
+        Me.ControlContainer3.Size = New System.Drawing.Size(267, 494)
+        Me.ControlContainer3.TabIndex = 0
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 1
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel5, 0, 1)
+        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 2
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(267, 494)
+        Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.GridControl4)
+        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel4.Location = New System.Drawing.Point(3, 3)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(261, 241)
+        Me.Panel4.TabIndex = 0
+        '
+        'GridControl4
+        '
+        Me.GridControl4.ContextMenuStrip = Me.ContextMenuStrip3
+        Me.GridControl4.Cursor = System.Windows.Forms.Cursors.Default
+        Me.GridControl4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GridControl4.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GridControl4.Location = New System.Drawing.Point(0, 0)
+        Me.GridControl4.MainView = Me.GridView4
+        Me.GridControl4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GridControl4.Name = "GridControl4"
+        Me.GridControl4.Size = New System.Drawing.Size(261, 241)
+        Me.GridControl4.TabIndex = 18
+        Me.GridControl4.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView4})
+        '
+        'ContextMenuStrip3
+        '
+        Me.ContextMenuStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuRef1, Me.ToolStripMenuItem2, Me.mnuChangeExpireDate1, Me.ToolStripMenuItem1, Me.mnuDelete})
+        Me.ContextMenuStrip3.Name = "ContextMenuStrip3"
+        Me.ContextMenuStrip3.Size = New System.Drawing.Size(217, 82)
+        '
+        'mnuRef1
+        '
+        Me.mnuRef1.Name = "mnuRef1"
+        Me.mnuRef1.Size = New System.Drawing.Size(216, 22)
+        Me.mnuRef1.Text = "Refresh"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(213, 6)
+        '
+        'mnuChangeExpireDate1
+        '
+        Me.mnuChangeExpireDate1.Name = "mnuChangeExpireDate1"
+        Me.mnuChangeExpireDate1.Size = New System.Drawing.Size(216, 22)
+        Me.mnuChangeExpireDate1.Text = "Փոխել Վերջնաժամկետը"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(213, 6)
+        '
+        'mnuDelete
+        '
+        Me.mnuDelete.Name = "mnuDelete"
+        Me.mnuDelete.Size = New System.Drawing.Size(216, 22)
+        Me.mnuDelete.Text = "Ջնջել"
+        '
+        'GridView4
+        '
+        Me.GridView4.GridControl = Me.GridControl4
+        Me.GridView4.Name = "GridView4"
+        Me.GridView4.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.[False]
+        Me.GridView4.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.[False]
+        Me.GridView4.OptionsBehavior.Editable = False
+        Me.GridView4.OptionsBehavior.ReadOnly = True
+        Me.GridView4.OptionsCustomization.AllowColumnMoving = False
+        Me.GridView4.OptionsCustomization.AllowColumnResizing = False
+        Me.GridView4.OptionsCustomization.AllowFilter = False
+        Me.GridView4.OptionsCustomization.AllowGroup = False
+        Me.GridView4.OptionsCustomization.AllowQuickHideColumns = False
+        Me.GridView4.OptionsCustomization.AllowRowSizing = True
+        Me.GridView4.OptionsView.ShowColumnHeaders = False
+        Me.GridView4.OptionsView.ShowDetailButtons = False
+        Me.GridView4.OptionsView.ShowGroupPanel = False
+        '
+        'Panel5
+        '
+        Me.Panel5.Controls.Add(Me.GridControl5)
+        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel5.Location = New System.Drawing.Point(3, 250)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(261, 241)
+        Me.Panel5.TabIndex = 1
+        '
+        'GridControl5
+        '
+        Me.GridControl5.ContextMenuStrip = Me.ContextMenuStrip4
+        Me.GridControl5.Cursor = System.Windows.Forms.Cursors.Default
+        Me.GridControl5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GridControl5.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GridControl5.Location = New System.Drawing.Point(0, 0)
+        Me.GridControl5.MainView = Me.GridView5
+        Me.GridControl5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.GridControl5.Name = "GridControl5"
+        Me.GridControl5.Size = New System.Drawing.Size(261, 241)
+        Me.GridControl5.TabIndex = 19
+        Me.GridControl5.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView5})
+        '
+        'ContextMenuStrip4
+        '
+        Me.ContextMenuStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuRef2, Me.ToolStripMenuItem3, Me.mnuChangeTime2})
+        Me.ContextMenuStrip4.Name = "ContextMenuStrip4"
+        Me.ContextMenuStrip4.Size = New System.Drawing.Size(217, 54)
+        '
+        'mnuRef2
+        '
+        Me.mnuRef2.Name = "mnuRef2"
+        Me.mnuRef2.Size = New System.Drawing.Size(216, 22)
+        Me.mnuRef2.Text = "Refresh"
+        '
+        'ToolStripMenuItem3
+        '
+        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(213, 6)
+        '
+        'mnuChangeTime2
+        '
+        Me.mnuChangeTime2.Name = "mnuChangeTime2"
+        Me.mnuChangeTime2.Size = New System.Drawing.Size(216, 22)
+        Me.mnuChangeTime2.Text = "Փոխել Վերջնաժամկետը"
+        '
+        'GridView5
+        '
+        Me.GridView5.GridControl = Me.GridControl5
+        Me.GridView5.Name = "GridView5"
+        Me.GridView5.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.[False]
+        Me.GridView5.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.[False]
+        Me.GridView5.OptionsBehavior.Editable = False
+        Me.GridView5.OptionsBehavior.ReadOnly = True
+        Me.GridView5.OptionsCustomization.AllowColumnMoving = False
+        Me.GridView5.OptionsCustomization.AllowColumnResizing = False
+        Me.GridView5.OptionsCustomization.AllowFilter = False
+        Me.GridView5.OptionsCustomization.AllowGroup = False
+        Me.GridView5.OptionsCustomization.AllowQuickHideColumns = False
+        Me.GridView5.OptionsCustomization.AllowRowSizing = True
+        Me.GridView5.OptionsView.ShowColumnHeaders = False
+        Me.GridView5.OptionsView.ShowDetailButtons = False
+        Me.GridView5.OptionsView.ShowGroupPanel = False
         '
         'MenuPanel
         '
@@ -2666,8 +2839,8 @@ Partial Class MainWindow
         Me.MenuPanel.Location = New System.Drawing.Point(4, 23)
         Me.MenuPanel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MenuPanel.Name = "MenuPanel"
-        Me.MenuPanel.OriginalSize = New System.Drawing.Size(267, 518)
-        Me.MenuPanel.Size = New System.Drawing.Size(267, 518)
+        Me.MenuPanel.OriginalSize = New System.Drawing.Size(267, 494)
+        Me.MenuPanel.Size = New System.Drawing.Size(267, 494)
         Me.MenuPanel.Text = "Ուղղորդիչ"
         '
         'DockPanel1_Container
@@ -2676,7 +2849,7 @@ Partial Class MainWindow
         Me.DockPanel1_Container.Location = New System.Drawing.Point(0, 0)
         Me.DockPanel1_Container.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DockPanel1_Container.Name = "DockPanel1_Container"
-        Me.DockPanel1_Container.Size = New System.Drawing.Size(267, 518)
+        Me.DockPanel1_Container.Size = New System.Drawing.Size(267, 494)
         Me.DockPanel1_Container.TabIndex = 0
         '
         'NavBarControl1
@@ -2694,7 +2867,7 @@ Partial Class MainWindow
         Me.NavBarControl1.Name = "NavBarControl1"
         Me.NavBarControl1.OptionsNavPane.ExpandedWidth = 267
         Me.NavBarControl1.PaintStyleKind = DevExpress.XtraNavBar.NavBarViewKind.NavigationPane
-        Me.NavBarControl1.Size = New System.Drawing.Size(267, 518)
+        Me.NavBarControl1.Size = New System.Drawing.Size(267, 494)
         Me.NavBarControl1.TabIndex = 0
         Me.NavBarControl1.Text = "NavBarControl1"
         '
@@ -3227,179 +3400,6 @@ Partial Class MainWindow
         Me.NavBarGroup5.Name = "NavBarGroup5"
         Me.NavBarGroup5.SmallImage = CType(resources.GetObject("NavBarGroup5.SmallImage"), System.Drawing.Image)
         '
-        'DockPanel1
-        '
-        Me.DockPanel1.Controls.Add(Me.ControlContainer3)
-        Me.DockPanel1.Dock = DevExpress.XtraBars.Docking.DockingStyle.Fill
-        Me.DockPanel1.ID = New System.Guid("b63c07df-8b92-4348-bf24-8a207e5c1745")
-        Me.DockPanel1.Location = New System.Drawing.Point(4, 23)
-        Me.DockPanel1.Name = "DockPanel1"
-        Me.DockPanel1.OriginalSize = New System.Drawing.Size(267, 518)
-        Me.DockPanel1.Size = New System.Drawing.Size(267, 518)
-        Me.DockPanel1.Text = "Փոխարինված ՀԴՄ"
-        '
-        'ControlContainer3
-        '
-        Me.ControlContainer3.Controls.Add(Me.TableLayoutPanel1)
-        Me.ControlContainer3.Location = New System.Drawing.Point(0, 0)
-        Me.ControlContainer3.Name = "ControlContainer3"
-        Me.ControlContainer3.Size = New System.Drawing.Size(267, 518)
-        Me.ControlContainer3.TabIndex = 0
-        '
-        'TableLayoutPanel1
-        '
-        Me.TableLayoutPanel1.ColumnCount = 1
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Panel5, 0, 1)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(267, 518)
-        Me.TableLayoutPanel1.TabIndex = 0
-        '
-        'Panel4
-        '
-        Me.Panel4.Controls.Add(Me.GridControl4)
-        Me.Panel4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel4.Location = New System.Drawing.Point(3, 3)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(261, 253)
-        Me.Panel4.TabIndex = 0
-        '
-        'GridControl4
-        '
-        Me.GridControl4.ContextMenuStrip = Me.ContextMenuStrip3
-        Me.GridControl4.Cursor = System.Windows.Forms.Cursors.Default
-        Me.GridControl4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl4.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GridControl4.Location = New System.Drawing.Point(0, 0)
-        Me.GridControl4.MainView = Me.GridView4
-        Me.GridControl4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GridControl4.Name = "GridControl4"
-        Me.GridControl4.Size = New System.Drawing.Size(261, 253)
-        Me.GridControl4.TabIndex = 18
-        Me.GridControl4.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView4})
-        '
-        'ContextMenuStrip3
-        '
-        Me.ContextMenuStrip3.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuRef1, Me.ToolStripMenuItem2, Me.mnuChangeExpireDate1, Me.ToolStripMenuItem1, Me.mnuDelete})
-        Me.ContextMenuStrip3.Name = "ContextMenuStrip3"
-        Me.ContextMenuStrip3.Size = New System.Drawing.Size(217, 82)
-        '
-        'mnuRef1
-        '
-        Me.mnuRef1.Name = "mnuRef1"
-        Me.mnuRef1.Size = New System.Drawing.Size(216, 22)
-        Me.mnuRef1.Text = "Refresh"
-        '
-        'ToolStripMenuItem2
-        '
-        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(213, 6)
-        '
-        'mnuChangeExpireDate1
-        '
-        Me.mnuChangeExpireDate1.Name = "mnuChangeExpireDate1"
-        Me.mnuChangeExpireDate1.Size = New System.Drawing.Size(216, 22)
-        Me.mnuChangeExpireDate1.Text = "Փոխել Վերջնաժամկետը"
-        '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(213, 6)
-        '
-        'mnuDelete
-        '
-        Me.mnuDelete.Name = "mnuDelete"
-        Me.mnuDelete.Size = New System.Drawing.Size(216, 22)
-        Me.mnuDelete.Text = "Ջնջել"
-        '
-        'GridView4
-        '
-        Me.GridView4.GridControl = Me.GridControl4
-        Me.GridView4.Name = "GridView4"
-        Me.GridView4.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.[False]
-        Me.GridView4.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.[False]
-        Me.GridView4.OptionsBehavior.Editable = False
-        Me.GridView4.OptionsBehavior.ReadOnly = True
-        Me.GridView4.OptionsCustomization.AllowColumnMoving = False
-        Me.GridView4.OptionsCustomization.AllowColumnResizing = False
-        Me.GridView4.OptionsCustomization.AllowFilter = False
-        Me.GridView4.OptionsCustomization.AllowGroup = False
-        Me.GridView4.OptionsCustomization.AllowQuickHideColumns = False
-        Me.GridView4.OptionsCustomization.AllowRowSizing = True
-        Me.GridView4.OptionsView.ShowColumnHeaders = False
-        Me.GridView4.OptionsView.ShowDetailButtons = False
-        Me.GridView4.OptionsView.ShowGroupPanel = False
-        '
-        'Panel5
-        '
-        Me.Panel5.Controls.Add(Me.GridControl5)
-        Me.Panel5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel5.Location = New System.Drawing.Point(3, 262)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(261, 253)
-        Me.Panel5.TabIndex = 1
-        '
-        'GridControl5
-        '
-        Me.GridControl5.ContextMenuStrip = Me.ContextMenuStrip4
-        Me.GridControl5.Cursor = System.Windows.Forms.Cursors.Default
-        Me.GridControl5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl5.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GridControl5.Location = New System.Drawing.Point(0, 0)
-        Me.GridControl5.MainView = Me.GridView5
-        Me.GridControl5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GridControl5.Name = "GridControl5"
-        Me.GridControl5.Size = New System.Drawing.Size(261, 253)
-        Me.GridControl5.TabIndex = 19
-        Me.GridControl5.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView5})
-        '
-        'ContextMenuStrip4
-        '
-        Me.ContextMenuStrip4.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuRef2, Me.ToolStripMenuItem3, Me.mnuChangeTime2})
-        Me.ContextMenuStrip4.Name = "ContextMenuStrip4"
-        Me.ContextMenuStrip4.Size = New System.Drawing.Size(217, 54)
-        '
-        'mnuRef2
-        '
-        Me.mnuRef2.Name = "mnuRef2"
-        Me.mnuRef2.Size = New System.Drawing.Size(216, 22)
-        Me.mnuRef2.Text = "Refresh"
-        '
-        'ToolStripMenuItem3
-        '
-        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(213, 6)
-        '
-        'mnuChangeTime2
-        '
-        Me.mnuChangeTime2.Name = "mnuChangeTime2"
-        Me.mnuChangeTime2.Size = New System.Drawing.Size(216, 22)
-        Me.mnuChangeTime2.Text = "Փոխել Վերջնաժամկետը"
-        '
-        'GridView5
-        '
-        Me.GridView5.GridControl = Me.GridControl5
-        Me.GridView5.Name = "GridView5"
-        Me.GridView5.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.[False]
-        Me.GridView5.OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.[False]
-        Me.GridView5.OptionsBehavior.Editable = False
-        Me.GridView5.OptionsBehavior.ReadOnly = True
-        Me.GridView5.OptionsCustomization.AllowColumnMoving = False
-        Me.GridView5.OptionsCustomization.AllowColumnResizing = False
-        Me.GridView5.OptionsCustomization.AllowFilter = False
-        Me.GridView5.OptionsCustomization.AllowGroup = False
-        Me.GridView5.OptionsCustomization.AllowQuickHideColumns = False
-        Me.GridView5.OptionsCustomization.AllowRowSizing = True
-        Me.GridView5.OptionsView.ShowColumnHeaders = False
-        Me.GridView5.OptionsView.ShowDetailButtons = False
-        Me.GridView5.OptionsView.ShowGroupPanel = False
-        '
         'DockPanel2
         '
         Me.DockPanel2.Controls.Add(Me.ControlContainer4)
@@ -3407,8 +3407,8 @@ Partial Class MainWindow
         Me.DockPanel2.ID = New System.Guid("54053939-e2a2-47dc-af69-7e84246b9333")
         Me.DockPanel2.Location = New System.Drawing.Point(4, 23)
         Me.DockPanel2.Name = "DockPanel2"
-        Me.DockPanel2.OriginalSize = New System.Drawing.Size(267, 518)
-        Me.DockPanel2.Size = New System.Drawing.Size(267, 518)
+        Me.DockPanel2.OriginalSize = New System.Drawing.Size(267, 494)
+        Me.DockPanel2.Size = New System.Drawing.Size(267, 494)
         Me.DockPanel2.Text = "Արհեստանոցի Հաղորդագրություն"
         '
         'ControlContainer4
@@ -3416,7 +3416,7 @@ Partial Class MainWindow
         Me.ControlContainer4.Controls.Add(Me.TableLayoutPanel2)
         Me.ControlContainer4.Location = New System.Drawing.Point(0, 0)
         Me.ControlContainer4.Name = "ControlContainer4"
-        Me.ControlContainer4.Size = New System.Drawing.Size(267, 518)
+        Me.ControlContainer4.Size = New System.Drawing.Size(267, 494)
         Me.ControlContainer4.TabIndex = 0
         '
         'TableLayoutPanel2
@@ -3431,7 +3431,7 @@ Partial Class MainWindow
         Me.TableLayoutPanel2.RowCount = 2
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(267, 518)
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(267, 494)
         Me.TableLayoutPanel2.TabIndex = 0
         '
         'Panel6
@@ -3440,7 +3440,7 @@ Partial Class MainWindow
         Me.Panel6.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel6.Location = New System.Drawing.Point(3, 3)
         Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(261, 253)
+        Me.Panel6.Size = New System.Drawing.Size(261, 241)
         Me.Panel6.TabIndex = 0
         '
         'GridControl6
@@ -3452,7 +3452,7 @@ Partial Class MainWindow
         Me.GridControl6.MainView = Me.GridView6
         Me.GridControl6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridControl6.Name = "GridControl6"
-        Me.GridControl6.Size = New System.Drawing.Size(261, 253)
+        Me.GridControl6.Size = New System.Drawing.Size(261, 241)
         Me.GridControl6.TabIndex = 20
         Me.GridControl6.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView6})
         '
@@ -3477,9 +3477,9 @@ Partial Class MainWindow
         '
         Me.Panel7.Controls.Add(Me.GridControl7)
         Me.Panel7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel7.Location = New System.Drawing.Point(3, 262)
+        Me.Panel7.Location = New System.Drawing.Point(3, 250)
         Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(261, 253)
+        Me.Panel7.Size = New System.Drawing.Size(261, 241)
         Me.Panel7.TabIndex = 1
         '
         'GridControl7
@@ -3491,7 +3491,7 @@ Partial Class MainWindow
         Me.GridControl7.MainView = Me.GridView7
         Me.GridControl7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridControl7.Name = "GridControl7"
-        Me.GridControl7.Size = New System.Drawing.Size(261, 253)
+        Me.GridControl7.Size = New System.Drawing.Size(261, 241)
         Me.GridControl7.TabIndex = 20
         Me.GridControl7.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView7})
         '
@@ -3551,8 +3551,8 @@ Partial Class MainWindow
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1100, 749)
         Me.Controls.Add(Me.MainMenu)
-        Me.Controls.Add(Me.panelContainer2)
         Me.Controls.Add(Me.panelContainer1)
+        Me.Controls.Add(Me.panelContainer2)
         Me.Controls.Add(Me.RibbonStatusBar1)
         Me.Controls.Add(Me.RibbonPanel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -3666,6 +3666,17 @@ Partial Class MainWindow
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.panelContainer2.ResumeLayout(False)
+        Me.DockPanel1.ResumeLayout(False)
+        Me.ControlContainer3.ResumeLayout(False)
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        CType(Me.GridControl4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip3.ResumeLayout(False)
+        CType(Me.GridView4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel5.ResumeLayout(False)
+        CType(Me.GridControl5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip4.ResumeLayout(False)
+        CType(Me.GridView5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuPanel.ResumeLayout(False)
         Me.DockPanel1_Container.ResumeLayout(False)
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -3681,17 +3692,6 @@ Partial Class MainWindow
         CType(Me.AcountTreeList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NavBarGroupControlContainer5.ResumeLayout(False)
         CType(Me.CallCenterTreeList, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.DockPanel1.ResumeLayout(False)
-        Me.ControlContainer3.ResumeLayout(False)
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
-        CType(Me.GridControl4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ContextMenuStrip3.ResumeLayout(False)
-        CType(Me.GridView4, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel5.ResumeLayout(False)
-        CType(Me.GridControl5, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ContextMenuStrip4.ResumeLayout(False)
-        CType(Me.GridView5, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DockPanel2.ResumeLayout(False)
         Me.ControlContainer4.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)

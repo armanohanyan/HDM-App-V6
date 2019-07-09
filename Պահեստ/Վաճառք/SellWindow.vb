@@ -241,7 +241,7 @@ Public Class SellWindow
                     isRemote = False
                 End If
 
-                dt = iDB.GetSupporterToClientInfo(txtShtrikhCode.Text.Trim, SupporterID, isRemote)
+                dt = iDB.GetSupporterToClientInfo(txtShtrikhCode.Text.Trim, SupporterID, isRemote, ClientID)
 
                 If dt.Rows.Count = 0 Then Throw New Exception("Պահեստում սարքավորումը չի հայտնաբերվել")
                 If dt.Rows.Count > 1 Then Throw New Exception("Պահեստից սխալ քանակի ապրանք է ստացվել")
