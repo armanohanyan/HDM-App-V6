@@ -218,6 +218,10 @@ Public Class ListOfWorkShopItems
         Try
             If txtShtrikh.Text.Trim.Length <> 7 Then Exit Sub
 
+            If iDB.IsEcrPaidForRemake(ecr, txtShtrikh.Text.Trim) = "True" Then
+                If MsgBox("Տվյալ ՀԴՄ-ի վրա սահմանված ժամկետում այս սարքավորումը փոխարնիվում է երկրորդ անգամ,հետևաբար ծառայությունը կլինի ՎՃԱՐՈՎԻ: Կատարե՞լ գործարքը", MsgBoxStyle.Information + MsgBoxStyle.YesNo, My.Application.Info.Title) <> MsgBoxResult.Yes Then Exit Sub
+            End If
+
             Dim isRemote As Boolean
 
             If GetIpAddress.StartsWith("192.168.22.") Then

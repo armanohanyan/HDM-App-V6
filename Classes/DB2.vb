@@ -3291,6 +3291,24 @@ Partial Public Class DB
         Return s
     End Function
 
+    'IsEcrPaidForRemake
+    Friend Function IsEcrPaidForRemake(Ecr As String, ShtrikhCode As String) As String
+        Dim s As String
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandTimeout = 20
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.Add("@Ecr", SqlDbType.NVarChar).Value = Ecr
+                cmd.Parameters.Add("@shtrikh", SqlDbType.NVarChar).Value = ShtrikhCode
+                cmd.CommandText = "SELECT Client.IsEcrPaidForRemake(@Ecr,@shtrikh)"
+                s = cmd.ExecuteScalar()
+            End Using
+        End Using
+        Return s
+    End Function
+
     'CheckShtrikhBeforeTransferTransfered
     Friend Function CheckShtrikhBeforeTransferTransfered(shtrikhcode As String) As String
         Dim s As String
