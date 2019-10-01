@@ -9,6 +9,8 @@ Public Class SelectEquipmentSellType
             Dim dt1 As DataTable = iDB.GetSupporter
             Dim dt2 As DataTable = iDB.GetSupporter
 
+            Dim dt3 As DataTable = iDB.GetHVHHsForSell
+
             With cSeller
                 .DataSource = dt1
                 .DisplayMember = "Կազմակերպություն"
@@ -17,6 +19,12 @@ Public Class SelectEquipmentSellType
 
             With cBuyer
                 .DataSource = dt2
+                .DisplayMember = "Կազմակերպություն"
+                .ValueMember = "ՀՀ"
+            End With
+
+            With cbBvhhList
+                .DataSource = dt3
                 .DisplayMember = "Կազմակերպություն"
                 .ValueMember = "ՀՀ"
             End With

@@ -33,6 +33,7 @@ Partial Class SelectEquipmentSellType
         Me.Label4 = New System.Windows.Forms.Label()
         Me.txtHVHH = New System.Windows.Forms.TextBox()
         Me.btnCheck = New DevExpress.XtraEditors.SimpleButton()
+        Me.cbBvhhList = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'RibbonStatusBar1
@@ -124,12 +125,22 @@ Partial Class SelectEquipmentSellType
         Me.btnCheck.TabIndex = 11
         Me.btnCheck.Text = "Ստուգել"
         '
+        'cbBvhhList
+        '
+        Me.cbBvhhList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbBvhhList.FormattingEnabled = True
+        Me.cbBvhhList.Location = New System.Drawing.Point(14, 229)
+        Me.cbBvhhList.Name = "cbBvhhList"
+        Me.cbBvhhList.Size = New System.Drawing.Size(132, 21)
+        Me.cbBvhhList.TabIndex = 12
+        '
         'SelectEquipmentSellType
         '
         Me.AcceptButton = Me.btnCheck
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(310, 280)
+        Me.Controls.Add(Me.cbBvhhList)
         Me.Controls.Add(Me.btnCheck)
         Me.Controls.Add(Me.txtHVHH)
         Me.Controls.Add(Me.Label4)
@@ -162,4 +173,5 @@ Partial Class SelectEquipmentSellType
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents txtHVHH As System.Windows.Forms.TextBox
     Friend WithEvents btnCheck As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents cbBvhhList As System.Windows.Forms.ComboBox
 End Class
