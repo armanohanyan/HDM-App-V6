@@ -25,7 +25,7 @@ Public Class SelectEquipmentSellType
 
             With cbBvhhList
                 .DataSource = dt3
-                .DisplayMember = "Կազմակերպություն"
+                .DisplayMember = "ՀՎՀՀ"
                 .ValueMember = "ՀՀ"
             End With
 
@@ -102,4 +102,12 @@ Public Class SelectEquipmentSellType
         End Try
     End Sub
 
+    Private Sub cbBvhhList_Click(sender As Object, e As EventArgs) Handles cbBvhhList.Click
+
+    End Sub
+
+    Private Sub cbBvhhList_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbBvhhList.SelectedIndexChanged
+        Dim hvhh As String = cbBvhhList.Text.ToString
+        txtHVHH.Text = hvhh
+    End Sub
 End Class

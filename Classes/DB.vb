@@ -1127,7 +1127,7 @@ Partial Public Class DB
             Using cmd As New SqlCommand
                 cmd.Connection = cnn
                 cmd.CommandType = CommandType.Text
-                cmd.CommandText = "SELECT ՀՀ,ՀՎՀՀ,Կազմակերպություն,Հասցե,Տնօրեն,Հաշվապահ,Բանկ,ԲանկայինՀաշիվ,Հապավում,ԻնվՀապ,ԱԱՀ FROM Supporter.GetSupporter()"
+                cmd.CommandText = "SELECT * FROM Client.GetHVHHsForSell()"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)

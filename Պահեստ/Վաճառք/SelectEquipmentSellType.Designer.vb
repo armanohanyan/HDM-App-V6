@@ -34,6 +34,7 @@ Partial Class SelectEquipmentSellType
         Me.txtHVHH = New System.Windows.Forms.TextBox()
         Me.btnCheck = New DevExpress.XtraEditors.SimpleButton()
         Me.cbBvhhList = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'RibbonStatusBar1
@@ -119,9 +120,9 @@ Partial Class SelectEquipmentSellType
         '
         'btnCheck
         '
-        Me.btnCheck.Location = New System.Drawing.Point(157, 229)
+        Me.btnCheck.Location = New System.Drawing.Point(172, 247)
         Me.btnCheck.Name = "btnCheck"
-        Me.btnCheck.Size = New System.Drawing.Size(125, 23)
+        Me.btnCheck.Size = New System.Drawing.Size(110, 23)
         Me.btnCheck.TabIndex = 11
         Me.btnCheck.Text = "Ստուգել"
         '
@@ -129,10 +130,19 @@ Partial Class SelectEquipmentSellType
         '
         Me.cbBvhhList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbBvhhList.FormattingEnabled = True
-        Me.cbBvhhList.Location = New System.Drawing.Point(14, 229)
+        Me.cbBvhhList.Location = New System.Drawing.Point(14, 247)
         Me.cbBvhhList.Name = "cbBvhhList"
-        Me.cbBvhhList.Size = New System.Drawing.Size(132, 21)
+        Me.cbBvhhList.Size = New System.Drawing.Size(147, 21)
         Me.cbBvhhList.TabIndex = 12
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(12, 231)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(149, 13)
+        Me.Label1.TabIndex = 13
+        Me.Label1.Text = "Վաճառոք ունեցող ՀՎՀՀ-ներ"
         '
         'SelectEquipmentSellType
         '
@@ -140,6 +150,7 @@ Partial Class SelectEquipmentSellType
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(310, 280)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.cbBvhhList)
         Me.Controls.Add(Me.btnCheck)
         Me.Controls.Add(Me.txtHVHH)
@@ -174,4 +185,5 @@ Partial Class SelectEquipmentSellType
     Friend WithEvents txtHVHH As System.Windows.Forms.TextBox
     Friend WithEvents btnCheck As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents cbBvhhList As System.Windows.Forms.ComboBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 End Class
