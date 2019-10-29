@@ -15,6 +15,7 @@ Public Class changeGeneralHaytInfo
     Friend haytXndir As String = ""
     Friend haytDate As DateTime
     Friend haytRegion As String = ""
+    Friend haytCreator As String = ""
 
     Friend haytEditTime As DateTime
     Friend clientTel As String = ""
@@ -102,6 +103,8 @@ Public Class changeGeneralHaytInfo
             .DateTime = haytDate
         End With
         haytEditTime = haytDate
+
+        iDB.AddProposalGeneralEdited(txtEcr.Text.Trim, txtHvhh.Text.Trim, txtClient.Text.Trim, cbTesuch.Text, txtTel.Text.Trim, txtAddress.Text.Trim, cbSupporter.SelectedValue, haytID, txtProblem.Text.Trim, ApprDate.DateTime, cbRegion.SelectedValue, haytCreator.ToString)
     End Sub
     Private Sub btnChange_Click(sender As Object, e As EventArgs) Handles btnChange.Click
         Try

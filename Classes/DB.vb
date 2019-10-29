@@ -4396,6 +4396,22 @@ Partial Public Class DB
         Return b
     End Function
 
+    'IsHamadzaynagirPrinted
+    Friend Function IsHamadzaynagirPrinted(ByVal hvhh As String) As Boolean
+        Dim b
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT Client.IsHamadzaynagirPrinted(@HVHH)"
+                cmd.Parameters.Add("@HVHH", SqlDbType.VarChar).Value = hvhh
+                b = cmd.ExecuteScalar()
+            End Using
+        End Using
+        Return b
+    End Function
+
     'GetClientSupporter
     Friend Function GetClientSupporter(ByVal hvhh As String) As Byte
         Dim b
@@ -6009,6 +6025,42 @@ Partial Public Class DB
         End Using
     End Sub
 
+    'AddHamadzaynagir
+    Friend Sub AddHamadzaynagir(ByVal HVHH As String, ByVal generatedCode As Integer, ByVal addUser As Int16, printHamadzaynagir As Byte)
+        Using connection As New SqlConnection(SQLString)
+            Dim cmdSQLcom As New SqlCommand("EXEC Client.AddHamadzaynagir @ClientHVHH,@GeneratedCode,@AddUser,@PrintHamadzaynagir", connection)
+            cmdSQLcom.Parameters.Add("@ClientHVHH", SqlDbType.VarChar).Value = HVHH
+            cmdSQLcom.Parameters.Add("@GeneratedCode", SqlDbType.Int).Value = generatedCode
+            cmdSQLcom.Parameters.Add("@AddUser", SqlDbType.TinyInt).Value = addUser
+            cmdSQLcom.Parameters.Add("@PrintHamadzaynagir", SqlDbType.Bit).Value = printHamadzaynagir
+            connection.Open()
+            cmdSQLcom.ExecuteNonQuery()
+            connection.Close()
+        End Using
+    End Sub
+
+    'AddProposalGeneralEdited
+    Friend Sub AddProposalGeneralEdited(ecr As String, hvhh As String, Client As String, Tesuch As String, Tel As String, addr As String, Supporter As Byte, ID As Integer, ByVal Xndir As String, ByVal haytDate As DateTime, ByVal reg As String, ByVal haytCreator As String)
+        Using connection As New SqlConnection(SQLString)
+            Dim cmdSQLcom As New SqlCommand("EXEC Client.AddProposalGeneralEdited @ecr,@hvhh,@Client,@Tesuch,@Tel,@addr,@Supporter,@ID,@Xndir,@haytDate,@Reg,@haytCreator", connection)
+            cmdSQLcom.Parameters.Add("@ecr", Data.SqlDbType.VarChar).Value = ecr
+            cmdSQLcom.Parameters.Add("@hvhh", Data.SqlDbType.VarChar).Value = hvhh
+            cmdSQLcom.Parameters.Add("@Client", Data.SqlDbType.NVarChar).Value = Client
+            cmdSQLcom.Parameters.Add("@Tesuch", Data.SqlDbType.NVarChar).Value = Tesuch
+            cmdSQLcom.Parameters.Add("@Tel", Data.SqlDbType.VarChar).Value = Tel
+            cmdSQLcom.Parameters.Add("@addr", Data.SqlDbType.NVarChar).Value = addr
+            cmdSQLcom.Parameters.Add("@Supporter", Data.SqlDbType.TinyInt).Value = Supporter
+            cmdSQLcom.Parameters.Add("@Xndir", Data.SqlDbType.NVarChar).Value = Xndir
+            cmdSQLcom.Parameters.Add("@ID", Data.SqlDbType.Int).Value = ID
+            cmdSQLcom.Parameters.Add("@haytDate", Data.SqlDbType.DateTime).Value = haytDate
+            cmdSQLcom.Parameters.Add("@Reg", Data.SqlDbType.NVarChar).Value = reg
+            cmdSQLcom.Parameters.Add("@haytCreator", Data.SqlDbType.NVarChar).Value = haytCreator
+            connection.Open()
+            cmdSQLcom.ExecuteNonQuery()
+            connection.Close()
+        End Using
+    End Sub
+
     'AddEnterClickForBranch
     Friend Sub AddEnterClickForBranch(ByVal Ecr As String, ByVal userName As String)
         Using connection As New SqlConnection(SQLString)
@@ -7111,6 +7163,17 @@ Partial Public Class DB
     Friend Sub SetRemakePropSold(ByVal hvhh As String)
         Using connection As New SqlConnection(SQLString)
             Dim cmdSQLcom As New SqlCommand("EXEC Client.SetRemakePropSold @hvhh", connection)
+            cmdSQLcom.Parameters.Add("@hvhh", Data.SqlDbType.NVarChar).Value = hvhh
+            connection.Open()
+            cmdSQLcom.ExecuteNonQuery()
+            connection.Close()
+        End Using
+    End Sub
+
+    'SetRemakePropNotSold
+    Friend Sub SetRemakePropNotSold(ByVal hvhh As String)
+        Using connection As New SqlConnection(SQLString)
+            Dim cmdSQLcom As New SqlCommand("EXEC Client.SetRemakePropNotSold @hvhh", connection)
             cmdSQLcom.Parameters.Add("@hvhh", Data.SqlDbType.NVarChar).Value = hvhh
             connection.Open()
             cmdSQLcom.ExecuteNonQuery()

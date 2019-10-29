@@ -108,7 +108,7 @@ Public Class RepBank
                         Case 3
                             If HTSCode <= 58000 OrElse HTSCode >= 73000 Then GridView1.SetRowCellValue(RowID, "ՀՎՀՀ", DBNull.Value) : GridView1.SetRowCellValue(RowID, "Գործընկեր", DBNull.Value) : Throw New Exception("ՀԾ կոդը պետք է լինի 58001 - 72999 միջակայքում")
                         Case 4
-                            If Not ((HTSCode > 42000 AndAlso HTSCode < 57800) OrElse (HTSCode > 150000 AndAlso HTSCode < 200000)) Then GridView1.SetRowCellValue(RowID, "ՀՎՀՀ", DBNull.Value) : GridView1.SetRowCellValue(RowID, "Գործընկեր", DBNull.Value) : Throw New Exception("ՀԾ կոդը պետք է լինի 42001 - 57799 կամ 150000 - 200000 միջակայքում")
+                            If Not ((HTSCode >= 42000 AndAlso HTSCode < 57800) OrElse (HTSCode > 150000 AndAlso HTSCode < 200000)) Then GridView1.SetRowCellValue(RowID, "ՀՎՀՀ", DBNull.Value) : GridView1.SetRowCellValue(RowID, "Գործընկեր", DBNull.Value) : Throw New Exception("ՀԾ կոդը պետք է լինի 42001 - 57799 կամ 150000 - 200000 միջակայքում")
                             'If HTSCode <= 42000 OrElse HTSCode >= 57800 Then GridView1.SetRowCellValue(RowID, "ՀՎՀՀ", DBNull.Value) : GridView1.SetRowCellValue(RowID, "Գործընկեր", DBNull.Value) : Throw New Exception("ՀԾ կոդը պետք է լինի 42001 - 57800 միջակայքում")
                     End Select
                     Call GetHTSClientInfoForPayment(RowID, HTSCode)

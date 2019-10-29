@@ -253,7 +253,7 @@ Partial Class OpenRemakeAkt
         Me.btnPrintAkt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnPrintAkt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPrintAkt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.btnPrintAkt.Location = New System.Drawing.Point(385, 71)
+        Me.btnPrintAkt.Location = New System.Drawing.Point(385, 83)
         Me.btnPrintAkt.Name = "btnPrintAkt"
         Me.btnPrintAkt.Size = New System.Drawing.Size(151, 29)
         Me.btnPrintAkt.TabIndex = 7
@@ -266,7 +266,7 @@ Partial Class OpenRemakeAkt
         Me.btnSelectPrinter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnSelectPrinter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSelectPrinter.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.btnSelectPrinter.Location = New System.Drawing.Point(13, 71)
+        Me.btnSelectPrinter.Location = New System.Drawing.Point(13, 83)
         Me.btnSelectPrinter.Name = "btnSelectPrinter"
         Me.btnSelectPrinter.Size = New System.Drawing.Size(305, 29)
         Me.btnSelectPrinter.TabIndex = 6

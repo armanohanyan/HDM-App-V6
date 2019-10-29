@@ -91,6 +91,7 @@ Public Class HaytActivateEdit
                     .haytSpasarkox = GridView1.GetFocusedDataRow.Item("Սպասարկող").ToString
                     .haytDate = GridView1.GetFocusedDataRow.Item("ՀայտիԱմսաթիվ").ToString
                     .haytRegion = GridView1.GetFocusedDataRow.Item("Տարածաշրջան").ToString
+                    .haytCreator = GridView1.GetFocusedDataRow.Item("Օպերատոր").ToString
 
                     If IsDBNull(GridView1.GetFocusedDataRow.Item("Խնդիր/ՀաստատմանԿոդ")) Then
                         .haytAppr = ""
@@ -114,6 +115,7 @@ Public Class HaytActivateEdit
                     .haytXndir = GridView1.GetFocusedDataRow.Item("Խնդիր/ՀաստատմանԿոդ").ToString
                     .haytDate = GridView1.GetFocusedDataRow.Item("ՀայտիԱմսաթիվ").ToString
                     .haytRegion = GridView1.GetFocusedDataRow.Item("Տարածաշրջան").ToString
+                    .haytCreator = GridView1.GetFocusedDataRow.Item("Օպերատոր").ToString
                     .ShowDialog()
                 End With
             End If

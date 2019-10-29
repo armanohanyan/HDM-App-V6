@@ -194,6 +194,14 @@ Public Class aktForCloseHayt
             xlApp.Quit()
             xlApp = Nothing
 
+            If dt.Rows(0)("Տարիֆ") = 4 OrElse dt.Rows(0)("Տարիֆ") = 5 OrElse dt.Rows(0)("Տարիֆ") = 15 Then
+                If cbPrintHamadzaynagir.Checked = True OrElse iDB.IsHamadzaynagirPrinted(hvhh) = False Then
+                    Call PrintHamadzaynagir()
+                End If
+            End If
+
+
+
             btnPrintAkt.Enabled = False
             btnCheck.Enabled = True
         Catch ex As Exception
@@ -204,6 +212,91 @@ Public Class aktForCloseHayt
         If txtCode.Text.Trim <> strRandom Then MsgBox("Գեներացման կոդը չի համնընկնում", MsgBoxStyle.Exclamation, My.Application.Info.Title) : Exit Sub
         formResult = True
         Me.Close()
+    End Sub
+    Private Sub PrintHamadzaynagir()
+
+        Dim contract As String = dt.Rows(0)("Պայմանագիր")
+        'Dim contractDate As String = dt.Rows(0)("ՊայմանագրիԱմսաթիվ")
+        Dim printDate As String = Date.Now.ToString("dd.MM.yyyy")
+        Dim sCompany As String = dt.Rows(0)("Կազմակերպություն")
+        Dim sDirector As String = dt.Rows(0)("Տնօրեն")
+        Dim sAddress As String = dt.Rows(0)("Հասցե")
+        Dim sHVHH As String = dt.Rows(0)("ՊՀՎՀՀ")
+        Dim sHH As String = dt.Rows(0)("BankAccount")
+        Dim sBankName As String = dt.Rows(0)("Bank")
+        Dim cCompany As String = dt.Rows(0)("Անվանում")
+        Dim cDirector As String = dt.Rows(0)("Տնօրեն2")
+        Dim cIravAddress As String = dt.Rows(0)("ԻրավաբանականՀասցե")
+        Dim cAraqAddress As String = dt.Rows(0)("ԱռաքմանՀասցե")
+        Dim cHVHH As String = dt.Rows(0)("ՀՎՀՀ")
+        Dim cTel As String = dt.Rows(0)("Հեռախոս")
+
+        If String.IsNullOrEmpty(strPrinter) Then MsgBox("Տպիչը նշված չէ", MsgBoxStyle.Exclamation, My.Application.Info.Title) : Exit Sub
+        Try
+            Dim r As New Random
+            strRandom = r.Next(1000000000, Integer.MaxValue)
+
+            Dim strPath As String = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) & "\HDM AKT\Hamadzaynagir"  ' Edited
+            If IO.Directory.Exists(strPath) = False Then IO.Directory.CreateDirectory(strPath)
+            strPath &= "\Temp"
+            If IO.Directory.Exists(strPath) = False Then IO.Directory.CreateDirectory(strPath)
+
+            My.Computer.FileSystem.WriteAllBytes(strPath & "\" & strRandom & ".xls", My.Resources.HamdzaynagirPahestamasi, False) ' Edited
+
+            Dim xlApp As New Microsoft.Office.Interop.Excel.Application
+            Dim wbk As Microsoft.Office.Interop.Excel.Workbook = xlApp.Workbooks.Open(strPath & "\" & strRandom & ".xls")
+            xlApp.DisplayAlerts = False
+            Dim sheet As Microsoft.Office.Interop.Excel.Worksheet = DirectCast(wbk.Worksheets("Sheet1"), Microsoft.Office.Interop.Excel.Worksheet)
+
+            With sheet.PageSetup
+                .PrintTitleRows = ""
+                .PrintTitleColumns = ""
+
+                .PrintArea = ""
+                'Set Paper Size To A4
+                .PaperSize = XlPaperSize.xlPaperA4
+
+                .Zoom = 93
+            End With
+
+            '''''''''''''''''''''''''''''''''''''''''''''''''''''''Edited
+            With sheet
+                .Range("A2").Value = "ՀՍԿԻՉ-ԴՐԱՄԱՐԿՂԱՅԻՆ ՄԵՔԵՆԱՆԵՐԻ ՍՊԱՍԱՐԿՄԱՆ ԹԻՎ " & contract & " ՊԱՅՄԱՆԱԳՐԻ"
+                .Range("I5").Value = printDate
+                .Range("A7").Value = sCompany & " (այսուհետ՝ Կատարող), ի դեմս տնօրեն " & sDirector & "ի, ով գործում է ընկերության կանոնադրության հիման վրա, մի կողմից, և " & cCompany & "-ը (այսուհետ՝ Պատվիրատու), ի դեմս տնօրեն՝ " & cDirector & "Ի, մյուս կողմից, ղեկավարվելով ՀՀ գործող օրենսդրությամբ և հիմք ընդունելով կողմերի միջև կնքված թիվ " & contract & " Հսկիչ-Դրամարկղային մեքենաների սպասարկման պայմանագիրը (այսուհետ՝ Պայմանագիր), կնքեցին սույն համաձայնագիրը հետևյալի մասին․ "
+                .Range("A16").Value = sCompany
+                .Range("A17").Value = "Հասցե` " & sAddress
+                .Range("A21").Value = "ՀՎՀՀ` " & sHVHH
+                .Range("A23").Value = "Հ/Հ՝ " & sHH
+                .Range("A24").Value = "Բանկ` " & sBankName
+                .Range("A28").Value = sDirector
+                .Range("F16").Value = cCompany
+                .Range("F17").Value = "Իր. Հասցե` " & cIravAddress
+                .Range("F19").Value = "Առաք. Հասցե` " & cAraqAddress
+                .Range("F21").Value = "ՀՎՀՀ` " & cHVHH
+                .Range("F22").Value = "Հեռ` " & cTel
+                .Range("F28").Value = cDirector
+                If sHVHH = "01562313" Then
+                    .Range("A9").Value = "1. Պայմանագրի 3.3 կետը շարադրել հետևյալ խմբագրությամբ՝ " & vbCrLf & "<<3.3 ՀԴՄ-ի վերանորոգման համար անհրաժեշտ պարագաների (պահեստամասերի և այլն)  արժեքը ներառված է 3.1 կետում սահմանված ընթացիկ սպասարկման արժեքի մեջ, բացառությամբ՝ մարտկոցի, ցանցային ադապտորի, լիցքավորիչի, թերմոտպիչի, էկրանի և ֆիսկալի, որոնց համար Կատարողին վճարվում է Կատարողի մոտ գործող գնացուցակի համաձայն>>: PAX մոդելի ՀԴՄ-ի վերանորոգման համար անհրաժեշտ պարագաների (պահեստամասերի և այլն) արժեքը ներառված չէ 3.1 կետում սահմանված ընթացիկ սպասարկման արժեքի մեջ, որոնց համար Կատարողին վճարվում է Կատարողի կողմից սահմանված գնացուցակի համաձայն:"
+                End If
+
+            End With
+            '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+            sheet.PrintOutEx(1, 1, 2, False, strPrinter, False, True, "", False)
+
+            wbk.Close(SaveChanges:=True)
+            xlApp.Quit()
+            xlApp = Nothing
+
+            iDB.AddHamadzaynagir(dt.Rows(0)("ՀՎՀՀ"), strRandom, iUser.UserID, cbPrintHamadzaynagir.Checked)
+
+        Catch ex As ExceptionClass
+        Catch ex As System.Data.SqlClient.SqlException
+            Call SQLException(ex)
+        Catch ex As Exception
+            Call SoftException(ex)
+        End Try
     End Sub
 
 End Class

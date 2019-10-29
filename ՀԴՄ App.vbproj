@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>3956</ApplicationRevision>
+    <ApplicationRevision>3958</ApplicationRevision>
     <ApplicationVersion>6.4.20.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -3142,6 +3142,7 @@
     <None Include="Excel Files\Ecr Rep Akt 1.xlsx" />
     <None Include="Excel Files\Ecr Rep Akt 2.xlsx" />
     <None Include="Excel Files\gprsAkt.xlsx" />
+    <None Include="Excel Files\HamdzaynagirPahestamasi.xls" />
     <None Include="Excel Files\havelvac.xls" />
     <None Include="Excel Files\InnerTransferDoc.xlsx" />
     <None Include="Excel Files\lucum.xls" />

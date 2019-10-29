@@ -549,4 +549,8 @@ Public Class SellWindow
         End If
     End Sub
 
+    Private Sub btnCancelSale_Click(sender As Object, e As EventArgs) Handles btnCancelSale.Click
+        iDB.SetRemakePropNotSold(ClientHVHH)
+        Me.Close()
+    End Sub
 End Class

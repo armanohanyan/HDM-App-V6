@@ -48,6 +48,7 @@ Partial Class SellWindow
         Me.txtClientCompany = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnCancelSale = New DevExpress.XtraEditors.SimpleButton()
         Me.btnPrint = New DevExpress.XtraEditors.SimpleButton()
         Me.txtEquipment = New DevExpress.XtraEditors.TextEdit()
         Me.txtPrice = New DevExpress.XtraEditors.TextEdit()
@@ -284,6 +285,7 @@ Partial Class SellWindow
         '
         'GroupBox3
         '
+        Me.GroupBox3.Controls.Add(Me.btnCancelSale)
         Me.GroupBox3.Controls.Add(Me.btnPrint)
         Me.GroupBox3.Controls.Add(Me.txtEquipment)
         Me.GroupBox3.Controls.Add(Me.txtPrice)
@@ -300,10 +302,20 @@ Partial Class SellWindow
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Վաճառքի Ընտրություն"
         '
+        'btnCancelSale
+        '
+        Me.btnCancelSale.Image = CType(resources.GetObject("btnCancelSale.Image"), System.Drawing.Image)
+        Me.btnCancelSale.Location = New System.Drawing.Point(220, 141)
+        Me.btnCancelSale.Name = "btnCancelSale"
+        Me.btnCancelSale.Size = New System.Drawing.Size(126, 27)
+        Me.btnCancelSale.TabIndex = 18
+        Me.btnCancelSale.TabStop = False
+        Me.btnCancelSale.Text = "Չեղարկել վաճառքը"
+        '
         'btnPrint
         '
         Me.btnPrint.Image = CType(resources.GetObject("btnPrint.Image"), System.Drawing.Image)
-        Me.btnPrint.Location = New System.Drawing.Point(10, 110)
+        Me.btnPrint.Location = New System.Drawing.Point(10, 105)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(163, 34)
         Me.btnPrint.TabIndex = 17
@@ -353,7 +365,7 @@ Partial Class SellWindow
         '
         Me.btnAdd.Enabled = False
         Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
-        Me.btnAdd.Location = New System.Drawing.Point(183, 110)
+        Me.btnAdd.Location = New System.Drawing.Point(183, 105)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(163, 34)
         Me.btnAdd.TabIndex = 2
@@ -491,4 +503,5 @@ Partial Class SellWindow
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents txtProblem As System.Windows.Forms.TextBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
+    Friend WithEvents btnCancelSale As DevExpress.XtraEditors.SimpleButton
 End Class

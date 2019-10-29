@@ -15,6 +15,7 @@ Public Class changeActivHaytInfo
     Friend haytAppr As String = ""
     Friend haytDate As DateTime
     Friend haytRegion As String = ""
+    Friend haytCreator As String = ""
 
     Friend haytEditTime As DateTime
     Friend clientTel As String = ""

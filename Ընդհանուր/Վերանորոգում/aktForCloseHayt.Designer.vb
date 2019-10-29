@@ -42,6 +42,7 @@ Partial Class aktForCloseHayt
         Me.txtCode = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.FormAssistant1 = New DevExpress.XtraBars.FormAssistant()
+        Me.cbPrintHamadzaynagir = New System.Windows.Forms.CheckBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -81,6 +82,7 @@ Partial Class aktForCloseHayt
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.cbPrintHamadzaynagir)
         Me.GroupBox2.Controls.Add(Me.txtDamage)
         Me.GroupBox2.Controls.Add(Me.cDamaged)
         Me.GroupBox2.Controls.Add(Me.NoBattary)
@@ -171,7 +173,7 @@ Partial Class aktForCloseHayt
         Me.btnPrintAkt.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnPrintAkt.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnPrintAkt.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.btnPrintAkt.Location = New System.Drawing.Point(389, 225)
+        Me.btnPrintAkt.Location = New System.Drawing.Point(385, 213)
         Me.btnPrintAkt.Name = "btnPrintAkt"
         Me.btnPrintAkt.Size = New System.Drawing.Size(151, 29)
         Me.btnPrintAkt.TabIndex = 5
@@ -184,7 +186,7 @@ Partial Class aktForCloseHayt
         Me.btnChangePrinter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnChangePrinter.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnChangePrinter.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.btnChangePrinter.Location = New System.Drawing.Point(17, 225)
+        Me.btnChangePrinter.Location = New System.Drawing.Point(13, 213)
         Me.btnChangePrinter.Name = "btnChangePrinter"
         Me.btnChangePrinter.Size = New System.Drawing.Size(305, 29)
         Me.btnChangePrinter.TabIndex = 4
@@ -262,6 +264,16 @@ Partial Class aktForCloseHayt
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Ակտի Գեներացման Կոդ"
         '
+        'cbPrintHamadzaynagir
+        '
+        Me.cbPrintHamadzaynagir.AutoSize = True
+        Me.cbPrintHamadzaynagir.Location = New System.Drawing.Point(385, 252)
+        Me.cbPrintHamadzaynagir.Name = "cbPrintHamadzaynagir"
+        Me.cbPrintHamadzaynagir.Size = New System.Drawing.Size(132, 17)
+        Me.cbPrintHamadzaynagir.TabIndex = 13
+        Me.cbPrintHamadzaynagir.Text = "Տպել Համաձայնագիր"
+        Me.cbPrintHamadzaynagir.UseVisualStyleBackColor = True
+        '
         'aktForCloseHayt
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -309,4 +321,5 @@ Partial Class aktForCloseHayt
     Friend WithEvents NoCase As DevExpress.XtraEditors.CheckEdit
     Friend WithEvents cDamaged As DevExpress.XtraEditors.CheckEdit
     Friend WithEvents txtDamage As System.Windows.Forms.TextBox
+    Friend WithEvents cbPrintHamadzaynagir As System.Windows.Forms.CheckBox
 End Class
