@@ -91,6 +91,7 @@ Public Class HaytGeneralEdit
                 .haytXndir = GridView1.GetFocusedDataRow.Item("Խնդիր").ToString
                 .haytDate = GridView1.GetFocusedDataRow.Item("ՀայտիԱմսաթիվ").ToString
                 .haytRegion = GridView1.GetFocusedDataRow.Item("Տարածաշրջան").ToString
+                .haytCreator = GridView1.GetFocusedDataRow.Item("Օպերատոր").ToString
                 .ShowDialog()
             End With
 

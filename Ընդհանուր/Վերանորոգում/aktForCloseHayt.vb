@@ -234,17 +234,18 @@ Public Class aktForCloseHayt
         If String.IsNullOrEmpty(strPrinter) Then MsgBox("Տպիչը նշված չէ", MsgBoxStyle.Exclamation, My.Application.Info.Title) : Exit Sub
         Try
             Dim r As New Random
-            strRandom = r.Next(1000000000, Integer.MaxValue)
+            Dim strRandom2 As String = ""
+            strRandom2 = r.Next(1000000000, Integer.MaxValue)
 
             Dim strPath As String = System.Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) & "\HDM AKT\Hamadzaynagir"  ' Edited
             If IO.Directory.Exists(strPath) = False Then IO.Directory.CreateDirectory(strPath)
             strPath &= "\Temp"
             If IO.Directory.Exists(strPath) = False Then IO.Directory.CreateDirectory(strPath)
 
-            My.Computer.FileSystem.WriteAllBytes(strPath & "\" & strRandom & ".xls", My.Resources.HamdzaynagirPahestamasi, False) ' Edited
+            My.Computer.FileSystem.WriteAllBytes(strPath & "\" & strRandom2 & ".xls", My.Resources.HamdzaynagirPahestamasi, False) ' Edited
 
             Dim xlApp As New Microsoft.Office.Interop.Excel.Application
-            Dim wbk As Microsoft.Office.Interop.Excel.Workbook = xlApp.Workbooks.Open(strPath & "\" & strRandom & ".xls")
+            Dim wbk As Microsoft.Office.Interop.Excel.Workbook = xlApp.Workbooks.Open(strPath & "\" & strRandom2 & ".xls")
             xlApp.DisplayAlerts = False
             Dim sheet As Microsoft.Office.Interop.Excel.Worksheet = DirectCast(wbk.Worksheets("Sheet1"), Microsoft.Office.Interop.Excel.Worksheet)
 
@@ -263,7 +264,10 @@ Public Class aktForCloseHayt
             With sheet
                 .Range("A2").Value = "ՀՍԿԻՉ-ԴՐԱՄԱՐԿՂԱՅԻՆ ՄԵՔԵՆԱՆԵՐԻ ՍՊԱՍԱՐԿՄԱՆ ԹԻՎ " & contract & " ՊԱՅՄԱՆԱԳՐԻ"
                 .Range("I5").Value = printDate
-                .Range("A7").Value = sCompany & " (այսուհետ՝ Կատարող), ի դեմս տնօրեն " & sDirector & "ի, ով գործում է ընկերության կանոնադրության հիման վրա, մի կողմից, և " & cCompany & "-ը (այսուհետ՝ Պատվիրատու), ի դեմս տնօրեն՝ " & cDirector & "Ի, մյուս կողմից, ղեկավարվելով ՀՀ գործող օրենսդրությամբ և հիմք ընդունելով կողմերի միջև կնքված թիվ " & contract & " Հսկիչ-Դրամարկղային մեքենաների սպասարկման պայմանագիրը (այսուհետ՝ Պայմանագիր), կնքեցին սույն համաձայնագիրը հետևյալի մասին․ "
+                .Range("A7").Value = sCompany & " (այսուհետ՝ Կատարող), ի դեմս տնօրեն " & sDirector & "ի, ով գործում է ընկերության կանոնադրության հիման վրա, մի կողմից, և " &
+                    cCompany & "-ը (այսուհետ՝ Պատվիրատու), ի դեմս տնօրեն՝ " & cDirector &
+                    "Ի, մյուս կողմից, ղեկավարվելով ՀՀ գործող օրենսդրությամբ և հիմք ընդունելով կողմերի միջև կնքված թիվ " & contract &
+                    " Հսկիչ-Դրամարկղային մեքենաների սպասարկման պայմանագիրը (այսուհետ՝ Պայմանագիր), կնքեցին սույն համաձայնագիրը հետևյալի մասին․ "
                 .Range("A16").Value = sCompany
                 .Range("A17").Value = "Հասցե` " & sAddress
                 .Range("A21").Value = "ՀՎՀՀ` " & sHVHH
@@ -277,7 +281,12 @@ Public Class aktForCloseHayt
                 .Range("F22").Value = "Հեռ` " & cTel
                 .Range("F28").Value = cDirector
                 If sHVHH = "01562313" Then
-                    .Range("A9").Value = "1. Պայմանագրի 3.3 կետը շարադրել հետևյալ խմբագրությամբ՝ " & vbCrLf & "<<3.3 ՀԴՄ-ի վերանորոգման համար անհրաժեշտ պարագաների (պահեստամասերի և այլն)  արժեքը ներառված է 3.1 կետում սահմանված ընթացիկ սպասարկման արժեքի մեջ, բացառությամբ՝ մարտկոցի, ցանցային ադապտորի, լիցքավորիչի, թերմոտպիչի, էկրանի և ֆիսկալի, որոնց համար Կատարողին վճարվում է Կատարողի մոտ գործող գնացուցակի համաձայն>>: PAX մոդելի ՀԴՄ-ի վերանորոգման համար անհրաժեշտ պարագաների (պահեստամասերի և այլն) արժեքը ներառված չէ 3.1 կետում սահմանված ընթացիկ սպասարկման արժեքի մեջ, որոնց համար Կատարողին վճարվում է Կատարողի կողմից սահմանված գնացուցակի համաձայն:"
+                    .Range("A9").Value = "1. Պայմանագրի 3.3 կետը շարադրել հետևյալ խմբագրությամբ՝ " & vbCrLf &
+                        "<<3.3 ՀԴՄ-ի վերանորոգման համար անհրաժեշտ պարագաների (պահեստամասերի և այլն)  արժեքը ներառված է 3.1 կետում սահմանված ընթացիկ սպասարկման արժեքի" &
+                        " մեջ, բացառությամբ՝ մարտկոցի, ցանցային ադապտորի, լիցքավորիչի, թերմոտպիչի, էկրանի և ֆիսկալի, որոնց համար Կատարողին վճարվում է Կատարողի մոտ գործող" &
+                        " գնացուցակի համաձայն>>: PAX մոդելի ՀԴՄ-ի վերանորոգման համար անհրաժեշտ պարագաների (պահեստամասերի և այլն) արժեքը ներառված չէ 3.1 կետում սահմանված" &
+                        " ընթացիկ սպասարկման արժեքի մեջ, որոնց համար Կատարողին վճարվում է Կատարողի կողմից սահմանված գնացուցակի համաձայն:" & vbCrLf &
+                        "2.Սույն համաձայնագիրը հանդիսանում է Պայմանագրի անբաժանելի մասը և ուժի մեջ է մտնում ստորագրման պահից"
                 End If
 
             End With
