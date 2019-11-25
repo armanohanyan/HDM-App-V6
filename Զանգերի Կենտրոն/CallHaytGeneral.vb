@@ -486,6 +486,7 @@ Public Class CallHaytGeneral
             ''''''''''''''''''''''''''''
             If RepEcrID > 0 Then
                 iDB.QueueEcr(txtEcr.Text.Trim, RepEcrID, iUser.LoginName)
+                SendSmsForReplacedECR(txtEcr.Text.Trim, RepEcr)
             End If
             ''''''''''''''''''''''''''''
             If dt.Rows.Count > 0 Then
@@ -735,7 +736,17 @@ Public Class CallHaytGeneral
             If IsNothing(client) Then client = New SmppClient With {.AutoReconnectDelay = 10000, .ConnectionTimeout = 15000, .KeepAliveInterval = 60000}
 
             'connection String
-            Dim iConnection = New With {.SystemID = "hdmserve2", .Password = "hdmsrv22", .Port = 2775, .Host = "31.47.195.66", .Tel = "HDM Serve"}
+            Dim iConnection = New With {.SystemID = "", .Password = "", .Port = 2775, .Host = "31.47.195.66", .Tel = ""}
+            Dim companyX As Byte = cbSupporter.SelectedValue
+            Dim NikitaAccount As DataTable = iDB.RetNikitaAccount(companyX)
+            With iConnection
+                .SystemID = NikitaAccount.Rows(0)("SystemID")
+                .Password = NikitaAccount.Rows(0)("Password")
+                .Tel = NikitaAccount.Rows(0)("Tel")
+            End With
+
+
+            '' ''Dim iConnection = New With {.SystemID = "hdmserve2", .Password = "hdmsrv22", .Port = 2775, .Host = "31.47.195.66", .Tel = "HDM Serve"}
 
             'set properties
             Dim properties As SmppConnectionProperties = client.Properties
@@ -784,6 +795,29 @@ Public Class CallHaytGeneral
             MsgBox(ex.Message, MsgBoxStyle.Critical, My.Application.Info.Title)
             Call KillClient(client)
         End Try
+    End Sub
+    Private Sub SendSmsForReplacedECR(ByVal ECR As String, ByVal PerECR As String)
+        On Error Resume Next
+
+        Dim clientECR As String = ECR
+        Dim repEcr As String = cbEcr.Text.Trim
+        If repEcr.Length > 12 Then repEcr = repEcr.Substring(2, 12)
+
+        Dim smsText As String = "Hargeli hajaxord, Dzez tramadrvac poxarinox HDM-i hamarn e` " & repEcr & ", xndrum enq grancel ev hetadardz zangov tramadrel hastatman kod:"
+        Dim clientTel As String = txtTel.Text.Trim
+        If clientTel.StartsWith("0") Then
+            clientTel = clientTel.Substring(1, 8)
+        Else
+            clientTel = clientTel.Substring(0, 8)
+        End If
+
+
+        'Send SMS
+        SMSToOperatorForSell(smsText, clientTel, "")
+
+        'Save To DB
+        'iDB.InsertSMSForREmake(HVHH, iUser.LoginName)
+
     End Sub
     Private Sub SendSmsForSell(ByVal HVHH As String)
         On Error Resume Next

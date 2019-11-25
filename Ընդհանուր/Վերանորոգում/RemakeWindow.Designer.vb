@@ -78,19 +78,6 @@ Partial Class RemakeWindow
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
-        CType(Me.OnlyBattary.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtCompany.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtReplaced.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtPayment.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtGarant.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtGprs.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtHvhh.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtEcr.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NoBattary.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NoStick.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NoCharger.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NoCase.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.OutDamaged.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -161,7 +148,6 @@ Partial Class RemakeWindow
         '
         Me.OnlyBattary.Location = New System.Drawing.Point(12, 198)
         Me.OnlyBattary.Name = "OnlyBattary"
-        Me.OnlyBattary.Properties.Caption = "Լիցքավորիչ"
         Me.OnlyBattary.Size = New System.Drawing.Size(88, 19)
         Me.OnlyBattary.TabIndex = 1
         '
@@ -179,8 +165,6 @@ Partial Class RemakeWindow
         '
         Me.txtCompany.Location = New System.Drawing.Point(43, 83)
         Me.txtCompany.Name = "txtCompany"
-        Me.txtCompany.Properties.ReadOnly = True
-        Me.txtCompany.Properties.ScrollBars = System.Windows.Forms.ScrollBars.None
         Me.txtCompany.Size = New System.Drawing.Size(194, 80)
         Me.txtCompany.TabIndex = 22
         Me.txtCompany.TabStop = False
@@ -189,7 +173,6 @@ Partial Class RemakeWindow
         '
         Me.txtReplaced.Location = New System.Drawing.Point(61, 471)
         Me.txtReplaced.Name = "txtReplaced"
-        Me.txtReplaced.Properties.ReadOnly = True
         Me.txtReplaced.Size = New System.Drawing.Size(173, 20)
         Me.txtReplaced.TabIndex = 21
         Me.txtReplaced.TabStop = False
@@ -198,7 +181,6 @@ Partial Class RemakeWindow
         '
         Me.txtPayment.Location = New System.Drawing.Point(61, 444)
         Me.txtPayment.Name = "txtPayment"
-        Me.txtPayment.Properties.ReadOnly = True
         Me.txtPayment.Size = New System.Drawing.Size(173, 20)
         Me.txtPayment.TabIndex = 21
         Me.txtPayment.TabStop = False
@@ -207,7 +189,6 @@ Partial Class RemakeWindow
         '
         Me.txtGarant.Location = New System.Drawing.Point(61, 417)
         Me.txtGarant.Name = "txtGarant"
-        Me.txtGarant.Properties.ReadOnly = True
         Me.txtGarant.Size = New System.Drawing.Size(173, 20)
         Me.txtGarant.TabIndex = 21
         Me.txtGarant.TabStop = False
@@ -216,7 +197,6 @@ Partial Class RemakeWindow
         '
         Me.txtGprs.Location = New System.Drawing.Point(61, 393)
         Me.txtGprs.Name = "txtGprs"
-        Me.txtGprs.Properties.ReadOnly = True
         Me.txtGprs.Size = New System.Drawing.Size(173, 20)
         Me.txtGprs.TabIndex = 21
         Me.txtGprs.TabStop = False
@@ -225,7 +205,6 @@ Partial Class RemakeWindow
         '
         Me.txtHvhh.Location = New System.Drawing.Point(44, 36)
         Me.txtHvhh.Name = "txtHvhh"
-        Me.txtHvhh.Properties.ReadOnly = True
         Me.txtHvhh.Size = New System.Drawing.Size(193, 20)
         Me.txtHvhh.TabIndex = 20
         Me.txtHvhh.TabStop = False
@@ -234,7 +213,6 @@ Partial Class RemakeWindow
         '
         Me.txtEcr.Location = New System.Drawing.Point(43, 10)
         Me.txtEcr.Name = "txtEcr"
-        Me.txtEcr.Properties.ReadOnly = True
         Me.txtEcr.Size = New System.Drawing.Size(194, 20)
         Me.txtEcr.TabIndex = 19
         Me.txtEcr.TabStop = False
@@ -310,7 +288,6 @@ Partial Class RemakeWindow
         '
         Me.NoBattary.Location = New System.Drawing.Point(118, 357)
         Me.NoBattary.Name = "NoBattary"
-        Me.NoBattary.Properties.Caption = "Առանց Մարտկոցի"
         Me.NoBattary.Size = New System.Drawing.Size(116, 19)
         Me.NoBattary.TabIndex = 6
         '
@@ -318,7 +295,6 @@ Partial Class RemakeWindow
         '
         Me.NoStick.Location = New System.Drawing.Point(11, 357)
         Me.NoStick.Name = "NoStick"
-        Me.NoStick.Properties.Caption = "Առանց Մատիտի"
         Me.NoStick.Size = New System.Drawing.Size(101, 19)
         Me.NoStick.TabIndex = 5
         '
@@ -326,7 +302,6 @@ Partial Class RemakeWindow
         '
         Me.NoCharger.Location = New System.Drawing.Point(108, 332)
         Me.NoCharger.Name = "NoCharger"
-        Me.NoCharger.Properties.Caption = "Առանց Լիցքավորիչի"
         Me.NoCharger.Size = New System.Drawing.Size(130, 19)
         Me.NoCharger.TabIndex = 4
         '
@@ -334,7 +309,6 @@ Partial Class RemakeWindow
         '
         Me.NoCase.Location = New System.Drawing.Point(10, 332)
         Me.NoCase.Name = "NoCase"
-        Me.NoCase.Properties.Caption = "Առանց Տուփի"
         Me.NoCase.Size = New System.Drawing.Size(102, 19)
         Me.NoCase.TabIndex = 3
         '
@@ -342,7 +316,6 @@ Partial Class RemakeWindow
         '
         Me.OutDamaged.Location = New System.Drawing.Point(10, 247)
         Me.OutDamaged.Name = "OutDamaged"
-        Me.OutDamaged.Properties.Caption = "Արտաքին Վնասվածքով"
         Me.OutDamaged.Size = New System.Drawing.Size(149, 19)
         Me.OutDamaged.TabIndex = 1
         '
@@ -411,7 +384,6 @@ Partial Class RemakeWindow
         Me.GridControl1.ContextMenuStrip = Me.ContextMenuStrip1
         Me.GridControl1.Cursor = System.Windows.Forms.Cursors.Default
         Me.GridControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl1.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridControl1.Location = New System.Drawing.Point(0, 0)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -543,7 +515,6 @@ Partial Class RemakeWindow
         Me.GridControl2.ContextMenuStrip = Me.ContextMenuStrip2
         Me.GridControl2.Cursor = System.Windows.Forms.Cursors.Default
         Me.GridControl2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl2.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridControl2.Location = New System.Drawing.Point(0, 0)
         Me.GridControl2.MainView = Me.GridView2
         Me.GridControl2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -609,19 +580,6 @@ Partial Class RemakeWindow
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.OnlyBattary.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtCompany.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtReplaced.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtPayment.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtGarant.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtGprs.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtHvhh.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtEcr.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NoBattary.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NoStick.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NoCharger.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NoCase.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.OutDamaged.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()

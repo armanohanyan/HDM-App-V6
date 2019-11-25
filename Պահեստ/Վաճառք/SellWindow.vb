@@ -353,8 +353,6 @@ Public Class SellWindow
         Try
             If GridView1.RowCount = 0 Then Throw New Exception("Ցանկը դատարկ է")
 
-            iDB.SetRemakePropSold(ClientHVHH)
-
             Dim rr As New Random
             Dim strRandom = rr.Next(1000000000, Integer.MaxValue)
 
@@ -527,6 +525,9 @@ Public Class SellWindow
             End If
 
             IsDocumentPrinted = True
+
+            iDB.SetRemakePropSold(ClientHVHH)
+
             Me.Close()
 
         Catch ex As ExceptionClass

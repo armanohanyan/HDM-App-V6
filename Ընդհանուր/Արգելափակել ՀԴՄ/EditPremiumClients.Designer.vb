@@ -193,7 +193,6 @@ Partial Class EditPremiumClients
         Me.GridControl1.ContextMenuStrip = Me.mnuContext
         Me.GridControl1.Cursor = System.Windows.Forms.Cursors.Default
         Me.GridControl1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GridControl1.EmbeddedNavigator.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridControl1.Location = New System.Drawing.Point(241, 0)
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
