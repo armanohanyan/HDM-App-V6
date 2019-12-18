@@ -5935,10 +5935,14 @@ Partial Public Class DB
     End Sub
 
     'BulkInsertPremiumClient
-    Friend Sub BulkInsertPremiumClient(ByVal hvhh As String, ByVal UserID As Short)
+    Friend Sub BulkInsertPremiumClient(ByVal vip1200hdm2 As Boolean, ByVal vip1200hdm3 As Boolean, ByVal vip3000 As Boolean, ByVal vip3000Paid As Boolean, ByVal vip3600 As Boolean, ByVal UserID As Short)
         Using connection As New SqlConnection(SQLString)
-            Dim cmdSQLcom As New SqlCommand("EXEC Client.BulkInsertPremiumClient @hvhh,@UserID", connection)
-            cmdSQLcom.Parameters.Add("@hvhh", Data.SqlDbType.VarChar).Value = hvhh
+            Dim cmdSQLcom As New SqlCommand("EXEC Client.BulkInsertPremiumClient @vip1200hdm2, @vip1200hdm3, @vip3000, @vip3000Paid, @vip3600, @UserID", connection)
+            cmdSQLcom.Parameters.Add("@vip1200hdm2", Data.SqlDbType.VarChar).Value = vip1200hdm2
+            cmdSQLcom.Parameters.Add("@vip1200hdm3", Data.SqlDbType.VarChar).Value = vip1200hdm3
+            cmdSQLcom.Parameters.Add("@vip3000", Data.SqlDbType.VarChar).Value = vip3000
+            cmdSQLcom.Parameters.Add("@vip3000Paid", Data.SqlDbType.VarChar).Value = vip3000Paid
+            cmdSQLcom.Parameters.Add("@vip3600", Data.SqlDbType.VarChar).Value = vip3600
             cmdSQLcom.Parameters.Add("@UserID", Data.SqlDbType.SmallInt).Value = UserID
             connection.Open()
             cmdSQLcom.ExecuteNonQuery()
@@ -7153,6 +7157,17 @@ Partial Public Class DB
             cmdSQLcom.Parameters.Add("@OldGPRSSerial", Data.SqlDbType.VarChar).Value = OldGPRSSerial
             cmdSQLcom.Parameters.Add("@NewGPRSSerial", Data.SqlDbType.VarChar).Value = NewGPRSSerial
             cmdSQLcom.Parameters.Add("@UserName", Data.SqlDbType.NVarChar).Value = UserName
+            connection.Open()
+            cmdSQLcom.ExecuteNonQuery()
+            connection.Close()
+        End Using
+    End Sub
+
+    'CheckRemakePropIsSold
+    Friend Sub CheckRemakePropIsSold(ByVal hvhh As String)
+        Using connection As New SqlConnection(SQLString)
+            Dim cmdSQLcom As New SqlCommand("EXEC Client.CheckRemakePropIsSold @hvhh", connection)
+            cmdSQLcom.Parameters.Add("@hvhh", Data.SqlDbType.NVarChar).Value = hvhh
             connection.Open()
             cmdSQLcom.ExecuteNonQuery()
             connection.Close()

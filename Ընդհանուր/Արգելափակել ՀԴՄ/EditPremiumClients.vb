@@ -121,23 +121,22 @@ Public Class EditPremiumClients
 
             Dim client As String = String.Empty
 
-            ''UnCheck Not Supported
-            'If NotSupportedClients.Rows.Count > 0 Then
-            '    For j As Integer = 0 To NotSupportedClients.Rows.Count - 1
-            '        If client = NotSupportedClients.Rows(j)("HVHH") Then
-            '            Throw New Exception("Գործընկերը արգելափակված է")
-            '        End If
-            '    Next
-            'End If
-            If cb1200.Checked Then client += "1200"
-            If cb3000.Checked Then client += "3000"
-            If cb3600.Checked Then client += "3600"
+            Dim vip1200hdm2 As Boolean = cb12002.Checked
+            Dim vop1200hdmShat As Boolean = cb12003.Checked
+            Dim vip3000 As Boolean = cb3000.Checked
+            Dim vip3000Paid As Boolean = cb3000Paid.Checked
+            Dim vip3600 As Boolean = cb3600.Checked
+
+            'If cb12002.Checked Then client += "1200"
+            'If cb3000.Checked Then client += "3000"
+            'If cb3000Paid.Checked Then client += "3000Paid"
+            'If cb3600.Checked Then client += "3600"
 
             'If String.IsNullOrEmpty(client) Then Exit Sub
 
             If iUser.DB = 5 Then
                 'MsgBox(client)
-                iDB.BulkInsertPremiumClient(client, iUser.UserID)
+                iDB.BulkInsertPremiumClient(vip1200hdm2, vop1200hdmShat, vip3000, vip3000Paid, vip3600, iUser.UserID)
             Else
                 iDB.InsertPremiumClient2(client, iUser.UserID, iUser.DB)
             End If
@@ -167,7 +166,7 @@ Public Class EditPremiumClients
                 MsgBox("Գրանցումը հաջողությամբ ջնջվեց", MsgBoxStyle.Information, My.Application.Info.Title)
                 Call LoadData()
             End If
-            
+
 
         Catch ex As ExceptionClass
         Catch ex As System.Data.SqlClient.SqlException
@@ -253,4 +252,7 @@ Public Class EditPremiumClients
     End Sub
 
 
+    Private Sub cb1200_CheckedChanged(sender As Object, e As EventArgs) Handles cb12002.CheckedChanged
+
+    End Sub
 End Class

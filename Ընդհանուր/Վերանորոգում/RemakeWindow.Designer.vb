@@ -78,6 +78,19 @@ Partial Class RemakeWindow
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.OnlyBattary.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtCompany.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtReplaced.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtPayment.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtGarant.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtGprs.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtHvhh.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtEcr.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NoBattary.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NoStick.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NoCharger.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NoCase.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.OutDamaged.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TableLayoutPanel2.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -148,6 +161,7 @@ Partial Class RemakeWindow
         '
         Me.OnlyBattary.Location = New System.Drawing.Point(12, 198)
         Me.OnlyBattary.Name = "OnlyBattary"
+        Me.OnlyBattary.Properties.Caption = "Լիցքավորիչ"
         Me.OnlyBattary.Size = New System.Drawing.Size(88, 19)
         Me.OnlyBattary.TabIndex = 1
         '
@@ -288,6 +302,7 @@ Partial Class RemakeWindow
         '
         Me.NoBattary.Location = New System.Drawing.Point(118, 357)
         Me.NoBattary.Name = "NoBattary"
+        Me.NoBattary.Properties.Caption = "Առանց մարտկոցի"
         Me.NoBattary.Size = New System.Drawing.Size(116, 19)
         Me.NoBattary.TabIndex = 6
         '
@@ -295,6 +310,7 @@ Partial Class RemakeWindow
         '
         Me.NoStick.Location = New System.Drawing.Point(11, 357)
         Me.NoStick.Name = "NoStick"
+        Me.NoStick.Properties.Caption = "Առանց մատիտի"
         Me.NoStick.Size = New System.Drawing.Size(101, 19)
         Me.NoStick.TabIndex = 5
         '
@@ -302,6 +318,7 @@ Partial Class RemakeWindow
         '
         Me.NoCharger.Location = New System.Drawing.Point(108, 332)
         Me.NoCharger.Name = "NoCharger"
+        Me.NoCharger.Properties.Caption = "Առանց լիցքավորիչի"
         Me.NoCharger.Size = New System.Drawing.Size(130, 19)
         Me.NoCharger.TabIndex = 4
         '
@@ -309,6 +326,7 @@ Partial Class RemakeWindow
         '
         Me.NoCase.Location = New System.Drawing.Point(10, 332)
         Me.NoCase.Name = "NoCase"
+        Me.NoCase.Properties.Caption = "Առանց տուփի"
         Me.NoCase.Size = New System.Drawing.Size(102, 19)
         Me.NoCase.TabIndex = 3
         '
@@ -316,6 +334,7 @@ Partial Class RemakeWindow
         '
         Me.OutDamaged.Location = New System.Drawing.Point(10, 247)
         Me.OutDamaged.Name = "OutDamaged"
+        Me.OutDamaged.Properties.Caption = "Արտաքին վնասվածքով"
         Me.OutDamaged.Size = New System.Drawing.Size(149, 19)
         Me.OutDamaged.TabIndex = 1
         '
@@ -580,6 +599,19 @@ Partial Class RemakeWindow
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.OnlyBattary.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtCompany.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtReplaced.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtPayment.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtGarant.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtGprs.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtHvhh.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtEcr.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NoBattary.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NoStick.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NoCharger.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NoCase.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.OutDamaged.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TableLayoutPanel2.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()

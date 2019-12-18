@@ -33,10 +33,12 @@ Partial Class EditPremiumClients
         Me.mnuDeleteBulk = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cb12003 = New System.Windows.Forms.CheckBox()
+        Me.cb3000Paid = New System.Windows.Forms.CheckBox()
         Me.btnBulkDelete = New DevExpress.XtraEditors.SimpleButton()
         Me.cb3000 = New System.Windows.Forms.CheckBox()
         Me.cb3600 = New System.Windows.Forms.CheckBox()
-        Me.cb1200 = New System.Windows.Forms.CheckBox()
+        Me.cb12002 = New System.Windows.Forms.CheckBox()
         Me.btnBulkInsert = New DevExpress.XtraEditors.SimpleButton()
         Me.btnInsert = New DevExpress.XtraEditors.SimpleButton()
         Me.txtHVHH = New System.Windows.Forms.TextBox()
@@ -103,22 +105,44 @@ Partial Class EditPremiumClients
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.cb12003)
+        Me.GroupBox1.Controls.Add(Me.cb3000Paid)
         Me.GroupBox1.Controls.Add(Me.btnBulkDelete)
         Me.GroupBox1.Controls.Add(Me.cb3000)
         Me.GroupBox1.Controls.Add(Me.cb3600)
-        Me.GroupBox1.Controls.Add(Me.cb1200)
+        Me.GroupBox1.Controls.Add(Me.cb12002)
         Me.GroupBox1.Controls.Add(Me.btnBulkInsert)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 199)
+        Me.GroupBox1.Location = New System.Drawing.Point(12, 167)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(219, 181)
+        Me.GroupBox1.Size = New System.Drawing.Size(219, 213)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Խմբային գործողություններ"
         '
+        'cb12003
+        '
+        Me.cb12003.AutoSize = True
+        Me.cb12003.Location = New System.Drawing.Point(12, 83)
+        Me.cb12003.Name = "cb12003"
+        Me.cb12003.Size = New System.Drawing.Size(169, 17)
+        Me.cb12003.TabIndex = 12
+        Me.cb12003.Text = "Տարիֆ1200 (2-ից ավել ՀԴՄ)"
+        Me.cb12003.UseVisualStyleBackColor = True
+        '
+        'cb3000Paid
+        '
+        Me.cb3000Paid.AutoSize = True
+        Me.cb3000Paid.Location = New System.Drawing.Point(12, 123)
+        Me.cb3000Paid.Name = "cb3000Paid"
+        Me.cb3000Paid.Size = New System.Drawing.Size(128, 17)
+        Me.cb3000Paid.TabIndex = 11
+        Me.cb3000Paid.Text = "Տարիֆ3000Վճարովի"
+        Me.cb3000Paid.UseVisualStyleBackColor = True
+        '
         'btnBulkDelete
         '
         Me.btnBulkDelete.Image = Global.ՀԴՄ_App.My.Resources.Resources.cancel_16x16
-        Me.btnBulkDelete.Location = New System.Drawing.Point(12, 132)
+        Me.btnBulkDelete.Location = New System.Drawing.Point(12, 169)
         Me.btnBulkDelete.Name = "btnBulkDelete"
         Me.btnBulkDelete.Size = New System.Drawing.Size(198, 36)
         Me.btnBulkDelete.TabIndex = 10
@@ -127,7 +151,7 @@ Partial Class EditPremiumClients
         'cb3000
         '
         Me.cb3000.AutoSize = True
-        Me.cb3000.Location = New System.Drawing.Point(12, 86)
+        Me.cb3000.Location = New System.Drawing.Point(12, 103)
         Me.cb3000.Name = "cb3000"
         Me.cb3000.Size = New System.Drawing.Size(84, 17)
         Me.cb3000.TabIndex = 8
@@ -137,22 +161,22 @@ Partial Class EditPremiumClients
         'cb3600
         '
         Me.cb3600.AutoSize = True
-        Me.cb3600.Location = New System.Drawing.Point(12, 109)
+        Me.cb3600.Location = New System.Drawing.Point(12, 144)
         Me.cb3600.Name = "cb3600"
         Me.cb3600.Size = New System.Drawing.Size(84, 17)
         Me.cb3600.TabIndex = 9
         Me.cb3600.Text = "Տարիֆ3600"
         Me.cb3600.UseVisualStyleBackColor = True
         '
-        'cb1200
+        'cb12002
         '
-        Me.cb1200.AutoSize = True
-        Me.cb1200.Location = New System.Drawing.Point(12, 63)
-        Me.cb1200.Name = "cb1200"
-        Me.cb1200.Size = New System.Drawing.Size(165, 17)
-        Me.cb1200.TabIndex = 7
-        Me.cb1200.Text = "Տարիֆ1200 (1ից ավել ՀԴՄ)"
-        Me.cb1200.UseVisualStyleBackColor = True
+        Me.cb12002.AutoSize = True
+        Me.cb12002.Location = New System.Drawing.Point(12, 63)
+        Me.cb12002.Name = "cb12002"
+        Me.cb12002.Size = New System.Drawing.Size(126, 17)
+        Me.cb12002.TabIndex = 7
+        Me.cb12002.Text = "Տարիֆ1200 (2 ՀԴՄ)"
+        Me.cb12002.UseVisualStyleBackColor = True
         '
         'btnBulkInsert
         '
@@ -249,7 +273,9 @@ Partial Class EditPremiumClients
     Friend WithEvents btnBulkDelete As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents cb3000 As System.Windows.Forms.CheckBox
     Friend WithEvents cb3600 As System.Windows.Forms.CheckBox
-    Friend WithEvents cb1200 As System.Windows.Forms.CheckBox
+    Friend WithEvents cb12002 As System.Windows.Forms.CheckBox
     Friend WithEvents btnBulkInsert As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents mnuDeleteBulk As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents cb3000Paid As System.Windows.Forms.CheckBox
+    Friend WithEvents cb12003 As System.Windows.Forms.CheckBox
 End Class
