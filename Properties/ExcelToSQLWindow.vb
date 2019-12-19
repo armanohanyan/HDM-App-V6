@@ -115,10 +115,23 @@ Public Class ExcelToSQLWindow
         Try
             If GridView2.RowCount = 0 Then Throw New Exception("Ֆայլը նշված չէ կամ գրանցումներ չկան")
             If IsNothing(iDT) Then Throw New Exception("Սկզբնական տվյալները անորոշ են")
+            ''''''''''''''''''''''''''''''''''''''''''''''''''Ամսաթվերի ինտերվալով ներմուծում
+            If cbRange.Checked = True Then
+                Dim sd As Date = sDate.DateTime.Date
+                Dim ed As Date = eDate.DateTime.Date
+                Dim days As Integer = DateDiff(DateInterval.Day, sd, ed)
+                For i = 0 To days
+                    If sd <= ed Then
+                        iDB.ExcelFileToSQLDB(iDT, sd)
+                        sd = DateAdd(DateInterval.Day, 1, sd)
+                    End If
+                Next
+                '''''''''''''''''''''''''''''''''''''''''''''''''' mek or
+            Else
+                iDB.ExcelFileToSQLDB(iDT, sDate.DateTime)
+            End If
 
-            iDB.ExcelFileToSQLDB(iDT, sDate.DateTime)
-
-            MsgBox("Գործողությունը կատարվեց", MsgBoxStyle.Information, My.Application.Info.Title)
+            'MsgBox("Գործողությունը կատարվեց", MsgBoxStyle.Information, My.Application.Info.Title)
 
         Catch ex As ExceptionClass
         Catch ex As System.Data.SqlClient.SqlException
@@ -137,6 +150,8 @@ Public Class ExcelToSQLWindow
     Private Sub ExcelToSQLWindow_Load(sender As Object, e As EventArgs) Handles Me.Load
         Me.WindowState = FormWindowState.Maximized
         sDate.DateTime = Now
+        cbRange.Checked = False
+        eDate.Enabled = False
     End Sub
     Private Sub ExcelToSQLWindow_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Call LoadListOfDays()
@@ -162,4 +177,14 @@ Public Class ExcelToSQLWindow
         End If
     End Sub
 
+    Private Sub cbRange_CheckedChanged(sender As Object, e As EventArgs) Handles cbRange.CheckedChanged
+        If cbRange.Checked = True Then
+            eDate.Enabled = True
+            eDate.DateTime = Now
+        Else
+            eDate.Enabled = False
+            eDate.DateTime = Nothing
+            eDate.Text = ""
+        End If
+    End Sub
 End Class

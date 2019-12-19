@@ -25,6 +25,7 @@ Partial Class ExcelToSQLWindow
         Me.FormAssistant1 = New DevExpress.XtraBars.FormAssistant()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.eDate = New DevExpress.XtraEditors.DateEdit()
         Me.btnCheck = New DevExpress.XtraEditors.SimpleButton()
         Me.sDate = New DevExpress.XtraEditors.DateEdit()
         Me.btnSave = New DevExpress.XtraEditors.SimpleButton()
@@ -35,8 +36,11 @@ Partial Class ExcelToSQLWindow
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.cbRange = New System.Windows.Forms.CheckBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.eDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.eDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.sDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.sDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -64,6 +68,8 @@ Partial Class ExcelToSQLWindow
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.cbRange)
+        Me.Panel1.Controls.Add(Me.eDate)
         Me.Panel1.Controls.Add(Me.btnCheck)
         Me.Panel1.Controls.Add(Me.sDate)
         Me.Panel1.Controls.Add(Me.btnSave)
@@ -73,6 +79,17 @@ Partial Class ExcelToSQLWindow
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(194, 358)
         Me.Panel1.TabIndex = 0
+        '
+        'eDate
+        '
+        Me.eDate.EditValue = Nothing
+        Me.eDate.Location = New System.Drawing.Point(9, 123)
+        Me.eDate.Name = "eDate"
+        Me.eDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.eDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.eDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret
+        Me.eDate.Size = New System.Drawing.Size(179, 20)
+        Me.eDate.TabIndex = 4
         '
         'btnCheck
         '
@@ -96,7 +113,7 @@ Partial Class ExcelToSQLWindow
         'btnSave
         '
         Me.btnSave.Enabled = False
-        Me.btnSave.Location = New System.Drawing.Point(9, 123)
+        Me.btnSave.Location = New System.Drawing.Point(9, 166)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(179, 23)
         Me.btnSave.TabIndex = 3
@@ -180,6 +197,16 @@ Partial Class ExcelToSQLWindow
         Me.GridView1.OptionsView.ColumnAutoWidth = False
         Me.GridView1.OptionsView.ShowGroupPanel = False
         '
+        'cbRange
+        '
+        Me.cbRange.AutoSize = True
+        Me.cbRange.Location = New System.Drawing.Point(9, 100)
+        Me.cbRange.Name = "cbRange"
+        Me.cbRange.Size = New System.Drawing.Size(146, 17)
+        Me.cbRange.TabIndex = 5
+        Me.cbRange.Text = "Ավելացնել միջակայքով"
+        Me.cbRange.UseVisualStyleBackColor = True
+        '
         'ExcelToSQLWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -193,6 +220,9 @@ Partial Class ExcelToSQLWindow
         Me.Text = "Excel To SQL Server"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        CType(Me.eDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.eDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.sDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.sDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
@@ -217,4 +247,6 @@ Partial Class ExcelToSQLWindow
     Friend WithEvents GridView2 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents GridControl1 As DevExpress.XtraGrid.GridControl
     Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents eDate As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents cbRange As System.Windows.Forms.CheckBox
 End Class
