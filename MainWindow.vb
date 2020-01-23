@@ -1515,7 +1515,7 @@ Public Class MainWindow
 
         If iUser.UserID = 20 OrElse iUser.UserID = 17 OrElse iUser.UserID = 16 OrElse iUser.UserID = 15 OrElse
             iUser.UserID = 11 OrElse iUser.UserID = 103 OrElse iUser.UserID = 7 OrElse iUser.UserID = 19 OrElse
-            iUser.UserID = 5 OrElse iUser.UserID = 116 OrElse iUser.UserID = 119 Then
+            iUser.UserID = 5 OrElse iUser.UserID = 116 OrElse iUser.UserID = 119 OrElse iUser.UserID = 3 Then
 
             RibbonGPRS.Visible = True
         Else

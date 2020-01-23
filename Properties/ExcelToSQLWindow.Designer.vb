@@ -25,6 +25,7 @@ Partial Class ExcelToSQLWindow
         Me.FormAssistant1 = New DevExpress.XtraBars.FormAssistant()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cbRange = New System.Windows.Forms.CheckBox()
         Me.eDate = New DevExpress.XtraEditors.DateEdit()
         Me.btnCheck = New DevExpress.XtraEditors.SimpleButton()
         Me.sDate = New DevExpress.XtraEditors.DateEdit()
@@ -36,7 +37,6 @@ Partial Class ExcelToSQLWindow
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.cbRange = New System.Windows.Forms.CheckBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.eDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -79,6 +79,16 @@ Partial Class ExcelToSQLWindow
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(194, 358)
         Me.Panel1.TabIndex = 0
+        '
+        'cbRange
+        '
+        Me.cbRange.AutoSize = True
+        Me.cbRange.Location = New System.Drawing.Point(9, 100)
+        Me.cbRange.Name = "cbRange"
+        Me.cbRange.Size = New System.Drawing.Size(146, 17)
+        Me.cbRange.TabIndex = 5
+        Me.cbRange.Text = "Ավելացնել միջակայքով"
+        Me.cbRange.UseVisualStyleBackColor = True
         '
         'eDate
         '
@@ -196,16 +206,6 @@ Partial Class ExcelToSQLWindow
         Me.GridView1.OptionsFind.ShowFindButton = False
         Me.GridView1.OptionsView.ColumnAutoWidth = False
         Me.GridView1.OptionsView.ShowGroupPanel = False
-        '
-        'cbRange
-        '
-        Me.cbRange.AutoSize = True
-        Me.cbRange.Location = New System.Drawing.Point(9, 100)
-        Me.cbRange.Name = "cbRange"
-        Me.cbRange.Size = New System.Drawing.Size(146, 17)
-        Me.cbRange.TabIndex = 5
-        Me.cbRange.Text = "Ավելացնել միջակայքով"
-        Me.cbRange.UseVisualStyleBackColor = True
         '
         'ExcelToSQLWindow
         '

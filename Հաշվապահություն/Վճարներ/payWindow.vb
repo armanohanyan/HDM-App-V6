@@ -285,7 +285,7 @@ Public Class payWindow
 
     Private Sub txtHvhh_TextChanged(sender As Object, e As EventArgs) Handles txtHvhh.TextChanged
         On Error Resume Next
-        If txtHvhh.Text.Trim.Length = 8 Then Call Query() : cbSupporter_SelectedIndexChanged(cbSupporter, Nothing) Else ClearInfo()
+        If txtHvhh.Text.Trim.Length = 8 OrElse txtHvhh.Text.Trim.Length = 9 Then Call Query() : cbSupporter_SelectedIndexChanged(cbSupporter, Nothing) Else ClearInfo()
     End Sub
     Private Sub GridControl1_KeyDown(sender As Object, e As KeyEventArgs) Handles GridControl1.KeyDown
         On Error Resume Next

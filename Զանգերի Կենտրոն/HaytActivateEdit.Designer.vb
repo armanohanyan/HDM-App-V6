@@ -60,7 +60,7 @@ Partial Class HaytActivateEdit
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuSelect, Me.mnuSelectAll, Me.mnuRevert, Me.ToolStripMenuItem1, Me.mnuViewed, Me.mnuPrint, Me.ToolStripMenuItem2, Me.mnuChangeInfo, Me.ToolStripMenuItem3, Me.mnuSMS, Me.ToolStripMenuItem4, Me.mnuCancel, Me.ToolStripMenuItem5, Me.mnuClose})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(228, 254)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(228, 232)
         '
         'mnuSelect
         '

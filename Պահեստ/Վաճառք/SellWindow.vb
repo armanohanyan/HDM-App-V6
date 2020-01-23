@@ -290,7 +290,7 @@ Public Class SellWindow
 
                 If sellID = 0 Then sellID = dt.Rows(0)(0)
             Else
-                If txtPrice.Text <= 0 Then Throw New Exception("Գումարը չպետք է 0 կամ բացասական լինի")
+                'If txtPrice.Text <= 0 Then Throw New Exception("Գումարը չպետք է 0 կամ բացասական լինի")
 
                 If SupporterID = 2 Then
                     dt = iDB.CustomSellForClientNoNDS(txtShtrikhCode.Text.Trim, SupporterID, sellID, ClientID, EquipmentID, txtPrice.Text)

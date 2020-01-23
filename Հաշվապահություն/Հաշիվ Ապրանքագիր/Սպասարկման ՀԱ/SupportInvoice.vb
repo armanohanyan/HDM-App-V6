@@ -32,7 +32,7 @@ Public Class SupportInvoice
 
                 xw.WriteStartElement("ExportedData", "http://www.taxservice.am/tp3/invoice/definitions")
 
-                For i As Integer = dt.Rows.Count - 1 To dt.Rows.Count - 100 Step -1
+                For i As Integer = dt.Rows.Count - 1 To dt.Rows.Count - 500 Step -1
                     If dt.Rows.Count = 0 Then Exit For
 
                     xw.WriteStartElement("Invoice")
@@ -172,7 +172,7 @@ Public Class SupportInvoice
 
                 xw.WriteStartElement("ExportedAccDocData", "http://www.taxservice.am/tp3/invoice/definitions")
 
-                For i As Integer = dt.Rows.Count - 1 To dt.Rows.Count - 100 Step -1
+                For i As Integer = dt.Rows.Count - 1 To dt.Rows.Count - 500 Step -1
                     If dt.Rows.Count = 0 Then Exit For
 
                     xw.WriteStartElement("AccountingDocument")

@@ -331,21 +331,26 @@ Public Class MakeSellInvoiceXML
 
             For i As Integer = 0 To GridView1.RowCount - 1
                 If GridView1.GetRowCellValue(i, "Նշիչ") = False Then Continue For
+                'If GridView1.GetRowCellValue(i, "Գումար") = 0 Then Continue For
 
                 Dim rID As Integer = GridView1.GetRowCellValue(i, "InvoiceID")
                 Dim dealDate As Date = GridView1.GetRowCellValue(i, "Ամսաթիվ")
 
                 'Create XML File
-                If SupporterID = 2 Then
-                    createXMLFiles2(iPath, rID, dealDate)
-                Else
-                    createXMLFiles(iPath, rID, dealDate)
+                If GridView1.GetRowCellValue(i, "Գումար") > 0 Then
+                    If SupporterID = 2 Then
+                        createXMLFiles2(iPath, rID, dealDate)
+                    Else
+                        createXMLFiles(iPath, rID, dealDate)
+                    End If
                 End If
+
 
                 'Update Invoice Set Printed
                 iDB.SetInvoicePrinted(rID)
 
             Next
+
 
             Call Shell("explorer /select," & iPath, AppWinStyle.NormalFocus)
 
