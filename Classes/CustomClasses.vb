@@ -66,6 +66,24 @@ Public Class ForSmS
 
 End Class
 
+Public Class ForSmS2
+
+    Public Property ՀՎՀՀ As String
+    Public Property Հեռախոս As String
+    Public Property Պարտք As Decimal
+    Public Property Սպասարկող As String
+    Public Property id As Integer
+
+    Public Sub New(ByVal _hvhh As String, ByVal _tel As String, _partq As Decimal, _supporter As String, _id As Integer)
+        ՀՎՀՀ = _hvhh
+        Հեռախոս = _tel
+        Պարտք = _partq
+        Սպասարկող = _supporter
+        id = _id
+    End Sub
+
+End Class
+
 Public Class ForSmSToTesuch
 
     Public Property tesuch As String

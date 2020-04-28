@@ -33,6 +33,10 @@ Partial Class SendSMSWindow
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnuExportToExcel = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.btnSendFromExcell = New DevExpress.XtraEditors.SimpleButton()
+        Me.btnLoadFromExcell = New DevExpress.XtraEditors.SimpleButton()
+        Me.cbLoadFromExcell = New System.Windows.Forms.CheckBox()
         Me.cAllClients = New DevExpress.XtraEditors.CheckEdit()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -58,6 +62,7 @@ Partial Class SendSMSWindow
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.mnuContext.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
         CType(Me.cAllClients.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         CType(Me.TimeX.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -117,6 +122,7 @@ Partial Class SendSMSWindow
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.GroupBox4)
         Me.Panel1.Controls.Add(Me.cAllClients)
         Me.Panel1.Controls.Add(Me.GroupBox3)
         Me.Panel1.Controls.Add(Me.GroupBox2)
@@ -126,12 +132,56 @@ Partial Class SendSMSWindow
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 555)
+        Me.Panel1.Size = New System.Drawing.Size(200, 520)
         Me.Panel1.TabIndex = 1
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.btnSendFromExcell)
+        Me.GroupBox4.Controls.Add(Me.btnLoadFromExcell)
+        Me.GroupBox4.Controls.Add(Me.cbLoadFromExcell)
+        Me.GroupBox4.ForeColor = System.Drawing.Color.Red
+        Me.GroupBox4.Location = New System.Drawing.Point(6, 389)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(187, 104)
+        Me.GroupBox4.TabIndex = 14
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Արտակարգ դրություն"
+        '
+        'btnSendFromExcell
+        '
+        Me.btnSendFromExcell.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSendFromExcell.Image = CType(resources.GetObject("btnSendFromExcell.Image"), System.Drawing.Image)
+        Me.btnSendFromExcell.Location = New System.Drawing.Point(7, 76)
+        Me.btnSendFromExcell.Name = "btnSendFromExcell"
+        Me.btnSendFromExcell.Size = New System.Drawing.Size(109, 27)
+        Me.btnSendFromExcell.TabIndex = 13
+        Me.btnSendFromExcell.Text = "Ուղարկել SMS"
+        '
+        'btnLoadFromExcell
+        '
+        Me.btnLoadFromExcell.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnLoadFromExcell.Image = CType(resources.GetObject("btnLoadFromExcell.Image"), System.Drawing.Image)
+        Me.btnLoadFromExcell.Location = New System.Drawing.Point(6, 43)
+        Me.btnLoadFromExcell.Name = "btnLoadFromExcell"
+        Me.btnLoadFromExcell.Size = New System.Drawing.Size(111, 27)
+        Me.btnLoadFromExcell.TabIndex = 12
+        Me.btnLoadFromExcell.Text = "Բեռնել Excell-ից"
+        '
+        'cbLoadFromExcell
+        '
+        Me.cbLoadFromExcell.AutoSize = True
+        Me.cbLoadFromExcell.ForeColor = System.Drawing.Color.Black
+        Me.cbLoadFromExcell.Location = New System.Drawing.Point(6, 20)
+        Me.cbLoadFromExcell.Name = "cbLoadFromExcell"
+        Me.cbLoadFromExcell.Size = New System.Drawing.Size(108, 17)
+        Me.cbLoadFromExcell.TabIndex = 0
+        Me.cbLoadFromExcell.Text = "Բեռնել Excell-ից"
+        Me.cbLoadFromExcell.UseVisualStyleBackColor = True
         '
         'cAllClients
         '
-        Me.cAllClients.Location = New System.Drawing.Point(12, 346)
+        Me.cAllClients.Location = New System.Drawing.Point(12, 269)
         Me.cAllClients.Name = "cAllClients"
         Me.cAllClients.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.cAllClients.Properties.Appearance.ForeColor = System.Drawing.Color.RoyalBlue
@@ -155,9 +205,9 @@ Partial Class SendSMSWindow
         Me.GroupBox3.Controls.Add(Me.Label1)
         Me.GroupBox3.Controls.Add(Me.ckByPeriod)
         Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.GroupBox3.Location = New System.Drawing.Point(0, 185)
+        Me.GroupBox3.Location = New System.Drawing.Point(0, 136)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(198, 151)
+        Me.GroupBox3.Size = New System.Drawing.Size(198, 128)
         Me.GroupBox3.TabIndex = 9
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Պարամետրեր"
@@ -166,7 +216,7 @@ Partial Class SendSMSWindow
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label3.Location = New System.Drawing.Point(167, 76)
+        Me.Label3.Location = New System.Drawing.Point(167, 61)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(24, 16)
         Me.Label3.TabIndex = 18
@@ -176,7 +226,7 @@ Partial Class SendSMSWindow
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label2.Location = New System.Drawing.Point(167, 49)
+        Me.Label2.Location = New System.Drawing.Point(167, 37)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(31, 16)
         Me.Label2.TabIndex = 17
@@ -186,7 +236,7 @@ Partial Class SendSMSWindow
         '
         Me.cbSMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbSMonth.FormattingEnabled = True
-        Me.cbSMonth.Location = New System.Drawing.Point(102, 46)
+        Me.cbSMonth.Location = New System.Drawing.Point(102, 34)
         Me.cbSMonth.Name = "cbSMonth"
         Me.cbSMonth.Size = New System.Drawing.Size(57, 21)
         Me.cbSMonth.TabIndex = 16
@@ -195,7 +245,7 @@ Partial Class SendSMSWindow
         '
         Me.cbSYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbSYear.FormattingEnabled = True
-        Me.cbSYear.Location = New System.Drawing.Point(14, 46)
+        Me.cbSYear.Location = New System.Drawing.Point(14, 34)
         Me.cbSYear.Name = "cbSYear"
         Me.cbSYear.Size = New System.Drawing.Size(79, 21)
         Me.cbSYear.TabIndex = 15
@@ -203,7 +253,7 @@ Partial Class SendSMSWindow
         'TimeX
         '
         Me.TimeX.EditValue = Nothing
-        Me.TimeX.Location = New System.Drawing.Point(12, 123)
+        Me.TimeX.Location = New System.Drawing.Point(12, 102)
         Me.TimeX.Name = "TimeX"
         Me.TimeX.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.[False]
         Me.TimeX.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
@@ -216,7 +266,7 @@ Partial Class SendSMSWindow
         '
         Me.cbMonth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbMonth.FormattingEnabled = True
-        Me.cbMonth.Location = New System.Drawing.Point(102, 75)
+        Me.cbMonth.Location = New System.Drawing.Point(102, 60)
         Me.cbMonth.Name = "cbMonth"
         Me.cbMonth.Size = New System.Drawing.Size(57, 21)
         Me.cbMonth.TabIndex = 9
@@ -225,7 +275,7 @@ Partial Class SendSMSWindow
         '
         Me.cbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbYear.FormattingEnabled = True
-        Me.cbYear.Location = New System.Drawing.Point(14, 75)
+        Me.cbYear.Location = New System.Drawing.Point(14, 60)
         Me.cbYear.Name = "cbYear"
         Me.cbYear.Size = New System.Drawing.Size(79, 21)
         Me.cbYear.TabIndex = 8
@@ -233,7 +283,7 @@ Partial Class SendSMSWindow
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(11, 107)
+        Me.Label1.Location = New System.Drawing.Point(11, 86)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(111, 13)
         Me.Label1.TabIndex = 14
@@ -242,7 +292,7 @@ Partial Class SendSMSWindow
         'ckByPeriod
         '
         Me.ckByPeriod.Enabled = False
-        Me.ckByPeriod.Location = New System.Drawing.Point(12, 21)
+        Me.ckByPeriod.Location = New System.Drawing.Point(12, 12)
         Me.ckByPeriod.Name = "ckByPeriod"
         Me.ckByPeriod.Properties.Caption = "Ըստ Միջակայքի"
         Me.ckByPeriod.Size = New System.Drawing.Size(108, 19)
@@ -253,9 +303,9 @@ Partial Class SendSMSWindow
         Me.GroupBox2.Controls.Add(Me.rbForBlock)
         Me.GroupBox2.Controls.Add(Me.rbBlocked)
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.GroupBox2.Location = New System.Drawing.Point(0, 112)
+        Me.GroupBox2.Location = New System.Drawing.Point(0, 84)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(198, 73)
+        Me.GroupBox2.Size = New System.Drawing.Size(198, 52)
         Me.GroupBox2.TabIndex = 8
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Հաղորդագրության Տեսակ"
@@ -263,7 +313,7 @@ Partial Class SendSMSWindow
         'rbForBlock
         '
         Me.rbForBlock.AutoSize = True
-        Me.rbForBlock.Location = New System.Drawing.Point(6, 43)
+        Me.rbForBlock.Location = New System.Drawing.Point(6, 30)
         Me.rbForBlock.Name = "rbForBlock"
         Me.rbForBlock.Size = New System.Drawing.Size(144, 17)
         Me.rbForBlock.TabIndex = 5
@@ -274,7 +324,7 @@ Partial Class SendSMSWindow
         '
         Me.rbBlocked.AutoSize = True
         Me.rbBlocked.Checked = True
-        Me.rbBlocked.Location = New System.Drawing.Point(6, 19)
+        Me.rbBlocked.Location = New System.Drawing.Point(6, 14)
         Me.rbBlocked.Name = "rbBlocked"
         Me.rbBlocked.Size = New System.Drawing.Size(97, 17)
         Me.rbBlocked.TabIndex = 4
@@ -292,7 +342,7 @@ Partial Class SendSMSWindow
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(198, 112)
+        Me.GroupBox1.Size = New System.Drawing.Size(198, 84)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Կազմակերպություններ"
@@ -300,7 +350,7 @@ Partial Class SendSMSWindow
         'rbTouch
         '
         Me.rbTouch.AutoSize = True
-        Me.rbTouch.Location = New System.Drawing.Point(6, 87)
+        Me.rbTouch.Location = New System.Drawing.Point(6, 63)
         Me.rbTouch.Name = "rbTouch"
         Me.rbTouch.Size = New System.Drawing.Size(87, 17)
         Me.rbTouch.TabIndex = 3
@@ -310,7 +360,7 @@ Partial Class SendSMSWindow
         'rbMK
         '
         Me.rbMK.AutoSize = True
-        Me.rbMK.Location = New System.Drawing.Point(6, 64)
+        Me.rbMK.Location = New System.Drawing.Point(6, 47)
         Me.rbMK.Name = "rbMK"
         Me.rbMK.Size = New System.Drawing.Size(93, 17)
         Me.rbMK.TabIndex = 2
@@ -320,7 +370,7 @@ Partial Class SendSMSWindow
         'rbTama
         '
         Me.rbTama.AutoSize = True
-        Me.rbTama.Location = New System.Drawing.Point(6, 41)
+        Me.rbTama.Location = New System.Drawing.Point(6, 31)
         Me.rbTama.Name = "rbTama"
         Me.rbTama.Size = New System.Drawing.Size(106, 17)
         Me.rbTama.TabIndex = 1
@@ -331,7 +381,7 @@ Partial Class SendSMSWindow
         '
         Me.rbShtrikh.AutoSize = True
         Me.rbShtrikh.Checked = True
-        Me.rbShtrikh.Location = New System.Drawing.Point(6, 18)
+        Me.rbShtrikh.Location = New System.Drawing.Point(6, 15)
         Me.rbShtrikh.Name = "rbShtrikh"
         Me.rbShtrikh.Size = New System.Drawing.Size(87, 17)
         Me.rbShtrikh.TabIndex = 0
@@ -343,7 +393,7 @@ Partial Class SendSMSWindow
         '
         Me.btnSent.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSent.Image = CType(resources.GetObject("btnSent.Image"), System.Drawing.Image)
-        Me.btnSent.Location = New System.Drawing.Point(6, 454)
+        Me.btnSent.Location = New System.Drawing.Point(6, 352)
         Me.btnSent.Name = "btnSent"
         Me.btnSent.Size = New System.Drawing.Size(182, 27)
         Me.btnSent.TabIndex = 12
@@ -353,7 +403,7 @@ Partial Class SendSMSWindow
         '
         Me.btnLoad.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnLoad.Image = CType(resources.GetObject("btnLoad.Image"), System.Drawing.Image)
-        Me.btnLoad.Location = New System.Drawing.Point(6, 411)
+        Me.btnLoad.Location = New System.Drawing.Point(6, 317)
         Me.btnLoad.Name = "btnLoad"
         Me.btnLoad.Size = New System.Drawing.Size(182, 27)
         Me.btnLoad.TabIndex = 11
@@ -369,7 +419,7 @@ Partial Class SendSMSWindow
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(594, 555)
+        Me.GridControl1.Size = New System.Drawing.Size(594, 520)
         Me.GridControl1.TabIndex = 5
         Me.GridControl1.TabStop = False
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
@@ -389,7 +439,7 @@ Partial Class SendSMSWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(794, 555)
+        Me.ClientSize = New System.Drawing.Size(794, 520)
         Me.Controls.Add(Me.GridControl1)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -399,6 +449,8 @@ Partial Class SendSMSWindow
         Me.Text = "Ուղարկել SMS Գործընկերներին"
         Me.mnuContext.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         CType(Me.cAllClients.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
@@ -446,4 +498,8 @@ Partial Class SendSMSWindow
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents cbSMonth As System.Windows.Forms.ComboBox
     Friend WithEvents cbSYear As System.Windows.Forms.ComboBox
+    Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
+    Friend WithEvents btnSendFromExcell As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents btnLoadFromExcell As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents cbLoadFromExcell As System.Windows.Forms.CheckBox
 End Class

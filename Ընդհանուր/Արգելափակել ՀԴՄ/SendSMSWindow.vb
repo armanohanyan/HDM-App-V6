@@ -344,6 +344,9 @@ Public Class SendSMSWindow
             rbMK.Enabled = False
             rbTouch.Enabled = False
         End If
+
+        btnLoadFromExcell.Enabled = False
+        btnSendFromExcell.Enabled = False
     End Sub
     Private Sub rbBlocked_CheckedChanged(sender As Object, e As EventArgs) Handles rbBlocked.CheckedChanged
         If rbBlocked.Checked Then ckByPeriod.Enabled = False Else ckByPeriod.Enabled = True
@@ -460,4 +463,268 @@ Public Class SendSMSWindow
         End If
     End Sub
 
+    
+    Private Sub cbLoadFromExcell_CheckedChanged(sender As Object, e As EventArgs) Handles cbLoadFromExcell.CheckedChanged
+        If cbLoadFromExcell.Checked = True Then
+            btnLoadFromExcell.Enabled = True
+            btnSendFromExcell.Enabled = True
+            btnLoad.Enabled = False
+            btnSent.Enabled = False
+
+            GridControl1.BeginUpdate()
+            GridView1.Columns.Clear()
+            GridControl1.DataSource = Nothing
+            GridView1.ClearSelection()
+            GridControl1.EndUpdate()
+        ElseIf cbLoadFromExcell.Checked = False Then
+            btnLoadFromExcell.Enabled = False
+            btnSendFromExcell.Enabled = False
+            btnLoad.Enabled = True
+            btnSent.Enabled = True
+
+            GridControl1.BeginUpdate()
+            GridView1.Columns.Clear()
+            GridControl1.DataSource = Nothing
+            GridView1.ClearSelection()
+            GridControl1.EndUpdate()
+        End If
+    End Sub
+    Private Sub btnLoadFromExcell_Click(sender As Object, e As EventArgs) Handles btnLoadFromExcell.Click
+        If CheckPermission2("56783F618D244AF793667F3FB6EE2BE0") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
+
+        Dim fDialog As New OpenFileDialog
+        With fDialog
+            .Filter = "Microsoft Excel|*.xlsx"
+            .Multiselect = False
+            .Title = "Նշեք Excel-ի Ֆայլ"
+            Dim result As DialogResult = .ShowDialog
+            If result <> Windows.Forms.DialogResult.OK Then Exit Sub
+            Dim s As String = .FileName
+            If String.IsNullOrEmpty(s) Then Exit Sub
+
+            Dim MyConnection As System.Data.OleDb.OleDbConnection
+            Dim ExcelDataSet As System.Data.DataSet
+            Dim ExcelAdapter As System.Data.OleDb.OleDbDataAdapter
+
+            MyConnection = New System.Data.OleDb.OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0; Data Source=" & s & ";Extended Properties=Excel 12.0;")
+
+            ExcelAdapter = New System.Data.OleDb.OleDbDataAdapter("SELECT hvhh FROM [Sheet1$] WHERE hvhh IS NOT NULL", MyConnection)
+            ExcelAdapter.TableMappings.Add("Table", "Excel Data")
+            ExcelDataSet = New System.Data.DataSet
+            ExcelAdapter.Fill(ExcelDataSet)
+            Dim dt As DataTable = ExcelDataSet.Tables(0)
+            MyConnection.Close()
+
+            If dt.Rows.Count = 0 Then Exit Sub
+
+            Dim l As New List(Of ForSmS2)
+
+            For i = 0 To dt.Rows.Count - 1
+                Dim dt2 As DataTable
+                dt2 = iDB.PartqBySupporter2ForSMS(dt.Rows(i).Item(0))
+                If dt2.Rows.Count > 0 Then
+                    l.Add(New ForSmS2(dt2.Rows(0).Item(0), dt2.Rows(0).Item(5), dt2.Rows(0).Item(2), dt2.Rows(0).Item(3), dt2.Rows(0).Item(6)))
+                End If
+            Next
+            Dim dt3 As DataTable = ToDataTable(l)
+
+
+            GridControl1.BeginUpdate()
+            GridView1.Columns.Clear()
+            GridControl1.DataSource = Nothing
+            GridControl1.DataSource = dt3
+            GridView1.ClearSelection()
+            GridControl1.EndUpdate()
+
+            With GridView1
+                .Columns("id").Visible = False
+                '.Columns("Պատկան").Visible = False
+                .OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False
+                .OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False
+                .OptionsBehavior.Editable = False
+                .OptionsBehavior.ReadOnly = True
+                .OptionsCustomization.AllowColumnMoving = False
+                .OptionsCustomization.AllowGroup = False
+
+                .OptionsView.AllowCellMerge = False
+                .OptionsSelection.MultiSelect = True
+                .OptionsSelection.EnableAppearanceFocusedCell = False
+                .Columns("Պարտք").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending
+            End With
+            If GridView1.RowCount > 0 Then
+                If GridView1.Columns("ՀՎՀՀ").Summary.ActiveCount = 0 Then
+                    Dim item As GridColumnSummaryItem = New GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "ՀՎՀՀ", "Քանակ {0}")
+                    GridView1.Columns("ՀՎՀՀ").Summary.Add(item)
+                End If
+            End If
+        End With
+    End Sub
+    Private Sub btnSendFromExcell_Click(sender As Object, e As EventArgs) Handles btnSendFromExcell.Click
+        Dim formX As New Working
+        Try
+            If CheckPermission2("272792D12BD14C8B8FFD879DD9BC0FEC") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
+
+            'GridView1.ClearColumnsFilter()
+            'GridView1.SetRowCellValue(GridControl.AutoFilterRowHandle, "Նշիչ", True)
+
+            If GridView1.RowCount = 0 Then MsgBox("Նշված գրանցումներ չկան", MsgBoxStyle.Exclamation, My.Application.Info.Title) : Exit Sub
+
+            formX.Show() : My.Application.DoEvents()
+
+            btnLoadFromExcell.Enabled = False
+            btnSendFromExcell.Enabled = False
+
+            'Dim stopDate As String = Microsoft.VisualBasic.Right("00" & TimeX.DateTime.Day, 2) & "." & Microsoft.VisualBasic.Right("00" & TimeX.DateTime.Month, 2) & "." & TimeX.DateTime.Year
+
+           
+
+            Dim l As New List(Of ForSmS2)
+
+            'List Clients
+            For i As Integer = 0 To GridView1.RowCount - 1
+                l.Add(New ForSmS2(GridView1.GetRowCellValue(i, "ՀՎՀՀ"), GridView1.GetRowCellValue(i, "Հեռախոս"), GridView1.GetRowCellValue(i, "Պարտք"), GridView1.GetRowCellValue(i, "Սպասարկող"), GridView1.GetRowCellValue(i, "id")))
+            Next
+
+            'If cAllClients.Checked = True Then
+            '    'List of Disabled Clients
+            '    Dim DTNotSupportedClients As DataTable = iDB.SmsForBlockinNotSupportedClients(o)
+            '    If DTNotSupportedClients.Rows.Count > 0 Then
+            '        For i As Integer = 0 To DTNotSupportedClients.Rows.Count - 1
+            '            'l.Add(New ForSmS(DTNotSupportedClients.Rows(i)("ՀՎՀՀ"), DTNotSupportedClients.Rows(i)("Հեռախոս"), DTNotSupportedClients.Rows(i)("ClientID")))
+            '        Next
+            '    End If
+            'End If
+
+            Dim dt As DataTable = ToDataTable(l)
+
+            SendSMS2(dt, formX)
+
+            MsgBox("Գործողությունը կատարվեց", MsgBoxStyle.Information, My.Application.Info.Title)
+
+            cbLoadFromExcell.Checked = False
+
+        Catch ex As ExceptionClass
+        Catch ex As System.Data.SqlClient.SqlException
+            Call SQLException(ex)
+        Catch ex As Exception
+            Call SoftException(ex)
+        Finally
+            formX.Close()
+            formX = Nothing
+            GridView1.ClearColumnsFilter()
+            btnLoad.Enabled = True
+            btnSent.Enabled = True
+        End Try
+    End Sub
+    Private Sub SendSMS2(ByVal dt As DataTable, ByRef f As Form)
+        Try
+            For i As Integer = 0 To dt.Rows.Count - 1
+                Dim iCompany As New Company_XXX
+
+                Dim supporter As String = dt.Rows(i)("Սպասարկող")
+                Dim op As Integer
+                Select Case supporter
+                    Case """ՀԴՄ Շտրիխ"" ՍՊԸ"
+                        iCompany = Company_XXX.HDM_Shtrikh
+                        op = 1
+                    Case """Տամա Էլեկտրոն"" ՍՊԸ"
+                        iCompany = Company_XXX.Tama_Electron
+                        op = 2
+                    Case """ՄԵՐԻ-ՔՐԻՍՏ"" ՍՊԸ"
+                        iCompany = Company_XXX.Mery_Krist
+                        op = 3
+                    Case """Տոչ-մաստեր"" ՍՊԸ"
+                        iCompany = Company_XXX.Touch_Master
+                        op = 4
+                End Select
+
+                'If companyX = Company_XXX.Undefined Then Throw New Exception("Կազմակերպությունը սխալ է նշված")
+
+                'check if object is null
+                If IsNothing(client) Then client = New SmppClient With {.AutoReconnectDelay = 10000, .ConnectionTimeout = 15000, .KeepAliveInterval = 60000}
+
+                'connection String
+                Dim iConnection = New With {.SystemID = "", .Password = "", .Port = 2775, .Host = "31.47.195.66", .Tel = ""}
+                Dim strTel As String = String.Empty
+
+                Dim NikitaAccount As DataTable = iDB.RetNikitaAccount(op)
+                With iConnection
+                    .SystemID = NikitaAccount.Rows(0)("SystemID")
+                    .Password = NikitaAccount.Rows(0)("Password")
+                    .Tel = NikitaAccount.Rows(0)("Tel")
+                End With
+                strTel = NikitaAccount.Rows(0)("strTel")
+
+                'set properties
+                Dim properties As SmppConnectionProperties = client.Properties
+                With properties
+                    .SystemID = iConnection.SystemID
+                    .Password = iConnection.Password
+                    .Port = iConnection.Port
+                    .Host = iConnection.Host
+                    .SystemType = ""
+                    .DefaultServiceType = "0"
+                End With
+
+                'start client
+                If client.Started = False Then client.Start()
+
+                'check if connected
+                Dim j As Integer = 0
+                Do While isConnected = False
+                    j += 1
+                    Threading.Thread.Sleep(200)
+                    If j = 40 Then Exit Do
+                Loop
+
+                'text message object
+                Dim msg As New TextMessage()
+                With msg
+                    .RegisterDeliveryNotification = False
+                    .SourceAddress = iConnection.Tel
+                End With
+
+
+                If isConnected = False Then Throw New Exception("Կապը բացակայում է")
+                If dt.Rows(i)("Հեռախոս") = "-" Then Continue For
+
+                'Message
+
+                msg.Text = "Hargeli gorcynker HVHH " & dt.Rows(i)("ՀՎՀՀ") & " Dzer kazmakerputyunn uni partq " & dt.Rows(i)("Պարտք") & " dram. Xndrum enq katarel vjarum.Her " & strTel
+
+
+                msg.DestinationAddress = "+374" & Microsoft.VisualBasic.Right(dt.Rows(i)("Հեռախոս"), 8)
+
+                client.SendMessage(msg)
+
+                f.Text = dt.Rows.Count & " / " & i + 1
+                f.Refresh()
+
+                'Save to DB
+                iDB.InsertSMS(op, dt.Rows(i)("id"), 0, Microsoft.VisualBasic.Right(dt.Rows(i)("Հեռախոս"), 8))
+
+                Threading.Thread.Sleep(300)
+                My.Application.DoEvents()
+                client.SendMessage(msg)
+                Call KillClient(client)
+            Next
+
+            '////////////////////////////////////////////////
+            'Custom Send SMS
+            'msg.DestinationAddress = "+37495999997"
+            'If SMSType = True Then
+            '    msg.Text = "CompanyID` " & companyX.ToString & " , Type` Kasecum"
+            'Else
+            '    msg.Text = "CompanyID` " & companyX.ToString & " , Type` Kasecman Entaka"
+            'End If
+
+
+            '////////////////////////////////////////////////
+
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, My.Application.Info.Title)
+            Call KillClient(client)
+        End Try
+    End Sub
 End Class

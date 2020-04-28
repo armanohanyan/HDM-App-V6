@@ -1597,6 +1597,25 @@ Partial Public Class DB
         Return dt
     End Function
 
+    'PartqBySupporter2ForSMS
+    Friend Function PartqBySupporter2ForSMS(ByVal ClientHVHH As String) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "EXEC Payment.PartqBySupporter2ForSMS @ClientHVHH"
+                cmd.Parameters.Add("@ClientHVHH", SqlDbType.NVarChar).Value = ClientHVHH
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
     'PartqBySupporter4
     Friend Function PartqBySupporter4(ByVal hvhh As String, ByVal SupporterID As Byte) As DataTable
         Dim dt As DataTable

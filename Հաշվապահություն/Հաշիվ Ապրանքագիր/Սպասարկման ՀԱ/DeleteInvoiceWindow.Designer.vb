@@ -165,7 +165,7 @@ Partial Class DeleteInvoiceWindow
         '
         Me.cReason.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cReason.FormattingEnabled = True
-        Me.cReason.Items.AddRange(New Object() {"Լուծարված", "Հաշվառումից հանված", "Ժամանակավոր դադարեցված", "Սնանկ", "Լուծարված-միավորված", "Մահացած"})
+        Me.cReason.Items.AddRange(New Object() {"Լուծարված", "Հաշվառումից հանված", "Ժամանակավոր դադարեցված", "Սնանկ", "Լուծարված-միավորված", "Մահացած", "Ջնջված"})
         Me.cReason.Location = New System.Drawing.Point(281, 75)
         Me.cReason.Name = "cReason"
         Me.cReason.Size = New System.Drawing.Size(209, 21)
