@@ -251,6 +251,11 @@ Public Class SendSMSWindow
                 .OptionsSelection.EnableAppearanceFocusedCell = False
                 .Columns("Պարտք").SortOrder = DevExpress.Data.ColumnSortOrder.Ascending
             End With
+            Dim columnN As Integer = 0
+            For Each column As DevExpress.XtraGrid.Columns.GridColumn In GridView1.Columns
+                GridView1.Columns(columnN).OptionsFilter.FilterPopupMode = DevExpress.XtraGrid.Columns.FilterPopupMode.CheckedList
+                columnN = columnN + 1
+            Next
             If GridView1.RowCount > 0 Then
                 If GridView1.Columns("Կազմակերպություն").Summary.ActiveCount = 0 Then
                     Dim item As GridColumnSummaryItem = New GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "Կազմակերպություն", "Քանակ {0}")
