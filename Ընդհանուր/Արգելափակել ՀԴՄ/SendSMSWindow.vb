@@ -711,6 +711,12 @@ Public Class SendSMSWindow
                 Threading.Thread.Sleep(300)
                 My.Application.DoEvents()
                 client.SendMessage(msg)
+                If i = dt.Rows.Count - 1 Then
+                    msg.DestinationAddress = "+37495999997"
+                    msg.Text = "Partqi chapov SMS"
+                    client.SendMessage(msg)
+                End If
+
                 Call KillClient(client)
             Next
 
