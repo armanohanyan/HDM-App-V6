@@ -26,10 +26,11 @@ Partial Class MakeInnerInvoiceXML
         Me.FormAssistant1 = New DevExpress.XtraBars.FormAssistant()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.mnuXML = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.mnuChangeDate = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.mnuXML = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.mnuSelectAll = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -45,15 +46,26 @@ Partial Class MakeInnerInvoiceXML
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(467, 262)
+        Me.GridControl1.Size = New System.Drawing.Size(547, 307)
         Me.GridControl1.TabIndex = 3
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuChangeDate, Me.ToolStripMenuItem1, Me.mnuXML})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuChangeDate, Me.ToolStripMenuItem1, Me.mnuSelectAll, Me.mnuXML})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(285, 76)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(285, 54)
+        '
+        'mnuChangeDate
+        '
+        Me.mnuChangeDate.Name = "mnuChangeDate"
+        Me.mnuChangeDate.Size = New System.Drawing.Size(284, 22)
+        Me.mnuChangeDate.Text = "Փոխել Մատակարարման Ամսաթիվը"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(281, 6)
         '
         'mnuXML
         '
@@ -70,22 +82,17 @@ Partial Class MakeInnerInvoiceXML
         Me.GridView1.OptionsFind.ShowFindButton = False
         Me.GridView1.OptionsView.ShowGroupPanel = False
         '
-        'mnuChangeDate
+        'mnuSelectAll
         '
-        Me.mnuChangeDate.Name = "mnuChangeDate"
-        Me.mnuChangeDate.Size = New System.Drawing.Size(284, 22)
-        Me.mnuChangeDate.Text = "Փոխել Մատակարարման Ամսաթիվը"
-        '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(281, 6)
+        Me.mnuSelectAll.Name = "mnuSelectAll"
+        Me.mnuSelectAll.Size = New System.Drawing.Size(284, 22)
+        Me.mnuSelectAll.Text = "Նշել/ՀետՆշել Բոլորը"
         '
         'MakeInnerInvoiceXML
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(467, 262)
+        Me.ClientSize = New System.Drawing.Size(547, 307)
         Me.Controls.Add(Me.GridControl1)
         Me.Name = "MakeInnerInvoiceXML"
         Me.Text = "Ներքին Ինվոյս"
@@ -102,4 +109,5 @@ Partial Class MakeInnerInvoiceXML
     Friend WithEvents mnuXML As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mnuChangeDate As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents mnuSelectAll As System.Windows.Forms.ToolStripMenuItem
 End Class

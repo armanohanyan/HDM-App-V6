@@ -28,9 +28,9 @@ Partial Class MakeSellInvoiceXML
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.mnuChangeDate = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.mnuSelectAll = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuXML = New System.Windows.Forms.ToolStripMenuItem()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.mnuSelectAll = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -54,7 +54,7 @@ Partial Class MakeSellInvoiceXML
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuChangeDate, Me.ToolStripMenuItem1, Me.mnuSelectAll, Me.mnuXML})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(285, 98)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(285, 76)
         '
         'mnuChangeDate
         '
@@ -66,6 +66,12 @@ Partial Class MakeSellInvoiceXML
         '
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(281, 6)
+        '
+        'mnuSelectAll
+        '
+        Me.mnuSelectAll.Name = "mnuSelectAll"
+        Me.mnuSelectAll.Size = New System.Drawing.Size(284, 22)
+        Me.mnuSelectAll.Text = "Նշել/ՀետՆշել Բոլորը"
         '
         'mnuXML
         '
@@ -81,12 +87,6 @@ Partial Class MakeSellInvoiceXML
         Me.GridView1.OptionsFind.ShowClearButton = False
         Me.GridView1.OptionsFind.ShowFindButton = False
         Me.GridView1.OptionsView.ShowGroupPanel = False
-        '
-        'mnuSelectAll
-        '
-        Me.mnuSelectAll.Name = "mnuSelectAll"
-        Me.mnuSelectAll.Size = New System.Drawing.Size(284, 22)
-        Me.mnuSelectAll.Text = "Նշել/ՀետՆշել Բոլորը"
         '
         'MakeSellInvoiceXML
         '

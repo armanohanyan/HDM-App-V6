@@ -304,6 +304,150 @@ Public Class MakeInnerInvoiceXML
             MsgBox(ex.Message, MsgBoxStyle.Critical, My.Application.Info.Title)
         End Try
     End Sub
+    Private Sub createXMLFilesBulk(ByVal dirName As String, ByVal SellInvoice_list As List(Of InnerInvInfo))  'Arman
+        Try
+
+            Dim r As New Random
+            Dim xws As XmlWriterSettings = New XmlWriterSettings()
+
+            'Settings
+            xws.Indent = True
+            xws.NewLineOnAttributes = False
+            xws.ConformanceLevel = ConformanceLevel.Auto
+
+            Dim k As String = "Inv_" & "Inner_" & Now.Day & "_" & Now.Month & "_" & Now.Year & "_" & r.Next(0, Integer.MaxValue) & ".xml"
+            Dim xw As XmlWriter = XmlWriter.Create(dirName & "\" & k, xws)
+            xw.WriteStartDocument(False)
+
+            xw.WriteStartElement("ExportedData", "http://www.taxservice.am/tp3/invoice/definitions")
+
+            Dim dt7 As DataTable = ToDataTable(SellInvoice_list)
+            Dim rID As Integer
+            Dim dealDAte As Date
+            For ii As Integer = 0 To dt7.Rows.Count - 1
+                rID = dt7.Rows(ii)("ID")
+                dealDAte = dt7.Rows(ii)("Dildate")
+
+                Dim dt2 As System.Data.DataTable = iDB.GetInnerInvInfo(rID)
+                If dt2.Rows.Count = 0 Then Throw New Exception("Տվյալներ չկան")
+
+                Dim dt As System.Data.DataTable = iDB.GetInnerInvDetails(rID)
+                If dt.Rows.Count = 0 Then Throw New Exception("Տվյալներ չկան")
+
+                'If dt.Rows.Count = 0 Then Exit While
+               
+
+             
+                xw.WriteStartElement("Invoice")
+                xw.WriteAttributeString("Version", "1.0")
+
+                xw.WriteElementString("Type", 1)
+
+                'Start GeneralInfo
+                xw.WriteStartElement("GeneralInfo")
+                xw.WriteElementString("SupplyDate", dealDAte.Year & "-" & Microsoft.VisualBasic.Right("00" & dealDAte.Month, 2) & "-" & Microsoft.VisualBasic.Right("00" & dealDAte.Day, 2))
+                xw.WriteElementString("Procedure", 2)
+                'Start DealInfo
+                xw.WriteStartElement("DealInfo")
+                xw.WriteEndElement()
+                'End DealInfo
+                xw.WriteElementString("AdditionalData", "Փոխանցումով")
+                xw.WriteEndElement()
+                'End GeneralInfo
+
+
+
+                'Start SupplierInfo
+                xw.WriteStartElement("SupplierInfo")
+                'Start Taxpayer
+                xw.WriteElementString("VATNumber", dt2.Rows(0)("ՊատկանՀՎՀՀ") & "/1")
+                xw.WriteStartElement("Taxpayer")
+                xw.WriteElementString("TIN", dt2.Rows(0)("ՊատկանՀՎՀՀ"))
+                xw.WriteElementString("Name", dt2.Rows(0)("ՊատկանԿազմակերպություն"))
+                xw.WriteElementString("Address", dt2.Rows(0)("Հասցե"))
+                'Start BankAccount
+                xw.WriteStartElement("BankAccount")
+                xw.WriteElementString("BankName", dt2.Rows(0)("Բանկ"))
+                xw.WriteElementString("BankAccountNumber", dt2.Rows(0)("Հաշվեհամար"))
+                xw.WriteEndElement()
+                'End BankAccount
+                xw.WriteElementString("AdditionalData", "Վճարում կատարելիս վճարման հանձնարարագրի նպատակ դաշտում նշել ՀՎՀՀ և կազմակերպության անվանում:")
+                xw.WriteEndElement()
+                'End Taxpayer
+                xw.WriteElementString("SupplyLocation", dt2.Rows(0)("ՊատկանԳործՀասցե"))
+                xw.WriteEndElement()
+                'End SupplierInfo
+
+
+
+
+                'Start BuyerInfo
+                xw.WriteStartElement("BuyerInfo")
+                'Start Taxpayer
+                xw.WriteStartElement("Taxpayer")
+                xw.WriteElementString("TIN", dt2.Rows(0)("ՀՎՀՀ"))
+                xw.WriteElementString("Name", dt2.Rows(0)("Կազմակերպություն"))
+                xw.WriteElementString("Address", dt2.Rows(0)("ԻրավաբանականՀասցե"))
+                'Start BankAccount
+                xw.WriteStartElement("BankAccount")
+                xw.WriteElementString("BankName", "")
+                xw.WriteElementString("BankAccountNumber", "")
+                xw.WriteEndElement()
+                'End BankAccount
+                xw.WriteEndElement()
+                'End Taxpayer
+                xw.WriteElementString("DeliveryMethod", "Ինքնատեղափոխում")
+                xw.WriteElementString("DeliveryLocation", "Ինքնատեղափոխում")
+                xw.WriteEndElement()
+                'End BuyerInfo
+
+
+
+
+                'Start GoodsInfo
+                xw.WriteStartElement("GoodsInfo")
+
+                For i As Integer = 0 To dt.Rows.Count - 1
+                    'Start Good
+                    xw.WriteStartElement("Good")
+                    xw.WriteElementString("Description", dt.Rows(i)("Սարքավորում"))
+                    xw.WriteElementString("Unit", "Հատ")
+                    xw.WriteElementString("Amount", dt.Rows(i)("Քանակ"))
+                    xw.WriteElementString("PricePerUnit", dt.Rows(i)("Միավորի Գին"))
+                    xw.WriteElementString("Price", dt.Rows(i)("Գին"))
+                    xw.WriteElementString("VATRate", 20)
+                    xw.WriteElementString("VAT", dt.Rows(i)("ԱԱՀ"))
+                    xw.WriteElementString("TotalPrice", dt.Rows(i)("Գումար"))
+                    xw.WriteEndElement()
+                    'End Good
+                Next
+
+                'Start Total
+                xw.WriteStartElement("Total")
+                xw.WriteElementString("Price", dt.Compute("SUM(Գին)", ""))
+                xw.WriteElementString("VAT", dt.Compute("SUM(ԱԱՀ)", ""))
+                xw.WriteElementString("TotalPrice", dt.Compute("SUM(Գումար)", ""))
+                xw.WriteEndElement()
+                'End Total
+                xw.WriteEndElement()
+                'End GoodsInfo
+
+                xw.WriteEndElement()    'Close Invoice
+
+                iDB.SetInvoicePrinted(rID)
+
+            Next
+
+            xw.WriteEndElement()    'Close ExportedData
+
+            xw.WriteEndDocument()
+            xw.Flush()
+            xw.Close()
+
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, My.Application.Info.Title)
+        End Try
+    End Sub
     Private Sub MakeInnerInvoiceXML_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Call LoadData()
     End Sub
@@ -326,6 +470,8 @@ Public Class MakeInnerInvoiceXML
             iPath &= "\" & sDate
             If IO.Directory.Exists(iPath) = False Then IO.Directory.CreateDirectory(iPath)
 
+            Dim innerInvoice_list As New List(Of InnerInvInfo)    'Arman
+
             For i As Integer = 0 To GridView1.RowCount - 1
                 If GridView1.GetRowCellValue(i, "Նշիչ") = True Then
 
@@ -335,15 +481,20 @@ Public Class MakeInnerInvoiceXML
                     'Create XML File
                     If SupporterID = 2 Then
                         createXMLFiles2(iPath, rID, dealDate)
+                        iDB.SetInvoicePrinted(rID)
                     Else
-                        createXMLFiles(iPath, rID, dealDate)
+                        'createXMLFiles(iPath, rID, dealDate)
+                        innerInvoice_list.Add(New InnerInvInfo(GridView1.GetRowCellValue(i, "InvoiceID"), GridView1.GetRowCellValue(i, "Ամսաթիվ")))   'Arman
                     End If
 
                     'Update Invoice Set Printed
-                    iDB.SetInvoicePrinted(rID)
+                    'iDB.SetInvoicePrinted(rID)
 
                 End If
             Next
+
+            createXMLFilesBulk(iPath, innerInvoice_list) ' Arman
+
 
             Call Shell("explorer /select," & iPath, AppWinStyle.NormalFocus)
 
@@ -407,5 +558,48 @@ Public Class MakeInnerInvoiceXML
             Call LoadData()
         End Try
     End Sub
+
+    Private Sub mnuSelectAll_Click(sender As Object, e As EventArgs) Handles mnuSelectAll.Click
+        On Error Resume Next
+        If GridView1.GetDataRow(GridView1.GetSelectedRows()(0)).Item("Նշիչ") = False Then
+            For i As Int32 = 0 To GridView1.RowCount - 1
+                GridView1.SetRowCellValue(i, "Նշիչ", True)
+            Next
+        Else
+            For i As Int32 = 0 To GridView1.RowCount - 1
+                GridView1.SetRowCellValue(i, "Նշիչ", False)
+            Next
+        End If
+    End Sub
+End Class
+
+
+Public Class InnerInvInfo
+
+    Private _id As Integer
+    Private _dildate As Date
+
+    Public Sub New(id As Integer, dildate As Date)
+        _id = id
+        _dildate = dildate
+    End Sub
+
+    Public Property ID As Integer
+        Get
+            Return _id
+        End Get
+        Set(value As Integer)
+            _id = value
+        End Set
+    End Property
+
+    Public Property Dildate As Date
+        Get
+            Return _dildate
+        End Get
+        Set(value As Date)
+            _dildate = value
+        End Set
+    End Property
 
 End Class
