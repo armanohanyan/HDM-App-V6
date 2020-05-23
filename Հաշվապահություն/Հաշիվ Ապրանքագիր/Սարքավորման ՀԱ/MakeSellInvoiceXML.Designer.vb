@@ -26,10 +26,11 @@ Partial Class MakeSellInvoiceXML
         Me.FormAssistant1 = New DevExpress.XtraBars.FormAssistant()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.mnuXML = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.mnuChangeDate = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.mnuXML = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.mnuSelectAll = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,9 +52,20 @@ Partial Class MakeSellInvoiceXML
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuChangeDate, Me.ToolStripMenuItem1, Me.mnuXML})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuChangeDate, Me.ToolStripMenuItem1, Me.mnuSelectAll, Me.mnuXML})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(285, 76)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(285, 98)
+        '
+        'mnuChangeDate
+        '
+        Me.mnuChangeDate.Name = "mnuChangeDate"
+        Me.mnuChangeDate.Size = New System.Drawing.Size(284, 22)
+        Me.mnuChangeDate.Text = "Փոխել Մատակարարման Ամսաթիվը"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(281, 6)
         '
         'mnuXML
         '
@@ -70,16 +82,11 @@ Partial Class MakeSellInvoiceXML
         Me.GridView1.OptionsFind.ShowFindButton = False
         Me.GridView1.OptionsView.ShowGroupPanel = False
         '
-        'mnuChangeDate
+        'mnuSelectAll
         '
-        Me.mnuChangeDate.Name = "mnuChangeDate"
-        Me.mnuChangeDate.Size = New System.Drawing.Size(284, 22)
-        Me.mnuChangeDate.Text = "Փոխել Մատակարարման Ամսաթիվը"
-        '
-        'ToolStripMenuItem1
-        '
-        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
-        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(281, 6)
+        Me.mnuSelectAll.Name = "mnuSelectAll"
+        Me.mnuSelectAll.Size = New System.Drawing.Size(284, 22)
+        Me.mnuSelectAll.Text = "Նշել/ՀետՆշել Բոլորը"
         '
         'MakeSellInvoiceXML
         '
@@ -102,4 +109,5 @@ Partial Class MakeSellInvoiceXML
     Friend WithEvents mnuXML As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents mnuChangeDate As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents mnuSelectAll As System.Windows.Forms.ToolStripMenuItem
 End Class
