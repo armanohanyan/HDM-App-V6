@@ -31,6 +31,7 @@ Public Class EditActivateHayt
             f.GridView1.Columns("Սպասարկող").Visible = False
             f.GridView1.Columns("Դիտված").Visible = False
             f.GridView1.Columns("ՀայտիՏեսակ").Visible = False
+            f.GridView1.Columns("Խնդիր").Visible = False
             f.GridView1.OptionsSelection.MultiSelect = True
 
             Dim columnN As Integer = 0

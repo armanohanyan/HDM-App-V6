@@ -16,6 +16,7 @@ Public Class changeGeneralHaytInfo
     Friend haytDate As DateTime
     Friend haytRegion As String = ""
     Friend haytCreator As String = ""
+    Friend problem As Integer = 0
 
     Friend haytEditTime As DateTime
     Friend clientTel As String = ""
@@ -86,6 +87,7 @@ Public Class changeGeneralHaytInfo
         cbTesuch.Text = haytTesuch
         cbSupporter.Text = haytSpasarkox
         cbRegion.Text = haytRegion
+        cProb.SelectedIndex = problem
 
         txtEcr.Text = haytHDM
         txtHvhh.Text = haytHVHH
@@ -109,7 +111,7 @@ Public Class changeGeneralHaytInfo
     Private Sub btnChange_Click(sender As Object, e As EventArgs) Handles btnChange.Click
         Try
 
-            iDB.UpdateProposalGeneral(txtEcr.Text.Trim, txtHvhh.Text.Trim, txtClient.Text.Trim, cbTesuch.Text, txtTel.Text.Trim, txtAddress.Text.Trim, cbSupporter.SelectedValue, haytID, txtProblem.Text.Trim, ApprDate.DateTime, cbRegion.SelectedValue)
+            iDB.UpdateProposalGeneral(txtEcr.Text.Trim, txtHvhh.Text.Trim, txtClient.Text.Trim, cbTesuch.Text, txtTel.Text.Trim, txtAddress.Text.Trim, cbSupporter.SelectedValue, haytID, txtProblem.Text.Trim, ApprDate.DateTime, cbRegion.SelectedValue, cProb.SelectedIndex)
 
             'If haytEditTime <> ApprDate.DateTime Then
             '    clientTel = haytTel

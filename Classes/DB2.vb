@@ -3604,9 +3604,9 @@ Partial Public Class DB
     End Sub
 
     'UpdateProposalGeneral
-    Friend Sub UpdateProposalGeneral(ecr As String, hvhh As String, Client As String, Tesuch As String, Tel As String, addr As String, Supporter As Byte, ID As Integer, ByVal Xndir As String, ByVal haytDate As DateTime, ByVal reg As String)
+    Friend Sub UpdateProposalGeneral(ecr As String, hvhh As String, Client As String, Tesuch As String, Tel As String, addr As String, Supporter As Byte, ID As Integer, ByVal Xndir As String, ByVal haytDate As DateTime, ByVal reg As String, ByVal ProblemType As Integer)
         Using connection As New SqlConnection(SQLString)
-            Dim cmdSQLcom As New SqlCommand("EXEC Client.UpdateProposalGeneral @ecr,@hvhh,@Client,@Tesuch,@Tel,@addr,@Supporter,@ID,@Xndir,@haytDate,@Reg,@EditerID", connection)
+            Dim cmdSQLcom As New SqlCommand("EXEC Client.UpdateProposalGeneral @ecr,@hvhh,@Client,@Tesuch,@Tel,@addr,@Supporter,@ID,@Xndir,@haytDate,@Reg,@EditerID,@ProblemType", connection)
             cmdSQLcom.Parameters.Add("@ecr", Data.SqlDbType.VarChar).Value = ecr
             cmdSQLcom.Parameters.Add("@hvhh", Data.SqlDbType.VarChar).Value = hvhh
             cmdSQLcom.Parameters.Add("@Client", Data.SqlDbType.NVarChar).Value = Client
@@ -3619,6 +3619,7 @@ Partial Public Class DB
             cmdSQLcom.Parameters.Add("@haytDate", Data.SqlDbType.DateTime).Value = haytDate
             cmdSQLcom.Parameters.Add("@Reg", Data.SqlDbType.NVarChar).Value = reg
             cmdSQLcom.Parameters.Add("@EditerID", Data.SqlDbType.SmallInt).Value = iUser.UserID
+            cmdSQLcom.Parameters.Add("@ProblemType", Data.SqlDbType.Int).Value = ProblemType
             connection.Open()
             cmdSQLcom.ExecuteNonQuery()
             connection.Close()

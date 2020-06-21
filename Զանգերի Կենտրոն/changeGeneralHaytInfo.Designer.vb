@@ -44,6 +44,8 @@ Partial Class changeGeneralHaytInfo
         Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.cbRegion = New System.Windows.Forms.ComboBox()
+        Me.cProb = New System.Windows.Forms.ComboBox()
+        Me.Label15 = New System.Windows.Forms.Label()
         CType(Me.ApprDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ApprDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -95,7 +97,7 @@ Partial Class changeGeneralHaytInfo
         Me.txtClient.Location = New System.Drawing.Point(92, 62)
         Me.txtClient.Multiline = True
         Me.txtClient.Name = "txtClient"
-        Me.txtClient.Size = New System.Drawing.Size(181, 105)
+        Me.txtClient.Size = New System.Drawing.Size(181, 82)
         Me.txtClient.TabIndex = 2
         '
         'Label3
@@ -236,10 +238,31 @@ Partial Class changeGeneralHaytInfo
         Me.cbRegion.Size = New System.Drawing.Size(146, 21)
         Me.cbRegion.TabIndex = 9
         '
+        'cProb
+        '
+        Me.cProb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cProb.FormattingEnabled = True
+        Me.cProb.Items.AddRange(New Object() {"Այլ", "Վերագրանցում", "Ապաակտիվացում", "Հարկատեսակի փոփոխում", "Բաժին ավելացնել", "Համաձայնագիր", "Պայմանագիր", "Վերանորոգման Հայտ", "Վաճառք"})
+        Me.cProb.Location = New System.Drawing.Point(92, 153)
+        Me.cProb.Name = "cProb"
+        Me.cProb.Size = New System.Drawing.Size(181, 21)
+        Me.cProb.TabIndex = 28
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(43, 161)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(41, 13)
+        Me.Label15.TabIndex = 59
+        Me.Label15.Text = "Խնդիր"
+        '
         'changeGeneralHaytInfo
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.ClientSize = New System.Drawing.Size(530, 370)
+        Me.Controls.Add(Me.Label15)
+        Me.Controls.Add(Me.cProb)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.cbRegion)
         Me.Controls.Add(Me.ApprDate)
@@ -297,4 +320,6 @@ Partial Class changeGeneralHaytInfo
     Friend WithEvents LabelControl3 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents cbRegion As System.Windows.Forms.ComboBox
+    Friend WithEvents cProb As System.Windows.Forms.ComboBox
+    Friend WithEvents Label15 As System.Windows.Forms.Label
 End Class

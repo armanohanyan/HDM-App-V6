@@ -119,6 +119,7 @@ Public Class HaytActivateEdit
                     .haytDate = GridView1.GetFocusedDataRow.Item("ՀայտիԱմսաթիվ").ToString
                     .haytRegion = GridView1.GetFocusedDataRow.Item("Տարածաշրջան").ToString
                     .haytCreator = GridView1.GetFocusedDataRow.Item("Օպերատոր").ToString
+                    .problem = GridView1.GetFocusedDataRow.Item("Խնդիր")
                     .ShowDialog()
                 End With
             End If

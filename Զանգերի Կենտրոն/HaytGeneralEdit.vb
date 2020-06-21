@@ -77,6 +77,8 @@ Public Class HaytGeneralEdit
     Private Sub mnuChangeInfo_Click(sender As Object, e As EventArgs) Handles mnuChangeInfo.Click
         Try
             If GridView1.SelectedRowsCount = 0 Then Exit Sub
+            Dim haytId As Integer = GridView1.GetFocusedDataRow.Item("ՀՀ").ToString
+            If iDB.IsProposalEquipmentSold(haytId) = True Then Throw New Exception("Հայտը խմբագրման ենթակա չէ, քանի որ վաճառքն արդեն իսկ իրականացված է։")
 
             Dim f As New changeGeneralHaytInfo
             With f
