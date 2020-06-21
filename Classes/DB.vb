@@ -4839,6 +4839,22 @@ Partial Public Class DB
         Return b
     End Function
 
+    'IsProposalEquipmentSold
+    Friend Function IsProposalEquipmentSold(ByVal haytId As Integer) As Boolean
+        Dim b
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT Client.IsProposalEquipmentSold(@haytId)"
+                cmd.Parameters.Add("@haytId", SqlDbType.Int).Value = haytId
+                b = cmd.ExecuteScalar()
+            End Using
+        End Using
+        Return b
+    End Function
+
     'GetGprsClientInfoBySerial
     Friend Function GetGprsClientInfoBySerial(ByVal Serial As String) As DataTable
         Dim dt As DataTable

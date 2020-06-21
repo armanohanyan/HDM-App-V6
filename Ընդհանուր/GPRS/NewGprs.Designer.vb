@@ -25,6 +25,7 @@ Partial Class NewGprs
         Me.FormAssistant1 = New DevExpress.XtraBars.FormAssistant()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cF1 = New DevExpress.XtraEditors.CheckEdit()
         Me.cBeeline = New System.Windows.Forms.RadioButton()
         Me.cViva = New System.Windows.Forms.RadioButton()
         Me.cOrange = New System.Windows.Forms.RadioButton()
@@ -35,15 +36,16 @@ Partial Class NewGprs
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.cF1 = New DevExpress.XtraEditors.CheckEdit()
+        Me.cC1 = New DevExpress.XtraEditors.CheckEdit()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        CType(Me.cF1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.sDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.sDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.cF1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cC1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TableLayoutPanel1
@@ -64,6 +66,7 @@ Partial Class NewGprs
         'Panel1
         '
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel1.Controls.Add(Me.cC1)
         Me.Panel1.Controls.Add(Me.cF1)
         Me.Panel1.Controls.Add(Me.cBeeline)
         Me.Panel1.Controls.Add(Me.cViva)
@@ -77,6 +80,14 @@ Partial Class NewGprs
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(244, 382)
         Me.Panel1.TabIndex = 0
+        '
+        'cF1
+        '
+        Me.cF1.Location = New System.Drawing.Point(87, 82)
+        Me.cF1.Name = "cF1"
+        Me.cF1.Properties.Caption = "F-ով"
+        Me.cF1.Size = New System.Drawing.Size(55, 19)
+        Me.cF1.TabIndex = 5
         '
         'cBeeline
         '
@@ -202,13 +213,13 @@ Partial Class NewGprs
         Me.GridView1.OptionsMenu.EnableGroupPanelMenu = False
         Me.GridView1.OptionsView.ShowGroupPanel = False
         '
-        'cF1
+        'cC1
         '
-        Me.cF1.Location = New System.Drawing.Point(87, 82)
-        Me.cF1.Name = "cF1"
-        Me.cF1.Properties.Caption = "F-ով"
-        Me.cF1.Size = New System.Drawing.Size(55, 19)
-        Me.cF1.TabIndex = 5
+        Me.cC1.Location = New System.Drawing.Point(87, 105)
+        Me.cC1.Name = "cC1"
+        Me.cC1.Properties.Caption = "C-ով"
+        Me.cC1.Size = New System.Drawing.Size(55, 19)
+        Me.cC1.TabIndex = 6
         '
         'NewGprs
         '
@@ -222,12 +233,13 @@ Partial Class NewGprs
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.cF1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.sDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.sDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.cF1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cC1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -245,4 +257,5 @@ Partial Class NewGprs
     Friend WithEvents cViva As System.Windows.Forms.RadioButton
     Friend WithEvents cOrange As System.Windows.Forms.RadioButton
     Friend WithEvents cF1 As DevExpress.XtraEditors.CheckEdit
+    Friend WithEvents cC1 As DevExpress.XtraEditors.CheckEdit
 End Class

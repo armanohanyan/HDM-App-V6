@@ -21,7 +21,8 @@ Public Class NewGprs
             ElseIf cViva.Checked AndAlso ((txtCode.Text.Trim.Length <> 19 AndAlso cF1.Checked = False) _
                                            OrElse (txtCode.Text.Trim.Length <> 20 AndAlso cF1.Checked = True)) Then
                 Exit Sub
-            ElseIf cBeeline.Checked AndAlso txtCode.Text.Trim.Length <> 19 Then
+            ElseIf cBeeline.Checked AndAlso ((txtCode.Text.Trim.Length <> 19 AndAlso cC1.Checked = False) _
+                                           OrElse (txtCode.Text.Trim.Length <> 18 AndAlso cC1.Checked = True)) Then
                 Exit Sub
             End If
 

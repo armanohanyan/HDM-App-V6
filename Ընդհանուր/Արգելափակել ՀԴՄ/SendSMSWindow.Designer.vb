@@ -146,7 +146,7 @@ Partial Class SendSMSWindow
         Me.GroupBox4.Size = New System.Drawing.Size(187, 104)
         Me.GroupBox4.TabIndex = 14
         Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Արտակարգ դրություն"
+        Me.GroupBox4.Text = "Կասեցվածներ Excell-ից"
         '
         'btnSendFromExcell
         '

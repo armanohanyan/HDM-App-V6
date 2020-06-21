@@ -695,7 +695,8 @@ Public Class SendSMSWindow
 
                 'Message
 
-                msg.Text = "Hargeli gorcynker HVHH " & dt.Rows(i)("ՀՎՀՀ") & " Dzer kazmakerputyunn uni partq " & dt.Rows(i)("Պարտք") & " dram. Xndrum enq katarel vjarum.Her " & strTel
+                'msg.Text = "Hargeli gorcynker HVHH " & dt.Rows(i)("ՀՎՀՀ") & " Dzer kazmakerputyunn uni partq " & dt.Rows(i)("Պարտք") & " dram.Xndrum enq katarel vjarum.Kasecman amsativ` 08.06.2020.Her " & strTel
+                msg.Text = "Hargeli gorcynker HVHH " & dt.Rows(i)("ՀՎՀՀ") & " Dzez matucvox tsarayutyunnery masnaki dadarecvats en. Xndrum enq katarel " & dt.Rows(i)("Պարտք") & " dram vjarum versksman hamar.Her " & strTel
 
 
                 msg.DestinationAddress = "+374" & Microsoft.VisualBasic.Right(dt.Rows(i)("Հեռախոս"), 8)

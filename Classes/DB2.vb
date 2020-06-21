@@ -575,8 +575,8 @@ Partial Public Class DB
             Using cmd As New SqlCommand
                 cmd.Connection = cnn
                 cmd.CommandType = CommandType.Text
-                cmd.Parameters.Add("@Y", SqlDbType.SmallInt).Value = y
-                cmd.Parameters.Add("@M", SqlDbType.TinyInt).Value = m
+                cmd.Parameters.Add("@Y", SqlDbType.SmallInt).Value = Y
+                cmd.Parameters.Add("@M", SqlDbType.TinyInt).Value = M
                 cmd.CommandText = "EXEC Payment.GetNotPrintedInvoice @Y,@M"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
