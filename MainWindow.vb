@@ -2715,9 +2715,10 @@ Public Class MainWindow
                         f.Dispose()
                     Case 4  'Խմբագրել Ընդհանուր Հայտերը
                         If CheckPermission("7D0D71A6422748108546B1AEB559B2F7") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
-                        Dim f As New EditGeneralHayt
-                        f.ShowDialog()
-                        f.Dispose()
+                        MessageBox.Show("Խնդրում եմ օգտվել ՛Խմբագրել Ակտիվացման Հայտերը՛ մենյուից", "", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        'Dim f As New EditGeneralHayt
+                        'f.ShowDialog()
+                        'f.Dispose()
                     Case 5  'Դիտել Ակտիվացման Հայտերը
                         If CheckPermission("A2ADDECDE9034B91A442C5707C428D20") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim f As New ViewActivateHaytSelector
@@ -3299,6 +3300,8 @@ Public Class MainWindow
                 .Items.Add("MK")
                 .Items.Add("TM")
                 .Items.Add("NA")
+                .Items.Add("SS")
+                .Items.Add("TP")
 
                 .SelectedIndex = 4
             End With
@@ -3331,6 +3334,10 @@ Public Class MainWindow
                     dbID = 4
                 Case 4
                     dbID = 5
+                Case 5
+                    dbID = 8
+                Case 6
+                    dbID = 10
             End Select
 
             iDB.InsertUsers(txtLogin.Text.Trim, getMd5Hash(txtUserPassword.Text.Trim), txtName.Text.Trim, txtLastName.Text.Trim,
@@ -3389,6 +3396,8 @@ Public Class MainWindow
                 .Items.Add("TE")
                 .Items.Add("MK")
                 .Items.Add("TM")
+                .Items.Add("SS")
+                .Items.Add("TP")
                 .SelectedIndex = 0
             End With
 
@@ -3420,6 +3429,10 @@ Public Class MainWindow
                 cbUserDB.SelectedItem = "TM"
             Case 5
                 cbUserDB.SelectedItem = "NA"
+            Case 8
+                cbUserDB.SelectedItem = "SS"
+            Case 10
+                cbUserDB.SelectedItem = "TP"
         End Select
     End Sub
     'Change User Info
@@ -3441,6 +3454,10 @@ Public Class MainWindow
                     dbID = 4
                 Case "NA"
                     dbID = 5
+                Case "SS"
+                    dbID = 8
+                Case "TP"
+                    dbID = 10
             End Select
 
             iDB.ChangeUserInfo(cbNewUserGroup.SelectedValue, ckIsUserActive.Checked, dbID, cbUserName.SelectedValue)
@@ -5148,6 +5165,5 @@ Public Class MainWindow
     End Sub
 
 #End Region
-
 
 End Class

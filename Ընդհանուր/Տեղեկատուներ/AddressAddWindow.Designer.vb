@@ -70,7 +70,7 @@ Partial Class AddressAddWindow
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Նոր Հասեց"
+        Me.Text = "Նոր Հասցե"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

@@ -520,7 +520,8 @@ Partial Class MainWindow
         Me.MainMenu.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MainMenu.Name = "MainMenu"
         Me.MainMenu.Ribbon = Me.RibbonPanel
-        Me.MainMenu.SelectedTab = Nothing
+        Me.MainMenu.SelectedTab = Me.tbChangeUser
+        Me.MainMenu.SelectedTabIndex = 6
         Me.MainMenu.Size = New System.Drawing.Size(496, 542)
         Me.MainMenu.Style = DevExpress.XtraBars.Ribbon.BackstageViewStyle.Office2013
         Me.MainMenu.TabIndex = 2
@@ -1182,7 +1183,7 @@ Partial Class MainWindow
         Me.tbChangeUser.ContentControl = Me.BackstageViewClientControl3
         Me.tbChangeUser.Glyph = CType(resources.GetObject("tbChangeUser.Glyph"), System.Drawing.Image)
         Me.tbChangeUser.Name = "tbChangeUser"
-        Me.tbChangeUser.Selected = False
+        Me.tbChangeUser.Selected = True
         '
         'tbDeleteUser
         '

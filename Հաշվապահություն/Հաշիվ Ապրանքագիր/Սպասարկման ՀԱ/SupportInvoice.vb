@@ -349,7 +349,8 @@ Public Class SupportInvoice
     End Sub
     Private Sub mnuExportToExcel_Click(sender As Object, e As EventArgs) Handles mnuExportToExcel.Click
         Try
-            ExportTo(ExportType.Excel2013, Me)
+            'ExportTo(ExportType.Excel2013, Me)
+            ExportTo2(ExportType.Excel2013, GridControl1)
         Catch ex As ExceptionClass
 
         Catch ex As System.Data.SqlClient.SqlException

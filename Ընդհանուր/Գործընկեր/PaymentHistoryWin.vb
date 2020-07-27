@@ -1,6 +1,7 @@
 ﻿Imports DevExpress.XtraGrid
 Imports DevExpress.Data
 Imports DevExpress.XtraGrid.Views.Grid
+Imports DevExpress.XtraGrid.Columns
 
 Public Class PaymentHistoryWin
 
@@ -138,4 +139,39 @@ Public Class PaymentHistoryWin
         End If
     End Sub
 
+    Private Sub mnuWxportToExcell_Click(sender As Object, e As EventArgs) Handles mnuWxportToExcell.Click
+        Try
+            Dim CurrentSupporter As String = ""
+
+            For i As Integer = 0 To GridView2.DataRowCount - 1
+                If GridView2.GetRowCellValue(i, "ԸնթացիկՍպասարկող") = True Then
+                    CurrentSupporter = GridView2.GetRowCellValue(i, "Սպասարկող")
+                    'Exit For
+                End If
+            Next i
+
+            If CurrentSupporter = """ՄԵՐԻ-ՔՐԻՍՏ"" ՍՊԸ" Then
+                GridView1.Columns("Սպասարկող").FilterInfo = New ColumnFilterInfo("[Սպասարկող] = '""ՄԵՐԻ-ՔՐԻՍՏ"" ՍՊԸ'")
+            ElseIf CurrentSupporter = """Տոչ-մաստեր"" ՍՊԸ" Then
+                GridView1.Columns("Սպասարկող").FilterInfo = New ColumnFilterInfo("[Սպասարկող] = '""Տոչ-մաստեր"" ՍՊԸ'")
+            ElseIf CurrentSupporter = """ՀԴՄ Շտրիխ"" ՍՊԸ" Then
+                GridView1.Columns("Սպասարկող").FilterInfo = New ColumnFilterInfo("[Սպասարկող] = '""ՀԴՄ Շտրիխ"" ՍՊԸ'")
+            ElseIf CurrentSupporter = """Տամա Էլեկտրոն"" ՍՊԸ" Then
+                GridView1.Columns("Սպասարկող").FilterInfo = New ColumnFilterInfo("[Սպասարկող] = '""Տամա Էլեկտրոն"" ՍՊԸ'")
+            ElseIf CurrentSupporter = """Սմարթ Սոլուշնս"" ՍՊԸ" Then
+                GridView1.Columns("Սպասարկող").FilterInfo = New ColumnFilterInfo("[Սպասարկող] = '""Սմարթ Սոլուշնս"" ՍՊԸ'")
+            End If
+
+            'CurrentSupporter = "ՄԵՐԻ-ՔՐԻՍՏ " & "ՍՊԸ"
+            'GridView1.Columns("Սպասարկող").FilterInfo = New ColumnFilterInfo("[Սպասարկող] = '""ՄԵՐԻ-ՔՐԻՍՏ"" ՍՊԸ'")
+
+            ExportTo2(ExportType.Excel2013, GridControl1)
+        Catch ex As ExceptionClass
+
+        Catch ex As System.Data.SqlClient.SqlException
+            Call SQLException(ex)
+        Catch ex As Exception
+            Call SoftException(ex)
+        End Try
+    End Sub
 End Class

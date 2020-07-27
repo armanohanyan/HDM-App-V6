@@ -17,6 +17,8 @@ Public Class SelectBankFile
             If te.Checked = True Then SupporterID = 2 : SupporterText = "TAMA ELECTRONIC LLC"
             If mk.Checked = True Then SupporterID = 3 : SupporterText = "MERI KRIST LLC"
             If tm.Checked = True Then SupporterID = 4 : SupporterText = "TOUCH-MASTER LLC"
+            If ss.Checked = True Then SupporterID = 8 : SupporterText = "SMART SOLUTIONS LLC"
+            If tp.Checked = True Then SupporterID = 10 : SupporterText = "TORPICE LLC"
 
             Dim s As String = String.Empty
             Dim fl As OpenFileDialog = New OpenFileDialog

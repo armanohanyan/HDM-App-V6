@@ -31,6 +31,8 @@ Partial Class SelectBankFile
         Me.mk = New System.Windows.Forms.RadioButton()
         Me.te = New System.Windows.Forms.RadioButton()
         Me.hs = New System.Windows.Forms.RadioButton()
+        Me.tp = New System.Windows.Forms.RadioButton()
+        Me.ss = New System.Windows.Forms.RadioButton()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -54,13 +56,15 @@ Partial Class SelectBankFile
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.tp)
+        Me.GroupBox1.Controls.Add(Me.ss)
         Me.GroupBox1.Controls.Add(Me.tm)
         Me.GroupBox1.Controls.Add(Me.mk)
         Me.GroupBox1.Controls.Add(Me.te)
         Me.GroupBox1.Controls.Add(Me.hs)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 74)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(280, 122)
+        Me.GroupBox1.Size = New System.Drawing.Size(280, 162)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Սպասարկող Կազմակերպություն"
@@ -107,11 +111,31 @@ Partial Class SelectBankFile
         Me.hs.Text = "ՀԴՄ Շտրիխ"
         Me.hs.UseVisualStyleBackColor = True
         '
+        'tp
+        '
+        Me.tp.AutoSize = True
+        Me.tp.Location = New System.Drawing.Point(6, 135)
+        Me.tp.Name = "tp"
+        Me.tp.Size = New System.Drawing.Size(72, 17)
+        Me.tp.TabIndex = 5
+        Me.tp.Text = "Թորփայս"
+        Me.tp.UseVisualStyleBackColor = True
+        '
+        'ss
+        '
+        Me.ss.AutoSize = True
+        Me.ss.Location = New System.Drawing.Point(6, 112)
+        Me.ss.Name = "ss"
+        Me.ss.Size = New System.Drawing.Size(107, 17)
+        Me.ss.TabIndex = 4
+        Me.ss.Text = "Սմարթ Սոլուշնս"
+        Me.ss.UseVisualStyleBackColor = True
+        '
         'SelectBankFile
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(304, 207)
+        Me.ClientSize = New System.Drawing.Size(304, 248)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnQuery)
@@ -136,4 +160,6 @@ Partial Class SelectBankFile
     Friend WithEvents mk As System.Windows.Forms.RadioButton
     Friend WithEvents te As System.Windows.Forms.RadioButton
     Friend WithEvents hs As System.Windows.Forms.RadioButton
+    Friend WithEvents tp As System.Windows.Forms.RadioButton
+    Friend WithEvents ss As System.Windows.Forms.RadioButton
 End Class

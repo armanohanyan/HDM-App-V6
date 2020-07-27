@@ -256,7 +256,7 @@ Public Class SellWindow
                 'OK
                 btnAdd.Enabled = True
             End If
-
+            MsgBox(sellID)
         Catch ex As ExceptionClass
         Catch ex As System.Data.SqlClient.SqlException
             Call SQLException(ex)
@@ -289,6 +289,7 @@ Public Class SellWindow
                 End If
 
                 If sellID = 0 Then sellID = dt.Rows(0)(0)
+
             Else
                 'If txtPrice.Text <= 0 Then Throw New Exception("Գումարը չպետք է 0 կամ բացասական լինի")
 
@@ -297,7 +298,9 @@ Public Class SellWindow
                 Else
                     dt = iDB.CustomSellForClient(txtShtrikhCode.Text.Trim, SupporterID, sellID, ClientID, EquipmentID, txtPrice.Text, txtAraqmanAddress.Text)
                 End If
+
                 If sellID = 0 Then sellID = dt.Rows(0)(0)
+
             End If
 
             txtShtrikhCode.Text = String.Empty
