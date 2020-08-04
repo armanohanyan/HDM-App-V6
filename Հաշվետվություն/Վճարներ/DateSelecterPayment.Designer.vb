@@ -140,7 +140,7 @@ Partial Class DateSelecterPayment
         '
         Me.cbPayType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbPayType.FormattingEnabled = True
-        Me.cbPayType.Items.AddRange(New Object() {"Բոլորը", "Բանկ", "TelCell"})
+        Me.cbPayType.Items.AddRange(New Object() {"Բոլորը", "Բանկ", "TelCell", "EasyPay", "Idram"})
         Me.cbPayType.Location = New System.Drawing.Point(12, 173)
         Me.cbPayType.Name = "cbPayType"
         Me.cbPayType.Size = New System.Drawing.Size(187, 21)

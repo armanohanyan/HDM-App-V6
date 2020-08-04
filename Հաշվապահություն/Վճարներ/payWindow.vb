@@ -200,6 +200,12 @@ Public Class payWindow
             Dim pType As Char
             If cbPayType.SelectedIndex = 0 Then
                 pType = "b"
+            ElseIf cbPayType.SelectedIndex = 1 Then
+                pType = "t"
+            ElseIf cbPayType.SelectedIndex = 2 Then
+                pType = "e"
+            ElseIf cbPayType.SelectedIndex = 3 Then
+                pType = "i"
             Else
                 pType = "c"
             End If

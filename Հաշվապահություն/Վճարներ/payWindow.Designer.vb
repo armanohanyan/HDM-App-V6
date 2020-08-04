@@ -203,9 +203,8 @@ Partial Class payWindow
         'cbPayType
         '
         Me.cbPayType.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.cbPayType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbPayType.FormattingEnabled = True
-        Me.cbPayType.Items.AddRange(New Object() {"Բանկ", "Կանխիկ"})
+        Me.cbPayType.Items.AddRange(New Object() {"Բանկ", "TelcCell", "EasyPay", "Idram", "Կանխիկ"})
         Me.cbPayType.Location = New System.Drawing.Point(77, 95)
         Me.cbPayType.Name = "cbPayType"
         Me.cbPayType.Size = New System.Drawing.Size(144, 21)

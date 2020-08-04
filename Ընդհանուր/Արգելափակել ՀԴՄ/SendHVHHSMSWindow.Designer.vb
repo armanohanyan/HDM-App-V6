@@ -45,6 +45,8 @@ Partial Class SendHVHHSMSWindow
         Me.btnLoad = New DevExpress.XtraEditors.SimpleButton()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.rbTorp = New System.Windows.Forms.RadioButton()
+        Me.rbSmart = New System.Windows.Forms.RadioButton()
         Me.mnuContext.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -109,14 +111,14 @@ Partial Class SendHVHHSMSWindow
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 459)
+        Me.Panel1.Size = New System.Drawing.Size(200, 521)
         Me.Panel1.TabIndex = 1
         '
         'btnFilter
         '
         Me.btnFilter.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnFilter.Image = CType(resources.GetObject("btnFilter.Image"), System.Drawing.Image)
-        Me.btnFilter.Location = New System.Drawing.Point(11, 162)
+        Me.btnFilter.Location = New System.Drawing.Point(11, 219)
         Me.btnFilter.Name = "btnFilter"
         Me.btnFilter.Size = New System.Drawing.Size(182, 27)
         Me.btnFilter.TabIndex = 16
@@ -124,6 +126,8 @@ Partial Class SendHVHHSMSWindow
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.rbTorp)
+        Me.GroupBox1.Controls.Add(Me.rbSmart)
         Me.GroupBox1.Controls.Add(Me.rbTouch)
         Me.GroupBox1.Controls.Add(Me.rbMK)
         Me.GroupBox1.Controls.Add(Me.rbTama)
@@ -132,7 +136,7 @@ Partial Class SendHVHHSMSWindow
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(198, 112)
+        Me.GroupBox1.Size = New System.Drawing.Size(198, 161)
         Me.GroupBox1.TabIndex = 15
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Կազմակերպություններ"
@@ -181,7 +185,7 @@ Partial Class SendHVHHSMSWindow
         '
         'txtMessage
         '
-        Me.txtMessage.Location = New System.Drawing.Point(9, 229)
+        Me.txtMessage.Location = New System.Drawing.Point(9, 286)
         Me.txtMessage.MaxLength = 259
         Me.txtMessage.Multiline = True
         Me.txtMessage.Name = "txtMessage"
@@ -191,7 +195,7 @@ Partial Class SendHVHHSMSWindow
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 203)
+        Me.Label1.Location = New System.Drawing.Point(6, 260)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(103, 13)
         Me.Label1.TabIndex = 13
@@ -201,7 +205,7 @@ Partial Class SendHVHHSMSWindow
         '
         Me.btnSent.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSent.Image = CType(resources.GetObject("btnSent.Image"), System.Drawing.Image)
-        Me.btnSent.Location = New System.Drawing.Point(6, 419)
+        Me.btnSent.Location = New System.Drawing.Point(6, 476)
         Me.btnSent.Name = "btnSent"
         Me.btnSent.Size = New System.Drawing.Size(182, 27)
         Me.btnSent.TabIndex = 12
@@ -211,7 +215,7 @@ Partial Class SendHVHHSMSWindow
         '
         Me.btnLoad.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnLoad.Image = CType(resources.GetObject("btnLoad.Image"), System.Drawing.Image)
-        Me.btnLoad.Location = New System.Drawing.Point(11, 120)
+        Me.btnLoad.Location = New System.Drawing.Point(11, 177)
         Me.btnLoad.Name = "btnLoad"
         Me.btnLoad.Size = New System.Drawing.Size(182, 27)
         Me.btnLoad.TabIndex = 11
@@ -227,7 +231,7 @@ Partial Class SendHVHHSMSWindow
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(485, 459)
+        Me.GridControl1.Size = New System.Drawing.Size(597, 521)
         Me.GridControl1.TabIndex = 5
         Me.GridControl1.TabStop = False
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
@@ -243,11 +247,31 @@ Partial Class SendHVHHSMSWindow
         Me.GridView1.OptionsView.ShowFooter = True
         Me.GridView1.OptionsView.ShowGroupPanel = False
         '
+        'rbTorp
+        '
+        Me.rbTorp.AutoSize = True
+        Me.rbTorp.Location = New System.Drawing.Point(6, 133)
+        Me.rbTorp.Name = "rbTorp"
+        Me.rbTorp.Size = New System.Drawing.Size(72, 17)
+        Me.rbTorp.TabIndex = 5
+        Me.rbTorp.Text = "Թորփայս"
+        Me.rbTorp.UseVisualStyleBackColor = True
+        '
+        'rbSmart
+        '
+        Me.rbSmart.AutoSize = True
+        Me.rbSmart.Location = New System.Drawing.Point(6, 110)
+        Me.rbSmart.Name = "rbSmart"
+        Me.rbSmart.Size = New System.Drawing.Size(107, 17)
+        Me.rbSmart.TabIndex = 4
+        Me.rbSmart.Text = "Սմարթ Սոլուշնս"
+        Me.rbSmart.UseVisualStyleBackColor = True
+        '
         'SendHVHHSMSWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(685, 459)
+        Me.ClientSize = New System.Drawing.Size(797, 521)
         Me.Controls.Add(Me.GridControl1)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -286,4 +310,6 @@ Partial Class SendHVHHSMSWindow
     Friend WithEvents rbTama As System.Windows.Forms.RadioButton
     Friend WithEvents rbShtrikh As System.Windows.Forms.RadioButton
     Friend WithEvents btnFilter As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents rbTorp As System.Windows.Forms.RadioButton
+    Friend WithEvents rbSmart As System.Windows.Forms.RadioButton
 End Class

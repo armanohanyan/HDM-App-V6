@@ -25,6 +25,8 @@ Public Class SendSMSWindow
         Tama_Electron = 2
         Mery_Krist = 3
         Touch_Master = 4
+        Smart_Solutions = 8
+        Torpays = 10
         Undefined = 5
     End Enum
 
@@ -212,6 +214,8 @@ Public Class SendSMSWindow
             If rbTama.Checked Then o = 2
             If rbMK.Checked Then o = 3
             If rbTouch.Checked Then o = 4
+            If rbSmart.Checked Then o = 8
+            If rbTorp.Checked Then o = 10
 
             sTime = Now
             If rbBlocked.Checked = True Then
@@ -383,6 +387,10 @@ Public Class SendSMSWindow
                     iCompany = Company_XXX.Mery_Krist
                 Case 4
                     iCompany = Company_XXX.Touch_Master
+                Case 8
+                    iCompany = Company_XXX.Smart_Solutions
+                Case 10
+                    iCompany = Company_XXX.Torpays
             End Select
 
             Dim l As New List(Of ForSmS)

@@ -60,6 +60,8 @@ Partial Class SendSMSWindow
         Me.btnLoad = New DevExpress.XtraEditors.SimpleButton()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.rbTorp = New System.Windows.Forms.RadioButton()
+        Me.rbSmart = New System.Windows.Forms.RadioButton()
         Me.mnuContext.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -132,7 +134,7 @@ Partial Class SendSMSWindow
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 520)
+        Me.Panel1.Size = New System.Drawing.Size(200, 562)
         Me.Panel1.TabIndex = 1
         '
         'GroupBox4
@@ -141,7 +143,7 @@ Partial Class SendSMSWindow
         Me.GroupBox4.Controls.Add(Me.btnLoadFromExcell)
         Me.GroupBox4.Controls.Add(Me.cbLoadFromExcell)
         Me.GroupBox4.ForeColor = System.Drawing.Color.Red
-        Me.GroupBox4.Location = New System.Drawing.Point(6, 389)
+        Me.GroupBox4.Location = New System.Drawing.Point(6, 446)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(187, 104)
         Me.GroupBox4.TabIndex = 14
@@ -181,7 +183,7 @@ Partial Class SendSMSWindow
         '
         'cAllClients
         '
-        Me.cAllClients.Location = New System.Drawing.Point(12, 269)
+        Me.cAllClients.Location = New System.Drawing.Point(12, 327)
         Me.cAllClients.Name = "cAllClients"
         Me.cAllClients.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.cAllClients.Properties.Appearance.ForeColor = System.Drawing.Color.RoyalBlue
@@ -205,9 +207,9 @@ Partial Class SendSMSWindow
         Me.GroupBox3.Controls.Add(Me.Label1)
         Me.GroupBox3.Controls.Add(Me.ckByPeriod)
         Me.GroupBox3.Dock = System.Windows.Forms.DockStyle.Top
-        Me.GroupBox3.Location = New System.Drawing.Point(0, 136)
+        Me.GroupBox3.Location = New System.Drawing.Point(0, 172)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(198, 128)
+        Me.GroupBox3.Size = New System.Drawing.Size(198, 130)
         Me.GroupBox3.TabIndex = 9
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Պարամետրեր"
@@ -303,7 +305,7 @@ Partial Class SendSMSWindow
         Me.GroupBox2.Controls.Add(Me.rbForBlock)
         Me.GroupBox2.Controls.Add(Me.rbBlocked)
         Me.GroupBox2.Dock = System.Windows.Forms.DockStyle.Top
-        Me.GroupBox2.Location = New System.Drawing.Point(0, 84)
+        Me.GroupBox2.Location = New System.Drawing.Point(0, 120)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(198, 52)
         Me.GroupBox2.TabIndex = 8
@@ -334,6 +336,8 @@ Partial Class SendSMSWindow
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.rbTorp)
+        Me.GroupBox1.Controls.Add(Me.rbSmart)
         Me.GroupBox1.Controls.Add(Me.rbTouch)
         Me.GroupBox1.Controls.Add(Me.rbMK)
         Me.GroupBox1.Controls.Add(Me.rbTama)
@@ -342,7 +346,7 @@ Partial Class SendSMSWindow
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(198, 84)
+        Me.GroupBox1.Size = New System.Drawing.Size(198, 120)
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Կազմակերպություններ"
@@ -393,7 +397,7 @@ Partial Class SendSMSWindow
         '
         Me.btnSent.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSent.Image = CType(resources.GetObject("btnSent.Image"), System.Drawing.Image)
-        Me.btnSent.Location = New System.Drawing.Point(6, 352)
+        Me.btnSent.Location = New System.Drawing.Point(6, 410)
         Me.btnSent.Name = "btnSent"
         Me.btnSent.Size = New System.Drawing.Size(182, 27)
         Me.btnSent.TabIndex = 12
@@ -403,7 +407,7 @@ Partial Class SendSMSWindow
         '
         Me.btnLoad.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnLoad.Image = CType(resources.GetObject("btnLoad.Image"), System.Drawing.Image)
-        Me.btnLoad.Location = New System.Drawing.Point(6, 317)
+        Me.btnLoad.Location = New System.Drawing.Point(6, 375)
         Me.btnLoad.Name = "btnLoad"
         Me.btnLoad.Size = New System.Drawing.Size(182, 27)
         Me.btnLoad.TabIndex = 11
@@ -419,7 +423,7 @@ Partial Class SendSMSWindow
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(594, 520)
+        Me.GridControl1.Size = New System.Drawing.Size(628, 562)
         Me.GridControl1.TabIndex = 5
         Me.GridControl1.TabStop = False
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
@@ -435,11 +439,31 @@ Partial Class SendSMSWindow
         Me.GridView1.OptionsView.ShowFooter = True
         Me.GridView1.OptionsView.ShowGroupPanel = False
         '
+        'rbTorp
+        '
+        Me.rbTorp.AutoSize = True
+        Me.rbTorp.Location = New System.Drawing.Point(6, 95)
+        Me.rbTorp.Name = "rbTorp"
+        Me.rbTorp.Size = New System.Drawing.Size(72, 17)
+        Me.rbTorp.TabIndex = 7
+        Me.rbTorp.Text = "Թորփայս"
+        Me.rbTorp.UseVisualStyleBackColor = True
+        '
+        'rbSmart
+        '
+        Me.rbSmart.AutoSize = True
+        Me.rbSmart.Location = New System.Drawing.Point(6, 79)
+        Me.rbSmart.Name = "rbSmart"
+        Me.rbSmart.Size = New System.Drawing.Size(107, 17)
+        Me.rbSmart.TabIndex = 6
+        Me.rbSmart.Text = "Սմարթ Սոլուշնս"
+        Me.rbSmart.UseVisualStyleBackColor = True
+        '
         'SendSMSWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(794, 520)
+        Me.ClientSize = New System.Drawing.Size(828, 562)
         Me.Controls.Add(Me.GridControl1)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -502,4 +526,6 @@ Partial Class SendSMSWindow
     Friend WithEvents btnSendFromExcell As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnLoadFromExcell As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents cbLoadFromExcell As System.Windows.Forms.CheckBox
+    Friend WithEvents rbTorp As System.Windows.Forms.RadioButton
+    Friend WithEvents rbSmart As System.Windows.Forms.RadioButton
 End Class
