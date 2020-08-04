@@ -7,9 +7,9 @@ Public Class RepBank
 
     Friend SupporterID As Byte
 
-    Private Sub Pay(hvhh As String, Payment As Decimal, PayDate As Date)
+    Private Sub Pay(hvhh As String, Payment As Decimal, PayDate As Date, PayType As String)
         On Error Resume Next
-        iDB.InsertPayment(hvhh, Payment, PayDate, "b", SupporterID)
+        iDB.InsertPayment(hvhh, Payment, PayDate, PayType, SupporterID)
     End Sub
     Private Sub GetHTSClientInfoForPayment(ByVal RowID As Int64, ByVal HTSCode As Integer)
         Try
@@ -47,10 +47,15 @@ Public Class RepBank
         Dim View As GridView = sender
         If (e.RowHandle >= 0) Then
             Dim hvhh As String = View.GetRowCellDisplayText(e.RowHandle, View.Columns("ՀՎՀՀ"))
-            If hvhh = String.Empty Then
+            Dim payType As String = View.GetRowCellDisplayText(e.RowHandle, View.Columns("ԲանկայինՀղում"))
+            If hvhh = String.Empty OrElse Trim(payType) = String.Empty OrElse Not (Trim(payType) = "b" OrElse Trim(payType) = "e" OrElse Trim(payType) = "t" OrElse Trim(payType) = "i") Then
                 e.Appearance.BackColor = Color.FromArgb(255, 153, 153)       ' Color.Salmon
                 e.Appearance.BackColor2 = Color.White            ' Color.SeaShell
             End If
+            'If Trim(payType) = String.Empty Then
+            '    e.Appearance.BackColor = Color.FromArgb(255, 153, 153)       ' Color.Salmon
+            '    e.Appearance.BackColor2 = Color.White            ' Color.SeaShell
+            'End If
 
             Dim R As String = View.GetRowCellDisplayText(e.RowHandle, View.Columns("R"))
             If R = 2 AndAlso hvhh <> String.Empty Then
@@ -112,7 +117,7 @@ Public Class RepBank
                             'If HTSCode <= 42000 OrElse HTSCode >= 57800 Then GridView1.SetRowCellValue(RowID, "ՀՎՀՀ", DBNull.Value) : GridView1.SetRowCellValue(RowID, "Գործընկեր", DBNull.Value) : Throw New Exception("ՀԾ կոդը պետք է լինի 42001 - 57800 միջակայքում")
                         Case 8
                             If HTSCode <= 210000 OrElse HTSCode >= 300000 Then GridView1.SetRowCellValue(RowID, "ՀՎՀՀ", DBNull.Value) : GridView1.SetRowCellValue(RowID, "Գործընկեր", DBNull.Value) : Throw New Exception("ՀԾ կոդը պետք է լինի 210001 - 299999 միջակայքում")
-                        Case 8
+                        Case 10
                             If HTSCode <= 320000 OrElse HTSCode >= 400000 Then GridView1.SetRowCellValue(RowID, "ՀՎՀՀ", DBNull.Value) : GridView1.SetRowCellValue(RowID, "Գործընկեր", DBNull.Value) : Throw New Exception("ՀԾ կոդը պետք է լինի 320001 - 399999 միջակայքում")
 
                     End Select
@@ -152,8 +157,8 @@ Public Class RepBank
 
             For i As Integer = 0 To GridView1.RowCount - 1
                 If GridView1.GetRowCellValue(i, "Նշիչ") = True Then
-                    If Not IsDBNull(GridView1.GetRowCellValue(i, "ՀծԿոդ")) AndAlso Not IsDBNull(GridView1.GetRowCellValue(i, "ՀՎՀՀ")) Then
-                        Call Pay(GridView1.GetRowCellValue(i, "ՀՎՀՀ"), GridView1.GetRowCellValue(i, "Կրեդիտ"), GridView1.GetRowCellValue(i, "Ամսաթիվ"))
+                    If Not IsDBNull(GridView1.GetRowCellValue(i, "ՀծԿոդ")) AndAlso Not IsDBNull(GridView1.GetRowCellValue(i, "ՀՎՀՀ")) AndAlso Not IsDBNull(GridView1.GetRowCellValue(i, "ԲանկայինՀղում")) Then
+                        Call Pay(GridView1.GetRowCellValue(i, "ՀՎՀՀ"), GridView1.GetRowCellValue(i, "Կրեդիտ"), GridView1.GetRowCellValue(i, "Ամսաթիվ"), GridView1.GetRowCellValue(i, "ԲանկայինՀղում"))
                     End If
                 End If
             Next

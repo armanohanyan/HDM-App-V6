@@ -500,9 +500,9 @@ Partial Class MainWindow
         'MainMenu
         '
         Me.MainMenu.ColorScheme = DevExpress.XtraBars.Ribbon.RibbonControlColorScheme.Yellow
+        Me.MainMenu.Controls.Add(Me.BackstageViewClientControl3)
         Me.MainMenu.Controls.Add(Me.BackstageViewClientControl1)
         Me.MainMenu.Controls.Add(Me.BackstageViewClientControl2)
-        Me.MainMenu.Controls.Add(Me.BackstageViewClientControl3)
         Me.MainMenu.Controls.Add(Me.BackstageViewClientControl4)
         Me.MainMenu.Controls.Add(Me.BackstageViewClientControl5)
         Me.MainMenu.Items.Add(Me.cmdSelectPrinter)
@@ -2309,7 +2309,7 @@ Partial Class MainWindow
         Me.panelContainer3.ID = New System.Guid("fcaf2345-728e-495c-8aae-e113652435ed")
         Me.panelContainer3.Location = New System.Drawing.Point(0, 0)
         Me.panelContainer3.Name = "panelContainer3"
-        Me.panelContainer3.OriginalSize = New System.Drawing.Size(317, 153)
+        Me.panelContainer3.OriginalSize = New System.Drawing.Size(317, 160)
         Me.panelContainer3.Size = New System.Drawing.Size(317, 160)
         Me.panelContainer3.Tabbed = True
         Me.panelContainer3.Text = "panelContainer3"
@@ -2322,7 +2322,7 @@ Partial Class MainWindow
         Me.CallPanel.ID = New System.Guid("12b361b2-2874-4ffb-a625-b97ff1606508")
         Me.CallPanel.Location = New System.Drawing.Point(4, 23)
         Me.CallPanel.Name = "CallPanel"
-        Me.CallPanel.OriginalSize = New System.Drawing.Size(309, 99)
+        Me.CallPanel.OriginalSize = New System.Drawing.Size(309, 106)
         Me.CallPanel.Size = New System.Drawing.Size(309, 106)
         Me.CallPanel.Text = "Զանգերի Կենտրոն"
         '
@@ -2380,7 +2380,7 @@ Partial Class MainWindow
         Me.RemakePanel.ID = New System.Guid("54d900e7-d775-4047-b781-e239943ce2e3")
         Me.RemakePanel.Location = New System.Drawing.Point(4, 23)
         Me.RemakePanel.Name = "RemakePanel"
-        Me.RemakePanel.OriginalSize = New System.Drawing.Size(309, 99)
+        Me.RemakePanel.OriginalSize = New System.Drawing.Size(309, 106)
         Me.RemakePanel.Size = New System.Drawing.Size(309, 106)
         Me.RemakePanel.Text = "Մուտք Կենտրոնի Արհեստանոց"
         '
@@ -2474,7 +2474,7 @@ Partial Class MainWindow
         Me.PartqPanel.ID = New System.Guid("52d346a8-c7d1-4857-801d-cfe242307b5f")
         Me.PartqPanel.Location = New System.Drawing.Point(4, 23)
         Me.PartqPanel.Name = "PartqPanel"
-        Me.PartqPanel.OriginalSize = New System.Drawing.Size(309, 99)
+        Me.PartqPanel.OriginalSize = New System.Drawing.Size(309, 106)
         Me.PartqPanel.Size = New System.Drawing.Size(309, 106)
         Me.PartqPanel.Text = "ՀԴՄ Կարգավիճակի Ստուգում"
         '
@@ -2544,7 +2544,7 @@ Partial Class MainWindow
         Me.InfoPanel.Location = New System.Drawing.Point(0, 160)
         Me.InfoPanel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.InfoPanel.Name = "InfoPanel"
-        Me.InfoPanel.OriginalSize = New System.Drawing.Size(317, 395)
+        Me.InfoPanel.OriginalSize = New System.Drawing.Size(317, 412)
         Me.InfoPanel.Size = New System.Drawing.Size(317, 412)
         Me.InfoPanel.Text = "Տեղեկատու"
         '
@@ -2646,7 +2646,7 @@ Partial Class MainWindow
         '
         'panelContainer2
         '
-        Me.panelContainer2.ActiveChild = Me.DockPanel1
+        Me.panelContainer2.ActiveChild = Me.MenuPanel
         Me.panelContainer2.Controls.Add(Me.MenuPanel)
         Me.panelContainer2.Controls.Add(Me.DockPanel1)
         Me.panelContainer2.Controls.Add(Me.DockPanel2)
@@ -2666,7 +2666,7 @@ Partial Class MainWindow
         Me.DockPanel1.ID = New System.Guid("b63c07df-8b92-4348-bf24-8a207e5c1745")
         Me.DockPanel1.Location = New System.Drawing.Point(4, 23)
         Me.DockPanel1.Name = "DockPanel1"
-        Me.DockPanel1.OriginalSize = New System.Drawing.Size(267, 494)
+        Me.DockPanel1.OriginalSize = New System.Drawing.Size(267, 518)
         Me.DockPanel1.Size = New System.Drawing.Size(267, 518)
         Me.DockPanel1.Text = "Փոխարինված ՀԴՄ"
         '
@@ -2840,7 +2840,7 @@ Partial Class MainWindow
         Me.MenuPanel.Location = New System.Drawing.Point(4, 23)
         Me.MenuPanel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MenuPanel.Name = "MenuPanel"
-        Me.MenuPanel.OriginalSize = New System.Drawing.Size(267, 494)
+        Me.MenuPanel.OriginalSize = New System.Drawing.Size(267, 518)
         Me.MenuPanel.Size = New System.Drawing.Size(267, 518)
         Me.MenuPanel.Text = "Ուղղորդիչ"
         '
@@ -2855,7 +2855,7 @@ Partial Class MainWindow
         '
         'NavBarControl1
         '
-        Me.NavBarControl1.ActiveGroup = Me.NavBarGroup6
+        Me.NavBarControl1.ActiveGroup = Me.NavBarGroup3
         Me.NavBarControl1.Controls.Add(Me.NavBarGroupControlContainer1)
         Me.NavBarControl1.Controls.Add(Me.NavBarGroupControlContainer2)
         Me.NavBarControl1.Controls.Add(Me.NavBarGroupControlContainer3)
@@ -2876,7 +2876,6 @@ Partial Class MainWindow
         '
         Me.NavBarGroup6.Caption = "Հաշվետվություն"
         Me.NavBarGroup6.ControlContainer = Me.NavBarGroupControlContainer6
-        Me.NavBarGroup6.Expanded = True
         Me.NavBarGroup6.GroupClientHeight = 197
         Me.NavBarGroup6.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer
         Me.NavBarGroup6.Name = "NavBarGroup6"
@@ -3241,7 +3240,7 @@ Partial Class MainWindow
         Me.AcountTreeList.BeginUnboundLoad()
         Me.AcountTreeList.AppendNode(New Object() {"Վճարներ"}, -1, 3, 3, -1)
         Me.AcountTreeList.AppendNode(New Object() {"Վճարների մուտքագրում"}, 0, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Բանկային տվյալների ստուգում"}, 0, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Խմբային վճարների մուտքագրում"}, 0, 3, 3, -1)
         Me.AcountTreeList.AppendNode(New Object() {"TelCell Վճարների Հաստատում"}, 0, 3, 3, -1)
         Me.AcountTreeList.AppendNode(New Object() {"Հաշիվ Ապրանքագիր"}, -1, 3, 3, -1)
         Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա"}, 4, 3, 3, -1)
@@ -3387,6 +3386,7 @@ Partial Class MainWindow
         '
         Me.NavBarGroup3.Caption = "Հաշվապահություն"
         Me.NavBarGroup3.ControlContainer = Me.NavBarGroupControlContainer3
+        Me.NavBarGroup3.Expanded = True
         Me.NavBarGroup3.GroupClientHeight = 187
         Me.NavBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer
         Me.NavBarGroup3.Name = "NavBarGroup3"
@@ -3408,7 +3408,7 @@ Partial Class MainWindow
         Me.DockPanel2.ID = New System.Guid("54053939-e2a2-47dc-af69-7e84246b9333")
         Me.DockPanel2.Location = New System.Drawing.Point(4, 23)
         Me.DockPanel2.Name = "DockPanel2"
-        Me.DockPanel2.OriginalSize = New System.Drawing.Size(267, 494)
+        Me.DockPanel2.OriginalSize = New System.Drawing.Size(267, 518)
         Me.DockPanel2.Size = New System.Drawing.Size(267, 518)
         Me.DockPanel2.Text = "Արհեստանոցի Հաղորդագրություն"
         '
@@ -3552,8 +3552,8 @@ Partial Class MainWindow
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1100, 749)
         Me.Controls.Add(Me.MainMenu)
-        Me.Controls.Add(Me.panelContainer1)
         Me.Controls.Add(Me.panelContainer2)
+        Me.Controls.Add(Me.panelContainer1)
         Me.Controls.Add(Me.RibbonStatusBar1)
         Me.Controls.Add(Me.RibbonPanel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
