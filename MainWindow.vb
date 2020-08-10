@@ -2103,35 +2103,40 @@ Public Class MainWindow
                         fm.ShowDialog()
                         fm.Dispose()
                     Case 17
+                        If CheckPermission("D76E9B41BE4A4668B3BAEBBA56F4D1A8") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
+                        Dim fm As New SelectEcrSellType
+                        fm.ShowDialog()
+                        fm.Dispose()
+                    Case 18
                         'Պահեստի Շարժ
                         '////////////////////////////////////////////////////////////////////////
 
                         'Ներքին Տեղափոխում
-                    Case 18
+                    Case 19
                         If CheckPermission("5556B31DA7F347D096612A365C4BDED6") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New InnerTransfer
                         fm.ShowDialog()
                         fm.Dispose()
                         'Պահեստի Մուտքի Օրդեր
-                    Case 19
+                    Case 20
                         If CheckPermission("3B5BEF3DC60A4B97A0704F3654BE1A24") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New PurchaseWarehouseAddWin
                         fm.ShowDialog()
                         fm.Dispose()
                         'Նոր Շտրիխ Կոդ
-                    Case 20
+                    Case 21
                         If CheckPermission("03025FE5C2124DB68CEF3EE2A85AF4CD") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New ShtrikhCodeGenerator
                         fm.ShowDialog()
                         fm.Dispose()
                         'Խոտան Պահեստ
-                    Case 21
+                    Case 22
                         If CheckPermission("E28CC06DE63D4F51974C43E844FB0116") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New TransferToRejectedWin
                         fm.ShowDialog()
                         fm.Dispose()
                         'ՊՈԱԿ Պահեստ
-                    Case 22
+                    Case 23
                         If CheckPermission("F7233259C8D346769F6591B3C4236E55") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New TransferToPoakWin
                         fm.ShowDialog()

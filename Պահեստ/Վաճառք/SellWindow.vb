@@ -256,7 +256,7 @@ Public Class SellWindow
                 'OK
                 btnAdd.Enabled = True
             End If
-            MsgBox(sellID)
+            'MsgBox(sellID)
         Catch ex As ExceptionClass
         Catch ex As System.Data.SqlClient.SqlException
             Call SQLException(ex)
@@ -320,29 +320,57 @@ Public Class SellWindow
             'Ինվոյսի Առկայության Ստուգում
             iDB.CheckSellInvoice(sellID)
 
-            Dim r As Integer = -1
-            Dim f As New ReturnSoldItem With {.IsLocalSell = IsLocalSell, .SupporterID = SupporterID}
+            If GridView1.GetRowCellValue(GridView1.FocusedRowHandle, GridView1.Columns(1)) = "PAX S900" Then
+                Dim r As Integer = -1
+                Dim f As New ReturnSoldEcr With {.IsLocalSell = IsLocalSell, .SupporterID = SupporterID}
 
-            f.ShtrikhArray.Clear()
-            For i As Integer = 0 To ShtrikhArray.Count - 1
-                f.ShtrikhArray.Add(ShtrikhArray.Item(i))
-            Next
+                f.ShtrikhArray.Clear()
+                For i As Integer = 0 To ShtrikhArray.Count - 1
+                    f.ShtrikhArray.Add(ShtrikhArray.Item(i))
+                Next
 
-            If IsLocalSell = True Then
-                f.SuppClient = ClientID
+                If IsLocalSell = True Then
+                    f.SuppClient = ClientID
+                Else
+                    f.ClientID = ClientID
+                End If
+
+                f.ShowDialog()
+                r = f.SID
+                f.Dispose()
+
+                sellID = r
+
+                Call LoadDataByClient()
+
+                If r = -1 Then Me.Close()
+
             Else
-                f.ClientID = ClientID
+
+                Dim r As Integer = -1
+                Dim f As New ReturnSoldItem With {.IsLocalSell = IsLocalSell, .SupporterID = SupporterID}
+
+                f.ShtrikhArray.Clear()
+                For i As Integer = 0 To ShtrikhArray.Count - 1
+                    f.ShtrikhArray.Add(ShtrikhArray.Item(i))
+                Next
+
+                If IsLocalSell = True Then
+                    f.SuppClient = ClientID
+                Else
+                    f.ClientID = ClientID
+                End If
+
+                f.ShowDialog()
+                r = f.SID
+                f.Dispose()
+
+                sellID = r
+
+                Call LoadDataByClient()
+
+                If r = -1 Then Me.Close()
             End If
-
-            f.ShowDialog()
-            r = f.SID
-            f.Dispose()
-
-            sellID = r
-
-            Call LoadDataByClient()
-
-            If r = -1 Then Me.Close()
 
         Catch ex As ExceptionClass
         Catch ex As System.Data.SqlClient.SqlException

@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>3976</ApplicationRevision>
+    <ApplicationRevision>3982</ApplicationRevision>
     <ApplicationVersion>6.4.20.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -2018,16 +2018,34 @@
     <Compile Include="Պահեստ\Վաճառք\InnerTransfer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Պահեստ\Վաճառք\ReturnSoldEcr.designer.vb">
+      <DependentUpon>ReturnSoldEcr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Վաճառք\ReturnSoldEcr.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Պահեստ\Վաճառք\ReturnSoldItem.Designer.vb">
       <DependentUpon>ReturnSoldItem.vb</DependentUpon>
     </Compile>
     <Compile Include="Պահեստ\Վաճառք\ReturnSoldItem.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Պահեստ\Վաճառք\SelectEcrSellType.designer.vb">
+      <DependentUpon>SelectEcrSellType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Վաճառք\SelectEcrSellType.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Պահեստ\Վաճառք\SelectEquipmentSellType.designer.vb">
       <DependentUpon>SelectEquipmentSellType.vb</DependentUpon>
     </Compile>
     <Compile Include="Պահեստ\Վաճառք\SelectEquipmentSellType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Պահեստ\Վաճառք\SellEcrWindow.designer.vb">
+      <DependentUpon>SellEcrWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Վաճառք\SellEcrWindow.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Պահեստ\Վաճառք\SellWindow.Designer.vb">
@@ -3073,11 +3091,20 @@
     <EmbeddedResource Include="Պահեստ\Վաճառք\InnerTransfer.resx">
       <DependentUpon>InnerTransfer.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Վաճառք\ReturnSoldEcr.resx">
+      <DependentUpon>ReturnSoldEcr.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Պահեստ\Վաճառք\ReturnSoldItem.resx">
       <DependentUpon>ReturnSoldItem.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Վաճառք\SelectEcrSellType.resx">
+      <DependentUpon>SelectEcrSellType.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Պահեստ\Վաճառք\SelectEquipmentSellType.resx">
       <DependentUpon>SelectEquipmentSellType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Վաճառք\SellEcrWindow.resx">
+      <DependentUpon>SellEcrWindow.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Պահեստ\Վաճառք\SellWindow.resx">
       <DependentUpon>SellWindow.vb</DependentUpon>
@@ -3151,6 +3178,8 @@
     <None Include="Excel Files\PoakEcrAkt.xlsx" />
     <None Include="Excel Files\Rem Invoise.xlsx" />
     <None Include="Excel Files\report.xls" />
+    <None Include="Excel Files\SellEcrAct.xlsx" />
+    <None Include="Excel Files\SellEcrContract.xlsx" />
     <None Include="Excel Files\Shtrikh Code Prit form.xlsx" />
     <None Include="Excel Files\TarifHavelvac.xls" />
     <None Include="Excel Files\TarifHavelvacZero.xls" />

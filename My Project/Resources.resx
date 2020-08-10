@@ -214,4 +214,10 @@
   <data name="HamdzaynagirPahestamasi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Excel Files\HamdzaynagirPahestamasi.xls;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="SellEcrAct" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Excel Files\SellEcrAct.xlsx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SellEcrContract" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Excel Files\SellEcrContract.xlsx;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

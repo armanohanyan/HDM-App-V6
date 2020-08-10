@@ -4157,6 +4157,51 @@ Partial Public Class DB
         End Using
     End Sub
 
+    'CanSellEcrBySeria
+    Friend Sub CanSellEcrBySeria(Seria As String)
+        Using connection As New SqlConnection(SQLString)
+            Dim cmdSQLcom As New SqlCommand("EXEC warehouse.CanSellEcrBySeria @Seria", connection)
+            cmdSQLcom.Parameters.Add("@Seria", SqlDbType.Char).Value = Seria
+            connection.Open()
+            cmdSQLcom.ExecuteNonQuery()
+            connection.Close()
+        End Using
+    End Sub
+
+    'GetShtrikhBySeria
+    Friend Function GetShtrikhBySeria(Seria As String) As String
+        Dim s As String
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandTimeout = 20
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.Add("@Seria", SqlDbType.VarChar).Value = Seria
+                cmd.CommandText = "SELECT warehouse.GetShtrikhBySeria(@Seria)"
+                s = cmd.ExecuteScalar()
+            End Using
+        End Using
+        Return s
+    End Function
+
+    'GetSeriaByShtrikh
+    Friend Function GetSeriaByShtrikh(Shtrikh As String) As String
+        Dim s As String
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandTimeout = 20
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.Add("@Shtrikh", SqlDbType.VarChar).Value = Shtrikh
+                cmd.CommandText = "SELECT warehouse.GetSeriaByShtrikh(@Shtrikh)"
+                s = cmd.ExecuteScalar()
+            End Using
+        End Using
+        Return s
+    End Function
+
     'AddNewBlockedClient
     Friend Sub AddNewBlockedClient(ByVal hvhh As String, ByVal UserName As String)
         Using connection As New SqlConnection(SQLString)

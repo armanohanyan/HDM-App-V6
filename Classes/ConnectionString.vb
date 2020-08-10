@@ -1,6 +1,6 @@
 ﻿Partial Public Class DB
 
-    ''(local)
+    '(local)
     Private SQLString As String = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=ODB;Data Source=(local)"
 
     '(remote)
