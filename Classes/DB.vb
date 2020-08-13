@@ -539,7 +539,7 @@ Partial Public Class DB
             cnn.Open()
             Using cmd As New SqlCommand
                 cmd.Connection = cnn
-                cmd.CommandTimeout = 120
+                cmd.CommandTimeout = 600
                 cmd.CommandType = CommandType.Text
                 If iUser.DB = 5 Then
                     cmd.CommandText = "EXEC poak.GetGarantHDM"

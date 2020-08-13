@@ -161,14 +161,17 @@ Public Class AddHVHHWindow
                 If txtHVHH.Text.Trim.Substring(8, 1) <> "S" Then Throw New Exception("Վերջին սիմվոլը սխալ է գրված")
             End If
 
-
-
             If txtContract.Text.Trim = "" Then Throw New Exception("Պայմանագիրը գրված չէ")
             If txtCompany.Text.Trim = "" Then Throw New Exception("Կազմակերպության անվանումը գրված չէ")
             If txtDirector.Text.Trim = "" Then Throw New Exception("Տնօրենի անունը գրված չէ")
             If txtIravAddress.Text.Trim = "" Then Throw New Exception("Իրավաբանական հասցեն գրված չէ")
             If txtAraqAddress.Text.Trim = "" Then Throw New Exception("Առաքման հասցեն գրված չէ")
             If txtTel.Text.Trim = "" Then Throw New Exception("Հեռախոսը գրված չէ")
+
+            'S-ով գործընկեր ստեղծելիս ստուգել առանց S-ի գորընկերն ունի ՀԴՄ
+            If iDB.IsInsertAllowedClientWithS(txtHVHH.Text.Trim) = 0 Then
+                Throw New Exception("S-ով գորընկեր ստեղծելու անհրաժեշտությունն չկա, խնդրում եմ օգտագործել նշված ՀՎՀՀ-ի առանց S-ի տարբերակը")
+            End If
 
             Dim iClient = New With {.hvhh = txtHVHH.Text.Trim, .contract = txtContract.Text.Trim, .company = txtCompany.Text.Trim, .director = txtDirector.Text.Trim,
                                     .iravAddress = txtIravAddress.Text.Trim, .araqAddress = txtAraqAddress.Text.Trim, .tht = cbTHT.SelectedValue, .tarif = cbTarif.SelectedValue,

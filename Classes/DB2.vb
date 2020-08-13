@@ -3343,6 +3343,23 @@ Partial Public Class DB
         Return s
     End Function
 
+    'IsInsertAllowedClientWithS
+    Friend Function IsInsertAllowedClientWithS(HVHH As String) As Boolean
+        Dim s As String
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandTimeout = 20
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.Add("@HVHH", SqlDbType.NVarChar).Value = HVHH
+                cmd.CommandText = "SELECT Client.AllowAddClentWithS(@HVHH)"
+                s = cmd.ExecuteScalar()
+            End Using
+        End Using
+        Return s
+    End Function
+
 #End Region
 
 #Region "Select Generic"
