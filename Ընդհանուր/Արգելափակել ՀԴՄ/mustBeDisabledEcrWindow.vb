@@ -367,6 +367,10 @@ Public Class mustBeDisabledEcrWindow
         Call ResetGrid()
         MOperator = "B"
     End Sub
+    Private Sub cAllEcr_CheckedChanged(sender As Object, e As EventArgs) Handles cAllEcr.CheckedChanged
+        Call ResetGrid()
+        MOperator = "A"
+    End Sub
     Private Sub btnInAction_Click(sender As Object, e As EventArgs) Handles btnInAction.Click
         If CheckPermission2("47DBC27B53144432869AD6466C8996E0") = False Then MsgBox("Գործողությունը կատարելու համար դուք իրավասություն չունեք", MsgBoxStyle.Critical, My.Application.Info.Title) : Exit Sub
         Call CloseWindow("nGprsIntermediate1")

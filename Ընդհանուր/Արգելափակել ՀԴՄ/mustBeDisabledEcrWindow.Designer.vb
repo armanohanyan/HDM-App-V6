@@ -51,6 +51,7 @@ Partial Class mustBeDisabledEcrWindow
         Me.btnQuery = New DevExpress.XtraEditors.SimpleButton()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.cAllEcr = New System.Windows.Forms.RadioButton()
         Me.mnuContext.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -164,7 +165,7 @@ Partial Class mustBeDisabledEcrWindow
         '
         Me.btnVarvac.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnVarvac.Image = CType(resources.GetObject("btnVarvac.Image"), System.Drawing.Image)
-        Me.btnVarvac.Location = New System.Drawing.Point(12, 230)
+        Me.btnVarvac.Location = New System.Drawing.Point(12, 241)
         Me.btnVarvac.Name = "btnVarvac"
         Me.btnVarvac.Size = New System.Drawing.Size(182, 27)
         Me.btnVarvac.TabIndex = 5
@@ -174,7 +175,7 @@ Partial Class mustBeDisabledEcrWindow
         '
         Me.btnInAction.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnInAction.Image = CType(resources.GetObject("btnInAction.Image"), System.Drawing.Image)
-        Me.btnInAction.Location = New System.Drawing.Point(12, 284)
+        Me.btnInAction.Location = New System.Drawing.Point(12, 295)
         Me.btnInAction.Name = "btnInAction"
         Me.btnInAction.Size = New System.Drawing.Size(182, 27)
         Me.btnInAction.TabIndex = 4
@@ -182,12 +183,13 @@ Partial Class mustBeDisabledEcrWindow
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.cAllEcr)
         Me.GroupBox1.Controls.Add(Me.cBeeline)
         Me.GroupBox1.Controls.Add(Me.cViva)
         Me.GroupBox1.Controls.Add(Me.cOrange)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 59)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(182, 100)
+        Me.GroupBox1.Size = New System.Drawing.Size(182, 111)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Օպերատոր"
@@ -228,7 +230,7 @@ Partial Class mustBeDisabledEcrWindow
         '
         Me.btnPremiums.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnPremiums.Image = CType(resources.GetObject("btnPremiums.Image"), System.Drawing.Image)
-        Me.btnPremiums.Location = New System.Drawing.Point(12, 198)
+        Me.btnPremiums.Location = New System.Drawing.Point(12, 209)
         Me.btnPremiums.Name = "btnPremiums"
         Me.btnPremiums.Size = New System.Drawing.Size(182, 27)
         Me.btnPremiums.TabIndex = 2
@@ -238,7 +240,7 @@ Partial Class mustBeDisabledEcrWindow
         '
         Me.btnLoadHVHH.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnLoadHVHH.Image = CType(resources.GetObject("btnLoadHVHH.Image"), System.Drawing.Image)
-        Me.btnLoadHVHH.Location = New System.Drawing.Point(12, 165)
+        Me.btnLoadHVHH.Location = New System.Drawing.Point(12, 176)
         Me.btnLoadHVHH.Name = "btnLoadHVHH"
         Me.btnLoadHVHH.Size = New System.Drawing.Size(182, 27)
         Me.btnLoadHVHH.TabIndex = 1
@@ -279,6 +281,16 @@ Partial Class mustBeDisabledEcrWindow
         Me.GridView1.OptionsView.ColumnAutoWidth = False
         Me.GridView1.OptionsView.ShowAutoFilterRow = True
         Me.GridView1.OptionsView.ShowFooter = True
+        '
+        'cAllEcr
+        '
+        Me.cAllEcr.AutoSize = True
+        Me.cAllEcr.Location = New System.Drawing.Point(6, 88)
+        Me.cAllEcr.Name = "cAllEcr"
+        Me.cAllEcr.Size = New System.Drawing.Size(60, 17)
+        Me.cAllEcr.TabIndex = 3
+        Me.cAllEcr.Text = "Բոլորը"
+        Me.cAllEcr.UseVisualStyleBackColor = True
         '
         'mustBeDisabledEcrWindow
         '
@@ -328,4 +340,5 @@ Partial Class mustBeDisabledEcrWindow
     Friend WithEvents cOrange As System.Windows.Forms.RadioButton
     Friend WithEvents btnInAction As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnVarvac As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents cAllEcr As System.Windows.Forms.RadioButton
 End Class

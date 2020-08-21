@@ -45,6 +45,7 @@ Partial Class disabledEcrWindow
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnNotSupGprs = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cAllEcr = New System.Windows.Forms.RadioButton()
         Me.cBeeline = New System.Windows.Forms.RadioButton()
         Me.cViva = New System.Windows.Forms.RadioButton()
         Me.cOrange = New System.Windows.Forms.RadioButton()
@@ -185,7 +186,7 @@ Partial Class disabledEcrWindow
         '
         'btnNotSupGprs
         '
-        Me.btnNotSupGprs.Location = New System.Drawing.Point(12, 346)
+        Me.btnNotSupGprs.Location = New System.Drawing.Point(12, 354)
         Me.btnNotSupGprs.Name = "btnNotSupGprs"
         Me.btnNotSupGprs.Size = New System.Drawing.Size(182, 27)
         Me.btnNotSupGprs.TabIndex = 7
@@ -193,15 +194,26 @@ Partial Class disabledEcrWindow
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.cAllEcr)
         Me.GroupBox1.Controls.Add(Me.cBeeline)
         Me.GroupBox1.Controls.Add(Me.cViva)
         Me.GroupBox1.Controls.Add(Me.cOrange)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 53)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(182, 100)
+        Me.GroupBox1.Size = New System.Drawing.Size(182, 108)
         Me.GroupBox1.TabIndex = 6
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Օպերատոր"
+        '
+        'cAllEcr
+        '
+        Me.cAllEcr.AutoSize = True
+        Me.cAllEcr.Location = New System.Drawing.Point(6, 87)
+        Me.cAllEcr.Name = "cAllEcr"
+        Me.cAllEcr.Size = New System.Drawing.Size(60, 17)
+        Me.cAllEcr.TabIndex = 4
+        Me.cAllEcr.Text = "Բոլորը"
+        Me.cAllEcr.UseVisualStyleBackColor = True
         '
         'cBeeline
         '
@@ -239,7 +251,7 @@ Partial Class disabledEcrWindow
         '
         Me.btnInAction.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnInAction.Image = CType(resources.GetObject("btnInAction.Image"), System.Drawing.Image)
-        Me.btnInAction.Location = New System.Drawing.Point(12, 296)
+        Me.btnInAction.Location = New System.Drawing.Point(12, 304)
         Me.btnInAction.Name = "btnInAction"
         Me.btnInAction.Size = New System.Drawing.Size(182, 27)
         Me.btnInAction.TabIndex = 5
@@ -249,7 +261,7 @@ Partial Class disabledEcrWindow
         '
         Me.btnDeleteSim.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnDeleteSim.Image = CType(resources.GetObject("btnDeleteSim.Image"), System.Drawing.Image)
-        Me.btnDeleteSim.Location = New System.Drawing.Point(12, 225)
+        Me.btnDeleteSim.Location = New System.Drawing.Point(12, 233)
         Me.btnDeleteSim.Name = "btnDeleteSim"
         Me.btnDeleteSim.Size = New System.Drawing.Size(182, 27)
         Me.btnDeleteSim.TabIndex = 3
@@ -259,7 +271,7 @@ Partial Class disabledEcrWindow
         '
         Me.btnSelectSim.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSelectSim.Image = CType(resources.GetObject("btnSelectSim.Image"), System.Drawing.Image)
-        Me.btnSelectSim.Location = New System.Drawing.Point(12, 192)
+        Me.btnSelectSim.Location = New System.Drawing.Point(12, 200)
         Me.btnSelectSim.Name = "btnSelectSim"
         Me.btnSelectSim.Size = New System.Drawing.Size(182, 27)
         Me.btnSelectSim.TabIndex = 2
@@ -269,7 +281,7 @@ Partial Class disabledEcrWindow
         '
         Me.btnLoadHVHH.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnLoadHVHH.Image = CType(resources.GetObject("btnLoadHVHH.Image"), System.Drawing.Image)
-        Me.btnLoadHVHH.Location = New System.Drawing.Point(12, 159)
+        Me.btnLoadHVHH.Location = New System.Drawing.Point(12, 167)
         Me.btnLoadHVHH.Name = "btnLoadHVHH"
         Me.btnLoadHVHH.Size = New System.Drawing.Size(182, 27)
         Me.btnLoadHVHH.TabIndex = 1
@@ -363,4 +375,5 @@ Partial Class disabledEcrWindow
     Friend WithEvents cViva As System.Windows.Forms.RadioButton
     Friend WithEvents cOrange As System.Windows.Forms.RadioButton
     Friend WithEvents btnNotSupGprs As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents cAllEcr As System.Windows.Forms.RadioButton
 End Class

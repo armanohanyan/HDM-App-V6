@@ -115,19 +115,19 @@ Public Class disabledEcrWindow
     Private Sub GridView1_RowCellStyle(sender As Object, e As RowCellStyleEventArgs) Handles GridView1.RowCellStyle
         On Error Resume Next
 
-        Dim View As GridView = sender
-        If e.Column.FieldName = "ՀուսալիությանՏոկոս" Then
-            Dim ColPercent = View.GetRowCellDisplayText(e.RowHandle, View.Columns("ՀուսալիությանՏոկոս"))
+        'Dim View As GridView = sender
+        'If e.Column.FieldName = "ՀուսալիությանՏոկոս" Then
+        '    Dim ColPercent = View.GetRowCellDisplayText(e.RowHandle, View.Columns("ՀուսալիությանՏոկոս"))
 
-            Dim r1 As Integer = 2.55 * (100 - ColPercent)
-            If r1 > 255 Then r1 = 255
+        '    Dim r1 As Integer = 2.55 * (100 - ColPercent)
+        '    If r1 > 255 Then r1 = 255
 
-            Dim r2 As Integer = (0.64 * (100 - ColPercent)) + 191
-            If r2 > 255 Then r2 = 255
+        '    Dim r2 As Integer = (0.64 * (100 - ColPercent)) + 191
+        '    If r2 > 255 Then r2 = 255
 
-            e.Appearance.BackColor = Color.FromArgb(r1, r2, 255)
-            e.Appearance.BackColor2 = Color.White
-        End If
+        '    e.Appearance.BackColor = Color.FromArgb(r1, r2, 255)
+        '    e.Appearance.BackColor2 = Color.White
+        'End If
 
     End Sub
     Private Sub GridView1_RowStyle(sender As Object, e As Views.Grid.RowStyleEventArgs) Handles GridView1.RowStyle
@@ -289,6 +289,7 @@ Public Class disabledEcrWindow
                                             GridView1.GetRowCellValue(i, "ՀԴՄ"),
                                             GridView1.GetRowCellValue(i, "ՀՎՀՀ"),
                                             GridView1.GetRowCellValue(i, "RecID")))
+
             Next
 
             Dim dt2 As DataTable = ToDataTable(gphvhhecr)
@@ -467,6 +468,10 @@ Public Class disabledEcrWindow
     Private Sub cBeeline_CheckedChanged(sender As Object, e As EventArgs) Handles cBeeline.CheckedChanged
         Call ResetGrid()
         MOperator = "B"
+    End Sub
+    Private Sub cAllEcr_CheckedChanged(sender As Object, e As EventArgs) Handles cAllEcr.CheckedChanged
+        Call ResetGrid()
+        MOperator = "A"
     End Sub
     Private Sub disabledEcrWindow_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Call loadNotSupportedClients()
