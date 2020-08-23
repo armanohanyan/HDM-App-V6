@@ -43,6 +43,7 @@ Partial Class mustBeDisabledEcrWindow
         Me.btnVarvac = New DevExpress.XtraEditors.SimpleButton()
         Me.btnInAction = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.cAllEcr = New System.Windows.Forms.RadioButton()
         Me.cBeeline = New System.Windows.Forms.RadioButton()
         Me.cViva = New System.Windows.Forms.RadioButton()
         Me.cOrange = New System.Windows.Forms.RadioButton()
@@ -51,7 +52,6 @@ Partial Class mustBeDisabledEcrWindow
         Me.btnQuery = New DevExpress.XtraEditors.SimpleButton()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.cAllEcr = New System.Windows.Forms.RadioButton()
         Me.mnuContext.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -194,6 +194,16 @@ Partial Class mustBeDisabledEcrWindow
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Օպերատոր"
         '
+        'cAllEcr
+        '
+        Me.cAllEcr.AutoSize = True
+        Me.cAllEcr.Location = New System.Drawing.Point(6, 88)
+        Me.cAllEcr.Name = "cAllEcr"
+        Me.cAllEcr.Size = New System.Drawing.Size(60, 17)
+        Me.cAllEcr.TabIndex = 3
+        Me.cAllEcr.Text = "Բոլորը"
+        Me.cAllEcr.UseVisualStyleBackColor = True
+        '
         'cBeeline
         '
         Me.cBeeline.AutoSize = True
@@ -281,16 +291,6 @@ Partial Class mustBeDisabledEcrWindow
         Me.GridView1.OptionsView.ColumnAutoWidth = False
         Me.GridView1.OptionsView.ShowAutoFilterRow = True
         Me.GridView1.OptionsView.ShowFooter = True
-        '
-        'cAllEcr
-        '
-        Me.cAllEcr.AutoSize = True
-        Me.cAllEcr.Location = New System.Drawing.Point(6, 88)
-        Me.cAllEcr.Name = "cAllEcr"
-        Me.cAllEcr.Size = New System.Drawing.Size(60, 17)
-        Me.cAllEcr.TabIndex = 3
-        Me.cAllEcr.Text = "Բոլորը"
-        Me.cAllEcr.UseVisualStyleBackColor = True
         '
         'mustBeDisabledEcrWindow
         '

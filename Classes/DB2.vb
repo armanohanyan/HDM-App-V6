@@ -4097,6 +4097,17 @@ Partial Public Class DB
         End Using
     End Sub
 
+    'CheckSellInvoiceFiz
+    Friend Sub CheckSellInvoiceFiz(SellID As Integer)
+        Using connection As New SqlConnection(SQLString)
+            Dim cmdSQLcom As New SqlCommand("EXEC Payment.CheckSellInvoiceFiz @SellID", connection)
+            cmdSQLcom.Parameters.Add("@SellID", SqlDbType.Int).Value = SellID
+            connection.Open()
+            cmdSQLcom.ExecuteNonQuery()
+            connection.Close()
+        End Using
+    End Sub
+
     'CheckHSMShtrikhWarehouseItem
     Friend Sub CheckHSMShtrikhWarehouseItem(ShtrikhCode As String)
         Using connection As New SqlConnection(SQLString)

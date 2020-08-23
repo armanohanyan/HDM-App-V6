@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>3982</ApplicationRevision>
+    <ApplicationRevision>3984</ApplicationRevision>
     <ApplicationVersion>6.4.20.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -646,6 +646,12 @@
       <DependentUpon>WorkShopProposalWindow.vb</DependentUpon>
     </Compile>
     <Compile Include="Ընդհանուր\Արհեստանոց\WorkShopProposalWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Գործընկեր\AddFizWindow.designer.vb">
+      <DependentUpon>AddFizWindow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Գործընկեր\AddFizWindow.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ընդհանուր\Գործընկեր\AddHVHHWindow.designer.vb">
@@ -2048,6 +2054,12 @@
     <Compile Include="Պահեստ\Վաճառք\SellEcrWindow.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Պահեստ\Վաճառք\SellEcrWindowFiz.designer.vb">
+      <DependentUpon>SellEcrWindowFiz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Պահեստ\Վաճառք\SellEcrWindowFiz.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Պահեստ\Վաճառք\SellWindow.Designer.vb">
       <DependentUpon>SellWindow.vb</DependentUpon>
     </Compile>
@@ -2405,6 +2417,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ընդհանուր\Արհեստանոց\WorkShopProposalWindow.resx">
       <DependentUpon>WorkShopProposalWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Գործընկեր\AddFizWindow.resx">
+      <DependentUpon>AddFizWindow.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ընդհանուր\Գործընկեր\AddHVHHWindow.resx">
       <DependentUpon>AddHVHHWindow.vb</DependentUpon>
@@ -3105,6 +3120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Պահեստ\Վաճառք\SellEcrWindow.resx">
       <DependentUpon>SellEcrWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Պահեստ\Վաճառք\SellEcrWindowFiz.resx">
+      <DependentUpon>SellEcrWindowFiz.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Պահեստ\Վաճառք\SellWindow.resx">
       <DependentUpon>SellWindow.vb</DependentUpon>

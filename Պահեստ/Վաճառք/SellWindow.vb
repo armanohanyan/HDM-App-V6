@@ -74,7 +74,12 @@ Public Class SellWindow
 
     Friend Sub LoadDataByClient()
         Try
-            Dim dt As DataTable = iDB.GetCustomSellByClient(sellID)
+            Dim dt As DataTable
+            If ClientID > 2000000 Then
+                dt = iDB.GetCustomSellByClientFiz(sellID)
+            Else
+                dt = iDB.GetCustomSellByClient(sellID)
+            End If
 
             GridControl1.BeginUpdate()
             GridControl1.DataSource = Nothing
@@ -318,7 +323,12 @@ Public Class SellWindow
         If GridView1.RowCount = 0 Then Exit Sub
         Try
             'Ինվոյսի Առկայության Ստուգում
-            iDB.CheckSellInvoice(sellID)
+            If ClientID > 2000000 Then
+                iDB.CheckSellInvoiceFiz(sellID)
+            Else
+                iDB.CheckSellInvoice(sellID)
+            End If
+
 
             If GridView1.GetRowCellValue(GridView1.FocusedRowHandle, GridView1.Columns(1)) = "PAX S900" Then
                 Dim r As Integer = -1

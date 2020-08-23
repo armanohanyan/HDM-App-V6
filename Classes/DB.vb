@@ -4296,6 +4296,22 @@ Partial Public Class DB
         Return b
     End Function
 
+    'IsClientFizExists
+    Friend Function IsClientFizExists(ByVal seria As String) As Boolean
+        Dim b
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT Client.IsClientFizExists(@seria)"
+                cmd.Parameters.Add("@seria", SqlDbType.VarChar).Value = seria
+                b = cmd.ExecuteScalar()
+            End Using
+        End Using
+        Return b
+    End Function
+
     'GetContractDissolve
     Friend Function GetContractDissolve(ByVal sDate As Date, ByVal eDate As Date, ByVal IsAll As Boolean) As DataTable
         Dim dt As DataTable
@@ -4501,6 +4517,25 @@ Partial Public Class DB
         Return dt
     End Function
 
+    'GetClientInfoForSellFiz
+    Friend Function GetClientInfoForSellFiz(ByVal Passport As String) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.Add("@Passport", SqlDbType.VarChar).Value = Passport
+                cmd.CommandText = "SELECT * FROM Supporter.GetClientInfoForSellFiz(@Passport)"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
     'GetEquipmentForCustomSell
     Friend Function GetEquipmentForCustomSell() As DataTable
         Dim dt As DataTable
@@ -4529,6 +4564,25 @@ Partial Public Class DB
                 cmd.CommandType = CommandType.Text
                 cmd.Parameters.Add("@CustomSellHeaderID", SqlDbType.Int).Value = sellID
                 cmd.CommandText = "SELECT * FROM warehouse.GetCustomSellByClient(@CustomSellHeaderID)"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    'GetCustomSellByClientFiz
+    Friend Function GetCustomSellByClientFiz(ByVal sellID As Int16) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.Add("@CustomSellHeaderID", SqlDbType.Int).Value = sellID
+                cmd.CommandText = "SELECT * FROM warehouse.GetCustomSellByClientFiz(@CustomSellHeaderID)"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)
@@ -4694,7 +4748,39 @@ Partial Public Class DB
         Return dt
     End Function
 
-    'RollbackCustomSellForSupporter
+    'RollbackCustomSellForSupporterFiz
+    Friend Function RollbackCustomSellForSupporterFiz(ByVal ShtrikhCode As String, ByVal SupporterID As Integer, ByVal ClientID As Integer, ByVal isLocal As Boolean) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.Add("@ShtrikhCode", SqlDbType.Char).Value = ShtrikhCode
+                cmd.Parameters.Add("@SupporterID", SqlDbType.TinyInt).Value = SupporterID
+
+                If isLocal = True Then
+                    cmd.Parameters.Add("@ClientID", SqlDbType.TinyInt).Value = ClientID
+                Else
+                    cmd.Parameters.Add("@ClientID", SqlDbType.Int).Value = ClientID
+                End If
+
+                If isLocal = True Then
+                    cmd.CommandText = "EXEC warehouse.RollbackCustomSellForSupporter @ShtrikhCode,@SupporterID,@ClientID"
+                Else
+                    cmd.CommandText = "EXEC warehouse.RollbackCustomSellForClientFiz @ShtrikhCode,@SupporterID,@ClientID"
+                End If
+
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    'RollbackCustomSellForSupporterNoNDS
     Friend Function RollbackCustomSellForSupporterNoNDS(ByVal ShtrikhCode As String, ByVal SupporterID As Integer, ByVal ClientID As Integer, ByVal isLocal As Boolean) As DataTable
         Dim dt As DataTable
         Using cnn As New SqlConnection(SQLString)
@@ -4742,6 +4828,31 @@ Partial Public Class DB
                 cmd.Parameters.Add("@Price", SqlDbType.Decimal).Value = Price
                 cmd.Parameters.Add("@AraqmanAddress", SqlDbType.NVarChar).Value = AraqmanAddress
                 cmd.CommandText = "EXEC warehouse.CustomSellForClient @ShtrikhCode,@SupporterID,@SELLID,@ClientID,@EquipmentID,@Price,@AraqmanAddress"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    'CustomSellForClientFiz
+    Friend Function CustomSellForClientFiz(ByVal ShtrikhCode As String, ByVal SupporterID As Byte, ByVal SELLID As Integer, ByVal ClientID As Integer, ByVal EquipmentID As Short, ByVal Price As Decimal, ByVal AraqmanAddress As String) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.Add("@ShtrikhCode", SqlDbType.Char).Value = ShtrikhCode
+                cmd.Parameters.Add("@SupporterID", SqlDbType.TinyInt).Value = SupporterID
+                cmd.Parameters.Add("@SELLID", SqlDbType.Int).Value = SELLID
+                cmd.Parameters.Add("@ClientID", SqlDbType.Int).Value = ClientID
+                cmd.Parameters.Add("@EquipmentID", SqlDbType.SmallInt).Value = EquipmentID
+                cmd.Parameters.Add("@Price", SqlDbType.Decimal).Value = Price
+                cmd.Parameters.Add("@AraqmanAddress", SqlDbType.NVarChar).Value = AraqmanAddress
+                cmd.CommandText = "EXEC warehouse.CustomSellForClientFiz @ShtrikhCode,@SupporterID,@SELLID,@ClientID,@EquipmentID,@Price,@AraqmanAddress"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)
@@ -5681,6 +5792,22 @@ Partial Public Class DB
             cmdSQLcom.Parameters.Add("@notSupp", Data.SqlDbType.Bit).Value = notSupp
             cmdSQLcom.Parameters.Add("@nds", Data.SqlDbType.Bit).Value = nds
             cmdSQLcom.Parameters.Add("@zeronds", Data.SqlDbType.Bit).Value = zeronds
+            connection.Open()
+            cmdSQLcom.ExecuteNonQuery()
+            connection.Close()
+        End Using
+    End Sub
+
+    'InsertClientFiz
+    Friend Sub InsertClientFiz(ByVal fullName As String, ByVal passport As String, ByVal tel As String, ByVal address As String, ByVal socCard As String, ByVal email As String)
+        Using connection As New SqlConnection(SQLString)
+            Dim cmdSQLcom As New SqlCommand("EXEC Client.InsertClientFiz @fullName,@passport,@tel,@address,@socCard,@email", connection)
+            cmdSQLcom.Parameters.Add("@fullName", Data.SqlDbType.NVarChar).Value = fullName
+            cmdSQLcom.Parameters.Add("@passport", Data.SqlDbType.NVarChar).Value = passport
+            cmdSQLcom.Parameters.Add("@tel", Data.SqlDbType.NVarChar).Value = tel
+            cmdSQLcom.Parameters.Add("@address", Data.SqlDbType.NVarChar).Value = address
+            If String.IsNullOrEmpty(socCard) Then cmdSQLcom.Parameters.Add("@socCard", Data.SqlDbType.NVarChar).Value = DBNull.Value Else cmdSQLcom.Parameters.Add("@socCard", Data.SqlDbType.NVarChar).Value = socCard
+            If String.IsNullOrEmpty(email) Then cmdSQLcom.Parameters.Add("@email", Data.SqlDbType.NVarChar).Value = DBNull.Value Else cmdSQLcom.Parameters.Add("@email", Data.SqlDbType.NVarChar).Value = email
             connection.Open()
             cmdSQLcom.ExecuteNonQuery()
             connection.Close()
