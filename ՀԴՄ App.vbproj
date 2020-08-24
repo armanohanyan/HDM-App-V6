@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>3984</ApplicationRevision>
+    <ApplicationRevision>3986</ApplicationRevision>
     <ApplicationVersion>6.4.20.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -1332,6 +1332,12 @@
     <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MakeRemakeInvoiceXML.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MakeSellInvoiceFizXML.designer.vb">
+      <DependentUpon>MakeSellInvoiceFizXML.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MakeSellInvoiceFizXML.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MakeSellInvoiceXML.designer.vb">
       <DependentUpon>MakeSellInvoiceXML.vb</DependentUpon>
     </Compile>
@@ -1354,6 +1360,12 @@
       <DependentUpon>SellInvoiceXMLSelector.vb</DependentUpon>
     </Compile>
     <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\SellInvoiceXMLSelector.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\SellInvoiceXMLSelectorFiz.designer.vb">
+      <DependentUpon>SellInvoiceXMLSelectorFiz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\SellInvoiceXMLSelectorFiz.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\ChangeInvoiceData.Designer.vb">
@@ -2761,6 +2773,9 @@
     <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MakeRemakeInvoiceXML.resx">
       <DependentUpon>MakeRemakeInvoiceXML.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MakeSellInvoiceFizXML.resx">
+      <DependentUpon>MakeSellInvoiceFizXML.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\MakeSellInvoiceXML.resx">
       <DependentUpon>MakeSellInvoiceXML.vb</DependentUpon>
     </EmbeddedResource>
@@ -2772,6 +2787,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\SellInvoiceXMLSelector.resx">
       <DependentUpon>SellInvoiceXMLSelector.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սարքավորման ՀԱ\SellInvoiceXMLSelectorFiz.resx">
+      <DependentUpon>SellInvoiceXMLSelectorFiz.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Հաշվապահություն\Հաշիվ Ապրանքագիր\Սպասարկման ՀԱ\ChangeInvoiceData.resx">
       <DependentUpon>ChangeInvoiceData.vb</DependentUpon>
@@ -3197,7 +3215,9 @@
     <None Include="Excel Files\Rem Invoise.xlsx" />
     <None Include="Excel Files\report.xls" />
     <None Include="Excel Files\SellEcrAct.xlsx" />
+    <None Include="Excel Files\SellEcrActFiz.xlsx" />
     <None Include="Excel Files\SellEcrContract.xlsx" />
+    <None Include="Excel Files\SellEcrContractFiz.xlsx" />
     <None Include="Excel Files\Shtrikh Code Prit form.xlsx" />
     <None Include="Excel Files\TarifHavelvac.xls" />
     <None Include="Excel Files\TarifHavelvacZero.xls" />

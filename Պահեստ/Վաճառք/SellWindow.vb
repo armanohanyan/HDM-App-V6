@@ -330,7 +330,7 @@ Public Class SellWindow
             End If
 
 
-            If GridView1.GetRowCellValue(GridView1.FocusedRowHandle, GridView1.Columns(1)) = "PAX S900" Then
+            If GridView1.GetRowCellValue(GridView1.FocusedRowHandle, GridView1.Columns(1)) = "PAX S900" OrElse GridView1.GetRowCellValue(GridView1.FocusedRowHandle, GridView1.Columns(1)) = "Pax S900" Then
                 Dim r As Integer = -1
                 Dim f As New ReturnSoldEcr With {.IsLocalSell = IsLocalSell, .SupporterID = SupporterID}
 

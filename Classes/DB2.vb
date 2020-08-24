@@ -704,7 +704,7 @@ Partial Public Class DB
     End Function
 
     'InvSellInvoices
-    Friend Function InvSellInvoices(SupporterID As Byte) As DataTable
+    Friend Function InvSellInvoices(ByVal SupporterID As Byte) As DataTable
         Dim dt As DataTable
         Using cnn As New SqlConnection(SQLString)
             cnn.Open()
@@ -713,6 +713,25 @@ Partial Public Class DB
                 cmd.CommandType = CommandType.Text
                 cmd.Parameters.Add("@SupporterID", SqlDbType.TinyInt).Value = SupporterID
                 cmd.CommandText = "SELECT * FROM Payment.InvSellInvoices(@SupporterID)"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    'InvSellInvoicesFiz
+    Friend Function InvSellInvoicesFiz(ByVal SupporterID As Byte) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.Add("@SupporterID", SqlDbType.TinyInt).Value = SupporterID
+                cmd.CommandText = "SELECT * FROM Payment.InvSellInvoicesFiz(@SupporterID)"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)
@@ -770,6 +789,25 @@ Partial Public Class DB
                 cmd.CommandType = CommandType.Text
                 cmd.Parameters.Add("@InvoiceID", SqlDbType.Int).Value = InvoiceID
                 cmd.CommandText = "SELECT * FROM Payment.GetSellInvInfo(@InvoiceID)"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    'GetSellInvInfoFiz
+    Friend Function GetSellInvInfoFiz(ByVal InvoiceID As Integer) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.Add("@InvoiceID", SqlDbType.Int).Value = InvoiceID
+                cmd.CommandText = "SELECT * FROM Payment.GetSellInvInfoFiz(@InvoiceID)"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)
@@ -865,6 +903,25 @@ Partial Public Class DB
                 cmd.CommandType = CommandType.Text
                 cmd.Parameters.Add("@InvoiceID", SqlDbType.Int).Value = InvoiceID
                 cmd.CommandText = "SELECT * FROM Payment.GetSellInvDetails(@InvoiceID)"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    'GetSellInvDetailsFiz
+    Friend Function GetSellInvDetailsFiz(ByVal InvoiceID As Integer) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.Add("@InvoiceID", SqlDbType.Int).Value = InvoiceID
+                cmd.CommandText = "SELECT * FROM Payment.GetSellInvDetailsFiz(@InvoiceID)"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)
@@ -3673,6 +3730,17 @@ Partial Public Class DB
     Friend Sub SetInvoicePrinted(InvoiceID As Integer)
         Using connection As New SqlConnection(SQLString)
             Dim cmdSQLcom As New SqlCommand("EXEC Payment.SetInvoicePrinted @InvoiceID", connection)
+            cmdSQLcom.Parameters.Add("@InvoiceID", Data.SqlDbType.Int).Value = InvoiceID
+            connection.Open()
+            cmdSQLcom.ExecuteNonQuery()
+            connection.Close()
+        End Using
+    End Sub
+
+    'SetInvoicePrintedFiz
+    Friend Sub SetInvoicePrintedFiz(InvoiceID As Integer)
+        Using connection As New SqlConnection(SQLString)
+            Dim cmdSQLcom As New SqlCommand("EXEC Payment.SetInvoicePrintedFiz @InvoiceID", connection)
             cmdSQLcom.Parameters.Add("@InvoiceID", Data.SqlDbType.Int).Value = InvoiceID
             connection.Open()
             cmdSQLcom.ExecuteNonQuery()
