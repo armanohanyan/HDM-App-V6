@@ -1446,6 +1446,12 @@
     <Compile Include="Հաշվապահություն\Վճարներ\payWindow.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Հաշվապահություն\Վճարներ\payWindowFiz.designer.vb">
+      <DependentUpon>payWindowFiz.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Հաշվապահություն\Վճարներ\payWindowFiz.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Հաշվապահություն\Վճարներ\RepBank.designer.vb">
       <DependentUpon>RepBank.vb</DependentUpon>
     </Compile>
@@ -2829,6 +2835,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Հաշվապահություն\Վճարներ\payWindow.resx">
       <DependentUpon>payWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Հաշվապահություն\Վճարներ\payWindowFiz.resx">
+      <DependentUpon>payWindowFiz.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Հաշվապահություն\Վճարներ\RepBank.resx">
       <DependentUpon>RepBank.vb</DependentUpon>

@@ -52,6 +52,8 @@ Partial Class SendSMSWindow
         Me.rbForBlock = New System.Windows.Forms.RadioButton()
         Me.rbBlocked = New System.Windows.Forms.RadioButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.rbTorp = New System.Windows.Forms.RadioButton()
+        Me.rbSmart = New System.Windows.Forms.RadioButton()
         Me.rbTouch = New System.Windows.Forms.RadioButton()
         Me.rbMK = New System.Windows.Forms.RadioButton()
         Me.rbTama = New System.Windows.Forms.RadioButton()
@@ -60,8 +62,8 @@ Partial Class SendSMSWindow
         Me.btnLoad = New DevExpress.XtraEditors.SimpleButton()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.rbTorp = New System.Windows.Forms.RadioButton()
-        Me.rbSmart = New System.Windows.Forms.RadioButton()
+        Me.rbForBlockExcel = New System.Windows.Forms.RadioButton()
+        Me.rbBlockedExcel = New System.Windows.Forms.RadioButton()
         Me.mnuContext.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -134,18 +136,20 @@ Partial Class SendSMSWindow
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 562)
+        Me.Panel1.Size = New System.Drawing.Size(200, 607)
         Me.Panel1.TabIndex = 1
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.rbForBlockExcel)
+        Me.GroupBox4.Controls.Add(Me.rbBlockedExcel)
         Me.GroupBox4.Controls.Add(Me.btnSendFromExcell)
         Me.GroupBox4.Controls.Add(Me.btnLoadFromExcell)
         Me.GroupBox4.Controls.Add(Me.cbLoadFromExcell)
         Me.GroupBox4.ForeColor = System.Drawing.Color.Red
         Me.GroupBox4.Location = New System.Drawing.Point(6, 446)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(187, 104)
+        Me.GroupBox4.Size = New System.Drawing.Size(187, 151)
         Me.GroupBox4.TabIndex = 14
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Կասեցվածներ Excell-ից"
@@ -154,7 +158,7 @@ Partial Class SendSMSWindow
         '
         Me.btnSendFromExcell.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSendFromExcell.Image = CType(resources.GetObject("btnSendFromExcell.Image"), System.Drawing.Image)
-        Me.btnSendFromExcell.Location = New System.Drawing.Point(7, 76)
+        Me.btnSendFromExcell.Location = New System.Drawing.Point(6, 115)
         Me.btnSendFromExcell.Name = "btnSendFromExcell"
         Me.btnSendFromExcell.Size = New System.Drawing.Size(109, 27)
         Me.btnSendFromExcell.TabIndex = 13
@@ -164,7 +168,7 @@ Partial Class SendSMSWindow
         '
         Me.btnLoadFromExcell.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnLoadFromExcell.Image = CType(resources.GetObject("btnLoadFromExcell.Image"), System.Drawing.Image)
-        Me.btnLoadFromExcell.Location = New System.Drawing.Point(6, 43)
+        Me.btnLoadFromExcell.Location = New System.Drawing.Point(5, 82)
         Me.btnLoadFromExcell.Name = "btnLoadFromExcell"
         Me.btnLoadFromExcell.Size = New System.Drawing.Size(111, 27)
         Me.btnLoadFromExcell.TabIndex = 12
@@ -351,6 +355,26 @@ Partial Class SendSMSWindow
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Կազմակերպություններ"
         '
+        'rbTorp
+        '
+        Me.rbTorp.AutoSize = True
+        Me.rbTorp.Location = New System.Drawing.Point(6, 95)
+        Me.rbTorp.Name = "rbTorp"
+        Me.rbTorp.Size = New System.Drawing.Size(72, 17)
+        Me.rbTorp.TabIndex = 7
+        Me.rbTorp.Text = "Թորփայս"
+        Me.rbTorp.UseVisualStyleBackColor = True
+        '
+        'rbSmart
+        '
+        Me.rbSmart.AutoSize = True
+        Me.rbSmart.Location = New System.Drawing.Point(6, 79)
+        Me.rbSmart.Name = "rbSmart"
+        Me.rbSmart.Size = New System.Drawing.Size(107, 17)
+        Me.rbSmart.TabIndex = 6
+        Me.rbSmart.Text = "Սմարթ Սոլուշնս"
+        Me.rbSmart.UseVisualStyleBackColor = True
+        '
         'rbTouch
         '
         Me.rbTouch.AutoSize = True
@@ -423,7 +447,7 @@ Partial Class SendSMSWindow
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(628, 562)
+        Me.GridControl1.Size = New System.Drawing.Size(628, 607)
         Me.GridControl1.TabIndex = 5
         Me.GridControl1.TabStop = False
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
@@ -439,31 +463,33 @@ Partial Class SendSMSWindow
         Me.GridView1.OptionsView.ShowFooter = True
         Me.GridView1.OptionsView.ShowGroupPanel = False
         '
-        'rbTorp
+        'rbForBlockExcel
         '
-        Me.rbTorp.AutoSize = True
-        Me.rbTorp.Location = New System.Drawing.Point(6, 95)
-        Me.rbTorp.Name = "rbTorp"
-        Me.rbTorp.Size = New System.Drawing.Size(72, 17)
-        Me.rbTorp.TabIndex = 7
-        Me.rbTorp.Text = "Թորփայս"
-        Me.rbTorp.UseVisualStyleBackColor = True
+        Me.rbForBlockExcel.AutoSize = True
+        Me.rbForBlockExcel.Location = New System.Drawing.Point(7, 57)
+        Me.rbForBlockExcel.Name = "rbForBlockExcel"
+        Me.rbForBlockExcel.Size = New System.Drawing.Size(144, 17)
+        Me.rbForBlockExcel.TabIndex = 15
+        Me.rbForBlockExcel.Text = "Կասեցման Ենթականեր"
+        Me.rbForBlockExcel.UseVisualStyleBackColor = True
         '
-        'rbSmart
+        'rbBlockedExcel
         '
-        Me.rbSmart.AutoSize = True
-        Me.rbSmart.Location = New System.Drawing.Point(6, 79)
-        Me.rbSmart.Name = "rbSmart"
-        Me.rbSmart.Size = New System.Drawing.Size(107, 17)
-        Me.rbSmart.TabIndex = 6
-        Me.rbSmart.Text = "Սմարթ Սոլուշնս"
-        Me.rbSmart.UseVisualStyleBackColor = True
+        Me.rbBlockedExcel.AutoSize = True
+        Me.rbBlockedExcel.Checked = True
+        Me.rbBlockedExcel.Location = New System.Drawing.Point(7, 41)
+        Me.rbBlockedExcel.Name = "rbBlockedExcel"
+        Me.rbBlockedExcel.Size = New System.Drawing.Size(97, 17)
+        Me.rbBlockedExcel.TabIndex = 14
+        Me.rbBlockedExcel.TabStop = True
+        Me.rbBlockedExcel.Text = "Կասեցվածներ"
+        Me.rbBlockedExcel.UseVisualStyleBackColor = True
         '
         'SendSMSWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(828, 562)
+        Me.ClientSize = New System.Drawing.Size(828, 607)
         Me.Controls.Add(Me.GridControl1)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -528,4 +554,6 @@ Partial Class SendSMSWindow
     Friend WithEvents cbLoadFromExcell As System.Windows.Forms.CheckBox
     Friend WithEvents rbTorp As System.Windows.Forms.RadioButton
     Friend WithEvents rbSmart As System.Windows.Forms.RadioButton
+    Friend WithEvents rbForBlockExcel As System.Windows.Forms.RadioButton
+    Friend WithEvents rbBlockedExcel As System.Windows.Forms.RadioButton
 End Class

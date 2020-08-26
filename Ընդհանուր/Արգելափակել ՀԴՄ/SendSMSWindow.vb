@@ -649,6 +649,12 @@ Public Class SendSMSWindow
                     Case """Տոչ-մաստեր"" ՍՊԸ"
                         iCompany = Company_XXX.Touch_Master
                         op = 4
+                    Case """Սմարթ Սոլուշնս"" ՍՊԸ"
+                        iCompany = Company_XXX.Touch_Master
+                        op = 8
+                    Case """Թորփայս"" ՍՊԸ"
+                        iCompany = Company_XXX.Touch_Master
+                        op = 10
                 End Select
 
                 'If companyX = Company_XXX.Undefined Then Throw New Exception("Կազմակերպությունը սխալ է նշված")
@@ -703,8 +709,22 @@ Public Class SendSMSWindow
 
                 'Message
 
+                If rbBlockedExcel.Checked Then
+                    If op = 8 Then
+                        msg.Text = dt.Rows(i)("ՀՎՀՀ") & " Dzer hashvekshiry kazmum e " & dt.Rows(i)("Պարտք") & " dr. Xndrum enq katarel vcharum ashxatanqy sharunakelu hamar. Smarts.am 060 400005․ Hashvehamar 220563330442000"
+                    Else
+                        msg.Text = "Hargeli gorcynker HVHH " & dt.Rows(i)("ՀՎՀՀ") & " Dzez matucvox tsarayutyunnery masnaki dadarecvats en. Xndrum enq katarel " & dt.Rows(i)("Պարտք") & " dram vjarum versksman hamar.Her " & strTel
+                    End If
+                ElseIf rbForBlockExcel.Checked = True Then
+                    If op = 8 Then
+                        msg.Text = dt.Rows(i)("ՀՎՀՀ") & "  Dzer hashvekshirn e " & dt.Rows(i)("Պարտք") & " dr. Xndrum enq katarel vcharum DMI-i anxapan ashxatanqi hamar. Smart Solutions 060 400005. Hashvehamar 220563330442000"
+                    Else
+                        msg.Text = "Hargeli gorcynker HVHH " & dt.Rows(i)("ՀՎՀՀ") & " Dzer kazmakerputyunn uni partq " & dt.Rows(i)("Պարտք") & " dram.Xndrum enq katarel vjarum.Kasecman amsativ` " & TimeX.DateTime.Date & ".Her " & strTel
+                    End If
+                End If
+
                 'msg.Text = "Hargeli gorcynker HVHH " & dt.Rows(i)("ՀՎՀՀ") & " Dzer kazmakerputyunn uni partq " & dt.Rows(i)("Պարտք") & " dram.Xndrum enq katarel vjarum.Kasecman amsativ` 08.06.2020.Her " & strTel
-                msg.Text = "Hargeli gorcynker HVHH " & dt.Rows(i)("ՀՎՀՀ") & " Dzez matucvox tsarayutyunnery masnaki dadarecvats en. Xndrum enq katarel " & dt.Rows(i)("Պարտք") & " dram vjarum versksman hamar.Her " & strTel
+                'msg.Text = "Hargeli gorcynker HVHH " & dt.Rows(i)("ՀՎՀՀ") & " Dzez matucvox tsarayutyunnery masnaki dadarecvats en. Xndrum enq katarel " & dt.Rows(i)("Պարտք") & " dram vjarum versksman hamar.Her " & strTel
 
 
                 msg.DestinationAddress = "+374" & Microsoft.VisualBasic.Right(dt.Rows(i)("Հեռախոս"), 8)

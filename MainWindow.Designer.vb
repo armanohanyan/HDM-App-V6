@@ -520,8 +520,8 @@ Partial Class MainWindow
         Me.MainMenu.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.MainMenu.Name = "MainMenu"
         Me.MainMenu.Ribbon = Me.RibbonPanel
-        Me.MainMenu.SelectedTab = Me.tbChangeUser
-        Me.MainMenu.SelectedTabIndex = 6
+        Me.MainMenu.SelectedTab = Me.tbDeleteUser
+        Me.MainMenu.SelectedTabIndex = 7
         Me.MainMenu.Size = New System.Drawing.Size(496, 542)
         Me.MainMenu.Style = DevExpress.XtraBars.Ribbon.BackstageViewStyle.Office2013
         Me.MainMenu.TabIndex = 2
@@ -1183,7 +1183,7 @@ Partial Class MainWindow
         Me.tbChangeUser.ContentControl = Me.BackstageViewClientControl3
         Me.tbChangeUser.Glyph = CType(resources.GetObject("tbChangeUser.Glyph"), System.Drawing.Image)
         Me.tbChangeUser.Name = "tbChangeUser"
-        Me.tbChangeUser.Selected = True
+        Me.tbChangeUser.Selected = False
         '
         'tbDeleteUser
         '
@@ -1191,7 +1191,7 @@ Partial Class MainWindow
         Me.tbDeleteUser.ContentControl = Me.BackstageViewClientControl4
         Me.tbDeleteUser.Glyph = CType(resources.GetObject("tbDeleteUser.Glyph"), System.Drawing.Image)
         Me.tbDeleteUser.Name = "tbDeleteUser"
-        Me.tbDeleteUser.Selected = False
+        Me.tbDeleteUser.Selected = True
         '
         'tbUserPermissions
         '
@@ -2729,31 +2729,32 @@ Partial Class MainWindow
         Me.AcountTreeList.AppendNode(New Object() {"Վճարների մուտքագրում"}, 0, 3, 3, -1)
         Me.AcountTreeList.AppendNode(New Object() {"Խմբային վճարների մուտքագրում"}, 0, 3, 3, -1)
         Me.AcountTreeList.AppendNode(New Object() {"TelCell Վճարների Հաստատում"}, 0, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Ֆիզ անձանց Վճարների մուտքագրում"}, 0, 3, 3, -1)
         Me.AcountTreeList.AppendNode(New Object() {"Հաշիվ Ապրանքագիր"}, -1, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա"}, 4, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Ընթացիկ Հ/Ա"}, 5, 16, 16, -1)
         Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա"}, 5, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա Շրջիկ"}, 5, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Փոխել Հ/Ա Տվյալները"}, 5, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Ջնջել Սպասարկման Հ/Ա"}, 5, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Չտպված Սպասարկման Հ/Ա"}, 5, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Չտպված Հավելվածներ"}, 5, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Տպված Սպասարկման Հ/Ա"}, 5, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Հ/Ա Վերադարձ"}, 5, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Սարքավորման Վաճառքի Հ/Ա"}, 4, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Ներքին Ինվոյս (XML)"}, 15, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Սարքավորման Ինվոյս (XML)"}, 15, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Վաճառքի Ինվոյս (XML)"}, 15, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Ֆիզ Անձի Ինվոյս (XML)"}, 15, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Ընթացիկ Հ/Ա"}, 6, 16, 16, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա Շրջիկ"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Փոխել Հ/Ա Տվյալները"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Ջնջել Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Չտպված Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Չտպված Հավելվածներ"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Տպված Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Հ/Ա Վերադարձ"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Սարքավորման Վաճառքի Հ/Ա"}, 5, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Ներքին Ինվոյս (XML)"}, 16, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Սարքավորման Ինվոյս (XML)"}, 16, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Վաճառքի Ինվոյս (XML)"}, 16, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Ֆիզ Անձի Ինվոյս (XML)"}, 16, 3, 3, -1)
         Me.AcountTreeList.AppendNode(New Object() {"Տեղեկատուներ"}, -1, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"ԱԱՀ-ից Ազատված Գործընկեր"}, 20, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Չսպասարկվող Գործընկեր"}, 20, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"PDF-ով Չտպվող"}, 20, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Հ/Ա PDF-ի Կարգաբերում"}, 20, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"PDF-Ի Էջերի Ստացում"}, 20, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Պահեստի Մնացորդ"}, 20, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"XML - ՀՎՀՀ Ստուգում"}, 20, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Պահանջագրեր"}, 20, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"ԱԱՀ-ից Ազատված Գործընկեր"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Չսպասարկվող Գործընկեր"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"PDF-ով Չտպվող"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Հ/Ա PDF-ի Կարգաբերում"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"PDF-Ի Էջերի Ստացում"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Պահեստի Մնացորդ"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"XML - ՀՎՀՀ Ստուգում"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Պահանջագրեր"}, 21, 3, 3, -1)
         Me.AcountTreeList.EndUnboundLoad()
         Me.AcountTreeList.OptionsBehavior.EnableFiltering = True
         Me.AcountTreeList.OptionsLayout.AddNewColumns = False

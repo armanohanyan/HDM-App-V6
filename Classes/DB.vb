@@ -1279,7 +1279,26 @@ Partial Public Class DB
         Return dt
     End Function
 
-    'GetPaymentInfoByHvhh
+    'GetPaymentsByPassport
+    Friend Function GetPaymentsByPassport(ByVal passport As String) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT PaymentID,Վճար,ՎճարմանԱմսաթիվ,ՎճարմանՁև,Հաստատված,PayType,Մուտք FROM Payment.GetPaymentsByPassport(@passport)"
+                cmd.Parameters.Add("@passport", SqlDbType.VarChar).Value = passport
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    'GetPaymentInfoBy
     Friend Function GetPaymentInfoByHvhh(ByVal hvhh As String) As DataTable
         Dim dt As DataTable
         Using cnn As New SqlConnection(SQLString)
@@ -1289,6 +1308,25 @@ Partial Public Class DB
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = "SELECT Սպասարկող,Կազմակերպություն,ՀծԿող FROM Payment.GetPaymentInfoByHvhh(@hvhh)"
                 cmd.Parameters.Add("@hvhh", SqlDbType.VarChar).Value = hvhh
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    'GetPaymentInfoByPassport
+    Friend Function GetPaymentInfoByPassport(ByVal passport As String) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT Սպասարկող,Կազմակերպություն,ՀծԿող FROM Payment.GetPaymentInfoByPassport(@passport)"
+                cmd.Parameters.Add("@passport", SqlDbType.VarChar).Value = passport
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)
@@ -5829,6 +5867,21 @@ Partial Public Class DB
         End Using
     End Sub
 
+    'InsertPaymentFiz
+    Friend Sub InsertPaymentFiz(ByVal hvhh As String, ByVal Payment As Decimal, ByVal PayDate As DateTime, ByVal PayType As Char, ByVal SupporterID As Byte)
+        Using connection As New SqlConnection(SQLString)
+            Dim cmdSQLcom As New SqlCommand("EXEC Payment.InsertPaymentFiz @passport,@Payment,@PayDate,@PayType,@SupporterID", connection)
+            cmdSQLcom.Parameters.Add("@passport", Data.SqlDbType.VarChar).Value = hvhh
+            cmdSQLcom.Parameters.Add("@Payment", Data.SqlDbType.Decimal).Value = Payment
+            cmdSQLcom.Parameters.Add("@PayDate", Data.SqlDbType.DateTime).Value = PayDate
+            cmdSQLcom.Parameters.Add("@PayType", Data.SqlDbType.Char).Value = PayType
+            cmdSQLcom.Parameters.Add("@SupporterID", Data.SqlDbType.TinyInt).Value = SupporterID
+            connection.Open()
+            cmdSQLcom.ExecuteNonQuery()
+            connection.Close()
+        End Using
+    End Sub
+
     'InsertEcr
     Friend Sub InsertEcr(ByVal ecr As String, ByVal hvhh As String, ByVal mgh As String, ByVal contDate As Date, ByVal gAddress As String, ByVal gprs As String,
                          ByVal sStatus As Byte, ByVal sRegion As Short, ByVal oType As String, ByVal Tel As String, ByVal tesuch As Short, ByVal isNds As Boolean,
@@ -7422,6 +7475,23 @@ Partial Public Class DB
                 cmd.Connection = cnn
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = "EXEC Client.AutoCompleteHvhh"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+    'Passport/ID card
+    Friend Function AutoCompleteHvhhFiz() As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "EXEC Client.AutoCompleteHvhhFiz"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)
