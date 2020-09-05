@@ -2712,6 +2712,24 @@ Partial Public Class DB
         Return dt
     End Function
 
+    'GetPartqListFiz
+    Friend Function GetPartqListFiz() As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "EXEC Client.GetPartqListFiz"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
     'GetZroList
     Friend Function GetZroList(ByVal id As Byte) As DataTable
         Dim dt As DataTable

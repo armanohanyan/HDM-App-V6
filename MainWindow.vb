@@ -2497,6 +2497,16 @@ Public Class MainWindow
                         Call CloseWindow("nEcrTesuchRep")
                         Dim f As New EcrTesuchRep
                         AddChildForm("nEcrTesuchRep", f)
+                    Case 64
+                        'Ֆիզ Անձ
+                        '////////////////////////////////////////////////////////////////////////
+
+                        'Բեռնել ֆիզ անձանց
+                    Case 65
+                        If CheckPermission("7094CBEF500943A5926699F1725D4A70") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
+                        Call CloseWindow("nEcrTesuchRep")
+                        Dim f As New LoadFizClients
+                        AddChildForm("nEcrTesuchRep", f)
                 End Select
             End If
 
@@ -4458,6 +4468,16 @@ Public Class MainWindow
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 63 Then
+            If CheckPermission("7094CBEF500943A5926699F1725D4A70") = False Then
+                e.Node.Visible = False
+                e.Handled = True
+            End If
+        ElseIf e.Node.Id = 64 Then
+            If CheckPermission("7094CBEF500943A5926699F1725D4A70") = False Then
+                e.Node.Visible = False
+                e.Handled = True
+            End If
+        ElseIf e.Node.Id = 65 Then
             If CheckPermission("7094CBEF500943A5926699F1725D4A70") = False Then
                 e.Node.Visible = False
                 e.Handled = True

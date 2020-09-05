@@ -26,6 +26,7 @@ Public Class WorkShopProposalWindow
                     'Dim IP As String = GetIpAddress()
                     isCenter = False
                     dt = iDB.GetWorkshopEcrByBranch(txtEcr.Text.Trim, iUser.DB)
+                    'dt = iDB.GetWorkshopEcrByCenter(txtEcr.Text.Trim)
                 Else
                     isCenter = True
                     dt = iDB.GetWorkshopEcrByCenter(txtEcr.Text.Trim)
@@ -35,6 +36,7 @@ Public Class WorkShopProposalWindow
                 If iUser.DB <> 5 Then
                     isCenter = False
                     dt = iDB.ReturnWorkshopEcrByBranch(txtEcr.Text.Trim, iUser.DB)
+                    'dt = iDB.ReturnWorkshopEcrByCenter(txtEcr.Text.Trim)
                 Else
                     isCenter = True
                     dt = iDB.ReturnWorkshopEcrByCenter(txtEcr.Text.Trim)

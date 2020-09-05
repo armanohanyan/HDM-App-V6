@@ -34,6 +34,8 @@ Partial Class SendSMSWindow
         Me.mnuExportToExcel = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.rbForBlockExcel = New System.Windows.Forms.RadioButton()
+        Me.rbBlockedExcel = New System.Windows.Forms.RadioButton()
         Me.btnSendFromExcell = New DevExpress.XtraEditors.SimpleButton()
         Me.btnLoadFromExcell = New DevExpress.XtraEditors.SimpleButton()
         Me.cbLoadFromExcell = New System.Windows.Forms.CheckBox()
@@ -62,8 +64,6 @@ Partial Class SendSMSWindow
         Me.btnLoad = New DevExpress.XtraEditors.SimpleButton()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.rbForBlockExcel = New System.Windows.Forms.RadioButton()
-        Me.rbBlockedExcel = New System.Windows.Forms.RadioButton()
         Me.mnuContext.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -153,6 +153,28 @@ Partial Class SendSMSWindow
         Me.GroupBox4.TabIndex = 14
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Կասեցվածներ Excell-ից"
+        '
+        'rbForBlockExcel
+        '
+        Me.rbForBlockExcel.AutoSize = True
+        Me.rbForBlockExcel.Location = New System.Drawing.Point(7, 57)
+        Me.rbForBlockExcel.Name = "rbForBlockExcel"
+        Me.rbForBlockExcel.Size = New System.Drawing.Size(144, 17)
+        Me.rbForBlockExcel.TabIndex = 15
+        Me.rbForBlockExcel.Text = "Կասեցման Ենթականեր"
+        Me.rbForBlockExcel.UseVisualStyleBackColor = True
+        '
+        'rbBlockedExcel
+        '
+        Me.rbBlockedExcel.AutoSize = True
+        Me.rbBlockedExcel.Checked = True
+        Me.rbBlockedExcel.Location = New System.Drawing.Point(7, 41)
+        Me.rbBlockedExcel.Name = "rbBlockedExcel"
+        Me.rbBlockedExcel.Size = New System.Drawing.Size(97, 17)
+        Me.rbBlockedExcel.TabIndex = 14
+        Me.rbBlockedExcel.TabStop = True
+        Me.rbBlockedExcel.Text = "Կասեցվածներ"
+        Me.rbBlockedExcel.UseVisualStyleBackColor = True
         '
         'btnSendFromExcell
         '
@@ -462,28 +484,6 @@ Partial Class SendSMSWindow
         Me.GridView1.OptionsView.ShowAutoFilterRow = True
         Me.GridView1.OptionsView.ShowFooter = True
         Me.GridView1.OptionsView.ShowGroupPanel = False
-        '
-        'rbForBlockExcel
-        '
-        Me.rbForBlockExcel.AutoSize = True
-        Me.rbForBlockExcel.Location = New System.Drawing.Point(7, 57)
-        Me.rbForBlockExcel.Name = "rbForBlockExcel"
-        Me.rbForBlockExcel.Size = New System.Drawing.Size(144, 17)
-        Me.rbForBlockExcel.TabIndex = 15
-        Me.rbForBlockExcel.Text = "Կասեցման Ենթականեր"
-        Me.rbForBlockExcel.UseVisualStyleBackColor = True
-        '
-        'rbBlockedExcel
-        '
-        Me.rbBlockedExcel.AutoSize = True
-        Me.rbBlockedExcel.Checked = True
-        Me.rbBlockedExcel.Location = New System.Drawing.Point(7, 41)
-        Me.rbBlockedExcel.Name = "rbBlockedExcel"
-        Me.rbBlockedExcel.Size = New System.Drawing.Size(97, 17)
-        Me.rbBlockedExcel.TabIndex = 14
-        Me.rbBlockedExcel.TabStop = True
-        Me.rbBlockedExcel.Text = "Կասեցվածներ"
-        Me.rbBlockedExcel.UseVisualStyleBackColor = True
         '
         'SendSMSWindow
         '

@@ -217,7 +217,7 @@ Public Class AddHVHHWindow
     End Sub
     Private Sub AddHVHHWindow_Shown(sender As Object, e As EventArgs) Handles Me.Shown
 
-        cbTarif.Enabled = False
+        'cbTarif.Enabled = False
 
         Call LoadDT()
 

@@ -30,12 +30,13 @@ Partial Class DatePartqHavelavchar
         Me.btnZroyakan = New DevExpress.XtraEditors.SimpleButton()
         Me.btnHavelavchar = New DevExpress.XtraEditors.SimpleButton()
         Me.btnAll = New DevExpress.XtraEditors.SimpleButton()
+        Me.btnPartqFiz = New DevExpress.XtraEditors.SimpleButton()
         Me.SuspendLayout()
         '
         'btnQueryReRegister
         '
         Me.btnQueryReRegister.Image = CType(resources.GetObject("btnQueryReRegister.Image"), System.Drawing.Image)
-        Me.btnQueryReRegister.Location = New System.Drawing.Point(12, 24)
+        Me.btnQueryReRegister.Location = New System.Drawing.Point(12, 50)
         Me.btnQueryReRegister.Name = "btnQueryReRegister"
         Me.btnQueryReRegister.Size = New System.Drawing.Size(277, 23)
         Me.btnQueryReRegister.TabIndex = 6
@@ -44,7 +45,7 @@ Partial Class DatePartqHavelavchar
         'btnClose
         '
         Me.btnClose.Image = CType(resources.GetObject("btnClose.Image"), System.Drawing.Image)
-        Me.btnClose.Location = New System.Drawing.Point(183, 182)
+        Me.btnClose.Location = New System.Drawing.Point(183, 208)
         Me.btnClose.Name = "btnClose"
         Me.btnClose.Size = New System.Drawing.Size(106, 23)
         Me.btnClose.TabIndex = 7
@@ -53,7 +54,7 @@ Partial Class DatePartqHavelavchar
         'btnPartq
         '
         Me.btnPartq.Image = CType(resources.GetObject("btnPartq.Image"), System.Drawing.Image)
-        Me.btnPartq.Location = New System.Drawing.Point(12, 53)
+        Me.btnPartq.Location = New System.Drawing.Point(12, 79)
         Me.btnPartq.Name = "btnPartq"
         Me.btnPartq.Size = New System.Drawing.Size(277, 23)
         Me.btnPartq.TabIndex = 8
@@ -62,7 +63,7 @@ Partial Class DatePartqHavelavchar
         'btnZroyakan
         '
         Me.btnZroyakan.Image = CType(resources.GetObject("btnZroyakan.Image"), System.Drawing.Image)
-        Me.btnZroyakan.Location = New System.Drawing.Point(12, 82)
+        Me.btnZroyakan.Location = New System.Drawing.Point(12, 108)
         Me.btnZroyakan.Name = "btnZroyakan"
         Me.btnZroyakan.Size = New System.Drawing.Size(277, 23)
         Me.btnZroyakan.TabIndex = 9
@@ -71,7 +72,7 @@ Partial Class DatePartqHavelavchar
         'btnHavelavchar
         '
         Me.btnHavelavchar.Image = CType(resources.GetObject("btnHavelavchar.Image"), System.Drawing.Image)
-        Me.btnHavelavchar.Location = New System.Drawing.Point(12, 111)
+        Me.btnHavelavchar.Location = New System.Drawing.Point(12, 137)
         Me.btnHavelavchar.Name = "btnHavelavchar"
         Me.btnHavelavchar.Size = New System.Drawing.Size(277, 23)
         Me.btnHavelavchar.TabIndex = 10
@@ -80,17 +81,27 @@ Partial Class DatePartqHavelavchar
         'btnAll
         '
         Me.btnAll.Image = CType(resources.GetObject("btnAll.Image"), System.Drawing.Image)
-        Me.btnAll.Location = New System.Drawing.Point(12, 140)
+        Me.btnAll.Location = New System.Drawing.Point(12, 166)
         Me.btnAll.Name = "btnAll"
         Me.btnAll.Size = New System.Drawing.Size(277, 23)
         Me.btnAll.TabIndex = 11
         Me.btnAll.Text = "Բոլորը"
         '
+        'btnPartqFiz
+        '
+        Me.btnPartqFiz.Image = CType(resources.GetObject("btnPartqFiz.Image"), System.Drawing.Image)
+        Me.btnPartqFiz.Location = New System.Drawing.Point(12, 21)
+        Me.btnPartqFiz.Name = "btnPartqFiz"
+        Me.btnPartqFiz.Size = New System.Drawing.Size(277, 23)
+        Me.btnPartqFiz.TabIndex = 1
+        Me.btnPartqFiz.Text = "Ֆիզ Անձանց Պարտք/Վճար"
+        '
         'DatePartqHavelavchar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(301, 215)
+        Me.ClientSize = New System.Drawing.Size(301, 244)
+        Me.Controls.Add(Me.btnPartqFiz)
         Me.Controls.Add(Me.btnAll)
         Me.Controls.Add(Me.btnHavelavchar)
         Me.Controls.Add(Me.btnZroyakan)
@@ -115,4 +126,5 @@ Partial Class DatePartqHavelavchar
     Friend WithEvents btnZroyakan As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnHavelavchar As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnAll As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents btnPartqFiz As DevExpress.XtraEditors.SimpleButton
 End Class

@@ -418,13 +418,13 @@ Partial Class SellWindow
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuDelete})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(108, 26)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 48)
         '
         'mnuDelete
         '
         Me.mnuDelete.Image = CType(resources.GetObject("mnuDelete.Image"), System.Drawing.Image)
         Me.mnuDelete.Name = "mnuDelete"
-        Me.mnuDelete.Size = New System.Drawing.Size(107, 22)
+        Me.mnuDelete.Size = New System.Drawing.Size(152, 22)
         Me.mnuDelete.Text = "Ջնջել"
         '
         'GridView1

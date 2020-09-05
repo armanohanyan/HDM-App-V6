@@ -146,6 +146,7 @@ Public Class UniCallCenterPanel
                     .Add(New infX("Երաշխ Կարգավիճակ", Garant()))
                     .Add(New infX("Փոխարինող", loadReplaced))
                     .Add(New infX("POS", dt.Rows(0)("POS")))
+                    .Add(New infX("Վերագրանցված", dt.Rows(0)("reRegisteredCount")))
                 End With
 
                 lcompany.Text = dt.Rows(0)("Client")

@@ -28,19 +28,12 @@ Partial Class MainWindow
         Me.FormAssistant1 = New DevExpress.XtraBars.FormAssistant()
         Me.RibbonPanel = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.MainMenu = New DevExpress.XtraBars.Ribbon.BackstageViewControl()
-        Me.BackstageViewClientControl3 = New DevExpress.XtraBars.Ribbon.BackstageViewClientControl()
-        Me.GroupControl6 = New DevExpress.XtraEditors.GroupControl()
-        Me.GroupControl7 = New DevExpress.XtraEditors.GroupControl()
-        Me.cbUserName = New System.Windows.Forms.ComboBox()
-        Me.LabelControl12 = New DevExpress.XtraEditors.LabelControl()
-        Me.cbUserOldGroup = New System.Windows.Forms.ComboBox()
-        Me.btnChangeUserInfo = New DevExpress.XtraEditors.SimpleButton()
-        Me.LabelControl9 = New DevExpress.XtraEditors.LabelControl()
-        Me.cbUserDB = New System.Windows.Forms.ComboBox()
-        Me.ckIsUserActive = New DevExpress.XtraEditors.CheckEdit()
-        Me.LabelControl10 = New DevExpress.XtraEditors.LabelControl()
-        Me.cbNewUserGroup = New System.Windows.Forms.ComboBox()
-        Me.LabelControl11 = New DevExpress.XtraEditors.LabelControl()
+        Me.BackstageViewClientControl4 = New DevExpress.XtraBars.Ribbon.BackstageViewClientControl()
+        Me.GroupControl8 = New DevExpress.XtraEditors.GroupControl()
+        Me.GroupControl9 = New DevExpress.XtraEditors.GroupControl()
+        Me.cbUserList = New System.Windows.Forms.ComboBox()
+        Me.btnDeleteUser = New DevExpress.XtraEditors.SimpleButton()
+        Me.LabelControl13 = New DevExpress.XtraEditors.LabelControl()
         Me.BackstageViewClientControl1 = New DevExpress.XtraBars.Ribbon.BackstageViewClientControl()
         Me.GroupControl4 = New DevExpress.XtraEditors.GroupControl()
         Me.GroupControl2 = New DevExpress.XtraEditors.GroupControl()
@@ -71,12 +64,19 @@ Partial Class MainWindow
         Me.txtLogin = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl6 = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControl5 = New DevExpress.XtraEditors.LabelControl()
-        Me.BackstageViewClientControl4 = New DevExpress.XtraBars.Ribbon.BackstageViewClientControl()
-        Me.GroupControl8 = New DevExpress.XtraEditors.GroupControl()
-        Me.GroupControl9 = New DevExpress.XtraEditors.GroupControl()
-        Me.cbUserList = New System.Windows.Forms.ComboBox()
-        Me.btnDeleteUser = New DevExpress.XtraEditors.SimpleButton()
-        Me.LabelControl13 = New DevExpress.XtraEditors.LabelControl()
+        Me.BackstageViewClientControl3 = New DevExpress.XtraBars.Ribbon.BackstageViewClientControl()
+        Me.GroupControl6 = New DevExpress.XtraEditors.GroupControl()
+        Me.GroupControl7 = New DevExpress.XtraEditors.GroupControl()
+        Me.cbUserName = New System.Windows.Forms.ComboBox()
+        Me.LabelControl12 = New DevExpress.XtraEditors.LabelControl()
+        Me.cbUserOldGroup = New System.Windows.Forms.ComboBox()
+        Me.btnChangeUserInfo = New DevExpress.XtraEditors.SimpleButton()
+        Me.LabelControl9 = New DevExpress.XtraEditors.LabelControl()
+        Me.cbUserDB = New System.Windows.Forms.ComboBox()
+        Me.ckIsUserActive = New DevExpress.XtraEditors.CheckEdit()
+        Me.LabelControl10 = New DevExpress.XtraEditors.LabelControl()
+        Me.cbNewUserGroup = New System.Windows.Forms.ComboBox()
+        Me.LabelControl11 = New DevExpress.XtraEditors.LabelControl()
         Me.BackstageViewClientControl5 = New DevExpress.XtraBars.Ribbon.BackstageViewClientControl()
         Me.GroupControl10 = New DevExpress.XtraEditors.GroupControl()
         Me.GroupControl12 = New DevExpress.XtraEditors.GroupControl()
@@ -290,10 +290,10 @@ Partial Class MainWindow
         Me.MenuPanel = New DevExpress.XtraBars.Docking.DockPanel()
         Me.DockPanel1_Container = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.NavBarControl1 = New DevExpress.XtraNavBar.NavBarControl()
-        Me.NavBarGroup3 = New DevExpress.XtraNavBar.NavBarGroup()
-        Me.NavBarGroupControlContainer3 = New DevExpress.XtraNavBar.NavBarGroupControlContainer()
-        Me.AcountTreeList = New DevExpress.XtraTreeList.TreeList()
-        Me.TreeListColumn4 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
+        Me.NavBarGroup6 = New DevExpress.XtraNavBar.NavBarGroup()
+        Me.NavBarGroupControlContainer6 = New DevExpress.XtraNavBar.NavBarGroupControlContainer()
+        Me.RepTreeList = New DevExpress.XtraTreeList.TreeList()
+        Me.TreeListColumn1 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.ImageCollection1 = New DevExpress.Utils.ImageCollection(Me.components)
         Me.NavBarGroupControlContainer1 = New DevExpress.XtraNavBar.NavBarGroupControlContainer()
         Me.ActionTreeList = New DevExpress.XtraTreeList.TreeList()
@@ -301,15 +301,15 @@ Partial Class MainWindow
         Me.NavBarGroupControlContainer2 = New DevExpress.XtraNavBar.NavBarGroupControlContainer()
         Me.WareHouseTreeList = New DevExpress.XtraTreeList.TreeList()
         Me.TreeListColumn2 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
+        Me.NavBarGroupControlContainer3 = New DevExpress.XtraNavBar.NavBarGroupControlContainer()
+        Me.AcountTreeList = New DevExpress.XtraTreeList.TreeList()
+        Me.TreeListColumn4 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.NavBarGroupControlContainer5 = New DevExpress.XtraNavBar.NavBarGroupControlContainer()
         Me.CallCenterTreeList = New DevExpress.XtraTreeList.TreeList()
         Me.TreeListColumn5 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
-        Me.NavBarGroupControlContainer6 = New DevExpress.XtraNavBar.NavBarGroupControlContainer()
-        Me.RepTreeList = New DevExpress.XtraTreeList.TreeList()
-        Me.TreeListColumn1 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.NavBarGroup1 = New DevExpress.XtraNavBar.NavBarGroup()
         Me.NavBarGroup2 = New DevExpress.XtraNavBar.NavBarGroup()
-        Me.NavBarGroup6 = New DevExpress.XtraNavBar.NavBarGroup()
+        Me.NavBarGroup3 = New DevExpress.XtraNavBar.NavBarGroup()
         Me.NavBarGroup5 = New DevExpress.XtraNavBar.NavBarGroup()
         Me.DockPanel1 = New DevExpress.XtraBars.Docking.DockPanel()
         Me.ControlContainer3 = New DevExpress.XtraBars.Docking.ControlContainer()
@@ -349,12 +349,11 @@ Partial Class MainWindow
         CType(Me.RibbonPanel, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MainMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MainMenu.SuspendLayout()
-        Me.BackstageViewClientControl3.SuspendLayout()
-        CType(Me.GroupControl6, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupControl6.SuspendLayout()
-        CType(Me.GroupControl7, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupControl7.SuspendLayout()
-        CType(Me.ckIsUserActive.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BackstageViewClientControl4.SuspendLayout()
+        CType(Me.GroupControl8, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl8.SuspendLayout()
+        CType(Me.GroupControl9, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl9.SuspendLayout()
         Me.BackstageViewClientControl1.SuspendLayout()
         CType(Me.GroupControl4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl4.SuspendLayout()
@@ -374,11 +373,12 @@ Partial Class MainWindow
         CType(Me.ckIsActiveUser.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtUserPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtLogin.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.BackstageViewClientControl4.SuspendLayout()
-        CType(Me.GroupControl8, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupControl8.SuspendLayout()
-        CType(Me.GroupControl9, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupControl9.SuspendLayout()
+        Me.BackstageViewClientControl3.SuspendLayout()
+        CType(Me.GroupControl6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl6.SuspendLayout()
+        CType(Me.GroupControl7, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl7.SuspendLayout()
+        CType(Me.ckIsUserActive.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BackstageViewClientControl5.SuspendLayout()
         CType(Me.GroupControl10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl10.SuspendLayout()
@@ -442,17 +442,17 @@ Partial Class MainWindow
         Me.DockPanel1_Container.SuspendLayout()
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NavBarControl1.SuspendLayout()
-        Me.NavBarGroupControlContainer3.SuspendLayout()
-        CType(Me.AcountTreeList, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.NavBarGroupControlContainer6.SuspendLayout()
+        CType(Me.RepTreeList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ImageCollection1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NavBarGroupControlContainer1.SuspendLayout()
         CType(Me.ActionTreeList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NavBarGroupControlContainer2.SuspendLayout()
         CType(Me.WareHouseTreeList, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.NavBarGroupControlContainer3.SuspendLayout()
+        CType(Me.AcountTreeList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NavBarGroupControlContainer5.SuspendLayout()
         CType(Me.CallCenterTreeList, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.NavBarGroupControlContainer6.SuspendLayout()
-        CType(Me.RepTreeList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DockPanel1.SuspendLayout()
         Me.ControlContainer3.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -500,10 +500,10 @@ Partial Class MainWindow
         'MainMenu
         '
         Me.MainMenu.ColorScheme = DevExpress.XtraBars.Ribbon.RibbonControlColorScheme.Yellow
-        Me.MainMenu.Controls.Add(Me.BackstageViewClientControl3)
+        Me.MainMenu.Controls.Add(Me.BackstageViewClientControl4)
         Me.MainMenu.Controls.Add(Me.BackstageViewClientControl1)
         Me.MainMenu.Controls.Add(Me.BackstageViewClientControl2)
-        Me.MainMenu.Controls.Add(Me.BackstageViewClientControl4)
+        Me.MainMenu.Controls.Add(Me.BackstageViewClientControl3)
         Me.MainMenu.Controls.Add(Me.BackstageViewClientControl5)
         Me.MainMenu.Items.Add(Me.cmdSelectPrinter)
         Me.MainMenu.Items.Add(Me.BackstageViewItemSeparator2)
@@ -526,127 +526,59 @@ Partial Class MainWindow
         Me.MainMenu.Style = DevExpress.XtraBars.Ribbon.BackstageViewStyle.Office2013
         Me.MainMenu.TabIndex = 2
         '
-        'BackstageViewClientControl3
+        'BackstageViewClientControl4
         '
-        Me.BackstageViewClientControl3.Controls.Add(Me.GroupControl6)
-        Me.BackstageViewClientControl3.Location = New System.Drawing.Point(259, 63)
-        Me.BackstageViewClientControl3.Name = "BackstageViewClientControl3"
-        Me.BackstageViewClientControl3.Size = New System.Drawing.Size(236, 478)
-        Me.BackstageViewClientControl3.TabIndex = 2
+        Me.BackstageViewClientControl4.Controls.Add(Me.GroupControl8)
+        Me.BackstageViewClientControl4.Location = New System.Drawing.Point(259, 63)
+        Me.BackstageViewClientControl4.Name = "BackstageViewClientControl4"
+        Me.BackstageViewClientControl4.Size = New System.Drawing.Size(236, 478)
+        Me.BackstageViewClientControl4.TabIndex = 3
         '
-        'GroupControl6
+        'GroupControl8
         '
-        Me.GroupControl6.Controls.Add(Me.GroupControl7)
-        Me.GroupControl6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupControl6.Location = New System.Drawing.Point(0, 0)
-        Me.GroupControl6.Name = "GroupControl6"
-        Me.GroupControl6.Size = New System.Drawing.Size(236, 478)
-        Me.GroupControl6.TabIndex = 0
+        Me.GroupControl8.Controls.Add(Me.GroupControl9)
+        Me.GroupControl8.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GroupControl8.Location = New System.Drawing.Point(0, 0)
+        Me.GroupControl8.Name = "GroupControl8"
+        Me.GroupControl8.Size = New System.Drawing.Size(236, 478)
+        Me.GroupControl8.TabIndex = 0
         '
-        'GroupControl7
+        'GroupControl9
         '
-        Me.GroupControl7.Controls.Add(Me.cbUserName)
-        Me.GroupControl7.Controls.Add(Me.LabelControl12)
-        Me.GroupControl7.Controls.Add(Me.cbUserOldGroup)
-        Me.GroupControl7.Controls.Add(Me.btnChangeUserInfo)
-        Me.GroupControl7.Controls.Add(Me.LabelControl9)
-        Me.GroupControl7.Controls.Add(Me.cbUserDB)
-        Me.GroupControl7.Controls.Add(Me.ckIsUserActive)
-        Me.GroupControl7.Controls.Add(Me.LabelControl10)
-        Me.GroupControl7.Controls.Add(Me.cbNewUserGroup)
-        Me.GroupControl7.Controls.Add(Me.LabelControl11)
-        Me.GroupControl7.Location = New System.Drawing.Point(5, 24)
-        Me.GroupControl7.Name = "GroupControl7"
-        Me.GroupControl7.Size = New System.Drawing.Size(278, 243)
-        Me.GroupControl7.TabIndex = 0
-        Me.GroupControl7.Text = "Փոխել Պարամետրերը"
+        Me.GroupControl9.Controls.Add(Me.cbUserList)
+        Me.GroupControl9.Controls.Add(Me.btnDeleteUser)
+        Me.GroupControl9.Controls.Add(Me.LabelControl13)
+        Me.GroupControl9.Location = New System.Drawing.Point(5, 24)
+        Me.GroupControl9.Name = "GroupControl9"
+        Me.GroupControl9.Size = New System.Drawing.Size(247, 163)
+        Me.GroupControl9.TabIndex = 2
+        Me.GroupControl9.Text = "Ջնջել Օգտվողին"
         '
-        'cbUserName
+        'cbUserList
         '
-        Me.cbUserName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbUserName.FormattingEnabled = True
-        Me.cbUserName.Location = New System.Drawing.Point(101, 38)
-        Me.cbUserName.Name = "cbUserName"
-        Me.cbUserName.Size = New System.Drawing.Size(152, 21)
-        Me.cbUserName.TabIndex = 30
+        Me.cbUserList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbUserList.FormattingEnabled = True
+        Me.cbUserList.Location = New System.Drawing.Point(16, 52)
+        Me.cbUserList.Name = "cbUserList"
+        Me.cbUserList.Size = New System.Drawing.Size(210, 21)
+        Me.cbUserList.TabIndex = 3
         '
-        'LabelControl12
+        'btnDeleteUser
         '
-        Me.LabelControl12.Location = New System.Drawing.Point(12, 68)
-        Me.LabelControl12.Name = "LabelControl12"
-        Me.LabelControl12.Size = New System.Drawing.Size(81, 13)
-        Me.LabelControl12.TabIndex = 29
-        Me.LabelControl12.Text = "Ընթացիկ Խումբ"
+        Me.btnDeleteUser.Image = CType(resources.GetObject("btnDeleteUser.Image"), System.Drawing.Image)
+        Me.btnDeleteUser.Location = New System.Drawing.Point(16, 98)
+        Me.btnDeleteUser.Name = "btnDeleteUser"
+        Me.btnDeleteUser.Size = New System.Drawing.Size(210, 34)
+        Me.btnDeleteUser.TabIndex = 2
+        Me.btnDeleteUser.Text = "Ջնջել"
         '
-        'cbUserOldGroup
+        'LabelControl13
         '
-        Me.cbUserOldGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbUserOldGroup.Enabled = False
-        Me.cbUserOldGroup.FormattingEnabled = True
-        Me.cbUserOldGroup.Location = New System.Drawing.Point(101, 65)
-        Me.cbUserOldGroup.Name = "cbUserOldGroup"
-        Me.cbUserOldGroup.Size = New System.Drawing.Size(152, 21)
-        Me.cbUserOldGroup.TabIndex = 28
-        '
-        'btnChangeUserInfo
-        '
-        Me.btnChangeUserInfo.Image = CType(resources.GetObject("btnChangeUserInfo.Image"), System.Drawing.Image)
-        Me.btnChangeUserInfo.Location = New System.Drawing.Point(39, 186)
-        Me.btnChangeUserInfo.Name = "btnChangeUserInfo"
-        Me.btnChangeUserInfo.Size = New System.Drawing.Size(222, 35)
-        Me.btnChangeUserInfo.TabIndex = 27
-        Me.btnChangeUserInfo.Text = "Փոփոխել"
-        '
-        'LabelControl9
-        '
-        Me.LabelControl9.Location = New System.Drawing.Point(64, 147)
-        Me.LabelControl9.Name = "LabelControl9"
-        Me.LabelControl9.Size = New System.Drawing.Size(29, 13)
-        Me.LabelControl9.TabIndex = 26
-        Me.LabelControl9.Text = "Բազա"
-        '
-        'cbUserDB
-        '
-        Me.cbUserDB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbUserDB.FormattingEnabled = True
-        Me.cbUserDB.Location = New System.Drawing.Point(101, 144)
-        Me.cbUserDB.Name = "cbUserDB"
-        Me.cbUserDB.Size = New System.Drawing.Size(152, 21)
-        Me.cbUserDB.TabIndex = 25
-        '
-        'ckIsUserActive
-        '
-        Me.ckIsUserActive.Location = New System.Drawing.Point(101, 119)
-        Me.ckIsUserActive.MenuManager = Me.RibbonPanel
-        Me.ckIsUserActive.Name = "ckIsUserActive"
-        Me.ckIsUserActive.Properties.Caption = "Ակտիվ Օգտվող"
-        Me.ckIsUserActive.Size = New System.Drawing.Size(106, 19)
-        Me.ckIsUserActive.TabIndex = 24
-        '
-        'LabelControl10
-        '
-        Me.LabelControl10.Location = New System.Drawing.Point(40, 95)
-        Me.LabelControl10.Name = "LabelControl10"
-        Me.LabelControl10.Size = New System.Drawing.Size(53, 13)
-        Me.LabelControl10.TabIndex = 23
-        Me.LabelControl10.Text = "Նոր Խումբ"
-        '
-        'cbNewUserGroup
-        '
-        Me.cbNewUserGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbNewUserGroup.FormattingEnabled = True
-        Me.cbNewUserGroup.Location = New System.Drawing.Point(101, 92)
-        Me.cbNewUserGroup.Name = "cbNewUserGroup"
-        Me.cbNewUserGroup.Size = New System.Drawing.Size(152, 21)
-        Me.cbNewUserGroup.TabIndex = 22
-        '
-        'LabelControl11
-        '
-        Me.LabelControl11.Location = New System.Drawing.Point(39, 41)
-        Me.LabelControl11.Name = "LabelControl11"
-        Me.LabelControl11.Size = New System.Drawing.Size(54, 13)
-        Me.LabelControl11.TabIndex = 20
-        Me.LabelControl11.Text = "Օգտանուն"
+        Me.LabelControl13.Location = New System.Drawing.Point(16, 36)
+        Me.LabelControl13.Name = "LabelControl13"
+        Me.LabelControl13.Size = New System.Drawing.Size(40, 13)
+        Me.LabelControl13.TabIndex = 0
+        Me.LabelControl13.Text = "Օգտվող"
         '
         'BackstageViewClientControl1
         '
@@ -924,59 +856,127 @@ Partial Class MainWindow
         Me.LabelControl5.TabIndex = 10
         Me.LabelControl5.Text = "Օգտանուն"
         '
-        'BackstageViewClientControl4
+        'BackstageViewClientControl3
         '
-        Me.BackstageViewClientControl4.Controls.Add(Me.GroupControl8)
-        Me.BackstageViewClientControl4.Location = New System.Drawing.Point(259, 63)
-        Me.BackstageViewClientControl4.Name = "BackstageViewClientControl4"
-        Me.BackstageViewClientControl4.Size = New System.Drawing.Size(236, 478)
-        Me.BackstageViewClientControl4.TabIndex = 3
+        Me.BackstageViewClientControl3.Controls.Add(Me.GroupControl6)
+        Me.BackstageViewClientControl3.Location = New System.Drawing.Point(259, 63)
+        Me.BackstageViewClientControl3.Name = "BackstageViewClientControl3"
+        Me.BackstageViewClientControl3.Size = New System.Drawing.Size(236, 478)
+        Me.BackstageViewClientControl3.TabIndex = 2
         '
-        'GroupControl8
+        'GroupControl6
         '
-        Me.GroupControl8.Controls.Add(Me.GroupControl9)
-        Me.GroupControl8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupControl8.Location = New System.Drawing.Point(0, 0)
-        Me.GroupControl8.Name = "GroupControl8"
-        Me.GroupControl8.Size = New System.Drawing.Size(236, 478)
-        Me.GroupControl8.TabIndex = 0
+        Me.GroupControl6.Controls.Add(Me.GroupControl7)
+        Me.GroupControl6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.GroupControl6.Location = New System.Drawing.Point(0, 0)
+        Me.GroupControl6.Name = "GroupControl6"
+        Me.GroupControl6.Size = New System.Drawing.Size(236, 478)
+        Me.GroupControl6.TabIndex = 0
         '
-        'GroupControl9
+        'GroupControl7
         '
-        Me.GroupControl9.Controls.Add(Me.cbUserList)
-        Me.GroupControl9.Controls.Add(Me.btnDeleteUser)
-        Me.GroupControl9.Controls.Add(Me.LabelControl13)
-        Me.GroupControl9.Location = New System.Drawing.Point(5, 24)
-        Me.GroupControl9.Name = "GroupControl9"
-        Me.GroupControl9.Size = New System.Drawing.Size(247, 163)
-        Me.GroupControl9.TabIndex = 2
-        Me.GroupControl9.Text = "Ջնջել Օգտվողին"
+        Me.GroupControl7.Controls.Add(Me.cbUserName)
+        Me.GroupControl7.Controls.Add(Me.LabelControl12)
+        Me.GroupControl7.Controls.Add(Me.cbUserOldGroup)
+        Me.GroupControl7.Controls.Add(Me.btnChangeUserInfo)
+        Me.GroupControl7.Controls.Add(Me.LabelControl9)
+        Me.GroupControl7.Controls.Add(Me.cbUserDB)
+        Me.GroupControl7.Controls.Add(Me.ckIsUserActive)
+        Me.GroupControl7.Controls.Add(Me.LabelControl10)
+        Me.GroupControl7.Controls.Add(Me.cbNewUserGroup)
+        Me.GroupControl7.Controls.Add(Me.LabelControl11)
+        Me.GroupControl7.Location = New System.Drawing.Point(5, 24)
+        Me.GroupControl7.Name = "GroupControl7"
+        Me.GroupControl7.Size = New System.Drawing.Size(278, 243)
+        Me.GroupControl7.TabIndex = 0
+        Me.GroupControl7.Text = "Փոխել Պարամետրերը"
         '
-        'cbUserList
+        'cbUserName
         '
-        Me.cbUserList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cbUserList.FormattingEnabled = True
-        Me.cbUserList.Location = New System.Drawing.Point(16, 52)
-        Me.cbUserList.Name = "cbUserList"
-        Me.cbUserList.Size = New System.Drawing.Size(210, 21)
-        Me.cbUserList.TabIndex = 3
+        Me.cbUserName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbUserName.FormattingEnabled = True
+        Me.cbUserName.Location = New System.Drawing.Point(101, 38)
+        Me.cbUserName.Name = "cbUserName"
+        Me.cbUserName.Size = New System.Drawing.Size(152, 21)
+        Me.cbUserName.TabIndex = 30
         '
-        'btnDeleteUser
+        'LabelControl12
         '
-        Me.btnDeleteUser.Image = CType(resources.GetObject("btnDeleteUser.Image"), System.Drawing.Image)
-        Me.btnDeleteUser.Location = New System.Drawing.Point(16, 98)
-        Me.btnDeleteUser.Name = "btnDeleteUser"
-        Me.btnDeleteUser.Size = New System.Drawing.Size(210, 34)
-        Me.btnDeleteUser.TabIndex = 2
-        Me.btnDeleteUser.Text = "Ջնջել"
+        Me.LabelControl12.Location = New System.Drawing.Point(12, 68)
+        Me.LabelControl12.Name = "LabelControl12"
+        Me.LabelControl12.Size = New System.Drawing.Size(81, 13)
+        Me.LabelControl12.TabIndex = 29
+        Me.LabelControl12.Text = "Ընթացիկ Խումբ"
         '
-        'LabelControl13
+        'cbUserOldGroup
         '
-        Me.LabelControl13.Location = New System.Drawing.Point(16, 36)
-        Me.LabelControl13.Name = "LabelControl13"
-        Me.LabelControl13.Size = New System.Drawing.Size(40, 13)
-        Me.LabelControl13.TabIndex = 0
-        Me.LabelControl13.Text = "Օգտվող"
+        Me.cbUserOldGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbUserOldGroup.Enabled = False
+        Me.cbUserOldGroup.FormattingEnabled = True
+        Me.cbUserOldGroup.Location = New System.Drawing.Point(101, 65)
+        Me.cbUserOldGroup.Name = "cbUserOldGroup"
+        Me.cbUserOldGroup.Size = New System.Drawing.Size(152, 21)
+        Me.cbUserOldGroup.TabIndex = 28
+        '
+        'btnChangeUserInfo
+        '
+        Me.btnChangeUserInfo.Image = CType(resources.GetObject("btnChangeUserInfo.Image"), System.Drawing.Image)
+        Me.btnChangeUserInfo.Location = New System.Drawing.Point(39, 186)
+        Me.btnChangeUserInfo.Name = "btnChangeUserInfo"
+        Me.btnChangeUserInfo.Size = New System.Drawing.Size(222, 35)
+        Me.btnChangeUserInfo.TabIndex = 27
+        Me.btnChangeUserInfo.Text = "Փոփոխել"
+        '
+        'LabelControl9
+        '
+        Me.LabelControl9.Location = New System.Drawing.Point(64, 147)
+        Me.LabelControl9.Name = "LabelControl9"
+        Me.LabelControl9.Size = New System.Drawing.Size(29, 13)
+        Me.LabelControl9.TabIndex = 26
+        Me.LabelControl9.Text = "Բազա"
+        '
+        'cbUserDB
+        '
+        Me.cbUserDB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbUserDB.FormattingEnabled = True
+        Me.cbUserDB.Location = New System.Drawing.Point(101, 144)
+        Me.cbUserDB.Name = "cbUserDB"
+        Me.cbUserDB.Size = New System.Drawing.Size(152, 21)
+        Me.cbUserDB.TabIndex = 25
+        '
+        'ckIsUserActive
+        '
+        Me.ckIsUserActive.Location = New System.Drawing.Point(101, 119)
+        Me.ckIsUserActive.MenuManager = Me.RibbonPanel
+        Me.ckIsUserActive.Name = "ckIsUserActive"
+        Me.ckIsUserActive.Properties.Caption = "Ակտիվ Օգտվող"
+        Me.ckIsUserActive.Size = New System.Drawing.Size(106, 19)
+        Me.ckIsUserActive.TabIndex = 24
+        '
+        'LabelControl10
+        '
+        Me.LabelControl10.Location = New System.Drawing.Point(40, 95)
+        Me.LabelControl10.Name = "LabelControl10"
+        Me.LabelControl10.Size = New System.Drawing.Size(53, 13)
+        Me.LabelControl10.TabIndex = 23
+        Me.LabelControl10.Text = "Նոր Խումբ"
+        '
+        'cbNewUserGroup
+        '
+        Me.cbNewUserGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbNewUserGroup.FormattingEnabled = True
+        Me.cbNewUserGroup.Location = New System.Drawing.Point(101, 92)
+        Me.cbNewUserGroup.Name = "cbNewUserGroup"
+        Me.cbNewUserGroup.Size = New System.Drawing.Size(152, 21)
+        Me.cbNewUserGroup.TabIndex = 22
+        '
+        'LabelControl11
+        '
+        Me.LabelControl11.Location = New System.Drawing.Point(39, 41)
+        Me.LabelControl11.Name = "LabelControl11"
+        Me.LabelControl11.Size = New System.Drawing.Size(54, 13)
+        Me.LabelControl11.TabIndex = 20
+        Me.LabelControl11.Text = "Օգտանուն"
         '
         'BackstageViewClientControl5
         '
@@ -2682,7 +2682,7 @@ Partial Class MainWindow
         '
         'NavBarControl1
         '
-        Me.NavBarControl1.ActiveGroup = Me.NavBarGroup3
+        Me.NavBarControl1.ActiveGroup = Me.NavBarGroup6
         Me.NavBarControl1.Controls.Add(Me.NavBarGroupControlContainer1)
         Me.NavBarControl1.Controls.Add(Me.NavBarGroupControlContainer2)
         Me.NavBarControl1.Controls.Add(Me.NavBarGroupControlContainer3)
@@ -2699,97 +2699,133 @@ Partial Class MainWindow
         Me.NavBarControl1.TabIndex = 0
         Me.NavBarControl1.Text = "NavBarControl1"
         '
-        'NavBarGroup3
+        'NavBarGroup6
         '
-        Me.NavBarGroup3.Caption = "Հաշվապահություն"
-        Me.NavBarGroup3.ControlContainer = Me.NavBarGroupControlContainer3
-        Me.NavBarGroup3.Expanded = True
-        Me.NavBarGroup3.GroupClientHeight = 187
-        Me.NavBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer
-        Me.NavBarGroup3.Name = "NavBarGroup3"
-        Me.NavBarGroup3.SmallImage = CType(resources.GetObject("NavBarGroup3.SmallImage"), System.Drawing.Image)
+        Me.NavBarGroup6.Caption = "Հաշվետվություն"
+        Me.NavBarGroup6.ControlContainer = Me.NavBarGroupControlContainer6
+        Me.NavBarGroup6.Expanded = True
+        Me.NavBarGroup6.GroupClientHeight = 197
+        Me.NavBarGroup6.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer
+        Me.NavBarGroup6.Name = "NavBarGroup6"
+        Me.NavBarGroup6.SmallImage = CType(resources.GetObject("NavBarGroup6.SmallImage"), System.Drawing.Image)
         '
-        'NavBarGroupControlContainer3
+        'NavBarGroupControlContainer6
         '
-        Me.NavBarGroupControlContainer3.Controls.Add(Me.AcountTreeList)
-        Me.NavBarGroupControlContainer3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.NavBarGroupControlContainer3.Name = "NavBarGroupControlContainer3"
-        Me.NavBarGroupControlContainer3.Size = New System.Drawing.Size(267, 293)
-        Me.NavBarGroupControlContainer3.TabIndex = 2
+        Me.NavBarGroupControlContainer6.Appearance.BackColor = System.Drawing.SystemColors.Control
+        Me.NavBarGroupControlContainer6.Appearance.Options.UseBackColor = True
+        Me.NavBarGroupControlContainer6.Controls.Add(Me.RepTreeList)
+        Me.NavBarGroupControlContainer6.Name = "NavBarGroupControlContainer6"
+        Me.NavBarGroupControlContainer6.Size = New System.Drawing.Size(267, 293)
+        Me.NavBarGroupControlContainer6.TabIndex = 5
         '
-        'AcountTreeList
+        'RepTreeList
         '
-        Me.AcountTreeList.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn4})
-        Me.AcountTreeList.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.AcountTreeList.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.AcountTreeList.Location = New System.Drawing.Point(0, 0)
-        Me.AcountTreeList.Name = "AcountTreeList"
-        Me.AcountTreeList.BeginUnboundLoad()
-        Me.AcountTreeList.AppendNode(New Object() {"Վճարներ"}, -1, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Վճարների մուտքագրում"}, 0, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Խմբային վճարների մուտքագրում"}, 0, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"TelCell Վճարների Հաստատում"}, 0, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Ֆիզ անձանց Վճարների մուտքագրում"}, 0, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Հաշիվ Ապրանքագիր"}, -1, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա"}, 5, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Ընթացիկ Հ/Ա"}, 6, 16, 16, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա Շրջիկ"}, 6, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Փոխել Հ/Ա Տվյալները"}, 6, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Ջնջել Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Չտպված Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Չտպված Հավելվածներ"}, 6, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Տպված Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Հ/Ա Վերադարձ"}, 6, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Սարքավորման Վաճառքի Հ/Ա"}, 5, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Ներքին Ինվոյս (XML)"}, 16, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Սարքավորման Ինվոյս (XML)"}, 16, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Վաճառքի Ինվոյս (XML)"}, 16, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Ֆիզ Անձի Ինվոյս (XML)"}, 16, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Տեղեկատուներ"}, -1, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"ԱԱՀ-ից Ազատված Գործընկեր"}, 21, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Չսպասարկվող Գործընկեր"}, 21, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"PDF-ով Չտպվող"}, 21, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Հ/Ա PDF-ի Կարգաբերում"}, 21, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"PDF-Ի Էջերի Ստացում"}, 21, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Պահեստի Մնացորդ"}, 21, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"XML - ՀՎՀՀ Ստուգում"}, 21, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Պահանջագրեր"}, 21, 3, 3, -1)
-        Me.AcountTreeList.EndUnboundLoad()
-        Me.AcountTreeList.OptionsBehavior.EnableFiltering = True
-        Me.AcountTreeList.OptionsLayout.AddNewColumns = False
-        Me.AcountTreeList.OptionsMenu.EnableColumnMenu = False
-        Me.AcountTreeList.OptionsMenu.EnableFooterMenu = False
-        Me.AcountTreeList.OptionsMenu.ShowAutoFilterRowItem = False
-        Me.AcountTreeList.OptionsPrint.PrintHorzLines = False
-        Me.AcountTreeList.OptionsPrint.PrintPageHeader = False
-        Me.AcountTreeList.OptionsPrint.PrintReportFooter = False
-        Me.AcountTreeList.OptionsPrint.PrintTree = False
-        Me.AcountTreeList.OptionsPrint.PrintTreeButtons = False
-        Me.AcountTreeList.OptionsPrint.PrintVertLines = False
-        Me.AcountTreeList.OptionsSelection.InvertSelection = True
-        Me.AcountTreeList.OptionsView.ShowColumns = False
-        Me.AcountTreeList.OptionsView.ShowHorzLines = False
-        Me.AcountTreeList.OptionsView.ShowIndicator = False
-        Me.AcountTreeList.OptionsView.ShowVertLines = False
-        Me.AcountTreeList.SelectImageList = Me.ImageCollection1
-        Me.AcountTreeList.Size = New System.Drawing.Size(267, 293)
-        Me.AcountTreeList.TabIndex = 2
+        Me.RepTreeList.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn1})
+        Me.RepTreeList.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.RepTreeList.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RepTreeList.Location = New System.Drawing.Point(0, 0)
+        Me.RepTreeList.Name = "RepTreeList"
+        Me.RepTreeList.BeginUnboundLoad()
+        Me.RepTreeList.AppendNode(New Object() {"Սպասարկող"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Կազմ-Տարած-ՀԴՄ Քանակ"}, 0, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Վճարներ"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Վճար"}, 2, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Բանկային Մուտքեր"}, 2, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Պարտք - Հավելավճար"}, 2, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Դեբետ - Կրեդետ"}, 2, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ամփոփ Հաշվետվություն"}, 2, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ամփոփ Հաշվետվություն 2"}, 2, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Պարտք Ըստ Պատկանելության"}, 2, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Վերանորոգում"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Քանակային Հաշվետվություն"}, 10, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Տևողության Հաշվետվություն"}, 10, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Վերանորոգում"}, 10, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Կրկնվող Վերանորոգումներ"}, 10, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Անվճար Վերանորոգումներ"}, 10, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"ՀԴՄ-ի Տեղաշարժ"}, 10, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ուղարկված SMS"}, 10, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Տեսուչի Վերանորոգումներ"}, 10, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"ՀԾ"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"ՀԾ Կոդի Փոփոխում"}, 19, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Փոխարինման ՀԴՄ-ներ"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ազատ փոխարինողներ"}, 21, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Փոխարինման ՀԴՄ-ներ"}, 21, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Պատկան ՀԴՄ-ներ Սրահում"}, 21, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"ՀԴՄ Փոխարինման Պատմություն"}, 21, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Առանց Հայտի Փոխարինող ՀԴՄ"}, 21, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Փոխարինող ՀԴՄ Տարբերություն"}, 21, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Հաշիվ Ապրանքագիր"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Չվերադարձված"}, 28, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Սպասարկման"}, 28, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Վերանորոգման"}, 28, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Վաճառքի"}, 28, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Շրջիկ"}, 28, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Բոլորը"}, 28, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Տեսուչ"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Տեսուչի Այցելություն"}, 35, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Տեսուչի ՀԴՄ"}, 35, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Վերագրանցում"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Վերագրանցում"}, 38, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Արգելափակ GPRS"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Արգելափակված GPRS"}, 40, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Արգելափակման Ենթակա"}, 40, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Նամակներ և SMS"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ուղարկված Նամակներ"}, 43, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ուղարկված SMS-ներ"}, 43, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"GPRS"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"GPRS-ի Փոփոխություն"}, 46, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Առկա GPRS Քարտեր"}, 46, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ավելացված Բայց Չհաստատված Քարտ"}, 46, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Orange Ընթացիկ Կարգավիճակներ"}, 46, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"GPRS Իրական Կարգավիճակ"}, 46, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"ՀԴՄ Վիճակագրություն"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"ՀԴՄ Վիճակագրություն"}, 52, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Հեռախոսահամարներ"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Գործընկերոջ Հեռախոսահամարներ"}, 54, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Լոգ"}, -1, 18, 18, -1)
+        Me.RepTreeList.AppendNode(New Object() {"TelCell Events"}, 56, 18, 18, -1)
+        Me.RepTreeList.AppendNode(New Object() {"TelCell Payments"}, 56, 18, 18, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Orange Events"}, 56, 18, 18, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Կոորդինատներ"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Հայտեր"}, 60, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Տեսուչ ՀԴՄ Վիճակագրություն"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Տեսուչ ՀԴՄ Հաշվետվություն"}, 62, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ֆիզ Անձ"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ֆիզ Անձիք"}, 64, 2, 2, -1)
+        Me.RepTreeList.EndUnboundLoad()
+        Me.RepTreeList.OptionsBehavior.EnableFiltering = True
+        Me.RepTreeList.OptionsLayout.AddNewColumns = False
+        Me.RepTreeList.OptionsMenu.EnableColumnMenu = False
+        Me.RepTreeList.OptionsMenu.EnableFooterMenu = False
+        Me.RepTreeList.OptionsMenu.ShowAutoFilterRowItem = False
+        Me.RepTreeList.OptionsPrint.PrintHorzLines = False
+        Me.RepTreeList.OptionsPrint.PrintPageHeader = False
+        Me.RepTreeList.OptionsPrint.PrintReportFooter = False
+        Me.RepTreeList.OptionsPrint.PrintTree = False
+        Me.RepTreeList.OptionsPrint.PrintTreeButtons = False
+        Me.RepTreeList.OptionsPrint.PrintVertLines = False
+        Me.RepTreeList.OptionsSelection.InvertSelection = True
+        Me.RepTreeList.OptionsView.ShowColumns = False
+        Me.RepTreeList.OptionsView.ShowHorzLines = False
+        Me.RepTreeList.OptionsView.ShowIndicator = False
+        Me.RepTreeList.OptionsView.ShowVertLines = False
+        Me.RepTreeList.SelectImageList = Me.ImageCollection1
+        Me.RepTreeList.Size = New System.Drawing.Size(267, 293)
+        Me.RepTreeList.TabIndex = 0
         '
-        'TreeListColumn4
+        'TreeListColumn1
         '
-        Me.TreeListColumn4.Caption = "TreeListColumn1"
-        Me.TreeListColumn4.FieldName = "TreeListColumn1"
-        Me.TreeListColumn4.MinWidth = 88
-        Me.TreeListColumn4.Name = "TreeListColumn4"
-        Me.TreeListColumn4.OptionsColumn.AllowMove = False
-        Me.TreeListColumn4.OptionsColumn.AllowMoveToCustomizationForm = False
-        Me.TreeListColumn4.OptionsColumn.AllowSort = False
-        Me.TreeListColumn4.OptionsColumn.ShowInCustomizationForm = False
-        Me.TreeListColumn4.OptionsColumn.ShowInExpressionEditor = False
-        Me.TreeListColumn4.Visible = True
-        Me.TreeListColumn4.VisibleIndex = 0
-        Me.TreeListColumn4.Width = 87
+        Me.TreeListColumn1.Caption = "TreeListColumn1"
+        Me.TreeListColumn1.FieldName = "TreeListColumn1"
+        Me.TreeListColumn1.MinWidth = 70
+        Me.TreeListColumn1.Name = "TreeListColumn1"
+        Me.TreeListColumn1.OptionsColumn.AllowMove = False
+        Me.TreeListColumn1.OptionsColumn.AllowMoveToCustomizationForm = False
+        Me.TreeListColumn1.OptionsColumn.AllowSort = False
+        Me.TreeListColumn1.OptionsColumn.ShowInCustomizationForm = False
+        Me.TreeListColumn1.OptionsColumn.ShowInExpressionEditor = False
+        Me.TreeListColumn1.Visible = True
+        Me.TreeListColumn1.VisibleIndex = 0
         '
         'ImageCollection1
         '
@@ -3017,6 +3053,88 @@ Partial Class MainWindow
         Me.TreeListColumn2.Visible = True
         Me.TreeListColumn2.VisibleIndex = 0
         '
+        'NavBarGroupControlContainer3
+        '
+        Me.NavBarGroupControlContainer3.Controls.Add(Me.AcountTreeList)
+        Me.NavBarGroupControlContainer3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.NavBarGroupControlContainer3.Name = "NavBarGroupControlContainer3"
+        Me.NavBarGroupControlContainer3.Size = New System.Drawing.Size(267, 293)
+        Me.NavBarGroupControlContainer3.TabIndex = 2
+        '
+        'AcountTreeList
+        '
+        Me.AcountTreeList.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn4})
+        Me.AcountTreeList.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.AcountTreeList.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.AcountTreeList.Location = New System.Drawing.Point(0, 0)
+        Me.AcountTreeList.Name = "AcountTreeList"
+        Me.AcountTreeList.BeginUnboundLoad()
+        Me.AcountTreeList.AppendNode(New Object() {"Վճարներ"}, -1, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Վճարների մուտքագրում"}, 0, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Խմբային վճարների մուտքագրում"}, 0, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"TelCell Վճարների Հաստատում"}, 0, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Ֆիզ անձանց Վճարների մուտքագրում"}, 0, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Հաշիվ Ապրանքագիր"}, -1, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա"}, 5, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Ընթացիկ Հ/Ա"}, 6, 16, 16, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա Շրջիկ"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Փոխել Հ/Ա Տվյալները"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Ջնջել Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Չտպված Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Չտպված Հավելվածներ"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Տպված Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Հ/Ա Վերադարձ"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Սարքավորման Վաճառքի Հ/Ա"}, 5, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Ներքին Ինվոյս (XML)"}, 16, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Սարքավորման Ինվոյս (XML)"}, 16, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Վաճառքի Ինվոյս (XML)"}, 16, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Ֆիզ Անձի Ինվոյս (XML)"}, 16, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Տեղեկատուներ"}, -1, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"ԱԱՀ-ից Ազատված Գործընկեր"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Չսպասարկվող Գործընկեր"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"PDF-ով Չտպվող"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Հ/Ա PDF-ի Կարգաբերում"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"PDF-Ի Էջերի Ստացում"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Պահեստի Մնացորդ"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"XML - ՀՎՀՀ Ստուգում"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Պահանջագրեր"}, 21, 3, 3, -1)
+        Me.AcountTreeList.EndUnboundLoad()
+        Me.AcountTreeList.OptionsBehavior.EnableFiltering = True
+        Me.AcountTreeList.OptionsLayout.AddNewColumns = False
+        Me.AcountTreeList.OptionsMenu.EnableColumnMenu = False
+        Me.AcountTreeList.OptionsMenu.EnableFooterMenu = False
+        Me.AcountTreeList.OptionsMenu.ShowAutoFilterRowItem = False
+        Me.AcountTreeList.OptionsPrint.PrintHorzLines = False
+        Me.AcountTreeList.OptionsPrint.PrintPageHeader = False
+        Me.AcountTreeList.OptionsPrint.PrintReportFooter = False
+        Me.AcountTreeList.OptionsPrint.PrintTree = False
+        Me.AcountTreeList.OptionsPrint.PrintTreeButtons = False
+        Me.AcountTreeList.OptionsPrint.PrintVertLines = False
+        Me.AcountTreeList.OptionsSelection.InvertSelection = True
+        Me.AcountTreeList.OptionsView.ShowColumns = False
+        Me.AcountTreeList.OptionsView.ShowHorzLines = False
+        Me.AcountTreeList.OptionsView.ShowIndicator = False
+        Me.AcountTreeList.OptionsView.ShowVertLines = False
+        Me.AcountTreeList.SelectImageList = Me.ImageCollection1
+        Me.AcountTreeList.Size = New System.Drawing.Size(267, 293)
+        Me.AcountTreeList.TabIndex = 2
+        '
+        'TreeListColumn4
+        '
+        Me.TreeListColumn4.Caption = "TreeListColumn1"
+        Me.TreeListColumn4.FieldName = "TreeListColumn1"
+        Me.TreeListColumn4.MinWidth = 88
+        Me.TreeListColumn4.Name = "TreeListColumn4"
+        Me.TreeListColumn4.OptionsColumn.AllowMove = False
+        Me.TreeListColumn4.OptionsColumn.AllowMoveToCustomizationForm = False
+        Me.TreeListColumn4.OptionsColumn.AllowSort = False
+        Me.TreeListColumn4.OptionsColumn.ShowInCustomizationForm = False
+        Me.TreeListColumn4.OptionsColumn.ShowInExpressionEditor = False
+        Me.TreeListColumn4.Visible = True
+        Me.TreeListColumn4.VisibleIndex = 0
+        Me.TreeListColumn4.Width = 87
+        '
         'NavBarGroupControlContainer5
         '
         Me.NavBarGroupControlContainer5.Controls.Add(Me.CallCenterTreeList)
@@ -3079,122 +3197,6 @@ Partial Class MainWindow
         Me.TreeListColumn5.Visible = True
         Me.TreeListColumn5.VisibleIndex = 0
         '
-        'NavBarGroupControlContainer6
-        '
-        Me.NavBarGroupControlContainer6.Appearance.BackColor = System.Drawing.SystemColors.Control
-        Me.NavBarGroupControlContainer6.Appearance.Options.UseBackColor = True
-        Me.NavBarGroupControlContainer6.Controls.Add(Me.RepTreeList)
-        Me.NavBarGroupControlContainer6.Name = "NavBarGroupControlContainer6"
-        Me.NavBarGroupControlContainer6.Size = New System.Drawing.Size(267, 293)
-        Me.NavBarGroupControlContainer6.TabIndex = 5
-        '
-        'RepTreeList
-        '
-        Me.RepTreeList.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn1})
-        Me.RepTreeList.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.RepTreeList.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RepTreeList.Location = New System.Drawing.Point(0, 0)
-        Me.RepTreeList.Name = "RepTreeList"
-        Me.RepTreeList.BeginUnboundLoad()
-        Me.RepTreeList.AppendNode(New Object() {"Սպասարկող"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Կազմ-Տարած-ՀԴՄ Քանակ"}, 0, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Վճարներ"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Վճար"}, 2, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Բանկային Մուտքեր"}, 2, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Պարտք - Հավելավճար"}, 2, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Դեբետ - Կրեդետ"}, 2, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Ամփոփ Հաշվետվություն"}, 2, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Ամփոփ Հաշվետվություն 2"}, 2, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Պարտք Ըստ Պատկանելության"}, 2, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Վերանորոգում"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Քանակային Հաշվետվություն"}, 10, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Տևողության Հաշվետվություն"}, 10, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Վերանորոգում"}, 10, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Կրկնվող Վերանորոգումներ"}, 10, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Անվճար Վերանորոգումներ"}, 10, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"ՀԴՄ-ի Տեղաշարժ"}, 10, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Ուղարկված SMS"}, 10, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Տեսուչի Վերանորոգումներ"}, 10, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"ՀԾ"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"ՀԾ Կոդի Փոփոխում"}, 19, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Փոխարինման ՀԴՄ-ներ"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Ազատ փոխարինողներ"}, 21, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Փոխարինման ՀԴՄ-ներ"}, 21, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Պատկան ՀԴՄ-ներ Սրահում"}, 21, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"ՀԴՄ Փոխարինման Պատմություն"}, 21, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Առանց Հայտի Փոխարինող ՀԴՄ"}, 21, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Փոխարինող ՀԴՄ Տարբերություն"}, 21, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Հաշիվ Ապրանքագիր"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Չվերադարձված"}, 28, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Սպասարկման"}, 28, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Վերանորոգման"}, 28, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Վաճառքի"}, 28, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Շրջիկ"}, 28, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Բոլորը"}, 28, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Տեսուչ"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Տեսուչի Այցելություն"}, 35, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Տեսուչի ՀԴՄ"}, 35, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Վերագրանցում"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Վերագրանցում"}, 38, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Արգելափակ GPRS"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Արգելափակված GPRS"}, 40, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Արգելափակման Ենթակա"}, 40, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Նամակներ և SMS"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Ուղարկված Նամակներ"}, 43, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Ուղարկված SMS-ներ"}, 43, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"GPRS"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"GPRS-ի Փոփոխություն"}, 46, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Առկա GPRS Քարտեր"}, 46, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Ավելացված Բայց Չհաստատված Քարտ"}, 46, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Orange Ընթացիկ Կարգավիճակներ"}, 46, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"GPRS Իրական Կարգավիճակ"}, 46, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"ՀԴՄ Վիճակագրություն"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"ՀԴՄ Վիճակագրություն"}, 52, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Հեռախոսահամարներ"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Գործընկերոջ Հեռախոսահամարներ"}, 54, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Լոգ"}, -1, 18, 18, -1)
-        Me.RepTreeList.AppendNode(New Object() {"TelCell Events"}, 56, 18, 18, -1)
-        Me.RepTreeList.AppendNode(New Object() {"TelCell Payments"}, 56, 18, 18, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Orange Events"}, 56, 18, 18, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Կոորդինատներ"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Հայտեր"}, 60, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Տեսուչ ՀԴՄ Վիճակագրություն"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Տեսուչ ՀԴՄ Հաշվետվություն"}, 62, 2, 2, -1)
-        Me.RepTreeList.EndUnboundLoad()
-        Me.RepTreeList.OptionsBehavior.EnableFiltering = True
-        Me.RepTreeList.OptionsLayout.AddNewColumns = False
-        Me.RepTreeList.OptionsMenu.EnableColumnMenu = False
-        Me.RepTreeList.OptionsMenu.EnableFooterMenu = False
-        Me.RepTreeList.OptionsMenu.ShowAutoFilterRowItem = False
-        Me.RepTreeList.OptionsPrint.PrintHorzLines = False
-        Me.RepTreeList.OptionsPrint.PrintPageHeader = False
-        Me.RepTreeList.OptionsPrint.PrintReportFooter = False
-        Me.RepTreeList.OptionsPrint.PrintTree = False
-        Me.RepTreeList.OptionsPrint.PrintTreeButtons = False
-        Me.RepTreeList.OptionsPrint.PrintVertLines = False
-        Me.RepTreeList.OptionsSelection.InvertSelection = True
-        Me.RepTreeList.OptionsView.ShowColumns = False
-        Me.RepTreeList.OptionsView.ShowHorzLines = False
-        Me.RepTreeList.OptionsView.ShowIndicator = False
-        Me.RepTreeList.OptionsView.ShowVertLines = False
-        Me.RepTreeList.SelectImageList = Me.ImageCollection1
-        Me.RepTreeList.Size = New System.Drawing.Size(267, 293)
-        Me.RepTreeList.TabIndex = 0
-        '
-        'TreeListColumn1
-        '
-        Me.TreeListColumn1.Caption = "TreeListColumn1"
-        Me.TreeListColumn1.FieldName = "TreeListColumn1"
-        Me.TreeListColumn1.MinWidth = 70
-        Me.TreeListColumn1.Name = "TreeListColumn1"
-        Me.TreeListColumn1.OptionsColumn.AllowMove = False
-        Me.TreeListColumn1.OptionsColumn.AllowMoveToCustomizationForm = False
-        Me.TreeListColumn1.OptionsColumn.AllowSort = False
-        Me.TreeListColumn1.OptionsColumn.ShowInCustomizationForm = False
-        Me.TreeListColumn1.OptionsColumn.ShowInExpressionEditor = False
-        Me.TreeListColumn1.Visible = True
-        Me.TreeListColumn1.VisibleIndex = 0
-        '
         'NavBarGroup1
         '
         Me.NavBarGroup1.Caption = "Ընդհանուր"
@@ -3213,14 +3215,14 @@ Partial Class MainWindow
         Me.NavBarGroup2.Name = "NavBarGroup2"
         Me.NavBarGroup2.SmallImage = CType(resources.GetObject("NavBarGroup2.SmallImage"), System.Drawing.Image)
         '
-        'NavBarGroup6
+        'NavBarGroup3
         '
-        Me.NavBarGroup6.Caption = "Հաշվետվություն"
-        Me.NavBarGroup6.ControlContainer = Me.NavBarGroupControlContainer6
-        Me.NavBarGroup6.GroupClientHeight = 197
-        Me.NavBarGroup6.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer
-        Me.NavBarGroup6.Name = "NavBarGroup6"
-        Me.NavBarGroup6.SmallImage = CType(resources.GetObject("NavBarGroup6.SmallImage"), System.Drawing.Image)
+        Me.NavBarGroup3.Caption = "Հաշվապահություն"
+        Me.NavBarGroup3.ControlContainer = Me.NavBarGroupControlContainer3
+        Me.NavBarGroup3.GroupClientHeight = 187
+        Me.NavBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer
+        Me.NavBarGroup3.Name = "NavBarGroup3"
+        Me.NavBarGroup3.SmallImage = CType(resources.GetObject("NavBarGroup3.SmallImage"), System.Drawing.Image)
         '
         'NavBarGroup5
         '
@@ -3571,13 +3573,12 @@ Partial Class MainWindow
         CType(Me.RibbonPanel, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.MainMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MainMenu.ResumeLayout(False)
-        Me.BackstageViewClientControl3.ResumeLayout(False)
-        CType(Me.GroupControl6, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupControl6.ResumeLayout(False)
-        CType(Me.GroupControl7, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupControl7.ResumeLayout(False)
-        Me.GroupControl7.PerformLayout()
-        CType(Me.ckIsUserActive.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.BackstageViewClientControl4.ResumeLayout(False)
+        CType(Me.GroupControl8, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl8.ResumeLayout(False)
+        CType(Me.GroupControl9, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl9.ResumeLayout(False)
+        Me.GroupControl9.PerformLayout()
         Me.BackstageViewClientControl1.ResumeLayout(False)
         CType(Me.GroupControl4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl4.ResumeLayout(False)
@@ -3600,12 +3601,13 @@ Partial Class MainWindow
         CType(Me.ckIsActiveUser.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtUserPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtLogin.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.BackstageViewClientControl4.ResumeLayout(False)
-        CType(Me.GroupControl8, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupControl8.ResumeLayout(False)
-        CType(Me.GroupControl9, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupControl9.ResumeLayout(False)
-        Me.GroupControl9.PerformLayout()
+        Me.BackstageViewClientControl3.ResumeLayout(False)
+        CType(Me.GroupControl6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl6.ResumeLayout(False)
+        CType(Me.GroupControl7, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl7.ResumeLayout(False)
+        Me.GroupControl7.PerformLayout()
+        CType(Me.ckIsUserActive.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BackstageViewClientControl5.ResumeLayout(False)
         CType(Me.GroupControl10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl10.ResumeLayout(False)
@@ -3674,17 +3676,17 @@ Partial Class MainWindow
         Me.DockPanel1_Container.ResumeLayout(False)
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NavBarControl1.ResumeLayout(False)
-        Me.NavBarGroupControlContainer3.ResumeLayout(False)
-        CType(Me.AcountTreeList, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.NavBarGroupControlContainer6.ResumeLayout(False)
+        CType(Me.RepTreeList, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ImageCollection1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NavBarGroupControlContainer1.ResumeLayout(False)
         CType(Me.ActionTreeList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NavBarGroupControlContainer2.ResumeLayout(False)
         CType(Me.WareHouseTreeList, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.NavBarGroupControlContainer3.ResumeLayout(False)
+        CType(Me.AcountTreeList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NavBarGroupControlContainer5.ResumeLayout(False)
         CType(Me.CallCenterTreeList, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.NavBarGroupControlContainer6.ResumeLayout(False)
-        CType(Me.RepTreeList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DockPanel1.ResumeLayout(False)
         Me.ControlContainer3.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)

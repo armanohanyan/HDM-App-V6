@@ -84,7 +84,7 @@ Partial Class ChangeSellInvoiceSelect
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuChange})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(176, 26)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(176, 48)
         '
         'mnuChange
         '
