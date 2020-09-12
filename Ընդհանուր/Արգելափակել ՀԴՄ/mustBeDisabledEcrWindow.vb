@@ -254,7 +254,7 @@ Public Class mustBeDisabledEcrWindow
             formX.Close()
             formX = Nothing
             GridView1.ClearColumnsFilter()
-            btnQuery.PerformClick()
+            'btnQuery.PerformClick()
         End Try
     End Sub
     Private Sub mnuSelectColored_Click(sender As Object, e As EventArgs) Handles mnuSelectColored.Click

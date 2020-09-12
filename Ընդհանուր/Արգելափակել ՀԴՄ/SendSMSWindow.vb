@@ -717,7 +717,7 @@ Public Class SendSMSWindow
                     End If
                 ElseIf rbForBlockExcel.Checked = True Then
                     If op = 8 Then
-                        msg.Text = dt.Rows(i)("ՀՎՀՀ") & "  Dzer hashvekshirn e " & dt.Rows(i)("Պարտք") & " dr. Xndrum enq katarel vcharum DMI-i anxapan ashxatanqi hamar. Smart Solutions 060 400005. Hashvehamar 220563330442000"
+                        msg.Text = dt.Rows(i)("ՀՎՀՀ") & "  Dzer hashvekshirn e " & dt.Rows(i)("Պարտք") & " dr. Xndrum enq katarel vcharum HDM-i anxapan ashxatanqi hamar. Smart Solutions 060 400005. Hashvehamar 220563330442000"
                     Else
                         msg.Text = "Hargeli gorcynker HVHH " & dt.Rows(i)("ՀՎՀՀ") & " Dzer kazmakerputyunn uni partq " & dt.Rows(i)("Պարտք") & " dram.Xndrum enq katarel vjarum.Kasecman amsativ` " & TimeX.DateTime.Date & ".Her " & strTel
                     End If

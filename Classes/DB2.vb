@@ -3366,6 +3366,23 @@ Partial Public Class DB
         Return s
     End Function
 
+    'isEquipmentECR
+    Friend Function isEquipmentECR(shrikh As String) As String
+        Dim s As String
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandTimeout = 20
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.Add("@shrikh", SqlDbType.NVarChar).Value = shrikh
+                cmd.CommandText = "SELECT warehouse.isEquipmentECR(@shrikh)"
+                s = cmd.ExecuteScalar()
+            End Using
+        End Using
+        Return s
+    End Function
+
     'IsEcrPaidForRemake
     Friend Function IsEcrPaidForRemake(Ecr As String, ShtrikhCode As String) As String
         Dim s As String

@@ -159,12 +159,12 @@ Public Class OpenRemakeAkt
                         .Range("A34").Value = "Գեներացման կոդ` " & strRandom & " ,  Հեռ՝ (060) 50-60-27"
                 End Select
 
-                Dim hdm As String = dt.Rows(0)("ՀԴՄ").ToString
-                Dim model As String = "MF 2351"
-                If hdm.StartsWith("S") Then
-                    model = "PAX S900"
-                    hdm = hdm.Substring(4, 8)
-                End If
+                Dim hdm As String = iDB.GetSerialNumberByEcr(dt.Rows(0)("ՀԴՄ")).ToString
+                Dim model As String = dt.Rows(0)("ՀդմՄոդել")
+                'If hdm.StartsWith("S") Then
+                '    model = "PAX S900"
+                '    hdm = hdm.Substring(4, 8)
+                'End If
                 Dim hvhh As String = dt.Rows(0)("ՀՎՀՀ").ToString
                 If hvhh.EndsWith("S") Then hvhh = hvhh.Substring(0, 8)
 

@@ -74,6 +74,7 @@ Public Class disabledEcrWindow
                 .Columns("NotServed").Visible = False
                 .Columns("Colored").Visible = False
                 .Columns("ԿասեցմանՊահիՊարտքիԱմսաթիվ").Visible = False
+                .Columns("Օպ").Visible = False
                 .OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False
                 .OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False
                 .OptionsBehavior.Editable = False

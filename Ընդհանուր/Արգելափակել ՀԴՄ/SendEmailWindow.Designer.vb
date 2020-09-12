@@ -30,14 +30,14 @@ Partial Class SendEmailWindow
         Me.mnuSelect = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuSelectAll = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuDeselect = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ՋնջելToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnuExportToExcel = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnSent = New DevExpress.XtraEditors.SimpleButton()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.ՋնջելToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnuContext.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -55,7 +55,7 @@ Partial Class SendEmailWindow
         '
         Me.mnuContext.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuSelect, Me.mnuSelectAll, Me.mnuDeselect, Me.ToolStripMenuItem2, Me.ՋնջելToolStripMenuItem, Me.ToolStripMenuItem1, Me.mnuExportToExcel})
         Me.mnuContext.Name = "mnuContext"
-        Me.mnuContext.Size = New System.Drawing.Size(175, 148)
+        Me.mnuContext.Size = New System.Drawing.Size(175, 126)
         '
         'mnuSelect
         '
@@ -76,6 +76,18 @@ Partial Class SendEmailWindow
         Me.mnuDeselect.Name = "mnuDeselect"
         Me.mnuDeselect.Size = New System.Drawing.Size(174, 22)
         Me.mnuDeselect.Text = "Հետնշել"
+        '
+        'ToolStripMenuItem2
+        '
+        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
+        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(171, 6)
+        '
+        'ՋնջելToolStripMenuItem
+        '
+        Me.ՋնջելToolStripMenuItem.Image = CType(resources.GetObject("ՋնջելToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.ՋնջելToolStripMenuItem.Name = "ՋնջելToolStripMenuItem"
+        Me.ՋնջելToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
+        Me.ՋնջելToolStripMenuItem.Text = "Ջնջել"
         '
         'ToolStripMenuItem1
         '
@@ -134,18 +146,6 @@ Partial Class SendEmailWindow
         Me.GridView1.OptionsView.ShowAutoFilterRow = True
         Me.GridView1.OptionsView.ShowFooter = True
         Me.GridView1.OptionsView.ShowGroupPanel = False
-        '
-        'ՋնջելToolStripMenuItem
-        '
-        Me.ՋնջելToolStripMenuItem.Image = CType(resources.GetObject("ՋնջելToolStripMenuItem.Image"), System.Drawing.Image)
-        Me.ՋնջելToolStripMenuItem.Name = "ՋնջելToolStripMenuItem"
-        Me.ՋնջելToolStripMenuItem.Size = New System.Drawing.Size(174, 22)
-        Me.ՋնջելToolStripMenuItem.Text = "Ջնջել"
-        '
-        'ToolStripMenuItem2
-        '
-        Me.ToolStripMenuItem2.Name = "ToolStripMenuItem2"
-        Me.ToolStripMenuItem2.Size = New System.Drawing.Size(171, 6)
         '
         'SendEmailWindow
         '

@@ -70,7 +70,7 @@ Partial Class mustBeDisabledEcrWindow
         '
         Me.mnuContext.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuSelectRow, Me.mnuSelectAll, Me.mnuSelectColored, Me.ToolStripMenuItem5, Me.mnuDeselect, Me.ToolStripMenuItem4, Me.mnuExportToExcel, Me.mnuExportSelected, Me.ToolStripMenuItem1, Me.mnuPrepareEmail, Me.ToolStripMenuItem2, Me.mnuDisableGprs})
         Me.mnuContext.Name = "mnuContext"
-        Me.mnuContext.Size = New System.Drawing.Size(233, 204)
+        Me.mnuContext.Size = New System.Drawing.Size(233, 226)
         '
         'mnuSelectRow
         '

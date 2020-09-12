@@ -1048,6 +1048,38 @@ Partial Public Class DB
         Return It
     End Function
 
+    'GetSerialNumberByEcr
+    Friend Function GetSerialNumberByEcr(ByVal Ecr As String) As String
+        Dim It As String
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT Client.GetSerialNumberByEcr(@Ecr)"
+                cmd.Parameters.Add("@Ecr", SqlDbType.VarChar).Value = Ecr
+                It = cmd.ExecuteScalar()
+            End Using
+        End Using
+        Return It
+    End Function
+
+    'GetSerialNumberByShtrikh
+    Friend Function GetSerialNumberByShtrikh(ByVal shtrikh As String) As String
+        Dim It As String
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT Client.GetSerialNumberByShtrikh(@shtrikh)"
+                cmd.Parameters.Add("@shtrikh", SqlDbType.VarChar).Value = shtrikh
+                It = cmd.ExecuteScalar()
+            End Using
+        End Using
+        Return It
+    End Function
+
     'RetGPSByEcr
     Friend Function RetGPSByEcr(ByVal Ecr As String) As String
         Dim It As String
