@@ -21,9 +21,13 @@ Public Class EnterCenterWorkshop
             ElseIf txtEcr.Text.StartsWith("q") Then
                 txtEcr.Text = txtEcr.Text.Replace("q", "Q80414") : txtEcr.SelectionStart = txtEcr.Text.Length
             ElseIf txtEcr.Text.StartsWith("S") Then
-                txtEcr.Text = txtEcr.Text.Replace("S", "S900552") : txtEcr.SelectionStart = txtEcr.Text.Length
+                txtEcr.Text = txtEcr.Text.Replace("S", "S90055") : txtEcr.SelectionStart = txtEcr.Text.Length
             ElseIf txtEcr.Text.StartsWith("s") Then
-                txtEcr.Text = txtEcr.Text.Replace("s", "S900552") : txtEcr.SelectionStart = txtEcr.Text.Length
+                txtEcr.Text = txtEcr.Text.Replace("s", "S90055") : txtEcr.SelectionStart = txtEcr.Text.Length
+            ElseIf txtEcr.Text.StartsWith("A") Then
+                txtEcr.Text = txtEcr.Text.Replace("A", "A90022") : txtEcr.SelectionStart = txtEcr.Text.Length
+            ElseIf txtEcr.Text.StartsWith("a") Then
+                txtEcr.Text = txtEcr.Text.Replace("a", "A90022") : txtEcr.SelectionStart = txtEcr.Text.Length
             End If
         End If
 

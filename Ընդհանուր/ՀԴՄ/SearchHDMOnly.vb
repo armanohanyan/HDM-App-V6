@@ -331,9 +331,13 @@ Public Class SearchHDMOnly
                 ElseIf txtPhrase.Text.StartsWith("q") Then
                     txtPhrase.Text = txtPhrase.Text.Replace("q", "Q80414") : txtPhrase.SelectionStart = txtPhrase.Text.Length
                 ElseIf txtPhrase.Text.StartsWith("S") Then
-                    txtPhrase.Text = txtPhrase.Text.Replace("S", "S900552") : txtPhrase.SelectionStart = txtPhrase.Text.Length
+                    txtPhrase.Text = txtPhrase.Text.Replace("S", "S90055") : txtPhrase.SelectionStart = txtPhrase.Text.Length
                 ElseIf txtPhrase.Text.StartsWith("s") Then
-                    txtPhrase.Text = txtPhrase.Text.Replace("s", "S900552") : txtPhrase.SelectionStart = txtPhrase.Text.Length
+                    txtPhrase.Text = txtPhrase.Text.Replace("s", "S90055") : txtPhrase.SelectionStart = txtPhrase.Text.Length
+                ElseIf txtPhrase.Text.StartsWith("A") Then
+                    txtPhrase.Text = txtPhrase.Text.Replace("A", "A90022") : txtPhrase.SelectionStart = txtPhrase.Text.Length
+                ElseIf txtPhrase.Text.StartsWith("a") Then
+                    txtPhrase.Text = txtPhrase.Text.Replace("a", "A90022") : txtPhrase.SelectionStart = txtPhrase.Text.Length
                 End If
             End If
         End If

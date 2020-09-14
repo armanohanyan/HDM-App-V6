@@ -119,9 +119,13 @@ Public Class hdmAraqumWindow
             ElseIf txtHDM.Text.StartsWith("q") Then
                 txtHDM.Text = txtHDM.Text.Replace("q", "Q80414") : txtHDM.SelectionStart = txtHDM.Text.Length
             ElseIf txtHDM.Text.StartsWith("S") Then
-                txtHDM.Text = txtHDM.Text.Replace("S", "S900552") : txtHDM.SelectionStart = txtHDM.Text.Length
+                txtHDM.Text = txtHDM.Text.Replace("S", "S90055") : txtHDM.SelectionStart = txtHDM.Text.Length
             ElseIf txtHDM.Text.StartsWith("s") Then
-                txtHDM.Text = txtHDM.Text.Replace("s", "S900552") : txtHDM.SelectionStart = txtHDM.Text.Length
+                txtHDM.Text = txtHDM.Text.Replace("s", "S90055") : txtHDM.SelectionStart = txtHDM.Text.Length
+            ElseIf txtHDM.Text.StartsWith("A") Then
+                txtHDM.Text = txtHDM.Text.Replace("A", "A90022") : txtHDM.SelectionStart = txtHDM.Text.Length
+            ElseIf txtHDM.Text.StartsWith("a") Then
+                txtHDM.Text = txtHDM.Text.Replace("a", "A90022") : txtHDM.SelectionStart = txtHDM.Text.Length
             End If
         End If
     End Sub

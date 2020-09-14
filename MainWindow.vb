@@ -4830,7 +4830,8 @@ Public Class MainWindow
         If txtPraseSearch.Text.Trim.Length = 1 Then
             If Microsoft.VisualBasic.Left(txtPraseSearch.Text, 1).ToLower = "v" Then txtPraseSearch.Text = "V90413" : txtPraseSearch.SelectionStart = Len(txtPraseSearch.Text)
             If Microsoft.VisualBasic.Left(txtPraseSearch.Text, 1).ToLower = "q" Then txtPraseSearch.Text = "Q80414" : txtPraseSearch.SelectionStart = Len(txtPraseSearch.Text)
-            If Microsoft.VisualBasic.Left(txtPraseSearch.Text, 1).ToLower = "s" Then txtPraseSearch.Text = "S900552" : txtPraseSearch.SelectionStart = Len(txtPraseSearch.Text)
+            If Microsoft.VisualBasic.Left(txtPraseSearch.Text, 1).ToLower = "s" Then txtPraseSearch.Text = "S90055" : txtPraseSearch.SelectionStart = Len(txtPraseSearch.Text)
+            If Microsoft.VisualBasic.Left(txtPraseSearch.Text, 1).ToLower = "a" Then txtPraseSearch.Text = "A90022" : txtPraseSearch.SelectionStart = Len(txtPraseSearch.Text)
         End If
     End Sub
     Private Sub btnQueryPayments_Click(sender As Object, e As EventArgs) Handles btnQueryPayments.Click
@@ -4854,7 +4855,8 @@ Public Class MainWindow
         If txtEcrPartq.Text.Trim.Length = 1 Then
             If Microsoft.VisualBasic.Left(txtEcrPartq.Text, 1).ToLower = "v" Then txtEcrPartq.Text = "V90413" : txtEcrPartq.SelectionStart = Len(txtEcrPartq.Text)
             If Microsoft.VisualBasic.Left(txtEcrPartq.Text, 1).ToLower = "q" Then txtEcrPartq.Text = "Q80414" : txtEcrPartq.SelectionStart = Len(txtEcrPartq.Text)
-            If Microsoft.VisualBasic.Left(txtEcrPartq.Text, 1).ToLower = "s" Then txtEcrPartq.Text = "S900552" : txtEcrPartq.SelectionStart = Len(txtEcrPartq.Text)
+            If Microsoft.VisualBasic.Left(txtEcrPartq.Text, 1).ToLower = "s" Then txtEcrPartq.Text = "S90055" : txtEcrPartq.SelectionStart = Len(txtEcrPartq.Text)
+            If Microsoft.VisualBasic.Left(txtEcrPartq.Text, 1).ToLower = "a" Then txtEcrPartq.Text = "A90022" : txtEcrPartq.SelectionStart = Len(txtEcrPartq.Text)
         End If
         txtPayRes.Text = String.Empty
     End Sub
