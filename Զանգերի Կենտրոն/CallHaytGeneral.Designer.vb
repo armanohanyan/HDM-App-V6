@@ -26,6 +26,7 @@ Partial Class CallHaytGeneral
         Me.FormAssistant1 = New DevExpress.XtraBars.FormAssistant()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnSendSMS = New DevExpress.XtraEditors.SimpleButton()
         Me.txtTesuch = New DevExpress.XtraEditors.TextEdit()
         Me.cbRegion = New System.Windows.Forms.ComboBox()
         Me.txtRegion = New DevExpress.XtraEditors.TextEdit()
@@ -113,6 +114,8 @@ Partial Class CallHaytGeneral
         'Panel1
         '
         Me.Panel1.AutoScroll = True
+        Me.Panel1.Controls.Add(Me.btnAdd)
+        Me.Panel1.Controls.Add(Me.btnSendSMS)
         Me.Panel1.Controls.Add(Me.txtTesuch)
         Me.Panel1.Controls.Add(Me.cbRegion)
         Me.Panel1.Controls.Add(Me.txtRegion)
@@ -140,7 +143,6 @@ Partial Class CallHaytGeneral
         Me.Panel1.Controls.Add(Me.bEcr)
         Me.Panel1.Controls.Add(Me.txtEcr)
         Me.Panel1.Controls.Add(Me.btnClean)
-        Me.Panel1.Controls.Add(Me.btnAdd)
         Me.Panel1.Controls.Add(Me.cbSupporter)
         Me.Panel1.Controls.Add(Me.sDate)
         Me.Panel1.Controls.Add(Me.txtTel)
@@ -162,6 +164,15 @@ Partial Class CallHaytGeneral
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(294, 655)
         Me.Panel1.TabIndex = 0
+        '
+        'btnSendSMS
+        '
+        Me.btnSendSMS.Image = CType(resources.GetObject("btnSendSMS.Image"), System.Drawing.Image)
+        Me.btnSendSMS.Location = New System.Drawing.Point(9, 566)
+        Me.btnSendSMS.Name = "btnSendSMS"
+        Me.btnSendSMS.Size = New System.Drawing.Size(273, 32)
+        Me.btnSendSMS.TabIndex = 70
+        Me.btnSendSMS.Text = "Ուղարկել SMS"
         '
         'txtTesuch
         '
@@ -289,7 +300,7 @@ Partial Class CallHaytGeneral
         '
         Me.cProb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cProb.FormattingEnabled = True
-        Me.cProb.Items.AddRange(New Object() {"Այլ", "Վերագրանցում", "Ապաակտիվացում", "Հարկատեսակի փոփոխում", "Բաժին ավելացնել", "Համաձայնագիր", "Պայմանագիր", "Վերանորոգման Հայտ", "Վաճառք"})
+        Me.cProb.Items.AddRange(New Object() {"Այլ", "Վերագրանցում", "Ապաակտիվացում", "Հարկատեսակի փոփոխում", "Բաժին ավելացնել", "Համաձայնագիր", "Պայմանագիր", "Վերանորոգման Հայտ", "Վաճառք", "ՀԴՄ վաճառքի Հայտ"})
         Me.cProb.Location = New System.Drawing.Point(82, 275)
         Me.cProb.Name = "cProb"
         Me.cProb.Size = New System.Drawing.Size(199, 21)
@@ -418,15 +429,16 @@ Partial Class CallHaytGeneral
         Me.btnClean.Image = CType(resources.GetObject("btnClean.Image"), System.Drawing.Image)
         Me.btnClean.Location = New System.Drawing.Point(9, 604)
         Me.btnClean.Name = "btnClean"
-        Me.btnClean.Size = New System.Drawing.Size(272, 32)
+        Me.btnClean.Size = New System.Drawing.Size(96, 32)
         Me.btnClean.TabIndex = 44
         Me.btnClean.TabStop = False
         Me.btnClean.Text = "Մաքրել"
+        Me.btnClean.Visible = False
         '
         'btnAdd
         '
         Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
-        Me.btnAdd.Location = New System.Drawing.Point(9, 566)
+        Me.btnAdd.Location = New System.Drawing.Point(9, 604)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(272, 32)
         Me.btnAdd.TabIndex = 9
@@ -716,4 +728,5 @@ Partial Class CallHaytGeneral
     Friend WithEvents btnOK As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents cbTesuch As System.Windows.Forms.ComboBox
     Friend WithEvents txtRegion As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents btnSendSMS As DevExpress.XtraEditors.SimpleButton
 End Class

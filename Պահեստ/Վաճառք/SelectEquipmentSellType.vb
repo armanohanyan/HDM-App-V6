@@ -4,12 +4,15 @@ Imports DevExpress.XtraEditors.Repository
 
 Public Class SelectEquipmentSellType
 
+    Dim dt3 As DataTable
+    Friend PropID As Integer
+
     Private Sub loadSupporter()
         Try
             Dim dt1 As DataTable = iDB.GetSupporter
             Dim dt2 As DataTable = iDB.GetSupporter
 
-            Dim dt3 As DataTable = iDB.GetHVHHsForSell
+            dt3 = iDB.GetHVHHsForSell
 
             With cSeller
                 .DataSource = dt1
@@ -47,7 +50,7 @@ Public Class SelectEquipmentSellType
 
         Dim isLocal As Boolean = rSupporter.Checked
 
-        Dim f As New SellWindow With {.IsLocalSell = isLocal, .ClientHVHH = txtHVHH.Text.Trim, .SupporterID = cSeller.SelectedValue, .ClientID = cBuyer.SelectedValue}
+        Dim f As New SellWindow With {.IsLocalSell = isLocal, .ClientHVHH = txtHVHH.Text.Trim, .SupporterID = cSeller.SelectedValue, .ClientID = cBuyer.SelectedValue, .SellPropID = PropID}
         f.ShowDialog()
         f.Dispose()
         Me.Close()
@@ -87,6 +90,14 @@ Public Class SelectEquipmentSellType
                 cBuyer.Enabled = False
                 rClient.Enabled = False
                 txtHVHH.Enabled = False
+
+                If txtHVHH.Text.Trim = cbBvhhList.Text.Trim Then
+                    If dt3.Rows.Count > 0 Then
+                        Dim i As Integer = cbBvhhList.SelectedIndex
+                        'cSeller.SelectedValue = dt3.Rows(i)("Սպասարկող")
+                        PropID = dt3.Rows(i)("ՀՀ")
+                    End If
+                End If
 
                 'OK
                 Call NextStep()

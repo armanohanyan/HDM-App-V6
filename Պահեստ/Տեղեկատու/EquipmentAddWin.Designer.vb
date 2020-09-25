@@ -28,7 +28,9 @@ Partial Class EquipmentAddWin
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.txtEquipment = New System.Windows.Forms.TextBox()
         Me.ckCanSell = New DevExpress.XtraEditors.CheckEdit()
+        Me.cbIsEcr = New DevExpress.XtraEditors.CheckEdit()
         CType(Me.ckCanSell.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cbIsEcr.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnAdd
@@ -64,12 +66,21 @@ Partial Class EquipmentAddWin
         Me.ckCanSell.Size = New System.Drawing.Size(123, 19)
         Me.ckCanSell.TabIndex = 1
         '
+        'cbIsEcr
+        '
+        Me.cbIsEcr.Location = New System.Drawing.Point(12, 67)
+        Me.cbIsEcr.Name = "cbIsEcr"
+        Me.cbIsEcr.Properties.Caption = "ՀԴՄ"
+        Me.cbIsEcr.Size = New System.Drawing.Size(123, 19)
+        Me.cbIsEcr.TabIndex = 6
+        '
         'EquipmentAddWin
         '
         Me.AcceptButton = Me.btnAdd
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(333, 95)
+        Me.Controls.Add(Me.cbIsEcr)
         Me.Controls.Add(Me.ckCanSell)
         Me.Controls.Add(Me.txtEquipment)
         Me.Controls.Add(Me.LabelControl1)
@@ -83,6 +94,7 @@ Partial Class EquipmentAddWin
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Նոր Սարքավորում"
         CType(Me.ckCanSell.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cbIsEcr.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -92,4 +104,5 @@ Partial Class EquipmentAddWin
     Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents txtEquipment As System.Windows.Forms.TextBox
     Friend WithEvents ckCanSell As DevExpress.XtraEditors.CheckEdit
+    Friend WithEvents cbIsEcr As DevExpress.XtraEditors.CheckEdit
 End Class

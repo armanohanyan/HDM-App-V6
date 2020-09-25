@@ -216,7 +216,7 @@ Public Class AddHVHHWindow
         End Try
     End Sub
     Private Sub AddHVHHWindow_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-
+        txtHVHH.Text = NewHvhh
         'cbTarif.Enabled = False
 
         Call LoadDT()

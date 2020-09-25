@@ -445,7 +445,7 @@ Public Class CallHaytGeneral
     End Sub
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Try
-            If MsgBox("Ցանկանու՞մ եք ավելացնել հայտ", MsgBoxStyle.Question + MsgBoxStyle.YesNo, My.Application.Info.Title) <> MsgBoxResult.Yes Then Exit Sub
+            'If MsgBox("Ցանկանու՞մ եք ավելացնել հայտ", MsgBoxStyle.Question + MsgBoxStyle.YesNo, My.Application.Info.Title) <> MsgBoxResult.Yes Then Exit Sub
 
             If String.IsNullOrEmpty(txtEcr.Text) AndAlso
                String.IsNullOrEmpty(txtHVHH.Text) AndAlso
@@ -469,7 +469,7 @@ Public Class CallHaytGeneral
 
             If Loc = "0,0" Then
                 Dim gF As New GPSforProp
-                gF.ShowDialog()
+                'gF.ShowDialog()
                 Loc = gF.Loc
                 gF.Dispose()
             End If
@@ -571,48 +571,49 @@ Public Class CallHaytGeneral
         Select Case cProb.SelectedIndex
             Case 0
                 txtProblem.Text = String.Empty
-
                 cbRemProblem.Enabled = False
+                sDate.DateTime = DateAdd(DateInterval.Hour, 1, Now)
             Case 1
                 btnMessageToAccount.Enabled = True
                 txtProblem.Text = "Վերագրանցում, ձեռք են բերել  ____________ ՍՊԸ/ԱՁ-ից, ՀՎՀՀ ________   լուծարել պայմանագիրը(անհրաժեշտության դեպքում)։"
-
                 cbRemProblem.Enabled = False
+                sDate.DateTime = DateAdd(DateInterval.Hour, 1, Now)
             Case 2
                 btnMessageToAccount.Enabled = True
                 txtProblem.Text = "Ապաակտիվացում, լուծարել պայմանագիրը(անհրաժեշտության դեպքում)։"
-
                 cbRemProblem.Enabled = False
+                sDate.DateTime = DateAdd(DateInterval.Hour, 1, Now)
             Case 3
                 txtProblem.Text = "_________ հարկ․ անցնում են _________ ,տանել համաձայնագիր։"
-
                 cbRemProblem.Enabled = False
+                sDate.DateTime = DateAdd(DateInterval.Hour, 1, Now)
             Case 4
                 txtProblem.Text = "Բաժին ավելացնել  հին հարկատեսակով՝ _______ / նոր հարկատեսակ՝ _______ , տանել համաձայնագիր։"
-
                 cbRemProblem.Enabled = False
+                sDate.DateTime = DateAdd(DateInterval.Hour, 1, Now)
             Case 5
                 txtProblem.Text = "Տանել համաձայնագիր "
-
                 cbRemProblem.Enabled = False
+                sDate.DateTime = DateAdd(DateInterval.Hour, 1, Now)
             Case 6
                 txtProblem.Text = "Տանել պայմանագիր "
-
                 cbRemProblem.Enabled = False
-            Case 7
+                sDate.DateTime = DateAdd(DateInterval.Hour, 1, Now)
+            Case 7  ' Վերանորոգման հայտ
                 txtProblem.Text = "Վերանորոգման հայտ "  'Arman
-
                 cbRemProblem.Enabled = True
-
                 Call LoadReplData()
                 Call LoadRepEcr()
-            Case 8
+                sDate.DateTime = DateAdd(DateInterval.Hour, 1, Now)
+            Case 8  ' Վաճառքի հայտ
                 txtProblem.Text = String.Empty
-
                 cbRemProblem.Enabled = False
-
                 Label3.ForeColor = Color.Red
-
+                sDate.DateTime = DateAdd(DateInterval.Hour, 1, Now)
+            Case 9  'ՀԴՄ Վաճառքի հայտ
+                txtProblem.Text = "ՀԴՄ քանակ՝ "
+                cbRemProblem.Enabled = False
+                sDate.DateTime = DateAdd(DateInterval.Day, 1, Now)
         End Select
     End Sub
     Private Sub cbEcr_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEcr.SelectedIndexChanged
@@ -703,6 +704,19 @@ Public Class CallHaytGeneral
             Call SQLException(ex)
         Catch ex As Exception
             Call SoftException(ex)
+        End Try
+    End Sub
+
+    Private Sub btnSendSMS_Click(sender As Object, e As EventArgs) Handles btnSendSMS.Click
+        Try
+            If cbSupporter.SelectedValue <> 1 AndAlso cbSupporter.SelectedValue <> 3 AndAlso cbSupporter.SelectedValue <> 4 AndAlso cbSupporter.SelectedValue <> 8 AndAlso cbSupporter.SelectedValue <> 10 Then
+                Throw New Exception("Սպասարկող կազմակերպությունը ընտրված չէ։")
+            End If
+            Call CloseWindow("nCustomCallCenterSMS")
+            Dim f As New CustomCallCenterSMS With {.SupporterID = cbSupporter.SelectedValue, .HVHH = txtHVHH.Text.Trim}
+            AddChildForm("nCustomCallCenterSMS", f)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Տվյալները թերի են լրացված", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 

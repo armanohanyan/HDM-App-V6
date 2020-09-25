@@ -20,6 +20,8 @@ Public Class SellWindow
     Dim BankName As String = String.Empty
     Dim BankAcount As String = String.Empty
 
+    Friend SellPropID As Integer
+
     Private Sub SendInvoiceMessage()
         On Error Resume Next
         Dim b As Image
@@ -571,7 +573,8 @@ Public Class SellWindow
             IsDocumentPrinted = True
 
             If IsLocalSell = False Then
-                iDB.SetRemakePropSold(ClientHVHH)
+                iDB.SetRemakePropSoldByPropID(SellPropID)
+                'iDB.SetRemakePropSold(ClientHVHH)
             End If
 
 

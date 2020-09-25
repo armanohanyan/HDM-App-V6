@@ -1119,6 +1119,41 @@ Partial Public Class DB
         Return dt
     End Function
 
+    'GetSMSTitles
+    Friend Function GetSMSTitles(SupporterID As Byte) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.Add("@SupporterID", SqlDbType.TinyInt).Value = SupporterID
+                cmd.CommandText = "SELECT * FROM Client.GetSMSTitles(@SupporterID)"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    'GetSMSTitles
+    Friend Function GetSMSText(ID As Integer) As String
+        Dim t As String
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.Add("@ID", SqlDbType.TinyInt).Value = ID
+                cmd.CommandText = "SELECT * FROM Client.GetSMSText(@ID)"
+                t = cmd.ExecuteScalar
+            End Using
+        End Using
+        Return t
+    End Function
+
     'GetHVHHsForSell
     Friend Function GetHVHHsForSell() As DataTable
         Dim dt As DataTable
@@ -1128,6 +1163,24 @@ Partial Public Class DB
                 cmd.Connection = cnn
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = "SELECT * FROM Client.GetHVHHsForSell()"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    'GetHVHHsForSellEcr
+    Friend Function GetHVHHsForSellEcr() As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT * FROM Client.GetHVHHsForSellEcr()"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)
@@ -6035,11 +6088,12 @@ Partial Public Class DB
     End Sub
 
     'InsertEquipment
-    Friend Sub InsertEquipment(ByVal Equipment As String, ByVal canSel As Boolean)
+    Friend Sub InsertEquipment(ByVal Equipment As String, ByVal canSel As Boolean, ByVal isEcr As Boolean)
         Using connection As New SqlConnection(SQLString)
-            Dim cmdSQLcom As New SqlCommand("EXEC warehouse.InsertEquipment @Equipment,@canSel", connection)
+            Dim cmdSQLcom As New SqlCommand("EXEC warehouse.InsertEquipment @Equipment,@canSel,@isEcr", connection)
             cmdSQLcom.Parameters.Add("@Equipment", Data.SqlDbType.NVarChar).Value = Equipment
             cmdSQLcom.Parameters.Add("@canSel", Data.SqlDbType.Bit).Value = canSel
+            cmdSQLcom.Parameters.Add("@isEcr", Data.SqlDbType.Bit).Value = isEcr
             connection.Open()
             cmdSQLcom.ExecuteNonQuery()
             connection.Close()
@@ -7412,6 +7466,17 @@ Partial Public Class DB
         Using connection As New SqlConnection(SQLString)
             Dim cmdSQLcom As New SqlCommand("EXEC Client.SetRemakePropSold @hvhh", connection)
             cmdSQLcom.Parameters.Add("@hvhh", Data.SqlDbType.NVarChar).Value = hvhh
+            connection.Open()
+            cmdSQLcom.ExecuteNonQuery()
+            connection.Close()
+        End Using
+    End Sub
+
+    'SetRemakePropSoldByPropID
+    Friend Sub SetRemakePropSoldByPropID(ByVal ID As Integer)
+        Using connection As New SqlConnection(SQLString)
+            Dim cmdSQLcom As New SqlCommand("EXEC Client.SetRemakePropSoldByPropID @ID", connection)
+            cmdSQLcom.Parameters.Add("@ID", Data.SqlDbType.Int).Value = ID
             connection.Open()
             cmdSQLcom.ExecuteNonQuery()
             connection.Close()
