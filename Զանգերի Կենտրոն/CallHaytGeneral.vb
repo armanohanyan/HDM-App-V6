@@ -378,6 +378,9 @@ Public Class CallHaytGeneral
         End Try
     End Sub
     Private Sub btnClean_Click(sender As Object, e As EventArgs) Handles btnClean.Click
+        ResetForm()
+    End Sub
+    Private Sub ResetForm()
         On Error Resume Next
         txtEcr.Text = ""
         txtHVHH.Text = ""
@@ -521,7 +524,9 @@ Public Class CallHaytGeneral
 
             sDate.DateTime = DateAdd(DateInterval.Hour, 1, Now)
 
-            btnClean.PerformClick()
+            'btnClean.PerformClick()
+
+            ResetForm()
 
         Catch ex As ExceptionClass
         Catch ex As System.Data.SqlClient.SqlException

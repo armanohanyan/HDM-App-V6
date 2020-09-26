@@ -3,6 +3,8 @@ Imports DevExpress.XtraGrid.Views.Grid
 Imports DevExpress.XtraGrid.Columns
 Imports DevExpress.XtraGrid.Views.Base
 Imports DevExpress.XtraGrid.Views.Grid.ViewInfo
+Imports HdmRouter
+Imports HdmRouter.Enum
 
 Public Class mustBeDisabledEcrWindow
 
@@ -232,16 +234,32 @@ Public Class mustBeDisabledEcrWindow
             Dim cBlockGprsByHdm As New List(Of BlockGprsByHdm)
 
             For i As Integer = 0 To GridView1.RowCount - 1
-                cBlockGprsByHdm.Add(New BlockGprsByHdm(GridView1.GetRowCellValue(i, "ՀԴՄ"), GridView1.GetRowCellValue(i, "Ամսաթիվ")))
+                cBlockGprsByHdm.Add(New BlockGprsByHdm(GridView1.GetRowCellValue(i, "ՀԴՄ"),
+                GridView1.GetRowCellValue(i, "Ամսաթիվ"),
+                GridView1.GetRowCellValue(i, "ՀԴՄ տեսակ"),
+                GridView1.GetRowCellValue(i, "Օպ")
+                ))
             Next
 
-            Dim dt2 As DataTable = ToDataTable(cBlockGprsByHdm)
+            Dim dataTable As DataTable = ToDataTable(cBlockGprsByHdm)
 
-            If MOperator = "O" Then
-                iDB.BlockGprsByEcr2(dt2)
-            Else
-                iDB.BlockGprsByEcr(dt2)
-            End If
+            Dim groupedDictionary = RoutingManager.GroupHdmsByType(dataTable)
+
+            For Each pair In groupedDictionary
+
+                Select Case pair.Key
+                    Case HdmType.Ucom
+                        iDB.BlockGprsByEcr2(pair.Value)
+                    Case HdmType.Vivacell
+                        iDB.BlockGprsByEcr(pair.Value)
+                    Case HdmType.Beeline
+                        iDB.BlockGprsByEcr(pair.Value)
+                    Case HdmType.Android
+                    Case HdmType.Pax
+                        iDB.BlockGprsByEcr3(pair.Value)
+                    Case Else
+                End Select
+            Next
 
             MsgBox("Գործողությունը կատարվեց", MsgBoxStyle.Information, My.Application.Info.Title)
 

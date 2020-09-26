@@ -7204,6 +7204,18 @@ Partial Public Class DB
             connection.Close()
         End Using
     End Sub
+    'EnableBlockedGPRS3
+    Friend Sub EnableBlockedGPRS3(ByVal T As DataTable)
+        Using connection As New SqlConnection(SQLString)
+            Dim cmdSQLcom As New SqlCommand("Client.EnableBlockedGPRS3", connection)
+            cmdSQLcom.CommandType = CommandType.StoredProcedure
+            cmdSQLcom.Parameters.Add("@T", SqlDbType.Structured).Value = T
+            connection.Open()
+            cmdSQLcom.ExecuteNonQuery()
+            connection.Close()
+        End Using
+    End Sub
+
 
     'BlockGprsByEcr
     Friend Sub BlockGprsByEcr(ByVal T As DataTable)
@@ -7221,6 +7233,18 @@ Partial Public Class DB
     Friend Sub BlockGprsByEcr2(ByVal T As DataTable)
         Using connection As New SqlConnection(SQLString)
             Dim cmdSQLcom As New SqlCommand("Client.BlockGprsByEcr2", connection)
+            cmdSQLcom.CommandType = CommandType.StoredProcedure
+            cmdSQLcom.Parameters.Add("@T", SqlDbType.Structured).Value = T
+            connection.Open()
+            cmdSQLcom.ExecuteNonQuery()
+            connection.Close()
+        End Using
+    End Sub
+
+    'BlockGprsByEcr3
+    Friend Sub BlockGprsByEcr3(ByVal T As DataTable)
+        Using connection As New SqlConnection(SQLString)
+            Dim cmdSQLcom As New SqlCommand("Client.BlockGprsByEcr3", connection)
             cmdSQLcom.CommandType = CommandType.StoredProcedure
             cmdSQLcom.Parameters.Add("@T", SqlDbType.Structured).Value = T
             connection.Open()

@@ -165,6 +165,7 @@ Partial Class disabledEcrWindow
         '
         'mnuAllItems
         '
+        Me.mnuAllItems.Enabled = False
         Me.mnuAllItems.Name = "mnuAllItems"
         Me.mnuAllItems.Size = New System.Drawing.Size(184, 22)
         Me.mnuAllItems.Text = "Բոլորի Համար"
@@ -260,6 +261,7 @@ Partial Class disabledEcrWindow
         'btnDeleteSim
         '
         Me.btnDeleteSim.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnDeleteSim.Enabled = False
         Me.btnDeleteSim.Image = CType(resources.GetObject("btnDeleteSim.Image"), System.Drawing.Image)
         Me.btnDeleteSim.Location = New System.Drawing.Point(12, 233)
         Me.btnDeleteSim.Name = "btnDeleteSim"

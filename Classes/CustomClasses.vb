@@ -18,15 +18,19 @@ End Class
 
 Public Class gprsDelHvhhEcr
 
-    Public Sub New(ByVal _ecr As String, ByVal _hvhh As String, ByVal _id As Integer)
+    Public Sub New(ByVal _ecr As String, ByVal _hvhh As String, ByVal _id As Integer, ByVal _type As String, ByVal _operatorType As String)
         ID = _id
         Ecr = _ecr
         Hvhh = _hvhh
+        Type = _type
+        OperatorType = _operatorType
     End Sub
 
     Public Property Ecr As String
     Public Property Hvhh As String
     Public Property ID As Integer
+    Public Property Type As String
+    Public Property OperatorType As String
 
 End Class
 
@@ -34,10 +38,14 @@ Public Class BlockGprsByHdm
 
     Public Property Ecr As String
     Public Property DisableDate As Date
+    Public Property Type As String
+    Public Property OperatorType As String
 
-    Public Sub New(ByVal _ecr As String, ByVal _disableDate As Date)
+    Public Sub New(ByVal _ecr As String, ByVal _disableDate As Date, ByVal _type As String, ByVal _operatorType As String)
         Ecr = _ecr
         DisableDate = _disableDate
+        Type = _type
+        OperatorType = _operatorType
     End Sub
 
 End Class

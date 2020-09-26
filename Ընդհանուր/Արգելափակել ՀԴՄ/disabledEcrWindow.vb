@@ -3,6 +3,8 @@ Imports DevExpress.XtraGrid.Views.Grid
 Imports DevExpress.XtraGrid.Columns
 Imports DevExpress.XtraGrid.Views.Base
 Imports DevExpress.XtraGrid.Views.Grid.ViewInfo
+Imports HdmRouter
+Imports HdmRouter.Enum
 
 Public Class disabledEcrWindow
 
@@ -213,50 +215,65 @@ Public Class disabledEcrWindow
     End Sub
     Private Sub mnuAllItems_Click(sender As Object, e As EventArgs) Handles mnuAllItems.Click
         Dim formX As New Working
-        Try
-            If CheckPermission2("AD9777798F7749C09B35549E885BFF7D") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
+        'Try
+        '    If CheckPermission2("AD9777798F7749C09B35549E885BFF7D") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
 
-            If Not MsgBox("Ցանկանու՞մ եք հանել ՀԴՄ-ի արգելքը", MsgBoxStyle.Question + MsgBoxStyle.YesNo).Equals(MsgBoxResult.Yes) Then Exit Sub
+        '    If Not MsgBox("Ցանկանու՞մ եք հանել ՀԴՄ-ի արգելքը", MsgBoxStyle.Question + MsgBoxStyle.YesNo).Equals(MsgBoxResult.Yes) Then Exit Sub
 
-            formX.Show() : My.Application.DoEvents()
+        '    formX.Show() : My.Application.DoEvents()
 
-            Dim gphvhhecr As New List(Of gprsDelHvhhEcr)
+        '    Dim gphvhhecr As New List(Of gprsDelHvhhEcr)
 
-            Dim b As Boolean = False
+        '    Dim b As Boolean = False
 
-            For i As Integer = 0 To GridView1.RowCount - 1
-                For j As Integer = 0 To NotSupportedClients.Rows.Count - 1
-                    If GridView1.GetRowCellValue(i, "ՀՎՀՀ") = NotSupportedClients.Rows(j)("HVHH") Then b = True : Continue For
-                Next
+        '    For i As Integer = 0 To GridView1.RowCount - 1
+        '        For j As Integer = 0 To NotSupportedClients.Rows.Count - 1
+        '            If GridView1.GetRowCellValue(i, "ՀՎՀՀ") = NotSupportedClients.Rows(j)("HVHH") Then b = True : Continue For
+        '        Next
 
-                If b = True Then b = False : Continue For
+        '        If b = True Then b = False : Continue For
 
-                gphvhhecr.Add(New gprsDelHvhhEcr(
-                                            GridView1.GetRowCellValue(i, "ՀԴՄ"),
-                                            GridView1.GetRowCellValue(i, "ՀՎՀՀ"),
-                                            GridView1.GetRowCellValue(i, "RecID")))
-            Next
+        '        gphvhhecr.Add(New gprsDelHvhhEcr(
+        '                                    GridView1.GetRowCellValue(i, "ՀԴՄ"),
+        '                                    GridView1.GetRowCellValue(i, "ՀՎՀՀ"),
+        '                                    GridView1.GetRowCellValue(i, "RecID"),
+        '                                    GridView1.GetRowCellValue(i, "ՀԴՄ տեսակ"),
+        '                                    GridView1.GetRowCellValue(i, "Օպ")
+        '                                    ))
+        '    Next
 
-            Dim dt2 As DataTable = ToDataTable(gphvhhecr)
+        '    Dim dataTable As DataTable = ToDataTable(gphvhhecr)
 
-            If MOperator = "O" Then
-                iDB.EnableBlockedGPRS2(dt2)
-            Else
-                iDB.EnableBlockedGPRS(dt2)
-            End If
+        '    Dim dict = RoutingManager.GroupHdmsByType(dataTable)
 
-            MsgBox("Գործողությունը կատարվեց", MsgBoxStyle.Information, My.Application.Info.Title)
+        '    For Each pair In dict
 
-        Catch ex As ExceptionClass
-        Catch ex As System.Data.SqlClient.SqlException
-            Call SQLException(ex)
-        Catch ex As Exception
-            Call SoftException(ex)
-        Finally
-            formX.Close()
-            formX = Nothing
-            'btnQuery.PerformClick()
-        End Try
+        '        Select Case pair.Key
+        '            Case HdmType.Ucom
+        '                iDB.EnableBlockedGPRS2(pair.Value)
+        '            Case HdmType.Vivacell
+        '                iDB.EnableBlockedGPRS(pair.Value)
+        '            Case HdmType.Beeline
+        '                iDB.EnableBlockedGPRS(pair.Value)
+        '            Case HdmType.Android
+        '            Case HdmType.Pax
+        '                iDB.EnableBlockedGPRS3(pair.Value)
+        '            Case Else
+        '        End Select
+        '    Next
+
+        '    MsgBox("Գործողությունը կատարվեց", MsgBoxStyle.Information, My.Application.Info.Title)
+
+        'Catch ex As ExceptionClass
+        'Catch ex As System.Data.SqlClient.SqlException
+        '    Call SQLException(ex)
+        'Catch ex As Exception
+        '    Call SoftException(ex)
+        'Finally
+        '    formX.Close()
+        '    formX = Nothing
+        '    btnQuery.PerformClick()
+        'End Try
     End Sub
     Private Sub mnuOnlySelected_Click(sender As Object, e As EventArgs) Handles mnuOnlySelected.Click
         Dim formX As New Working
@@ -289,17 +306,31 @@ Public Class disabledEcrWindow
                 gphvhhecr.Add(New gprsDelHvhhEcr(
                                             GridView1.GetRowCellValue(i, "ՀԴՄ"),
                                             GridView1.GetRowCellValue(i, "ՀՎՀՀ"),
-                                            GridView1.GetRowCellValue(i, "RecID")))
-
+                                            GridView1.GetRowCellValue(i, "RecID"),
+                                            GridView1.GetRowCellValue(i, "ՀԴՄ տեսակ"),
+                                            GridView1.GetRowCellValue(i, "Օպ")
+                                            ))
             Next
 
-            Dim dt2 As DataTable = ToDataTable(gphvhhecr)
+            Dim dataTable As DataTable = ToDataTable(gphvhhecr)
 
-            If MOperator = "O" Then
-                iDB.EnableBlockedGPRS2(dt2)
-            Else
-                iDB.EnableBlockedGPRS(dt2)
-            End If
+            Dim dict = RoutingManager.GroupHdmsByType(dataTable)
+
+            For Each pair In dict
+
+                Select Case pair.Key
+                    Case HdmType.Ucom
+                        iDB.EnableBlockedGPRS2(pair.Value)
+                    Case HdmType.Vivacell
+                        iDB.EnableBlockedGPRS(pair.Value)
+                    Case HdmType.Beeline
+                        iDB.EnableBlockedGPRS(pair.Value)
+                    Case HdmType.Android
+                    Case HdmType.Pax
+                        iDB.EnableBlockedGPRS3(pair.Value)
+                    Case Else
+                End Select
+            Next
 
             MsgBox("Գործողությունը կատարվեց", MsgBoxStyle.Information, My.Application.Info.Title)
 
@@ -420,7 +451,7 @@ Public Class disabledEcrWindow
                     End If
                 Next
                 If isExists = False Then
-                    gphvhhecr.Add(New gprsDelHvhhEcr(rHDM, rHVHH, 0))
+                    gphvhhecr.Add(New gprsDelHvhhEcr(rHDM, rHVHH, 0, Nothing, Nothing))
                 End If
             Next
 
