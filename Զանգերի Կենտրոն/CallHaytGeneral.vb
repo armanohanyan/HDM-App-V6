@@ -508,9 +508,12 @@ Public Class CallHaytGeneral
                 End If
             End If
 
-            'Ուղարկել Վաճառքի SMS
-            If cProb.SelectedIndex = 8 Then 'Arman
+
+            If cProb.SelectedIndex = 8 Then 'Arman 'Ուղարկել Վաճառքի SMS
                 SendSmsForSell(txtHVHH.Text)
+            ElseIf cProb.SelectedIndex = 9 Then 'ՀԴՄ Վաճառքի SMS հաճախորդին
+                Dim text As String = iDB.GetRekvizitsForSMS(cbSupporter.SelectedValue)
+                SendSmsForSellEcr(txtHVHH.Text, text, txtTel.Text.Trim)
             End If
 
             MsgBox("Տվյալները ավելացվեցին", MsgBoxStyle.Information, My.Application.Info.Title)
@@ -834,7 +837,6 @@ Public Class CallHaytGeneral
             clientTel = clientTel.Substring(0, 8)
         End If
 
-
         'Send SMS
         SMSToOperatorForSell(smsText, clientTel, "")
 
@@ -847,6 +849,19 @@ Public Class CallHaytGeneral
 
         Dim s As String = HVHH & "HVHH-i hamar katarel vajarq"
         Dim ToTel As String = GetTelNumber()
+
+        'Send SMS
+        SMSToOperatorForSell(s, ToTel, HVHH)
+
+        'Save To DB
+        'iDB.InsertSMSForREmake(HVHH, iUser.LoginName)
+
+    End Sub
+    Private Sub SendSmsForSellEcr(ByVal HVHH As String, ByVal Text As String, ByVal Tel As String)
+        On Error Resume Next
+
+        Dim s As String = Text
+        Dim ToTel As String = Tel
 
         'Send SMS
         SMSToOperatorForSell(s, ToTel, HVHH)

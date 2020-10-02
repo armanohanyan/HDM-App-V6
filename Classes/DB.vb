@@ -1138,7 +1138,7 @@ Partial Public Class DB
         Return dt
     End Function
 
-    'GetSMSTitles
+    'GetSMSText
     Friend Function GetSMSText(ID As Integer) As String
         Dim t As String
         Using cnn As New SqlConnection(SQLString)
@@ -1148,6 +1148,22 @@ Partial Public Class DB
                 cmd.CommandType = CommandType.Text
                 cmd.Parameters.Add("@ID", SqlDbType.TinyInt).Value = ID
                 cmd.CommandText = "SELECT * FROM Client.GetSMSText(@ID)"
+                t = cmd.ExecuteScalar
+            End Using
+        End Using
+        Return t
+    End Function
+
+    'GetRekvizitsForSMS
+    Friend Function GetRekvizitsForSMS(SuporterID As Integer) As String
+        Dim t As String
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.Add("@SuporterID", SqlDbType.TinyInt).Value = SuporterID
+                cmd.CommandText = "SELECT * FROM Client.GetRekvizitsForSMS(@SuporterID)"
                 t = cmd.ExecuteScalar
             End Using
         End Using
