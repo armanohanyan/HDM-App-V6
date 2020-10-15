@@ -450,6 +450,9 @@ Public Class CallHaytGeneral
         Try
             'If MsgBox("Ցանկանու՞մ եք ավելացնել հայտ", MsgBoxStyle.Question + MsgBoxStyle.YesNo, My.Application.Info.Title) <> MsgBoxResult.Yes Then Exit Sub
 
+            If txtTel.Text.Trim = String.Empty Then Throw New Exception("Հեռախոսը պարտադիր է")
+            If txtHVHH.Text.Trim = String.Empty Then Throw New Exception("Հաճախորդի ՀՎՀՀ-ն պարտադիր է")
+
             If String.IsNullOrEmpty(txtEcr.Text) AndAlso
                String.IsNullOrEmpty(txtHVHH.Text) AndAlso
                String.IsNullOrEmpty(txtAddress.Text) AndAlso
@@ -458,8 +461,6 @@ Public Class CallHaytGeneral
                String.IsNullOrEmpty(txtTel.Text) Then
                 Throw New Exception("Հայտի համար հարկավոր է լրացնել որևէ ինֆորմացիա")
             End If
-
-            If txtTel.Text.Trim = String.Empty Then Throw New Exception("Հեռախոսը պարտադիր է")
 
             If txtEcr.Text.Trim.Length = 12 Then If isHDMExists(txtEcr.Text.Trim) = True Then Throw New Exception("Սույն ՀԴՄ-ի համար հայտը ակտիվ է")
 
@@ -618,10 +619,18 @@ Public Class CallHaytGeneral
                 cbRemProblem.Enabled = False
                 Label3.ForeColor = Color.Red
                 sDate.DateTime = DateAdd(DateInterval.Hour, 1, Now)
-            Case 9  'ՀԴՄ Վաճառքի հայտ
+            Case 9  'ՀԴՄ Վաճառք
                 txtProblem.Text = "ՀԴՄ քանակ՝ "
                 cbRemProblem.Enabled = False
                 sDate.DateTime = DateAdd(DateInterval.Day, 1, Now)
+            Case 10  'ՀԴՄ Վաճառք ապառիկ
+                txtProblem.Text = "ՀԴՄ քանակ՝ "
+                cbRemProblem.Enabled = False
+                sDate.DateTime = DateAdd(DateInterval.Day, 3, Now)
+            Case 11  'ՀԴՄ Վաճառք Ֆիզ անձ
+                txtProblem.Text = "ՀԴՄ քանակ՝ "
+                cbRemProblem.Enabled = False
+                sDate.DateTime = DateAdd(DateInterval.Day, 3, Now)
         End Select
     End Sub
     Private Sub cbEcr_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEcr.SelectedIndexChanged
@@ -721,7 +730,7 @@ Public Class CallHaytGeneral
                 Throw New Exception("Սպասարկող կազմակերպությունը ընտրված չէ։")
             End If
             Call CloseWindow("nCustomCallCenterSMS")
-            Dim f As New CustomCallCenterSMS With {.SupporterID = cbSupporter.SelectedValue, .HVHH = txtHVHH.Text.Trim}
+            Dim f As New CustomCallCenterSMS With {.SupporterID = cbSupporter.SelectedValue, .HVHH = txtHVHH.Text.Trim, .Tel = txtTel.Text.Trim}
             AddChildForm("nCustomCallCenterSMS", f)
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Տվյալները թերի են լրացված", MessageBoxButtons.OK, MessageBoxIcon.Error)

@@ -91,13 +91,24 @@ Public Class SelectEquipmentSellType
                 rClient.Enabled = False
                 txtHVHH.Enabled = False
 
-                If txtHVHH.Text.Trim = cbBvhhList.Text.Trim Then
-                    If dt3.Rows.Count > 0 Then
-                        Dim i As Integer = cbBvhhList.SelectedIndex
-                        'cSeller.SelectedValue = dt3.Rows(i)("Սպասարկող")
-                        PropID = dt3.Rows(i)("ՀՀ")
-                    End If
+                If dt3.Rows.Count > 0 Then
+                    For i = 0 To dt3.Rows.Count - 1
+                        If txtHVHH.Text.Trim = dt3.Rows(i)("ՀՎՀՀ").ToString Then
+                            'If txtHVHH.Text.Trim = cbHvhhList.Text.Trim Then
+                            'Dim i As Integer = cbHvhhList.SelectedIndex
+                            'cSeller.SelectedValue = dt3.Rows(i)("Սպասարկող")
+                            PropID = dt3.Rows(i)("ՀՀ")
+                        End If
+                    Next
                 End If
+
+                'If txtHVHH.Text.Trim = cbBvhhList.Text.Trim Then
+                '    If dt3.Rows.Count > 0 Then
+                '        Dim i As Integer = cbBvhhList.SelectedIndex
+                '        'cSeller.SelectedValue = dt3.Rows(i)("Սպասարկող")
+                '        PropID = dt3.Rows(i)("ՀՀ")
+                '    End If
+                'End If
 
                 'OK
                 Call NextStep()

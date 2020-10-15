@@ -26,6 +26,7 @@ Partial Class CallHaytGeneral
         Me.FormAssistant1 = New DevExpress.XtraBars.FormAssistant()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.btnAdd = New DevExpress.XtraEditors.SimpleButton()
         Me.btnSendSMS = New DevExpress.XtraEditors.SimpleButton()
         Me.txtTesuch = New DevExpress.XtraEditors.TextEdit()
         Me.cbRegion = New System.Windows.Forms.ComboBox()
@@ -54,7 +55,6 @@ Partial Class CallHaytGeneral
         Me.bEcr = New DevExpress.XtraEditors.SimpleButton()
         Me.txtEcr = New System.Windows.Forms.TextBox()
         Me.btnClean = New DevExpress.XtraEditors.SimpleButton()
-        Me.btnAdd = New DevExpress.XtraEditors.SimpleButton()
         Me.cbSupporter = New System.Windows.Forms.ComboBox()
         Me.sDate = New DevExpress.XtraEditors.DateEdit()
         Me.txtTel = New DevExpress.XtraEditors.TextEdit()
@@ -164,6 +164,15 @@ Partial Class CallHaytGeneral
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(294, 655)
         Me.Panel1.TabIndex = 0
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
+        Me.btnAdd.Location = New System.Drawing.Point(9, 604)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(272, 32)
+        Me.btnAdd.TabIndex = 9
+        Me.btnAdd.Text = "Ավելացնել հայտ / տրամադրել փոխարինող"
         '
         'btnSendSMS
         '
@@ -300,7 +309,7 @@ Partial Class CallHaytGeneral
         '
         Me.cProb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cProb.FormattingEnabled = True
-        Me.cProb.Items.AddRange(New Object() {"Այլ", "Վերագրանցում", "Ապաակտիվացում", "Հարկատեսակի փոփոխում", "Բաժին ավելացնել", "Համաձայնագիր", "Պայմանագիր", "Վերանորոգման Հայտ", "Վաճառք", "ՀԴՄ վաճառքի Հայտ"})
+        Me.cProb.Items.AddRange(New Object() {"Այլ", "Վերագրանցում", "Ապաակտիվացում", "Հարկատեսակի փոփոխում", "Բաժին ավելացնել", "Համաձայնագիր", "Պայմանագիր", "Վերանորոգման Հայտ", "Վաճառք", "ՀԴՄ վաճառք", "ՀԴՄ վաճառք ապառիկ", "ՀԴՄ վաճառք ֆիզ անձ"})
         Me.cProb.Location = New System.Drawing.Point(82, 275)
         Me.cProb.Name = "cProb"
         Me.cProb.Size = New System.Drawing.Size(199, 21)
@@ -435,15 +444,6 @@ Partial Class CallHaytGeneral
         Me.btnClean.Text = "Մաքրել"
         Me.btnClean.Visible = False
         '
-        'btnAdd
-        '
-        Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
-        Me.btnAdd.Location = New System.Drawing.Point(9, 604)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(272, 32)
-        Me.btnAdd.TabIndex = 9
-        Me.btnAdd.Text = "Ավելացնել հայտ / տրամադրել փոխարինող"
-        '
         'cbSupporter
         '
         Me.cbSupporter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -577,11 +577,11 @@ Partial Class CallHaytGeneral
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(11, 64)
+        Me.Label2.Location = New System.Drawing.Point(3, 64)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(32, 13)
+        Me.Label2.Size = New System.Drawing.Size(50, 13)
         Me.Label2.TabIndex = 25
-        Me.Label2.Text = "ՀՎՀՀ"
+        Me.Label2.Text = "ՀՎՀՀ/ ID"
         '
         'Label1
         '

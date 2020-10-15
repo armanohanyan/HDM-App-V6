@@ -255,7 +255,7 @@ Partial Public Class DB
             Using cmd As New SqlCommand
                 cmd.Connection = cnn
                 cmd.CommandType = CommandType.Text
-                cmd.CommandText = "SELECT ID ՀՀ,Name Տեսուչ FROM Client.GetEcrTesuch()"
+                cmd.CommandText = "SELECT ID, Name FROM Client.GetEcrTesuch()"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)
@@ -1091,7 +1091,7 @@ Partial Public Class DB
             Using cmd As New SqlCommand
                 cmd.Connection = cnn
                 cmd.CommandType = CommandType.Text
-                cmd.CommandText = "SELECT ՀՀ,Տարիֆ FROM Payment.GetTarif()"
+                cmd.CommandText = "SELECT ՀՀ,Տարիֆ FROM Payment.GetTarif() order by Տարիֆ"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)
@@ -1197,6 +1197,43 @@ Partial Public Class DB
                 cmd.Connection = cnn
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = "SELECT * FROM Client.GetHVHHsForSellEcr()"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    'GetHVHHsForSellEcrFiz
+    Friend Function GetHVHHsForSellEcrFiz() As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT * FROM Client.GetHVHHsForSellEcrFiz()"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    'GetProposalDatales
+    Friend Function GetProposalDatales(ByVal PropId As Integer) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT * FROM Client.GetProposalDatales(@PropId)"
+                cmd.Parameters.Add("@PropId", SqlDbType.Int).Value = PropId
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)

@@ -242,7 +242,7 @@ Partial Class changeGeneralHaytInfo
         '
         Me.cProb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cProb.FormattingEnabled = True
-        Me.cProb.Items.AddRange(New Object() {"Այլ", "Վերագրանցում", "Ապաակտիվացում", "Հարկատեսակի փոփոխում", "Բաժին ավելացնել", "Համաձայնագիր", "Պայմանագիր", "Վերանորոգման Հայտ", "Վաճառք", "ՀԴՄ վաճառքի Հայտ"})
+        Me.cProb.Items.AddRange(New Object() {"Այլ", "Վերագրանցում", "Ապաակտիվացում", "Հարկատեսակի փոփոխում", "Բաժին ավելացնել", "Համաձայնագիր", "Պայմանագիր", "Վերանորոգման Հայտ", "Վաճառք", "ՀԴՄ վաճառք", "ՀԴՄ վաճառք ապառիկ", "ՀԴՄ վաճառք ֆիզ անձ"})
         Me.cProb.Location = New System.Drawing.Point(92, 153)
         Me.cProb.Name = "cProb"
         Me.cProb.Size = New System.Drawing.Size(181, 21)

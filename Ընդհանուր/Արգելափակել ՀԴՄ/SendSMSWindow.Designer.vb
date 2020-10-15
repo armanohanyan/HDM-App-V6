@@ -34,6 +34,8 @@ Partial Class SendSMSWindow
         Me.mnuExportToExcel = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Timex2 = New DevExpress.XtraEditors.DateEdit()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.rbForBlockExcel = New System.Windows.Forms.RadioButton()
         Me.rbBlockedExcel = New System.Windows.Forms.RadioButton()
         Me.btnSendFromExcell = New DevExpress.XtraEditors.SimpleButton()
@@ -67,6 +69,8 @@ Partial Class SendSMSWindow
         Me.mnuContext.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        CType(Me.Timex2.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Timex2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cAllClients.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         CType(Me.TimeX.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -136,11 +140,13 @@ Partial Class SendSMSWindow
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(200, 607)
+        Me.Panel1.Size = New System.Drawing.Size(200, 631)
         Me.Panel1.TabIndex = 1
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.Timex2)
+        Me.GroupBox4.Controls.Add(Me.Label4)
         Me.GroupBox4.Controls.Add(Me.rbForBlockExcel)
         Me.GroupBox4.Controls.Add(Me.rbBlockedExcel)
         Me.GroupBox4.Controls.Add(Me.btnSendFromExcell)
@@ -149,10 +155,31 @@ Partial Class SendSMSWindow
         Me.GroupBox4.ForeColor = System.Drawing.Color.Red
         Me.GroupBox4.Location = New System.Drawing.Point(6, 446)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(187, 151)
+        Me.GroupBox4.Size = New System.Drawing.Size(187, 172)
         Me.GroupBox4.TabIndex = 14
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Կասեցվածներ Excell-ից"
+        '
+        'Timex2
+        '
+        Me.Timex2.EditValue = Nothing
+        Me.Timex2.Location = New System.Drawing.Point(63, 78)
+        Me.Timex2.Name = "Timex2"
+        Me.Timex2.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.[False]
+        Me.Timex2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.Timex2.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.Timex2.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.DateTimeAdvancingCaret
+        Me.Timex2.Size = New System.Drawing.Size(114, 20)
+        Me.Timex2.TabIndex = 16
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(3, 81)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(54, 13)
+        Me.Label4.TabIndex = 17
+        Me.Label4.Text = "Ամսաթիվ"
         '
         'rbForBlockExcel
         '
@@ -180,7 +207,7 @@ Partial Class SendSMSWindow
         '
         Me.btnSendFromExcell.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnSendFromExcell.Image = CType(resources.GetObject("btnSendFromExcell.Image"), System.Drawing.Image)
-        Me.btnSendFromExcell.Location = New System.Drawing.Point(6, 115)
+        Me.btnSendFromExcell.Location = New System.Drawing.Point(8, 139)
         Me.btnSendFromExcell.Name = "btnSendFromExcell"
         Me.btnSendFromExcell.Size = New System.Drawing.Size(109, 27)
         Me.btnSendFromExcell.TabIndex = 13
@@ -190,7 +217,7 @@ Partial Class SendSMSWindow
         '
         Me.btnLoadFromExcell.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnLoadFromExcell.Image = CType(resources.GetObject("btnLoadFromExcell.Image"), System.Drawing.Image)
-        Me.btnLoadFromExcell.Location = New System.Drawing.Point(5, 82)
+        Me.btnLoadFromExcell.Location = New System.Drawing.Point(7, 106)
         Me.btnLoadFromExcell.Name = "btnLoadFromExcell"
         Me.btnLoadFromExcell.Size = New System.Drawing.Size(111, 27)
         Me.btnLoadFromExcell.TabIndex = 12
@@ -469,7 +496,7 @@ Partial Class SendSMSWindow
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(628, 607)
+        Me.GridControl1.Size = New System.Drawing.Size(628, 631)
         Me.GridControl1.TabIndex = 5
         Me.GridControl1.TabStop = False
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
@@ -489,7 +516,7 @@ Partial Class SendSMSWindow
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(828, 607)
+        Me.ClientSize = New System.Drawing.Size(828, 631)
         Me.Controls.Add(Me.GridControl1)
         Me.Controls.Add(Me.Panel1)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
@@ -501,6 +528,8 @@ Partial Class SendSMSWindow
         Me.Panel1.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        CType(Me.Timex2.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Timex2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cAllClients.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
@@ -556,4 +585,6 @@ Partial Class SendSMSWindow
     Friend WithEvents rbSmart As System.Windows.Forms.RadioButton
     Friend WithEvents rbForBlockExcel As System.Windows.Forms.RadioButton
     Friend WithEvents rbBlockedExcel As System.Windows.Forms.RadioButton
+    Friend WithEvents Timex2 As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class

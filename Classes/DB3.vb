@@ -784,6 +784,25 @@ Partial Public Class DB
         Return dt
     End Function
 
+    'GetOpenPropDetailsSellEcr
+    Friend Function GetOpenPropDetailsSellEcr(ByVal isRegion As Boolean) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "EXEC Client.GetOpenPropDetailsSellEcr @isRegion"
+                cmd.Parameters.Add("@isRegion", SqlDbType.Bit).Value = isRegion
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
     'GetDisolvedWorking
     Friend Function GetDisolvedWorking() As DataTable
         Dim dt As DataTable
@@ -985,6 +1004,24 @@ Partial Public Class DB
                 cmd.Connection = cnn
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = "SELECT * FROM Client.GetEcrPoakToOfficeTotals()"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    'GetEcrPoakToOfficeMnacord
+    Friend Function GetEcrPoakToOfficeMnacord() As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT * FROM Client.GetEcrPoakToOfficeMnacord()"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)

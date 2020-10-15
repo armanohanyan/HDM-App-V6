@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>3998</ApplicationRevision>
+    <ApplicationRevision>4006</ApplicationRevision>
     <ApplicationVersion>6.4.20.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -416,6 +416,12 @@
       <DependentUpon>OpenPropList.vb</DependentUpon>
     </Compile>
     <Compile Include="Զանգերի Կենտրոն\OpenPropList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\OpenPropListSellEcr.designer.vb">
+      <DependentUpon>OpenPropListSellEcr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\OpenPropListSellEcr.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Զանգերի Կենտրոն\OpenPropSelector.Designer.vb">
@@ -2329,6 +2335,9 @@
     <EmbeddedResource Include="Զանգերի Կենտրոն\OpenPropList.resx">
       <DependentUpon>OpenPropList.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\OpenPropListSellEcr.resx">
+      <DependentUpon>OpenPropListSellEcr.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\OpenPropSelector.resx">
       <DependentUpon>OpenPropSelector.vb</DependentUpon>

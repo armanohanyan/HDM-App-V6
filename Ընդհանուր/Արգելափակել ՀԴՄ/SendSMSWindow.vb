@@ -341,7 +341,14 @@ Public Class SendSMSWindow
             .Properties.ShowToday = True
             .Properties.ShowClear = False
         End With
-
+        With Timex2
+            '.DateTime = Now
+            .Properties.DisplayFormat.FormatType = FormatType.DateTime
+            .Properties.DisplayFormat.FormatString = "dd.MM.yyyy"
+            .Properties.ShowToday = True
+            .Properties.ShowClear = False
+            .Enabled = False
+        End With
         If iUser.DB <> 5 Then
             If iUser.DB = 1 Then rbShtrikh.Checked = True
             If iUser.DB = 2 Then rbTama.Checked = True
@@ -709,6 +716,11 @@ Public Class SendSMSWindow
 
                 'Message
 
+                Dim blockDate As String = ""
+                If Timex2.DateTime.Date > DateTime.Now Then
+                    blockDate = ".Kasecman amsativ` " & Timex2.DateTime.Date
+                End If
+
                 If rbBlockedExcel.Checked Then
                     If op = 8 Then
                         msg.Text = dt.Rows(i)("ՀՎՀՀ") & " Dzer hashvekshiry kazmum e " & dt.Rows(i)("Պարտք") & " dr. Xndrum enq katarel vcharum ashxatanqy sharunakelu hamar. Smarts.am 060 400005․ Hashvehamar 220563330442000"
@@ -718,8 +730,13 @@ Public Class SendSMSWindow
                 ElseIf rbForBlockExcel.Checked = True Then
                     If op = 8 Then
                         msg.Text = dt.Rows(i)("ՀՎՀՀ") & "  Dzer hashvekshirn e " & dt.Rows(i)("Պարտք") & " dr. Xndrum enq katarel vcharum HDM-i anxapan ashxatanqi hamar. Smart Solutions 060 400005. Hashvehamar 220563330442000"
+                    ElseIf op = 4 Then
+                        'msg.Text = "Hargeli gorcynker HVHH " & dt.Rows(i)("ՀՎՀՀ") & " Dzer kazmakerputyunn uni partq " & dt.Rows(i)("Պարտք") & " dram.Xndrum enq katarel vjarum." 'Hashvehamar 217005026273001.Her " & strTel
+                        'msg.Text = "Hargeli gorcynker HVHH " & dt.Rows(i)("ՀՎՀՀ") & " Dzer kazmakerputyunn uni partq " & dt.Rows(i)("Պարտք") & " dram.Xndrum enq katarel vjarum.Kasecman amsativ` " & TimeX2.DateTime.Date & ".Her " & strTel
+                        msg.Text = "Hargeli gorcynker HVHH " & dt.Rows(i)("ՀՎՀՀ") & " Dzer kazmakerputyunn uni partq " & dt.Rows(i)("Պարտք") & "dr.Xndrum enq vjarel,H/H 217005026273001" & blockDate & ".Her " & strTel
+                        'msg.Text = "test2"
                     Else
-                        msg.Text = "Hargeli gorcynker HVHH " & dt.Rows(i)("ՀՎՀՀ") & " Dzer kazmakerputyunn uni partq " & dt.Rows(i)("Պարտք") & " dram.Xndrum enq katarel vjarum.Kasecman amsativ` " & TimeX.DateTime.Date & ".Her " & strTel
+                        msg.Text = "Hargeli gorcynker HVHH " & dt.Rows(i)("ՀՎՀՀ") & " Dzer kazmakerputyunn uni partq " & dt.Rows(i)("Պարտք") & " dram.Xndrum enq katarel vjarum.Her " & strTel
                     End If
                 End If
 
@@ -766,5 +783,11 @@ Public Class SendSMSWindow
             MsgBox(ex.Message, MsgBoxStyle.Critical, My.Application.Info.Title)
             Call KillClient(client)
         End Try
+    End Sub
+    Private Sub rbBlockedExcel_CheckedChanged(sender As Object, e As EventArgs) Handles rbBlockedExcel.CheckedChanged
+        Timex2.Enabled = False
+    End Sub
+    Private Sub rbForBlockExcel_CheckedChanged(sender As Object, e As EventArgs) Handles rbForBlockExcel.CheckedChanged
+        Timex2.Enabled = True
     End Sub
 End Class

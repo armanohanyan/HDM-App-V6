@@ -24,7 +24,7 @@ Partial Class MainWindow
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainWindow))
-        Dim PushTransition1 As DevExpress.Utils.Animation.PushTransition = New DevExpress.Utils.Animation.PushTransition()
+        Dim PushTransition2 As DevExpress.Utils.Animation.PushTransition = New DevExpress.Utils.Animation.PushTransition()
         Me.FormAssistant1 = New DevExpress.XtraBars.FormAssistant()
         Me.RibbonPanel = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.MainMenu = New DevExpress.XtraBars.Ribbon.BackstageViewControl()
@@ -290,10 +290,10 @@ Partial Class MainWindow
         Me.MenuPanel = New DevExpress.XtraBars.Docking.DockPanel()
         Me.DockPanel1_Container = New DevExpress.XtraBars.Docking.ControlContainer()
         Me.NavBarControl1 = New DevExpress.XtraNavBar.NavBarControl()
-        Me.NavBarGroup6 = New DevExpress.XtraNavBar.NavBarGroup()
-        Me.NavBarGroupControlContainer6 = New DevExpress.XtraNavBar.NavBarGroupControlContainer()
-        Me.RepTreeList = New DevExpress.XtraTreeList.TreeList()
-        Me.TreeListColumn1 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
+        Me.NavBarGroup3 = New DevExpress.XtraNavBar.NavBarGroup()
+        Me.NavBarGroupControlContainer3 = New DevExpress.XtraNavBar.NavBarGroupControlContainer()
+        Me.AcountTreeList = New DevExpress.XtraTreeList.TreeList()
+        Me.TreeListColumn4 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.ImageCollection1 = New DevExpress.Utils.ImageCollection(Me.components)
         Me.NavBarGroupControlContainer1 = New DevExpress.XtraNavBar.NavBarGroupControlContainer()
         Me.ActionTreeList = New DevExpress.XtraTreeList.TreeList()
@@ -301,15 +301,15 @@ Partial Class MainWindow
         Me.NavBarGroupControlContainer2 = New DevExpress.XtraNavBar.NavBarGroupControlContainer()
         Me.WareHouseTreeList = New DevExpress.XtraTreeList.TreeList()
         Me.TreeListColumn2 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
-        Me.NavBarGroupControlContainer3 = New DevExpress.XtraNavBar.NavBarGroupControlContainer()
-        Me.AcountTreeList = New DevExpress.XtraTreeList.TreeList()
-        Me.TreeListColumn4 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.NavBarGroupControlContainer5 = New DevExpress.XtraNavBar.NavBarGroupControlContainer()
         Me.CallCenterTreeList = New DevExpress.XtraTreeList.TreeList()
         Me.TreeListColumn5 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
+        Me.NavBarGroupControlContainer6 = New DevExpress.XtraNavBar.NavBarGroupControlContainer()
+        Me.RepTreeList = New DevExpress.XtraTreeList.TreeList()
+        Me.TreeListColumn1 = New DevExpress.XtraTreeList.Columns.TreeListColumn()
         Me.NavBarGroup1 = New DevExpress.XtraNavBar.NavBarGroup()
         Me.NavBarGroup2 = New DevExpress.XtraNavBar.NavBarGroup()
-        Me.NavBarGroup3 = New DevExpress.XtraNavBar.NavBarGroup()
+        Me.NavBarGroup6 = New DevExpress.XtraNavBar.NavBarGroup()
         Me.NavBarGroup5 = New DevExpress.XtraNavBar.NavBarGroup()
         Me.DockPanel1 = New DevExpress.XtraBars.Docking.DockPanel()
         Me.ControlContainer3 = New DevExpress.XtraBars.Docking.ControlContainer()
@@ -442,17 +442,17 @@ Partial Class MainWindow
         Me.DockPanel1_Container.SuspendLayout()
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NavBarControl1.SuspendLayout()
-        Me.NavBarGroupControlContainer6.SuspendLayout()
-        CType(Me.RepTreeList, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.NavBarGroupControlContainer3.SuspendLayout()
+        CType(Me.AcountTreeList, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ImageCollection1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NavBarGroupControlContainer1.SuspendLayout()
         CType(Me.ActionTreeList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NavBarGroupControlContainer2.SuspendLayout()
         CType(Me.WareHouseTreeList, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.NavBarGroupControlContainer3.SuspendLayout()
-        CType(Me.AcountTreeList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.NavBarGroupControlContainer5.SuspendLayout()
         CType(Me.CallCenterTreeList, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.NavBarGroupControlContainer6.SuspendLayout()
+        CType(Me.RepTreeList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DockPanel1.SuspendLayout()
         Me.ControlContainer3.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -2682,7 +2682,7 @@ Partial Class MainWindow
         '
         'NavBarControl1
         '
-        Me.NavBarControl1.ActiveGroup = Me.NavBarGroup6
+        Me.NavBarControl1.ActiveGroup = Me.NavBarGroup3
         Me.NavBarControl1.Controls.Add(Me.NavBarGroupControlContainer1)
         Me.NavBarControl1.Controls.Add(Me.NavBarGroupControlContainer2)
         Me.NavBarControl1.Controls.Add(Me.NavBarGroupControlContainer3)
@@ -2699,133 +2699,97 @@ Partial Class MainWindow
         Me.NavBarControl1.TabIndex = 0
         Me.NavBarControl1.Text = "NavBarControl1"
         '
-        'NavBarGroup6
+        'NavBarGroup3
         '
-        Me.NavBarGroup6.Caption = "Հաշվետվություն"
-        Me.NavBarGroup6.ControlContainer = Me.NavBarGroupControlContainer6
-        Me.NavBarGroup6.Expanded = True
-        Me.NavBarGroup6.GroupClientHeight = 197
-        Me.NavBarGroup6.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer
-        Me.NavBarGroup6.Name = "NavBarGroup6"
-        Me.NavBarGroup6.SmallImage = CType(resources.GetObject("NavBarGroup6.SmallImage"), System.Drawing.Image)
+        Me.NavBarGroup3.Caption = "Հաշվապահություն"
+        Me.NavBarGroup3.ControlContainer = Me.NavBarGroupControlContainer3
+        Me.NavBarGroup3.Expanded = True
+        Me.NavBarGroup3.GroupClientHeight = 187
+        Me.NavBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer
+        Me.NavBarGroup3.Name = "NavBarGroup3"
+        Me.NavBarGroup3.SmallImage = CType(resources.GetObject("NavBarGroup3.SmallImage"), System.Drawing.Image)
         '
-        'NavBarGroupControlContainer6
+        'NavBarGroupControlContainer3
         '
-        Me.NavBarGroupControlContainer6.Appearance.BackColor = System.Drawing.SystemColors.Control
-        Me.NavBarGroupControlContainer6.Appearance.Options.UseBackColor = True
-        Me.NavBarGroupControlContainer6.Controls.Add(Me.RepTreeList)
-        Me.NavBarGroupControlContainer6.Name = "NavBarGroupControlContainer6"
-        Me.NavBarGroupControlContainer6.Size = New System.Drawing.Size(267, 293)
-        Me.NavBarGroupControlContainer6.TabIndex = 5
+        Me.NavBarGroupControlContainer3.Controls.Add(Me.AcountTreeList)
+        Me.NavBarGroupControlContainer3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.NavBarGroupControlContainer3.Name = "NavBarGroupControlContainer3"
+        Me.NavBarGroupControlContainer3.Size = New System.Drawing.Size(267, 293)
+        Me.NavBarGroupControlContainer3.TabIndex = 2
         '
-        'RepTreeList
+        'AcountTreeList
         '
-        Me.RepTreeList.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn1})
-        Me.RepTreeList.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.RepTreeList.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RepTreeList.Location = New System.Drawing.Point(0, 0)
-        Me.RepTreeList.Name = "RepTreeList"
-        Me.RepTreeList.BeginUnboundLoad()
-        Me.RepTreeList.AppendNode(New Object() {"Սպասարկող"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Կազմ-Տարած-ՀԴՄ Քանակ"}, 0, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Վճարներ"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Վճար"}, 2, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Բանկային Մուտքեր"}, 2, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Պարտք - Հավելավճար"}, 2, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Դեբետ - Կրեդետ"}, 2, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Ամփոփ Հաշվետվություն"}, 2, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Ամփոփ Հաշվետվություն 2"}, 2, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Պարտք Ըստ Պատկանելության"}, 2, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Վերանորոգում"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Քանակային Հաշվետվություն"}, 10, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Տևողության Հաշվետվություն"}, 10, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Վերանորոգում"}, 10, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Կրկնվող Վերանորոգումներ"}, 10, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Անվճար Վերանորոգումներ"}, 10, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"ՀԴՄ-ի Տեղաշարժ"}, 10, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Ուղարկված SMS"}, 10, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Տեսուչի Վերանորոգումներ"}, 10, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"ՀԾ"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"ՀԾ Կոդի Փոփոխում"}, 19, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Փոխարինման ՀԴՄ-ներ"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Ազատ փոխարինողներ"}, 21, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Փոխարինման ՀԴՄ-ներ"}, 21, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Պատկան ՀԴՄ-ներ Սրահում"}, 21, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"ՀԴՄ Փոխարինման Պատմություն"}, 21, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Առանց Հայտի Փոխարինող ՀԴՄ"}, 21, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Փոխարինող ՀԴՄ Տարբերություն"}, 21, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Հաշիվ Ապրանքագիր"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Չվերադարձված"}, 28, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Սպասարկման"}, 28, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Վերանորոգման"}, 28, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Վաճառքի"}, 28, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Շրջիկ"}, 28, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Բոլորը"}, 28, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Տեսուչ"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Տեսուչի Այցելություն"}, 35, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Տեսուչի ՀԴՄ"}, 35, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Վերագրանցում"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Վերագրանցում"}, 38, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Արգելափակ GPRS"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Արգելափակված GPRS"}, 40, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Արգելափակման Ենթակա"}, 40, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Նամակներ և SMS"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Ուղարկված Նամակներ"}, 43, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Ուղարկված SMS-ներ"}, 43, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"GPRS"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"GPRS-ի Փոփոխություն"}, 46, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Առկա GPRS Քարտեր"}, 46, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Ավելացված Բայց Չհաստատված Քարտ"}, 46, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Orange Ընթացիկ Կարգավիճակներ"}, 46, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"GPRS Իրական Կարգավիճակ"}, 46, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"ՀԴՄ Վիճակագրություն"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"ՀԴՄ Վիճակագրություն"}, 52, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Հեռախոսահամարներ"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Գործընկերոջ Հեռախոսահամարներ"}, 54, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Լոգ"}, -1, 18, 18, -1)
-        Me.RepTreeList.AppendNode(New Object() {"TelCell Events"}, 56, 18, 18, -1)
-        Me.RepTreeList.AppendNode(New Object() {"TelCell Payments"}, 56, 18, 18, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Orange Events"}, 56, 18, 18, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Կոորդինատներ"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Հայտեր"}, 60, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Տեսուչ ՀԴՄ Վիճակագրություն"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Տեսուչ ՀԴՄ Հաշվետվություն"}, 62, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Ֆիզ Անձ"}, -1, 2, 2, -1)
-        Me.RepTreeList.AppendNode(New Object() {"Ֆիզ Անձիք"}, 64, 2, 2, -1)
-        Me.RepTreeList.EndUnboundLoad()
-        Me.RepTreeList.OptionsBehavior.EnableFiltering = True
-        Me.RepTreeList.OptionsLayout.AddNewColumns = False
-        Me.RepTreeList.OptionsMenu.EnableColumnMenu = False
-        Me.RepTreeList.OptionsMenu.EnableFooterMenu = False
-        Me.RepTreeList.OptionsMenu.ShowAutoFilterRowItem = False
-        Me.RepTreeList.OptionsPrint.PrintHorzLines = False
-        Me.RepTreeList.OptionsPrint.PrintPageHeader = False
-        Me.RepTreeList.OptionsPrint.PrintReportFooter = False
-        Me.RepTreeList.OptionsPrint.PrintTree = False
-        Me.RepTreeList.OptionsPrint.PrintTreeButtons = False
-        Me.RepTreeList.OptionsPrint.PrintVertLines = False
-        Me.RepTreeList.OptionsSelection.InvertSelection = True
-        Me.RepTreeList.OptionsView.ShowColumns = False
-        Me.RepTreeList.OptionsView.ShowHorzLines = False
-        Me.RepTreeList.OptionsView.ShowIndicator = False
-        Me.RepTreeList.OptionsView.ShowVertLines = False
-        Me.RepTreeList.SelectImageList = Me.ImageCollection1
-        Me.RepTreeList.Size = New System.Drawing.Size(267, 293)
-        Me.RepTreeList.TabIndex = 0
+        Me.AcountTreeList.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn4})
+        Me.AcountTreeList.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.AcountTreeList.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.AcountTreeList.Location = New System.Drawing.Point(0, 0)
+        Me.AcountTreeList.Name = "AcountTreeList"
+        Me.AcountTreeList.BeginUnboundLoad()
+        Me.AcountTreeList.AppendNode(New Object() {"Վճարներ"}, -1, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Վճարների մուտքագրում"}, 0, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Խմբային վճարների մուտքագրում"}, 0, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"TelCell Վճարների Հաստատում"}, 0, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Ֆիզ անձանց Վճարների մուտքագրում"}, 0, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Հաշիվ Ապրանքագիր"}, -1, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա"}, 5, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Ընթացիկ Հ/Ա"}, 6, 16, 16, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա Շրջիկ"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Փոխել Հ/Ա Տվյալները"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Ջնջել Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Չտպված Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Չտպված Հավելվածներ"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Տպված Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Հ/Ա Վերադարձ"}, 6, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Սարքավորման Վաճառքի Հ/Ա"}, 5, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Ներքին Ինվոյս (XML)"}, 16, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Սարքավորման Ինվոյս (XML)"}, 16, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Վաճառքի Ինվոյս (XML)"}, 16, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Ֆիզ Անձի Ինվոյս (XML)"}, 16, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Տեղեկատուներ"}, -1, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"ԱԱՀ-ից Ազատված Գործընկեր"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Չսպասարկվող Գործընկեր"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"PDF-ով Չտպվող"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Հ/Ա PDF-ի Կարգաբերում"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"PDF-Ի Էջերի Ստացում"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Պահեստի Մնացորդ"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"XML - ՀՎՀՀ Ստուգում"}, 21, 3, 3, -1)
+        Me.AcountTreeList.AppendNode(New Object() {"Պահանջագրեր"}, 21, 3, 3, -1)
+        Me.AcountTreeList.EndUnboundLoad()
+        Me.AcountTreeList.OptionsBehavior.EnableFiltering = True
+        Me.AcountTreeList.OptionsLayout.AddNewColumns = False
+        Me.AcountTreeList.OptionsMenu.EnableColumnMenu = False
+        Me.AcountTreeList.OptionsMenu.EnableFooterMenu = False
+        Me.AcountTreeList.OptionsMenu.ShowAutoFilterRowItem = False
+        Me.AcountTreeList.OptionsPrint.PrintHorzLines = False
+        Me.AcountTreeList.OptionsPrint.PrintPageHeader = False
+        Me.AcountTreeList.OptionsPrint.PrintReportFooter = False
+        Me.AcountTreeList.OptionsPrint.PrintTree = False
+        Me.AcountTreeList.OptionsPrint.PrintTreeButtons = False
+        Me.AcountTreeList.OptionsPrint.PrintVertLines = False
+        Me.AcountTreeList.OptionsSelection.InvertSelection = True
+        Me.AcountTreeList.OptionsView.ShowColumns = False
+        Me.AcountTreeList.OptionsView.ShowHorzLines = False
+        Me.AcountTreeList.OptionsView.ShowIndicator = False
+        Me.AcountTreeList.OptionsView.ShowVertLines = False
+        Me.AcountTreeList.SelectImageList = Me.ImageCollection1
+        Me.AcountTreeList.Size = New System.Drawing.Size(267, 293)
+        Me.AcountTreeList.TabIndex = 2
         '
-        'TreeListColumn1
+        'TreeListColumn4
         '
-        Me.TreeListColumn1.Caption = "TreeListColumn1"
-        Me.TreeListColumn1.FieldName = "TreeListColumn1"
-        Me.TreeListColumn1.MinWidth = 70
-        Me.TreeListColumn1.Name = "TreeListColumn1"
-        Me.TreeListColumn1.OptionsColumn.AllowMove = False
-        Me.TreeListColumn1.OptionsColumn.AllowMoveToCustomizationForm = False
-        Me.TreeListColumn1.OptionsColumn.AllowSort = False
-        Me.TreeListColumn1.OptionsColumn.ShowInCustomizationForm = False
-        Me.TreeListColumn1.OptionsColumn.ShowInExpressionEditor = False
-        Me.TreeListColumn1.Visible = True
-        Me.TreeListColumn1.VisibleIndex = 0
+        Me.TreeListColumn4.Caption = "TreeListColumn1"
+        Me.TreeListColumn4.FieldName = "TreeListColumn1"
+        Me.TreeListColumn4.MinWidth = 88
+        Me.TreeListColumn4.Name = "TreeListColumn4"
+        Me.TreeListColumn4.OptionsColumn.AllowMove = False
+        Me.TreeListColumn4.OptionsColumn.AllowMoveToCustomizationForm = False
+        Me.TreeListColumn4.OptionsColumn.AllowSort = False
+        Me.TreeListColumn4.OptionsColumn.ShowInCustomizationForm = False
+        Me.TreeListColumn4.OptionsColumn.ShowInExpressionEditor = False
+        Me.TreeListColumn4.Visible = True
+        Me.TreeListColumn4.VisibleIndex = 0
+        Me.TreeListColumn4.Width = 87
         '
         'ImageCollection1
         '
@@ -3053,88 +3017,6 @@ Partial Class MainWindow
         Me.TreeListColumn2.Visible = True
         Me.TreeListColumn2.VisibleIndex = 0
         '
-        'NavBarGroupControlContainer3
-        '
-        Me.NavBarGroupControlContainer3.Controls.Add(Me.AcountTreeList)
-        Me.NavBarGroupControlContainer3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.NavBarGroupControlContainer3.Name = "NavBarGroupControlContainer3"
-        Me.NavBarGroupControlContainer3.Size = New System.Drawing.Size(267, 293)
-        Me.NavBarGroupControlContainer3.TabIndex = 2
-        '
-        'AcountTreeList
-        '
-        Me.AcountTreeList.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn4})
-        Me.AcountTreeList.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.AcountTreeList.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.AcountTreeList.Location = New System.Drawing.Point(0, 0)
-        Me.AcountTreeList.Name = "AcountTreeList"
-        Me.AcountTreeList.BeginUnboundLoad()
-        Me.AcountTreeList.AppendNode(New Object() {"Վճարներ"}, -1, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Վճարների մուտքագրում"}, 0, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Խմբային վճարների մուտքագրում"}, 0, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"TelCell Վճարների Հաստատում"}, 0, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Ֆիզ անձանց Վճարների մուտքագրում"}, 0, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Հաշիվ Ապրանքագիր"}, -1, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա"}, 5, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Ընթացիկ Հ/Ա"}, 6, 16, 16, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Սպասարկման Հ/Ա Շրջիկ"}, 6, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Փոխել Հ/Ա Տվյալները"}, 6, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Ջնջել Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Չտպված Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Չտպված Հավելվածներ"}, 6, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Տպված Սպասարկման Հ/Ա"}, 6, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Հ/Ա Վերադարձ"}, 6, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Սարքավորման Վաճառքի Հ/Ա"}, 5, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Ներքին Ինվոյս (XML)"}, 16, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Սարքավորման Ինվոյս (XML)"}, 16, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Վաճառքի Ինվոյս (XML)"}, 16, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Գեներացնել Ֆիզ Անձի Ինվոյս (XML)"}, 16, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Տեղեկատուներ"}, -1, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"ԱԱՀ-ից Ազատված Գործընկեր"}, 21, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Չսպասարկվող Գործընկեր"}, 21, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"PDF-ով Չտպվող"}, 21, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Հ/Ա PDF-ի Կարգաբերում"}, 21, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"PDF-Ի Էջերի Ստացում"}, 21, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Պահեստի Մնացորդ"}, 21, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"XML - ՀՎՀՀ Ստուգում"}, 21, 3, 3, -1)
-        Me.AcountTreeList.AppendNode(New Object() {"Պահանջագրեր"}, 21, 3, 3, -1)
-        Me.AcountTreeList.EndUnboundLoad()
-        Me.AcountTreeList.OptionsBehavior.EnableFiltering = True
-        Me.AcountTreeList.OptionsLayout.AddNewColumns = False
-        Me.AcountTreeList.OptionsMenu.EnableColumnMenu = False
-        Me.AcountTreeList.OptionsMenu.EnableFooterMenu = False
-        Me.AcountTreeList.OptionsMenu.ShowAutoFilterRowItem = False
-        Me.AcountTreeList.OptionsPrint.PrintHorzLines = False
-        Me.AcountTreeList.OptionsPrint.PrintPageHeader = False
-        Me.AcountTreeList.OptionsPrint.PrintReportFooter = False
-        Me.AcountTreeList.OptionsPrint.PrintTree = False
-        Me.AcountTreeList.OptionsPrint.PrintTreeButtons = False
-        Me.AcountTreeList.OptionsPrint.PrintVertLines = False
-        Me.AcountTreeList.OptionsSelection.InvertSelection = True
-        Me.AcountTreeList.OptionsView.ShowColumns = False
-        Me.AcountTreeList.OptionsView.ShowHorzLines = False
-        Me.AcountTreeList.OptionsView.ShowIndicator = False
-        Me.AcountTreeList.OptionsView.ShowVertLines = False
-        Me.AcountTreeList.SelectImageList = Me.ImageCollection1
-        Me.AcountTreeList.Size = New System.Drawing.Size(267, 293)
-        Me.AcountTreeList.TabIndex = 2
-        '
-        'TreeListColumn4
-        '
-        Me.TreeListColumn4.Caption = "TreeListColumn1"
-        Me.TreeListColumn4.FieldName = "TreeListColumn1"
-        Me.TreeListColumn4.MinWidth = 88
-        Me.TreeListColumn4.Name = "TreeListColumn4"
-        Me.TreeListColumn4.OptionsColumn.AllowMove = False
-        Me.TreeListColumn4.OptionsColumn.AllowMoveToCustomizationForm = False
-        Me.TreeListColumn4.OptionsColumn.AllowSort = False
-        Me.TreeListColumn4.OptionsColumn.ShowInCustomizationForm = False
-        Me.TreeListColumn4.OptionsColumn.ShowInExpressionEditor = False
-        Me.TreeListColumn4.Visible = True
-        Me.TreeListColumn4.VisibleIndex = 0
-        Me.TreeListColumn4.Width = 87
-        '
         'NavBarGroupControlContainer5
         '
         Me.NavBarGroupControlContainer5.Controls.Add(Me.CallCenterTreeList)
@@ -3162,6 +3044,8 @@ Partial Class MainWindow
         Me.CallCenterTreeList.AppendNode(New Object() {"Փակ Հայտեր"}, 0, 5, 5, -1)
         Me.CallCenterTreeList.AppendNode(New Object() {"Բաց Հայտեր"}, 0, 5, 5, -1)
         Me.CallCenterTreeList.AppendNode(New Object() {"Հայտի Վերլուծություն"}, 0, 5, 5, -1)
+        Me.CallCenterTreeList.AppendNode(New Object() {"ՀԴՄ Վաճառքի բաց հայտեր"}, 0, 5, 5, -1)
+        Me.CallCenterTreeList.AppendNode(New Object() {"ՀԴՄ Վաճառքի բաց հայտեր (Ռեգիոն)"}, 0, 5, 5, -1)
         Me.CallCenterTreeList.EndUnboundLoad()
         Me.CallCenterTreeList.OptionsBehavior.EnableFiltering = True
         Me.CallCenterTreeList.OptionsLayout.AddNewColumns = False
@@ -3197,6 +3081,124 @@ Partial Class MainWindow
         Me.TreeListColumn5.Visible = True
         Me.TreeListColumn5.VisibleIndex = 0
         '
+        'NavBarGroupControlContainer6
+        '
+        Me.NavBarGroupControlContainer6.Appearance.BackColor = System.Drawing.SystemColors.Control
+        Me.NavBarGroupControlContainer6.Appearance.Options.UseBackColor = True
+        Me.NavBarGroupControlContainer6.Controls.Add(Me.RepTreeList)
+        Me.NavBarGroupControlContainer6.Name = "NavBarGroupControlContainer6"
+        Me.NavBarGroupControlContainer6.Size = New System.Drawing.Size(267, 293)
+        Me.NavBarGroupControlContainer6.TabIndex = 5
+        '
+        'RepTreeList
+        '
+        Me.RepTreeList.Columns.AddRange(New DevExpress.XtraTreeList.Columns.TreeListColumn() {Me.TreeListColumn1})
+        Me.RepTreeList.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.RepTreeList.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RepTreeList.Location = New System.Drawing.Point(0, 0)
+        Me.RepTreeList.Name = "RepTreeList"
+        Me.RepTreeList.BeginUnboundLoad()
+        Me.RepTreeList.AppendNode(New Object() {"Սպասարկող"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Կազմ-Տարած-ՀԴՄ Քանակ"}, 0, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Վճարներ"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Վճար"}, 2, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Բանկային Մուտքեր"}, 2, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Պարտք - Հավելավճար"}, 2, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Դեբետ - Կրեդետ"}, 2, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ամփոփ Հաշվետվություն"}, 2, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ամփոփ Հաշվետվություն 2"}, 2, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Պարտք Ըստ Պատկանելության"}, 2, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Վերանորոգում"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Քանակային Հաշվետվություն"}, 10, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Տևողության Հաշվետվություն"}, 10, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Վերանորոգում"}, 10, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Կրկնվող Վերանորոգումներ"}, 10, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Անվճար Վերանորոգումներ"}, 10, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"ՀԴՄ-ի Տեղաշարժ"}, 10, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ուղարկված SMS"}, 10, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Տեսուչի Վերանորոգումներ"}, 10, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"ՀԾ"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"ՀԾ Կոդի Փոփոխում"}, 19, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Փոխարինման ՀԴՄ-ներ"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ազատ փոխարինողներ"}, 21, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Փոխարինման ՀԴՄ-ներ"}, 21, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Պատկան ՀԴՄ-ներ Սրահում"}, 21, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"ՀԴՄ Փոխարինման Պատմություն"}, 21, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Առանց Հայտի Փոխարինող ՀԴՄ"}, 21, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Փոխարինող ՀԴՄ Տարբերություն"}, 21, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Հաշիվ Ապրանքագիր"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Չվերադարձված"}, 28, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Սպասարկման"}, 28, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Վերանորոգման"}, 28, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Վաճառքի"}, 28, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Շրջիկ"}, 28, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Բոլորը"}, 28, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Տեսուչ"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Տեսուչի Այցելություն"}, 35, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Տեսուչի ՀԴՄ"}, 35, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Վերագրանցում"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Վերագրանցում"}, 38, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Արգելափակ GPRS"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Արգելափակված GPRS"}, 40, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Արգելափակման Ենթակա"}, 40, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Նամակներ և SMS"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ուղարկված Նամակներ"}, 43, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ուղարկված SMS-ներ"}, 43, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"GPRS"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"GPRS-ի Փոփոխություն"}, 46, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Առկա GPRS Քարտեր"}, 46, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ավելացված Բայց Չհաստատված Քարտ"}, 46, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Orange Ընթացիկ Կարգավիճակներ"}, 46, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"GPRS Իրական Կարգավիճակ"}, 46, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"ՀԴՄ Վիճակագրություն"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"ՀԴՄ Վիճակագրություն"}, 52, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Հեռախոսահամարներ"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Գործընկերոջ Հեռախոսահամարներ"}, 54, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Լոգ"}, -1, 18, 18, -1)
+        Me.RepTreeList.AppendNode(New Object() {"TelCell Events"}, 56, 18, 18, -1)
+        Me.RepTreeList.AppendNode(New Object() {"TelCell Payments"}, 56, 18, 18, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Orange Events"}, 56, 18, 18, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Կոորդինատներ"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Հայտեր"}, 60, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Տեսուչ ՀԴՄ Վիճակագրություն"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Տեսուչ ՀԴՄ Հաշվետվություն"}, 62, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ֆիզ Անձ"}, -1, 2, 2, -1)
+        Me.RepTreeList.AppendNode(New Object() {"Ֆիզ Անձիք"}, 64, 2, 2, -1)
+        Me.RepTreeList.EndUnboundLoad()
+        Me.RepTreeList.OptionsBehavior.EnableFiltering = True
+        Me.RepTreeList.OptionsLayout.AddNewColumns = False
+        Me.RepTreeList.OptionsMenu.EnableColumnMenu = False
+        Me.RepTreeList.OptionsMenu.EnableFooterMenu = False
+        Me.RepTreeList.OptionsMenu.ShowAutoFilterRowItem = False
+        Me.RepTreeList.OptionsPrint.PrintHorzLines = False
+        Me.RepTreeList.OptionsPrint.PrintPageHeader = False
+        Me.RepTreeList.OptionsPrint.PrintReportFooter = False
+        Me.RepTreeList.OptionsPrint.PrintTree = False
+        Me.RepTreeList.OptionsPrint.PrintTreeButtons = False
+        Me.RepTreeList.OptionsPrint.PrintVertLines = False
+        Me.RepTreeList.OptionsSelection.InvertSelection = True
+        Me.RepTreeList.OptionsView.ShowColumns = False
+        Me.RepTreeList.OptionsView.ShowHorzLines = False
+        Me.RepTreeList.OptionsView.ShowIndicator = False
+        Me.RepTreeList.OptionsView.ShowVertLines = False
+        Me.RepTreeList.SelectImageList = Me.ImageCollection1
+        Me.RepTreeList.Size = New System.Drawing.Size(267, 293)
+        Me.RepTreeList.TabIndex = 0
+        '
+        'TreeListColumn1
+        '
+        Me.TreeListColumn1.Caption = "TreeListColumn1"
+        Me.TreeListColumn1.FieldName = "TreeListColumn1"
+        Me.TreeListColumn1.MinWidth = 70
+        Me.TreeListColumn1.Name = "TreeListColumn1"
+        Me.TreeListColumn1.OptionsColumn.AllowMove = False
+        Me.TreeListColumn1.OptionsColumn.AllowMoveToCustomizationForm = False
+        Me.TreeListColumn1.OptionsColumn.AllowSort = False
+        Me.TreeListColumn1.OptionsColumn.ShowInCustomizationForm = False
+        Me.TreeListColumn1.OptionsColumn.ShowInExpressionEditor = False
+        Me.TreeListColumn1.Visible = True
+        Me.TreeListColumn1.VisibleIndex = 0
+        '
         'NavBarGroup1
         '
         Me.NavBarGroup1.Caption = "Ընդհանուր"
@@ -3215,14 +3217,14 @@ Partial Class MainWindow
         Me.NavBarGroup2.Name = "NavBarGroup2"
         Me.NavBarGroup2.SmallImage = CType(resources.GetObject("NavBarGroup2.SmallImage"), System.Drawing.Image)
         '
-        'NavBarGroup3
+        'NavBarGroup6
         '
-        Me.NavBarGroup3.Caption = "Հաշվապահություն"
-        Me.NavBarGroup3.ControlContainer = Me.NavBarGroupControlContainer3
-        Me.NavBarGroup3.GroupClientHeight = 187
-        Me.NavBarGroup3.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer
-        Me.NavBarGroup3.Name = "NavBarGroup3"
-        Me.NavBarGroup3.SmallImage = CType(resources.GetObject("NavBarGroup3.SmallImage"), System.Drawing.Image)
+        Me.NavBarGroup6.Caption = "Հաշվետվություն"
+        Me.NavBarGroup6.ControlContainer = Me.NavBarGroupControlContainer6
+        Me.NavBarGroup6.GroupClientHeight = 197
+        Me.NavBarGroup6.GroupStyle = DevExpress.XtraNavBar.NavBarGroupStyle.ControlContainer
+        Me.NavBarGroup6.Name = "NavBarGroup6"
+        Me.NavBarGroup6.SmallImage = CType(resources.GetObject("NavBarGroup6.SmallImage"), System.Drawing.Image)
         '
         'NavBarGroup5
         '
@@ -3545,7 +3547,7 @@ Partial Class MainWindow
         'WorkspaceManager1
         '
         Me.WorkspaceManager1.TargetControl = Me.RibbonPanel
-        Me.WorkspaceManager1.TransitionType = PushTransition1
+        Me.WorkspaceManager1.TransitionType = PushTransition2
         '
         'WTimer
         '
@@ -3676,17 +3678,17 @@ Partial Class MainWindow
         Me.DockPanel1_Container.ResumeLayout(False)
         CType(Me.NavBarControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NavBarControl1.ResumeLayout(False)
-        Me.NavBarGroupControlContainer6.ResumeLayout(False)
-        CType(Me.RepTreeList, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.NavBarGroupControlContainer3.ResumeLayout(False)
+        CType(Me.AcountTreeList, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ImageCollection1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NavBarGroupControlContainer1.ResumeLayout(False)
         CType(Me.ActionTreeList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NavBarGroupControlContainer2.ResumeLayout(False)
         CType(Me.WareHouseTreeList, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.NavBarGroupControlContainer3.ResumeLayout(False)
-        CType(Me.AcountTreeList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.NavBarGroupControlContainer5.ResumeLayout(False)
         CType(Me.CallCenterTreeList, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.NavBarGroupControlContainer6.ResumeLayout(False)
+        CType(Me.RepTreeList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DockPanel1.ResumeLayout(False)
         Me.ControlContainer3.ResumeLayout(False)
         Me.TableLayoutPanel1.ResumeLayout(False)

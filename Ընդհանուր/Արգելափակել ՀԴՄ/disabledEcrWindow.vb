@@ -256,6 +256,7 @@ Public Class disabledEcrWindow
         '            Case HdmType.Beeline
         '                iDB.EnableBlockedGPRS(pair.Value)
         '            Case HdmType.Android
+        '                iDB.EnableBlockedGPRS3(pair.Value)
         '            Case HdmType.Pax
         '                iDB.EnableBlockedGPRS3(pair.Value)
         '            Case Else
@@ -326,6 +327,7 @@ Public Class disabledEcrWindow
                     Case HdmType.Beeline
                         iDB.EnableBlockedGPRS(pair.Value)
                     Case HdmType.Android
+                        iDB.EnableBlockedGPRS3(pair.Value)
                     Case HdmType.Pax
                         iDB.EnableBlockedGPRS3(pair.Value)
                     Case Else

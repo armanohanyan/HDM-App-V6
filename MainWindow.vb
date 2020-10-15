@@ -2529,73 +2529,57 @@ Public Class MainWindow
 
             If hi.Node IsNot Nothing Then
                 Select Case hi.Node.Id
-                    Case 0
-                        'Վճարներ
+                    Case 0   'Վճարներ
                         '////////////////////////////////////////////////////////////////////////
-
-                        'Վճարների Մուտքագրում
-                    Case 1
+                    Case 1  'Վճարների Մուտքագրում
                         If CheckPermission("F1FD2572CEF74F86A4A3F93C84BDD69C") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nAddPaymentWin")
                         Dim f As New payWindow
                         AddChildForm("nAddPaymentWin", f)
-                        'Բանկային Տվյալների Ստուգում
-                    Case 2
+                    Case 2  'Բանկային Տվյալների Ստուգում
                         If CheckPermission("FB41CB18707F4A63BC498DCB036B3BF0") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New SelectBankFile
                         fm.ShowDialog()
                         fm.Dispose()
-                        'TelCell Վճարների Հաստատում
-                    Case 3
+                    Case 3   'TelCell Վճարների Հաստատում
                         If CheckPermission("80C5DB191AEB4C52929E92832780E348") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nTelCellFileSelecter")
                         Dim f As New TelCellFileSelecter
                         AddChildForm("nTelCellFileSelecter", f)
-                        'Ֆիզ անձանց Վճարների Մուտքագրում
-                    Case 4
+                    Case 4  'Ֆիզ անձանց Վճարների Մուտքագրում
                         If CheckPermission("F1FD2572CEF74F86A4A3F93C84BDD69C") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nAddPaymentWin")
                         Dim f As New payWindowFiz
                         AddChildForm("nAddPaymentWin", f)
-                    Case 5
-                        'Հաշիվ Ապրանքագիր
+                    Case 5  'Հաշիվ Ապրանքագիր
                         '////////////////////////////////////////////////////////////////////////
-                    Case 6
-                        'Սպասարկման
+                    Case 6  'Սպասարկման
                         '////////////////////////////////////////////////////////////////////////
-
-                        'Ընթացիկ Հ/Ա
-                    Case 7
+                    Case 7  'Ընթացիկ Հ/Ա
                         If CheckPermission("DC565D749ADF4CEF93382AE8FA73AAC1") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nReRegInvoice")
                         Dim f As New ReRegInvoice
                         AddChildForm("nReRegInvoice", f)
-                        'Սպասարկման Հ/Ա
-                    Case 8
+                    Case 8  'Սպասարկման Հ/Ա
                         If CheckPermission("BCAEB19836BB47C18D05F6294BC11E22") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nSupportInvoice")
                         Dim f As New SupportInvoice
                         AddChildForm("nSupportInvoice", f)
-                        'Հ/Ա Շրջիկ
-                    Case 9
+                    Case 9  'Հ/Ա Շրջիկ
                         If CheckPermission("27D4F96EF7CD46D8BDFE1196E51F526B") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
 
                         ''''''''''''''''''''''''''''''''''''''''''''''''''   Կոդը չկա
-
-                        'Փոխել Հ/Ա Տվյալները
-                    Case 10
+                    Case 10 'Փոխել Հ/Ա Տվյալները
                         If CheckPermission("598734DB5B89437C87E9E495CACBE251") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New UpdateInvoiceWindow
                         fm.ShowDialog()
                         fm.Dispose()
-                        'Ջնջել Սպասարկման Հ/Ա
-                    Case 11
+                    Case 11 'Ջնջել Սպասարկման Հ/Ա
                         If CheckPermission("BC4A475917A74FC3802FF4F98A267C23") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New DeleteInvoiceWindow
                         fm.ShowDialog()
                         fm.Dispose()
-                        'Չտպված Սպասարկման Հ/Ա
-                    Case 12
+                    Case 12 'Չտպված Սպասարկման Հ/Ա
                         If CheckPermission("EC3C09F1DF1E4F7D83F85E2F7D05C907") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New printNoPrintInvoiceSelect
                         fm.cNoPrinted.Checked = True
@@ -2604,96 +2588,84 @@ Public Class MainWindow
                         fm.GroupBox1.Visible = False
                         fm.ShowDialog()
                         fm.Dispose()
-                        'Չտպված Հավելվածներ
-                    Case 13
+                    Case 13 'Չտպված Հավելվածներ
                         If CheckPermission("C7AAB12B501E497EB1AC79C358FE2660") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New DateSelect
                         fm.ShowDialog()
                         fm.Dispose()
-
-                        'Տպված Ինվոյս
-                    Case 14
+                    Case 14 'Տպված Ինվոյս
                         If CheckPermission("6A6270584F664A9AB901D02807DE63CB") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New printNoPrintInvoiceSelect
                         fm.ShowDialog()
                         fm.Dispose()
-                        'Հ/Ա Վերադարձ
-                    Case 15
+                    Case 15 'Հ/Ա Վերադարձ
                         If CheckPermission("6A6270584F664A9AB901D02807DE9999") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New ReturnNotRetInvoice
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 16
-                        'Սարքավորման Վաճառքի Հ/Ա
+                    Case 16 'Սարքավորման Վաճառքի Հ/Ա
                         '////////////////////////////////////////////////////////////////////////
-
-                        'Գեներացնել Ներքին Ինվոյս
-                    Case 17
+                    Case 17 'Գեներացնել Ներքին Ինվոյս
                         If CheckPermission("F43C45EA9D1C4C88A3DCD6655DC2F117") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New InnerInvoiceXMLSelector
                         fm.ShowDialog()
                         fm.Dispose()
-                        'Գեներացնել Սարքավորման Ինվոյս
-                    Case 18
+                    Case 18 'Գեներացնել Սարքավորման Ինվոյս
                         If CheckPermission("611231905EAE40A583B7057B4181B442") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New RemakeInvoiceXMLSelector
                         fm.ShowDialog()
                         fm.Dispose()
-                        'Գեներացնել Վաճառքի Ինվոյս
-                    Case 19
+                    Case 19 'Գեներացնել Վաճառքի Ինվոյս
                         If CheckPermission("6FA14DC18E2E425CA8DE7F34AC72EA9B") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New SellInvoiceXMLSelector
                         fm.ShowDialog()
                         fm.Dispose()
-                        'Գեներացնել Ֆիզ Անձի Ինվոյս
-                    Case 20
+                        'Case 20 'Գեներացնել ՀԴՄ Վաճառքի Ինվոյս
+                        '    If CheckPermission("6FA14DC18E2E425CA8DE7F34AC72EA9B") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
+                        '    Dim fm As New SellInvoiceXMLSelector
+                        '    fm.ShowDialog()
+                        '    fm.Dispose()
+                    Case 20 'Գեներացնել Ֆիզ Անձի Ինվոյս
                         If CheckPermission("6FA14DC18E2E425CA8DE7F34AC72EA9B") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New SellInvoiceXMLSelectorFiz
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 21
-                        'Տեղեկատուներ
+                    Case 21 'Տեղեկատուներ
                         '////////////////////////////////////////////////////////////////////////
-
-                        'ԱԱՀ-ից ազատված գործընկեր
-                    Case 22
+                    Case 22 'ԱԱՀ-ից ազատված գործընկեր
                         If CheckPermission("60FE011E74B54CCF93982D0EEEC5CAE7") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nRepNoNDS")
                         Dim f As New RepNoNDS
                         AddChildForm("nRepNoNDS", f)
-                        'Չսպասարկվող Գործընկեր
-                    Case 23
+                    Case 23 'Չսպասարկվող Գործընկեր
                         If CheckPermission("4381A79A288A43C3B008C8C4A71E8A8B") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nRepNoSupport")
                         Dim f As New RepNoSupport
                         AddChildForm("nRepNoSupport", f)
-                        'PDF-ով Չտպվող
-                    Case 24
+                    Case 24 'PDF-ով Չտպվող
                         If CheckPermission("E66BC93651694F07B50CA9E5B2608050") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nExcludedHvhhForInvoice")
                         Dim f As New ExcludedHvhhForInvoice
                         AddChildForm("nExcludedHvhhForInvoice", f)
-                        'Հ/Ա PDF-ի Կարգաբերում
-                    Case 25
+                    Case 25 'Հ/Ա PDF-ի Կարգաբերում
                         If CheckPermission("2C720AFD51BA4578B8E7D0AD28689485") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New PDF_Searcher
                         fm.ShowDialog()
                         fm.Dispose()
-                        'PDF-Ի Էջերի Ստացում
-                    Case 26
+                    Case 26 'PDF-Ի Էջերի Ստացում
                         If CheckPermission("C565D69E31B9484F8B5BE430E97FD95E") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call PdfFileSelecter()
-                    Case 27
+                    Case 27 'Պահեստի մնացորդ
                         If CheckPermission("6F2C3728C7344E15ACCD2AFD7167A065") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New AcountWarhExSel
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 28
+                    Case 28 'XML-ՀՎՀՀ ստուգում
                         If CheckPermission("FD2DDCCE0ECB4F63B209085070F2A32B") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New XML_Dublicate_Checker
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 29
+                    Case 29 'Պահանջագրեր
                         If CheckPermission("209045D6E2444F50A4D2F01226F5B625") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("npahanj")
                         Dim f As New pahanj
@@ -2776,7 +2748,16 @@ Public Class MainWindow
                         Dim f As New SelectPropAnalitics
                         f.ShowDialog()
                         f.Dispose()
-
+                    Case 11  'Հդմ վաճառքի Բաց Հայտեր
+                        If CheckPermission("A944BA07C90846CF89FE2CB08C2AF7AC") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
+                        Call CloseWindow("nOpenPropListSellEcr")
+                        Dim f As New OpenPropListSellEcr With {.IsRegion = False}
+                        AddChildForm("nOpenPropListSellEcr", f)
+                    Case 12  'Հդմ վաճառքի Բաց Հայտեր Ռեգիոն
+                        If CheckPermission("A944BA07C90846CF89FE2CB08C2AF7AC") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
+                        Call CloseWindow("nnOpenPropListSellEcr")
+                        Dim f As New OpenPropListSellEcr With {.IsRegion = True}
+                        AddChildForm("nnOpenPropListSellEcr", f)
                 End Select
             End If
 
@@ -4586,6 +4567,11 @@ Public Class MainWindow
                 e.Node.Visible = False
                 e.Handled = True
             End If
+            'ElseIf e.Node.Id = 20 Then
+            '    If CheckPermission("6FA14DC18E2E425CA8DE7F34AC72EA9B") = False Then
+            '        e.Node.Visible = False
+            '        e.Handled = True
+            '    End If
         ElseIf e.Node.Id = 20 Then
             If CheckPermission("6FA14DC18E2E425CA8DE7F34AC72EA9B") = False Then
                 e.Node.Visible = False
@@ -4704,6 +4690,16 @@ Public Class MainWindow
             End If
         ElseIf e.Node.Id = 10 Then
             If CheckPermission("6E2805538310451AB4DEBE862115E6A5") = False Then
+                e.Node.Visible = False
+                e.Handled = True
+            End If
+        ElseIf e.Node.Id = 11 Then
+            If CheckPermission("A944BA07C90846CF89FE2CB08C2AF7AC") = False Then
+                e.Node.Visible = False
+                e.Handled = True
+            End If
+        ElseIf e.Node.Id = 12 Then
+            If CheckPermission("A944BA07C90846CF89FE2CB08C2AF7AC") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If

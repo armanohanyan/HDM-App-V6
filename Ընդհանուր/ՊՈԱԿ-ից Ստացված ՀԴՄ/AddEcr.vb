@@ -9,8 +9,8 @@ Public Class AddEcr
             Dim dtT As System.Data.DataTable = iDB.GetWorkingTesuch2()
             With cTesuch
                 .DataSource = dtT
-                .DisplayMember = "Տեսուչ"
-                .ValueMember = "ՀՀ"
+                .DisplayMember = "Name"
+                .ValueMember = "ID"
             End With
 
         Catch ex As ExceptionClass

@@ -255,6 +255,7 @@ Public Class mustBeDisabledEcrWindow
                     Case HdmType.Beeline
                         iDB.BlockGprsByEcr(pair.Value)
                     Case HdmType.Android
+                        iDB.BlockGprsByEcr3(pair.Value)
                     Case HdmType.Pax
                         iDB.BlockGprsByEcr3(pair.Value)
                     Case Else

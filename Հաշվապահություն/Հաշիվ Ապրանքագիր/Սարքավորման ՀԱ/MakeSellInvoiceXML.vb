@@ -23,6 +23,7 @@ Public Class MakeSellInvoiceXML
                 .OptionsView.AllowCellMerge = False
                 .OptionsSelection.MultiSelect = False
                 .OptionsSelection.EnableAppearanceFocusedCell = False
+                .Columns("Պարտք").SortOrder = DevExpress.Data.ColumnSortOrder.Descending
                 .Columns("Ամսաթիվ").SortOrder = DevExpress.Data.ColumnSortOrder.Descending
             End With
             If GridView1.RowCount > 0 Then
