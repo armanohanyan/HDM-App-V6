@@ -7,6 +7,14 @@ Public Class enagleSIMByHvhhWindow
 
     Dim NotSupportedClients As New DataTable
 
+    Friend simHVHH As String = ""
+
+    Private Sub enagleSIMByHvhhWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtHVHH.Text = simHVHH
+        If txtHVHH.Text.Trim <> "" Then
+            btnAdd.PerformClick()
+        End If
+    End Sub
     Private Sub loadNotSupportedClients()
         On Error Resume Next
         NotSupportedClients = iDB.GetNotServedClients()

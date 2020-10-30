@@ -276,6 +276,9 @@ Public Class disabledEcrWindow
         '    btnQuery.PerformClick()
         'End Try
     End Sub
+    Private Sub ՀանելԱրգելքըToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ՀանելԱրգելքըToolStripMenuItem.Click
+        mnuOnlySelected.PerformClick()
+    End Sub
     Private Sub mnuOnlySelected_Click(sender As Object, e As EventArgs) Handles mnuOnlySelected.Click
         Dim formX As New Working
         Try
@@ -401,8 +404,11 @@ Public Class disabledEcrWindow
         Try
             If CheckPermission2("175F430B0B9C41BF924FD6CE15BDC3F1") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
 
+            mnuSelectColored.PerformClick() 'Նշել երանգավորները
+            GridView1.ClearColumnsFilter()
+
             Dim dt As DataTable = iDB.GetBlockedGprsForEnable()
-            If dt.Rows.Count = 0 Then Exit Sub
+            'If dt.Rows.Count = 0 Then Exit Sub
 
             formX.Show() : My.Application.DoEvents()
 
@@ -417,6 +423,7 @@ Public Class disabledEcrWindow
                 Next
                 My.Application.DoEvents()
             Next
+            GridView1.SetRowCellValue(GridControl.AutoFilterRowHandle, "Նշիչ", True)
         Catch ex As ExceptionClass
         Catch ex As System.Data.SqlClient.SqlException
             Call SQLException(ex)
@@ -425,7 +432,7 @@ Public Class disabledEcrWindow
         Finally
             formX.Close()
             formX = Nothing
-            MsgBox("Գործողությունը կատարվեց", MsgBoxStyle.Information, My.Application.Info.Title)
+            'MsgBox("Գործողությունը կատարվեց", MsgBoxStyle.Information, My.Application.Info.Title)
         End Try
     End Sub
     Private Sub btnDeleteSim_Click(sender As Object, e As EventArgs) Handles btnDeleteSim.Click
@@ -483,7 +490,6 @@ Public Class disabledEcrWindow
             'GridView1.GetRow(i).Item("Նշիչ") = True
             GridView1.SetRowCellValue(i, "Նշիչ", True)
         Next
-
     End Sub
     Private Sub btnInAction_Click(sender As Object, e As EventArgs) Handles btnInAction.Click
         If CheckPermission2("A4B2F098385E4F7EAF2DA5C7D8A168AC") = False Then MsgBox("Գործողությունը կատարելու համար դուք իրավասություն չունեք", MsgBoxStyle.Critical, My.Application.Info.Title) : Exit Sub

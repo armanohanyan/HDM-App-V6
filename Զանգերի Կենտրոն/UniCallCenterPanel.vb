@@ -310,7 +310,7 @@ Public Class UniCallCenterPanel
         If CheckPermission("2B6BAE83388B4C8AAC3FA07C0ABC5416") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
 
         Call CloseWindow("nEnableSIMByHVHH")
-        Dim f As New enagleSIMByHvhhWindow
+        Dim f As New enagleSIMByHvhhWindow With {.simHVHH = lhvhh.Text.Substring(lhvhh.Text.Length - 9).Trim}
         AddChildForm("nEnableSIMByHVHH", f)
 
     End Sub

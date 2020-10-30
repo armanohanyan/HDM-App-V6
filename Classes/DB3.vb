@@ -291,6 +291,24 @@ Partial Public Class DB
         End Using
     End Sub
 
+    'ReturnPoakOfficeEcrByEcr
+    Friend Sub ReturnPoakOfficeEcrByEcr(ECR As String)
+        Dim Parameters As New List(Of SqlParameter)
+        With Parameters
+            .Add(New SqlParameter("@ECR", ECR))
+        End With
+        Using connection As New SqlConnection(SQLString)
+            Dim Exec As New SqlCommand
+            Exec.Connection = connection
+            Exec.CommandText = "Client.ReturnPoakOfficeEcrByEcr"
+            Exec.CommandType = CommandType.StoredProcedure
+            Exec.Parameters.AddRange(Parameters.ToArray)
+            connection.Open()
+            Exec.ExecuteNonQuery()
+            connection.Close()
+        End Using
+    End Sub
+
     'UpdateEcrPoakToOffice
     Friend Sub UpdateEcrPoakToOffice(Ecr As String)
         Dim Parameters As New List(Of SqlParameter)
@@ -1110,6 +1128,22 @@ Partial Public Class DB
                 cmd.Connection = cnn
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = "SELECT Client.GetSerialNumberByShtrikh(@shtrikh)"
+                cmd.Parameters.Add("@shtrikh", SqlDbType.VarChar).Value = shtrikh
+                It = cmd.ExecuteScalar()
+            End Using
+        End Using
+        Return It
+    End Function
+
+    'GetEcrByShtrikh
+    Friend Function GetEcrByShtrikh(ByVal shtrikh As String) As String
+        Dim It As String
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT Client.GetEcrByShtrikh(@shtrikh)"
                 cmd.Parameters.Add("@shtrikh", SqlDbType.VarChar).Value = shtrikh
                 It = cmd.ExecuteScalar()
             End Using

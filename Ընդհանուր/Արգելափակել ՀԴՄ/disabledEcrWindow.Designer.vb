@@ -39,8 +39,8 @@ Partial Class disabledEcrWindow
         Me.mnuPrepareEmail = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ՀանելԱրգելքըToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuOnlySelected = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.mnuOnlySelected = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuAllItems = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnNotSupGprs = New DevExpress.XtraEditors.SimpleButton()
@@ -147,21 +147,21 @@ Partial Class disabledEcrWindow
         '
         'ՀանելԱրգելքըToolStripMenuItem
         '
-        Me.ՀանելԱրգելքըToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuOnlySelected, Me.ToolStripMenuItem3, Me.mnuAllItems})
+        Me.ՀանելԱրգելքըToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItem3, Me.mnuOnlySelected, Me.mnuAllItems})
         Me.ՀանելԱրգելքըToolStripMenuItem.Name = "ՀանելԱրգելքըToolStripMenuItem"
         Me.ՀանելԱրգելքըToolStripMenuItem.Size = New System.Drawing.Size(232, 22)
         Me.ՀանելԱրգելքըToolStripMenuItem.Text = "Հանել Արգելքը"
+        '
+        'ToolStripMenuItem3
+        '
+        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(181, 6)
         '
         'mnuOnlySelected
         '
         Me.mnuOnlySelected.Name = "mnuOnlySelected"
         Me.mnuOnlySelected.Size = New System.Drawing.Size(184, 22)
         Me.mnuOnlySelected.Text = "Նշվածների Համար"
-        '
-        'ToolStripMenuItem3
-        '
-        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
-        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(181, 6)
         '
         'mnuAllItems
         '
@@ -209,10 +209,12 @@ Partial Class disabledEcrWindow
         'cAllEcr
         '
         Me.cAllEcr.AutoSize = True
+        Me.cAllEcr.Checked = True
         Me.cAllEcr.Location = New System.Drawing.Point(6, 87)
         Me.cAllEcr.Name = "cAllEcr"
         Me.cAllEcr.Size = New System.Drawing.Size(60, 17)
         Me.cAllEcr.TabIndex = 4
+        Me.cAllEcr.TabStop = True
         Me.cAllEcr.Text = "Բոլորը"
         Me.cAllEcr.UseVisualStyleBackColor = True
         '
@@ -239,12 +241,10 @@ Partial Class disabledEcrWindow
         'cOrange
         '
         Me.cOrange.AutoSize = True
-        Me.cOrange.Checked = True
         Me.cOrange.Location = New System.Drawing.Point(6, 20)
         Me.cOrange.Name = "cOrange"
         Me.cOrange.Size = New System.Drawing.Size(97, 17)
         Me.cOrange.TabIndex = 0
-        Me.cOrange.TabStop = True
         Me.cOrange.Text = "Orange / Ucom"
         Me.cOrange.UseVisualStyleBackColor = True
         '

@@ -4458,6 +4458,23 @@ Partial Public Class DB
         Return b
     End Function
 
+    'IsEcrSent
+    Friend Function IsEcrSent(ByVal hvhh As String) As Boolean
+        Dim b
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT Client.IsEcrSent(@hvhh)"
+                cmd.Parameters.Add("@hvhh", SqlDbType.VarChar).Value = hvhh
+                b = cmd.ExecuteScalar()
+            End Using
+        End Using
+        Return b
+    End Function
+
+
     'IsClientFizExists
     Friend Function IsClientFizExists(ByVal seria As String) As Boolean
         Dim b
