@@ -1878,72 +1878,59 @@ Public Class MainWindow
                         Dim fm As New CloseBranchWindow
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 56
-                        'Արհեստանոց
-                        '////////////////////////////////////////////////////////////////////////
 
-                        'Արհեստանոցի Հայտ
-                    Case 57
+                        '////////////////////////////////////////////////////////////////////////
+                    Case 56 'Արհեստանոց
+                    Case 57 'Արհեստանոցի Հայտ
                         If CheckPermission("B2924575445C43D7A15E3FD546FBF214") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New WorkShopProposalWindow
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 58
-                        'GPRS
-                        '////////////////////////////////////////////////////////////////////////
 
-                        'GPRS Նոր Քարտ
-                    Case 59
+                        '////////////////////////////////////////////////////////////////////////
+                    Case 58 'GPRS
+                    Case 59 'GPRS Նոր Քարտ
                         If CheckPermission("01F5295314404972B73AB8905D2DF7AE") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nNewGprs")
                         Dim f As New NewGprs
                         AddChildForm("nNewGprs", f)
-                        'GPRS Քարտ Ներբեռնել EXCEL-ից
-                    Case 60
+                    Case 60 'GPRS Քարտ Ներբեռնել EXCEL-ից
                         If CheckPermission("3AA18BBFB06244C893F4F637E9B03B27") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New GprsFileSelecter
                         fm.ShowDialog()
                         fm.Dispose()
-                        'Ջնջել GPRS-ը
-                    Case 61
+                    Case 61 'Ջնջել GPRS-ը
                         If CheckPermission("9D5A719035B341A083696B17E61D5627") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nDeleteGPRSWindow")
                         Dim f As New DeleteGPRSWindow
                         AddChildForm("nDeleteGPRSWindow", f)
-                        'Արխիվացնել Orange GPRS Հարցումները
-                    Case 62
+                    Case 62 'Արխիվացնել Orange GPRS Հարցումները
                         If CheckPermission("6680F94061EE45969FD2A361A73A3469") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call ArchiveOrangeData()
-                    Case 63
-                        'Տարիֆ
-                        '////////////////////////////////////////////////////////////////////////
 
-                        'Փոխել Գործընկերոջ Տարիֆը
-                    Case 64
+                        '////////////////////////////////////////////////////////////////////////
+                    Case 63 'Տարիֆ
+                    Case 64 'Փոխել Գործընկերոջ Տարիֆը
                         If CheckPermission("39C84C2EB6C14990B74164C1A7D3A8AF") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New changeTarifWindow
                         fm.ShowDialog()
                         fm.Dispose()
-                        'Գործընկերոջ Ընթացիկ Տարիֆ
-                    Case 65
+                    Case 65 'Գործընկերոջ Ընթացիկ Տարիֆ
                         If CheckPermission("CDD8026AB52D4D80AC4331393DEF3A73") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nListOfCurrentTarifWindow")
                         Dim f As New ListOfCurrentTarifWindow
                         AddChildForm("nListOfCurrentTarifWindow", f)
-                        'Տարիֆի Պատմություն
-                    Case 66
+                    Case 66 'Տարիֆի Պատմություն
                         If CheckPermission("AB0E3EB722B948D8AB84F1F32E42C960") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nTarifHistoryWindow")
                         Dim f As New TarifHistoryWindow
                         AddChildForm("nTarifHistoryWindow", f)
-                        'Փոփոխման Ենթակա Տարիֆ
-                    Case 67
+                    Case 67 'Փոփոխման Ենթակա Տարիֆ
                         If CheckPermission("DB24BF62FA9E4589BBCD8DD9AE3F358C") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nUpcomingTarifWindow")
                         Dim f As New UpcomingTarifWindow
                         AddChildForm("nUpcomingTarifWindow", f)
-                        'Տարիֆ Ըստ ՊՈԱԿ-ի
-                    Case 68
+                    Case 68 'Տարիֆ Ըստ ՊՈԱԿ-ի
                         If CheckPermission("3164C25231034131AAAB2AE858FEBE61") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nPoakTariff")
                         Dim f As New PoakTariff
@@ -1958,28 +1945,23 @@ Public Class MainWindow
                         Call CloseWindow("nCheckPoakTariff")
                         Dim f As New CheckPoakTariff
                         AddChildForm("nCheckPoakTariff", f)
-                    Case 71
-                        'POS
-                        '////////////////////////////////////////////////////////////////////////
 
-                        'Լիցենզիա
-                    Case 72
+                        '////////////////////////////////////////////////////////////////////////
+                    Case 71 'POS
+                    Case 72 'Լիցենզիա
                         If CheckPermission("57E6BB4B20B341EDA77D847BC5A0E824") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nLicWin")
                         Dim f As New LicWin
                         AddChildForm("nLicWin", f)
-                        'Բանկ
-                    Case 73
+                    Case 73 'Բանկ
                         If CheckPermission("D47955C2018E4E6F837779CE26403838") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nBankWin")
                         Dim f As New BankWin
                         AddChildForm("nBankWin", f)
 
-                    Case 74
-                        'ՊՈԱԿ-ից Ստացված ՀԴՄ
                         '////////////////////////////////////////////////////////////////////////
-
-                    Case 75
+                    Case 74 'ՊՈԱԿ-ից Ստացված ՀԴՄ
+                    Case 75 'Ստացված ՀԴՄ-ներ
                         If CheckPermission("2384E622118D4FF4AA680ADA98813BED") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nPoakToOffice")
                         Dim f As New PoakToOffice
@@ -2758,6 +2740,11 @@ Public Class MainWindow
                         Call CloseWindow("nnOpenPropListSellEcr")
                         Dim f As New OpenPropListSellEcr With {.IsRegion = True}
                         AddChildForm("nnOpenPropListSellEcr", f)
+                    Case 13  'Հդմ վաճառքի Փակ Հայտեր 
+                        If CheckPermission("A944BA07C90846CF89FE2CB08C2AF7AC") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
+                        Call CloseWindow("nClosedPropListSellEcr")
+                        Dim f As New ClosedPropListSellEcr
+                        AddChildForm("nClosedPropListSellEcr", f)
                 End Select
             End If
 
@@ -4699,6 +4686,11 @@ Public Class MainWindow
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 12 Then
+            If CheckPermission("A944BA07C90846CF89FE2CB08C2AF7AC") = False Then
+                e.Node.Visible = False
+                e.Handled = True
+            End If
+        ElseIf e.Node.Id = 13 Then
             If CheckPermission("A944BA07C90846CF89FE2CB08C2AF7AC") = False Then
                 e.Node.Visible = False
                 e.Handled = True

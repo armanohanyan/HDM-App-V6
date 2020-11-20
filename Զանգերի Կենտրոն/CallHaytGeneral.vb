@@ -870,7 +870,7 @@ Public Class CallHaytGeneral
         On Error Resume Next
 
         Dim s As String = Text
-        Dim ToTel As String = Tel
+        Dim ToTel As String = Tel.Substring(Tel.Length - 8)
 
         'Send SMS
         SMSToOperatorForSell(s, ToTel, HVHH)

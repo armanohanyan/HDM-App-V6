@@ -548,13 +548,13 @@ Partial Class CallHaytGeneral
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Red
-        Me.Label5.Location = New System.Drawing.Point(18, 137)
+        Me.Label5.Location = New System.Drawing.Point(14, 140)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(30, 20)
+        Me.Label5.Size = New System.Drawing.Size(34, 17)
         Me.Label5.TabIndex = 28
-        Me.Label5.Text = "Հեռ"
+        Me.Label5.Text = "Հեռ."
         '
         'Label4
         '

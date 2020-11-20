@@ -821,6 +821,25 @@ Partial Public Class DB
         Return dt
     End Function
 
+    'GetClosedPropDetailsSellEcr
+    Friend Function GetClosedPropDetailsSellEcr(ByVal isRegion As Boolean) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "EXEC Client.GetClosedPropDetailsSellEcr @isRegion"
+                cmd.Parameters.Add("@isRegion", SqlDbType.Bit).Value = isRegion
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
     'GetDisolvedWorking
     Friend Function GetDisolvedWorking() As DataTable
         Dim dt As DataTable

@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>4008</ApplicationRevision>
+    <ApplicationRevision>4010</ApplicationRevision>
     <ApplicationVersion>6.4.20.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -356,6 +356,12 @@
       <DependentUpon>changeGeneralHaytInfo.vb</DependentUpon>
     </Compile>
     <Compile Include="Զանգերի Կենտրոն\changeGeneralHaytInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\ClosedPropListSellEcr.designer.vb">
+      <DependentUpon>ClosedPropListSellEcr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Զանգերի Կենտրոն\ClosedPropListSellEcr.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Զանգերի Կենտրոն\ClosedPropSelect.Designer.vb">
@@ -2297,6 +2303,9 @@
     <EmbeddedResource Include="Զանգերի Կենտրոն\changeGeneralHaytInfo.resx">
       <DependentUpon>changeGeneralHaytInfo.vb</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Զանգերի Կենտրոն\ClosedPropListSellEcr.resx">
+      <DependentUpon>ClosedPropListSellEcr.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Զանգերի Կենտրոն\ClosedPropSelect.resx">
       <DependentUpon>ClosedPropSelect.vb</DependentUpon>
