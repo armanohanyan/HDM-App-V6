@@ -78,7 +78,7 @@ Public Class HaytGeneralEdit
         Try
             If GridView1.SelectedRowsCount = 0 Then Exit Sub
             Dim haytId As Integer = GridView1.GetFocusedDataRow.Item("ՀՀ").ToString
-            If iDB.IsProposalEquipmentSold(haytId) = True Then Throw New Exception("Հայտը խմբագրման ենթակա չէ, քանի որ վաճառքն արդեն իսկ իրականացված է։")
+            'If iDB.IsProposalEquipmentSold(haytId) = True Then Throw New Exception("Հայտը խմբագրման ենթակա չէ, քանի որ վաճառքն արդեն իսկ իրականացված է։")
 
             Dim f As New changeGeneralHaytInfo
             With f

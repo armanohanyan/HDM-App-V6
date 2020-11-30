@@ -471,7 +471,8 @@ Partial Class UniCallCenterPanel
         Me.Name = "UniCallCenterPanel"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Զանգերի Կենտրոն Վահանակ"
+        Me.Text = "Զանգերի կենտրուն "
+        Me.TransparencyKey = System.Drawing.Color.White
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

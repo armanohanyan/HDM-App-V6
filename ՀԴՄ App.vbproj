@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>4010</ApplicationRevision>
+    <ApplicationRevision>4012</ApplicationRevision>
     <ApplicationVersion>6.4.20.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -908,6 +908,12 @@
       <DependentUpon>HdmCountByContractWindow.vb</DependentUpon>
     </Compile>
     <Compile Include="Ընդհանուր\Պայմանագիր\HdmCountByContractWindow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\NotRecievedContract.designer.vb">
+      <DependentUpon>NotRecievedContract.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ընդհանուր\Պայմանագիր\NotRecievedContract.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Ընդհանուր\Պայմանագիր\PoakToDB.designer.vb">
@@ -2592,6 +2598,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\HdmCountByContractWindow.resx">
       <DependentUpon>HdmCountByContractWindow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\NotRecievedContract.resx">
+      <DependentUpon>NotRecievedContract.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ընդհանուր\Պայմանագիր\PoakToDB.resx">
       <DependentUpon>PoakToDB.vb</DependentUpon>

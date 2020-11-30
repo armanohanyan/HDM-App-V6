@@ -514,6 +514,25 @@ Partial Public Class DB
         Return dt
     End Function
 
+    'GetNotRecievedContracts
+    Friend Function GetNotRecievedContracts() As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandTimeout = 120
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "EXEC poak.GetNotRecievedContracts"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
     'GetDataFor_BazaPoak
     Friend Function BazaPoak() As DataTable
         Dim dt As DataTable
@@ -618,6 +637,26 @@ Partial Public Class DB
                     cmd.Parameters.Add("@dbID", SqlDbType.TinyInt).Value = iUser.DB
                     cmd.Parameters.Add("@O", SqlDbType.Char).Value = o
                 End If
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    'GetBlockedEcrDetails
+    Friend Function GetBlockedEcrDetails(ecr As String) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandTimeout = 150    'Arman
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "EXEC Client.GetBlockedEcrDetails @ecr"
+                cmd.Parameters.Add("@ecr", SqlDbType.VarChar).Value = ecr
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)
@@ -1900,6 +1939,26 @@ Partial Public Class DB
             End Using
         End Using
 
+        Return dt
+    End Function
+
+    'GetMustBeDisabledEcrDetails
+    Friend Function GetMustBeDisabledEcrDetails(ecr As String) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandTimeout = 150    'Arman
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "EXEC Client.GetMustBeDisabledEcrDetails @ecr"
+                cmd.Parameters.Add("@ecr", SqlDbType.VarChar).Value = ecr
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
         Return dt
     End Function
 
@@ -5139,6 +5198,22 @@ Partial Public Class DB
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = "SELECT Client.IsProposalEquipmentSold(@haytId)"
                 cmd.Parameters.Add("@haytId", SqlDbType.Int).Value = haytId
+                b = cmd.ExecuteScalar()
+            End Using
+        End Using
+        Return b
+    End Function
+
+    'IsProposalOpenExist
+    Friend Function IsProposalOpenExist(ByVal hvhh As String) As Boolean
+        Dim b
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT Client.IsProposalOpenExist(@hvhh)"
+                cmd.Parameters.Add("@hvhh", SqlDbType.VarChar).Value = hvhh
                 b = cmd.ExecuteScalar()
             End Using
         End Using

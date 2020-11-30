@@ -40,6 +40,10 @@ Partial Class mustBeDisabledEcrWindow
         Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
         Me.mnuDisableGprs = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnDisableEcr = New DevExpress.XtraEditors.SimpleButton()
+        Me.txtEcr = New System.Windows.Forms.TextBox()
+        Me.cbEcr = New System.Windows.Forms.CheckBox()
         Me.btnVarvac = New DevExpress.XtraEditors.SimpleButton()
         Me.btnInAction = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -54,6 +58,7 @@ Partial Class mustBeDisabledEcrWindow
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.mnuContext.SuspendLayout()
         Me.Panel1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -149,6 +154,7 @@ Partial Class mustBeDisabledEcrWindow
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.GroupBox2)
         Me.Panel1.Controls.Add(Me.btnVarvac)
         Me.Panel1.Controls.Add(Me.btnInAction)
         Me.Panel1.Controls.Add(Me.GroupBox1)
@@ -160,6 +166,43 @@ Partial Class mustBeDisabledEcrWindow
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(200, 428)
         Me.Panel1.TabIndex = 1
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.btnDisableEcr)
+        Me.GroupBox2.Controls.Add(Me.txtEcr)
+        Me.GroupBox2.Controls.Add(Me.cbEcr)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 336)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(182, 89)
+        Me.GroupBox2.TabIndex = 10
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "GroupBox2"
+        '
+        'btnDisableEcr
+        '
+        Me.btnDisableEcr.Location = New System.Drawing.Point(6, 49)
+        Me.btnDisableEcr.Name = "btnDisableEcr"
+        Me.btnDisableEcr.Size = New System.Drawing.Size(170, 23)
+        Me.btnDisableEcr.TabIndex = 10
+        Me.btnDisableEcr.Text = "Արգելափակել"
+        '
+        'txtEcr
+        '
+        Me.txtEcr.Location = New System.Drawing.Point(6, 21)
+        Me.txtEcr.Name = "txtEcr"
+        Me.txtEcr.Size = New System.Drawing.Size(170, 21)
+        Me.txtEcr.TabIndex = 9
+        '
+        'cbEcr
+        '
+        Me.cbEcr.AutoSize = True
+        Me.cbEcr.Location = New System.Drawing.Point(0, 0)
+        Me.cbEcr.Name = "cbEcr"
+        Me.cbEcr.Size = New System.Drawing.Size(121, 17)
+        Me.cbEcr.TabIndex = 8
+        Me.cbEcr.Text = "Արգելափակել ՀԴՄ"
+        Me.cbEcr.UseVisualStyleBackColor = True
         '
         'btnVarvac
         '
@@ -197,10 +240,12 @@ Partial Class mustBeDisabledEcrWindow
         'cAllEcr
         '
         Me.cAllEcr.AutoSize = True
+        Me.cAllEcr.Checked = True
         Me.cAllEcr.Location = New System.Drawing.Point(6, 88)
         Me.cAllEcr.Name = "cAllEcr"
         Me.cAllEcr.Size = New System.Drawing.Size(60, 17)
         Me.cAllEcr.TabIndex = 3
+        Me.cAllEcr.TabStop = True
         Me.cAllEcr.Text = "Բոլորը"
         Me.cAllEcr.UseVisualStyleBackColor = True
         '
@@ -227,12 +272,10 @@ Partial Class mustBeDisabledEcrWindow
         'cOrange
         '
         Me.cOrange.AutoSize = True
-        Me.cOrange.Checked = True
         Me.cOrange.Location = New System.Drawing.Point(6, 20)
         Me.cOrange.Name = "cOrange"
         Me.cOrange.Size = New System.Drawing.Size(97, 17)
         Me.cOrange.TabIndex = 0
-        Me.cOrange.TabStop = True
         Me.cOrange.Text = "Orange / Ucom"
         Me.cOrange.UseVisualStyleBackColor = True
         '
@@ -306,6 +349,8 @@ Partial Class mustBeDisabledEcrWindow
         Me.Text = "Արգելափակման Ենթակա ՀԴՄ-ներ"
         Me.mnuContext.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -341,4 +386,8 @@ Partial Class mustBeDisabledEcrWindow
     Friend WithEvents btnInAction As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnVarvac As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents cAllEcr As System.Windows.Forms.RadioButton
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents btnDisableEcr As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents txtEcr As System.Windows.Forms.TextBox
+    Friend WithEvents cbEcr As System.Windows.Forms.CheckBox
 End Class

@@ -516,6 +516,8 @@ Public Class disabledEcrWindow
     Private Sub disabledEcrWindow_Shown(sender As Object, e As EventArgs) Handles Me.Shown
         Call loadNotSupportedClients()
         Call NoGprsSupport()
+        txtEcr.Enabled = False
+        btnEnableEcr.Enabled = False
     End Sub
     Private Sub GridControl1_KeyDown(sender As Object, e As KeyEventArgs) Handles GridControl1.KeyDown
         On Error Resume Next
@@ -533,5 +535,65 @@ Public Class disabledEcrWindow
         Dim f As New ErrorPhoneNumber
         AddChildForm("nErrorPhoneNumber", f)
     End Sub
+    Private Sub cbEcr_CheckedChanged(sender As Object, e As EventArgs) Handles cbEcr.CheckedChanged
+        If cbEcr.Checked Then
+            txtEcr.Enabled = True
+            btnEnableEcr.Enabled = True
+        Else
+            txtEcr.Enabled = False
+            btnEnableEcr.Enabled = False
+        End If
+    End Sub
+    Private Sub btnEnableEcr_Click(sender As Object, e As EventArgs) Handles btnEnableEcr.Click
+        Try
 
+
+            Dim ecr As String = txtEcr.Text.Trim
+            Dim dt As DataTable = iDB.GetBlockedEcrDetails(ecr)
+            If dt.Rows.Count < 1 Then
+                Throw New Exception("Նշված ՀԴՄ-ն ակտիվ է")
+            End If
+            Dim hvhh = dt.Rows(0)("HVHH")
+            Dim recID = dt.Rows(0)("RecID")
+            Dim ecrType = dt.Rows(0)("Model")
+            Dim op = dt.Rows(0)("Operator")
+
+            Dim EcrToActivate = New gprsDelHvhhEcr(ecr, hvhh, recID, ecrType, op)
+
+            Dim gphvhhecr As New List(Of gprsDelHvhhEcr)
+            gphvhhecr.Add(EcrToActivate)
+
+            Dim dataTable As DataTable = ToDataTable(gphvhhecr)
+
+            Dim dict = RoutingManager.GroupHdmsByType(dataTable)
+
+            For Each pair In dict
+                Select Case pair.Key
+                    Case HdmType.Ucom
+                        iDB.EnableBlockedGPRS2(pair.Value)
+                    Case HdmType.Vivacell
+                        iDB.EnableBlockedGPRS(pair.Value)
+                    Case HdmType.Beeline
+                        iDB.EnableBlockedGPRS(pair.Value)
+                    Case HdmType.Android
+                        iDB.EnableBlockedGPRS3(pair.Value)
+                    Case HdmType.Pax
+                        iDB.EnableBlockedGPRS3(pair.Value)
+                    Case Else
+                End Select
+            Next
+
+            MsgBox("Գործողությունը կատարվեց", MsgBoxStyle.Information, My.Application.Info.Title)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+    Private Sub txtEcr_TextChanged(sender As Object, e As EventArgs) Handles txtEcr.TextChanged
+        If txtEcr.Text.Trim.Length = 1 Then
+            If Microsoft.VisualBasic.Left(txtEcr.Text, 1).ToLower = "v" Then txtEcr.Text = "V90413" : txtEcr.SelectionStart = Len(txtEcr.Text)
+            If Microsoft.VisualBasic.Left(txtEcr.Text, 1).ToLower = "q" Then txtEcr.Text = "Q80414" : txtEcr.SelectionStart = Len(txtEcr.Text)
+            If Microsoft.VisualBasic.Left(txtEcr.Text, 1).ToLower = "s" Then txtEcr.Text = "S90055" : txtEcr.SelectionStart = Len(txtEcr.Text)
+            If Microsoft.VisualBasic.Left(txtEcr.Text, 1).ToLower = "a" Then txtEcr.Text = "A90022" : txtEcr.SelectionStart = Len(txtEcr.Text)
+        End If
+    End Sub
 End Class

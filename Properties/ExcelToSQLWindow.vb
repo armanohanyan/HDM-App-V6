@@ -131,7 +131,7 @@ Public Class ExcelToSQLWindow
                 iDB.ExcelFileToSQLDB(iDT, sDate.DateTime)
             End If
 
-            'MsgBox("Գործողությունը կատարվեց", MsgBoxStyle.Information, My.Application.Info.Title)
+            MsgBox("Գործողությունը կատարվեց", MsgBoxStyle.Information, My.Application.Info.Title)
 
         Catch ex As ExceptionClass
         Catch ex As System.Data.SqlClient.SqlException

@@ -464,6 +464,11 @@ Public Class CallHaytGeneral
 
             If txtEcr.Text.Trim.Length = 12 Then If isHDMExists(txtEcr.Text.Trim) = True Then Throw New Exception("Սույն ՀԴՄ-ի համար հայտը ակտիվ է")
 
+            If cProb.SelectedIndex = 9 OrElse cProb.SelectedIndex = 10 OrElse cProb.SelectedIndex = 11 Then
+                If iDB.IsProposalOpenExist(txtHVHH.Text.Trim) = True Then Throw New Exception("Գործողությունն արգելված է, քանի որ այս կազմակերպության համար առկա է ՀԴՄ վաճառքի բաց հայտ։")
+            End If
+
+
             Dim Loc As String = "0,0"
 
             'Get Location

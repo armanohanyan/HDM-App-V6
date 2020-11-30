@@ -407,4 +407,74 @@ Public Class mustBeDisabledEcrWindow
         End If
     End Sub
 
+
+    Private Sub mustBeDisabledEcrWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        txtEcr.Enabled = False
+        btnDisableEcr.Enabled = False
+    End Sub
+
+    Private Sub txtEcr_TextChanged(sender As Object, e As EventArgs) Handles txtEcr.TextChanged
+        If txtEcr.Text.Trim.Length = 1 Then
+            If Microsoft.VisualBasic.Left(txtEcr.Text, 1).ToLower = "v" Then txtEcr.Text = "V90413" : txtEcr.SelectionStart = Len(txtEcr.Text)
+            If Microsoft.VisualBasic.Left(txtEcr.Text, 1).ToLower = "q" Then txtEcr.Text = "Q80414" : txtEcr.SelectionStart = Len(txtEcr.Text)
+            If Microsoft.VisualBasic.Left(txtEcr.Text, 1).ToLower = "s" Then txtEcr.Text = "S90055" : txtEcr.SelectionStart = Len(txtEcr.Text)
+            If Microsoft.VisualBasic.Left(txtEcr.Text, 1).ToLower = "a" Then txtEcr.Text = "A90022" : txtEcr.SelectionStart = Len(txtEcr.Text)
+        End If
+
+    End Sub
+
+    Private Sub cbEcr_CheckedChanged(sender As Object, e As EventArgs) Handles cbEcr.CheckedChanged
+        If cbEcr.Checked Then
+            txtEcr.Enabled = True
+            btnDisableEcr.Enabled = True
+        Else
+            txtEcr.Enabled = False
+            btnDisableEcr.Enabled = False
+        End If
+    End Sub
+
+    Private Sub btnEnableEcr_Click(sender As Object, e As EventArgs) Handles btnDisableEcr.Click
+
+        If CheckPermission2("EE4F139B2D444A3A8F03BAE87CA7C600") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
+
+        If Not MsgBox("Ցանկանու՞մ եք արգելափակել ՀԴՄ-ն", MsgBoxStyle.Question + MsgBoxStyle.YesNo).Equals(MsgBoxResult.Yes) Then Exit Sub
+
+        Dim ecr As String = txtEcr.Text.Trim
+        Dim dt As DataTable = iDB.GetMustBeDisabledEcrDetails(ecr)
+
+        If dt.Rows.Count < 1 Then
+            Throw New Exception("Նշված ՀԴՄ-ն գոյություն չունի")
+        End If
+        Dim partqDate = dt.Rows(0)("partqDate")
+        Dim ecrType = dt.Rows(0)("Model")
+        Dim op = dt.Rows(0)("Operator")
+
+        Dim mustbeblockedEcr = New BlockGprsByHdm(ecr, partqDate, ecrType, op)
+        Dim cBlockGprsByHdm As New List(Of BlockGprsByHdm)
+        cBlockGprsByHdm.Add(mustbeblockedEcr)
+
+        Dim dataTable As DataTable = ToDataTable(cBlockGprsByHdm)
+
+        Dim groupedDictionary = RoutingManager.GroupHdmsByType(dataTable)
+
+        For Each pair In groupedDictionary
+
+            Select Case pair.Key
+                Case HdmType.Ucom
+                    iDB.BlockGprsByEcr2(pair.Value)
+                Case HdmType.Vivacell
+                    iDB.BlockGprsByEcr(pair.Value)
+                Case HdmType.Beeline
+                    iDB.BlockGprsByEcr(pair.Value)
+                Case HdmType.Android
+                    iDB.BlockGprsByEcr3(pair.Value)
+                Case HdmType.Pax
+                    iDB.BlockGprsByEcr3(pair.Value)
+                Case Else
+            End Select
+        Next
+
+        MsgBox("Գործողությունը կատարվեց", MsgBoxStyle.Information, My.Application.Info.Title)
+
+    End Sub
 End Class

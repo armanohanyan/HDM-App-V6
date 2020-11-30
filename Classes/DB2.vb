@@ -3563,7 +3563,7 @@ Partial Public Class DB
             cnn.Open()
             Using cmd As New SqlCommand
                 cmd.Connection = cnn
-                cmd.CommandTimeout = 500
+                cmd.CommandTimeout = 1500
                 cmd.CommandType = CommandType.StoredProcedure
                 cmd.CommandText = "poak.ExcelFileToSQLDB"
                 cmd.Parameters.Add("@T", SqlDbType.Structured).Value = T
