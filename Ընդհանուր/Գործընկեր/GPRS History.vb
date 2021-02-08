@@ -36,6 +36,8 @@ Public Class GPRS_History
                 .OptionsBehavior.ReadOnly = True
                 .OptionsCustomization.AllowColumnMoving = False
                 .OptionsCustomization.AllowGroup = False
+                .Columns("ԱրգելափակմանԱմսաթիվ").DisplayFormat.FormatString = "yyyy-MM-dd hh:mm:ss"
+                .Columns("ԱկտիվացմանԱմսաթիվ").DisplayFormat.FormatString = "yyyy-MM-dd hh:mm:ss"
 
                 .OptionsView.AllowCellMerge = False
                 .OptionsSelection.MultiSelect = False

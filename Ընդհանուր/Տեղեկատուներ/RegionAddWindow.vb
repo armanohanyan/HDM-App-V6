@@ -1,5 +1,7 @@
 ﻿Public Class RegionAddWindow
 
+
+
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
         Try
             If String.IsNullOrEmpty(txtRegion.Text) Then Throw New Exception("Տվյալները գրված չեն")

@@ -49,20 +49,20 @@ Public Class ActiveHaytWin
         On Error Resume Next
 
         Dim View As GridView = sender
-        If (e.RowHandle >= 0) Then
-            Dim stat As String = View.GetRowCellDisplayText(e.RowHandle, View.Columns("Կարգավիճակ"))
-            If stat <> "Checked" Then
-                e.Appearance.BackColor = Color.Green ' Color.Salmon
-                e.Appearance.BackColor2 = Color.Yellow ' Color.SeaShell
-            End If
+        'If (e.RowHandle >= 0) Then
+        '    Dim stat As String = View.GetRowCellDisplayText(e.RowHandle, View.Columns("Կարգավիճակ"))
+        '    If stat <> "Checked" Then
+        '        e.Appearance.BackColor = Color.Green ' Color.Salmon
+        '        e.Appearance.BackColor2 = Color.Yellow ' Color.SeaShell
+        '    End If
 
-            Dim d As Date = View.GetRowCellDisplayText(e.RowHandle, View.Columns("ՀայտիԱմսաթիվ"))
-            If Now.Date > DateAdd(DateInterval.Day, 3, d) AndAlso stat <> "Checked" Then
-                e.Appearance.BackColor = Color.Red ' Color.Salmon
-                e.Appearance.BackColor2 = Color.Orange ' Color.SeaShell
-            End If
+        '    Dim d As Date = View.GetRowCellDisplayText(e.RowHandle, View.Columns("ՀայտիԱմսաթիվ"))
+        '    If Now.Date > DateAdd(DateInterval.Day, 3, d) AndAlso stat <> "Checked" Then
+        '        e.Appearance.BackColor = Color.Red ' Color.Salmon
+        '        e.Appearance.BackColor2 = Color.Orange ' Color.SeaShell
+        '    End If
 
-        End If
+        'End If
 
     End Sub
     Private Sub GridControl1_KeyDown(sender As Object, e As KeyEventArgs) Handles GridControl1.KeyDown
@@ -76,7 +76,7 @@ Public Class ActiveHaytWin
         End If
     End Sub
     Private Sub GridControl1_Load(sender As Object, e As EventArgs) Handles GridControl1.Load
-        Call LoadOpenHayts()
+        'Call LoadOpenHayts()
     End Sub
 
 End Class

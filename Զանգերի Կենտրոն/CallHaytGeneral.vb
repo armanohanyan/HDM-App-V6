@@ -468,6 +468,7 @@ Public Class CallHaytGeneral
                 If iDB.IsProposalOpenExist(txtHVHH.Text.Trim) = True Then Throw New Exception("Գործողությունն արգելված է, քանի որ այս կազմակերպության համար առկա է ՀԴՄ վաճառքի բաց հայտ։")
             End If
 
+            If (cProb.SelectedIndex = 9 OrElse cProb.SelectedIndex = 10 OrElse cProb.SelectedIndex = 11) AndAlso cbSupporter.SelectedValue = 5 Then Throw New Exception("ՀԴՄ-ն չի կարող վաճառել Անորոշ կազմակերպություն")
 
             Dim Loc As String = "0,0"
 

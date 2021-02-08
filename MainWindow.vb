@@ -1606,298 +1606,310 @@ Public Class MainWindow
                         Call CloseWindow("nTarif")
                         Dim f As New TarifWin
                         AddChildForm("nTarif", f)
-                    Case 10 'ՀԴՄ Առաքում
+                    Case 10 'Տարաժամկետ
                         '////////////////////////////////////////////////////////////////////////
-                    Case 11 'ՀԴՄ Առաքում
+                    Case 11 'Պայմաններ
+                        If CheckPermission("77B200BBD84F4DADB4FFFDA4377B035C") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
+                        Call CloseWindow("nTarajamketWindow")
+                        Dim f As New TarajamketWindow
+                        AddChildForm("nTarajamketWindow", f)
+                    Case 12 'Գրաֆիկ
+                        If CheckPermission("77B200BBD84F4DADB4FFFDA4377B035C") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
+                        Call CloseWindow("nTarajamketGraphik")
+                        Dim f As New TarajamketGraphik
+                        AddChildForm("nTarajamketGraphik", f)
+                    Case 13 'ՀԴՄ Առաքում
+                        '////////////////////////////////////////////////////////////////////////
+                    Case 14 'ՀԴՄ Առաքում
                         If CheckPermission("874DF27A12054E17A5B6DB8D8AC750FE") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nHDMAraqum")
                         Dim f As New hdmAraqumWindow
                         AddChildForm("nHDMAraqum", f)
-                    Case 12 'ՀԴՄ Ճանապարհին
+                    Case 15 'ՀԴՄ Ճանապարհին
                         If CheckPermission("2B6B1113D956414796E53F2A1647A56A") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nHDMInRoad")
                         Dim f As New hdmOnRoadWindow
                         AddChildForm("nHDMInRoad", f)
-                    Case 13 'ՀԴՄ Վերանորոգման Մեջ
+                    Case 16 'ՀԴՄ Վերանորոգման Մեջ
                         If CheckPermission("45BBCE23E1E446C69CE00AEDF5BC4B44") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nDHMRemReady")
                         Dim f As New hdmAraqumOnRemontWindow
                         AddChildForm("nDHMRemReady", f)
-                    Case 14 'ՀԴՄ Ուղարկման Ենթակա
+                    Case 17 'ՀԴՄ Ուղարկման Ենթակա
                         If CheckPermission("DCBD85BE9F6A43159F68B64B72222F33") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nHDMToBeSend")
                         Dim f As New hdmAraqumReadyWindow
                         AddChildForm("nHDMToBeSend", f)
-                    Case 15 'ՀԴՄ Ուղարկված
+                    Case 18 'ՀԴՄ Ուղարկված
                         If CheckPermission("0FE2E3E794CE438681BE8267F0B7F410") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nHDMSentToRoad")
                         Dim f As New hdmAraqumSentWindow
                         AddChildForm("nHDMSentToRoad", f)
-                    Case 16 'Պայմանագիր
+                    Case 19 'Պայմանագիր
                         '////////////////////////////////////////////////////////////////////////
-                    Case 17 'ՊՈԱԿ Ավելացման Ենթակա
+                    Case 20 'ՊՈԱԿ Ավելացման Ենթակա
                         If CheckPermission("99E1C38807234D36A30F7148BA074DB2") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim f As New PoakToDBSelector
                         f.ShowDialog()
-                    Case 18 'ՊՈԱԿ Վերագրանցման Ենթակա
+                    Case 21 'ՊՈԱԿ Վերագրանցման Ենթակա
                         If CheckPermission("9360823FDE4746A294FBF349759BFEC0") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nPoakForReRegister")
                         Dim f As New PoakToRegister
                         AddChildForm("nPoakForReRegister", f)
-                    Case 19 'ՊՈԱԿ ՄԳՀ Տարբերություն
+                    Case 22 'ՊՈԱԿ ՄԳՀ Տարբերություն
                         If CheckPermission("9132657EF0A045FF80433E6E0DC3E9ED") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nPoakMGH")
                         Dim f As New PoakToMGH
                         AddChildForm("nPoakMGH", f)
-                    Case 20 'Չվերադարձված պայմանագրեր
+                    Case 23 'Չվերադարձված պայմանագրեր
                         If CheckPermission("9360823FDE4746A294FBF349759BFEC0") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nNotRecievedContract")
                         Dim f As New NotRecievedContract
                         AddChildForm("nNotRecievedContract", f)
-                    Case 21 'ԲԱԶԱ ՊՈԱԿ Համեմատում
+                    Case 24 'ԲԱԶԱ ՊՈԱԿ Համեմատում
                         If CheckPermission("70326A9271804018A5F894A7117817F3") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nBaseToPoak")
                         Dim f As New BazaPoak
                         AddChildForm("nBaseToPoak", f)
-                    Case 22 'Պայմանագրի Քանակի Համեմատում
+                    Case 25 'Պայմանագրի Քանակի Համեմատում
                         If CheckPermission("282DB48D53424BF4AF73481CE093B3C9") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nCountractCounteChecker")
                         Dim f As New ContractCounterWindow
                         AddChildForm("nCountractCounteChecker", f)
-                    Case 23  'Տպված Պայմանագրի Հավելված
+                    Case 26  'Տպված Պայմանագրի Հավելված
                         If CheckPermission("22171AEB3646406691BC382AB49AC145") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nPrintedApplContract")
                         Dim f As New PrintedContractApplicationsWin
                         AddChildForm("nPrintedApplContract", f)
-                    Case 24 'Չտպված Հավելվածներ
+                    Case 27 'Չտպված Հավելվածներ
                         If CheckPermission("B2F89BF559744C1D95F8A47996A3D350") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New DateSelect
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 25 'Գործընկերոջ Կարգավիճակի Փոփոխություն
+                    Case 28 'Գործընկերոջ Կարգավիճակի Փոփոխություն
                         If CheckPermission("B2F89BF559744C1D95F8A47996A3D359") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nChangeEcrStatus")
                         Dim f As New ChangeEcrStatus
                         AddChildForm("nChangeEcrStatus", f)
-                    Case 26 'Արգելափակել ՀԴՄ-GPRS
+                    Case 29 'Արգելափակել ՀԴՄ-GPRS
                         '////////////////////////////////////////////////////////////////////////
-                    Case 27  'GPRS Կասեցումից Ազատված
+                    Case 30  'GPRS Կասեցումից Ազատված
                         If CheckPermission("34BF90D3C1D84BB69586FFDA1FE389A4") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nEditPremiumClients")
                         Dim f As New EditPremiumClients
                         AddChildForm("nEditPremiumClients", f)
-                    Case 28 'Արգելափակել GPRS
+                    Case 31 'Արգելափակել GPRS
                         If CheckPermission("835C5DAD85F14F9192BE753F9F9D3134") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nMustBeDisables")
                         Dim f As New mustBeDisabledEcrWindow
                         AddChildForm("nMustBeDisables", f)
-                    Case 29  'Արգելափակված GPRS
+                    Case 32  'Արգելափակված GPRS
                         If CheckPermission("2BE4D16252A241E9BEBBC5BE6B46E37C") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nDisabledECRs")
                         Dim f As New disabledEcrWindow
                         AddChildForm("nDisabledECRs", f)
-                    Case 30 'Ուղարկել Նամակ
+                    Case 33 'Ուղարկել Նամակ
                         If CheckPermission("B620D1EE214F4768AF96286F5CB3E281") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nSendEmailToTesuch")
                         Dim f As New SendEmailWindow
                         AddChildForm("nSendEmailToTesuch", f)
-                    Case 31 'Ուղարկել SMS Հաճախորդներին
+                    Case 34 'Ուղարկել SMS Հաճախորդներին
                         If CheckPermission("4BF939352BB44D7A853D9CD7C4EA72AE") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nSMSToClient")
                         Dim f As New SendSMSWindow
                         AddChildForm("nSMSToClient", f)
-                    Case 32 'Ուղարկել SMS Տեսուչներին
+                    Case 35 'Ուղարկել SMS Տեսուչներին
                         If CheckPermission("FFCB6B904E8E41939D2CCA5187B43AD9") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nSMSToTesuch")
                         Dim f As New SendTesuchSMSWindow
                         AddChildForm("nSMSToTesuch", f)
-                    Case 33 'Ուղարկել Անհատական SMS
+                    Case 36 'Ուղարկել Անհատական SMS
                         If CheckPermission("A982D7FBED2A45F2AE9CD2B57F6F8F44") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nCustomSMSByClient")
                         Dim f As New SendHVHHSMSWindow
                         AddChildForm("nCustomSMSByClient", f)
-                    Case 34 'ՀՎՀՀ-ով SIM Արգելքի Հանում
+                    Case 37 'ՀՎՀՀ-ով SIM Արգելքի Հանում
                         If CheckPermission("2B6BAE83388B4C8AAC3FA07C0ABC5416") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nEnableSIMByHVHH")
                         Dim f As New enagleSIMByHvhhWindow
                         AddChildForm("nEnableSIMByHVHH", f)
-                    Case 35 'Գործընկերներ
+                    Case 38 'Գործընկերներ
                         '////////////////////////////////////////////////////////////////////////
-                    Case 36 'Գործընկեր
+                    Case 39 'Գործընկեր
                         If CheckPermission("AA7ABFF5766B46DFB03432178C0A22FB") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nSearchClient")
                         Dim f As New SearchHVHH
                         AddChildForm("nSearchClient", f)
-                    Case 37 'Գործընկերոջ Հուսալիություն
+                    Case 40 'Գործընկերոջ Հուսալիություն
                         If CheckPermission("A68E621DA9604C9A8F68EFAC7531774D") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nRepPartnerPercent")
                         Dim f As New RepPartnerPercent
                         AddChildForm("nRepPartnerPercent", f)
-                    Case 38 'ՀԴՄ-ներ
+                    Case 41 'ՀԴՄ-ներ
                         '////////////////////////////////////////////////////////////////////////
-                    Case 39 'ՀԴՄ
+                    Case 42 'ՀԴՄ
                         If CheckPermission("7C7D395B41B647E398D265A5B5E1AC20") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nHDMSearch")
                         Dim f As New SearchHDMOnly
                         AddChildForm("nHDMSearch", f)
-                    Case 40 'GPRS Քարտի Փոփոխում
+                    Case 43 'GPRS Քարտի Փոփոխում
                         If CheckPermission("026606C89C9449DBBBB864007DF90C57") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim f As New changeGPRSCode
                         f.ShowDialog()
                         f.Dispose()
-                    Case 41 'Արգելափակված ՀԴՄ
+                    Case 44 'Արգելափակված ՀԴՄ
                         If CheckPermission("79ED7339409148A49324712C84ED707E") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nBlockedHDMGprs")
                         Dim f As New BlockedGPRS
                         AddChildForm("nBlockedHDMGprs", f)
-                    Case 42 'ՀԴՄ Կարգավիճակ ՊՈԱԿ-ում
+                    Case 45 'ՀԴՄ Կարգավիճակ ՊՈԱԿ-ում
                         If CheckPermission("AB2A040842F441BB8A578C0F3C33A7EE") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nPoakHDMStatus")
                         Dim f As New PoakHdmStatus
                         AddChildForm("nPoakHDMStatus", f)
-                    Case 43  'Երաշխիքային ՀԴՄ
+                    Case 46  'Երաշխիքային ՀԴՄ
                         If CheckPermission("858A3BDA099344B2812384918418B619") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nInGarant")
                         Dim f As New garantHDM
                         AddChildForm("nInGarant", f)
-                    Case 44 'Ոչ Երաշխիքային ՀԴՄ
+                    Case 47 'Ոչ Երաշխիքային ՀԴՄ
                         If CheckPermission("032886C945DB4C958FF3EE3043E24840") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nNotInGarant")
                         Dim f As New NotgarantHDM
                         AddChildForm("nNotInGarant", f)
-                    Case 45 'Տեսուչի Այց
+                    Case 48 'Տեսուչի Այց
                         '////////////////////////////////////////////////////////////////////////
-                    Case 46 'Տեսուչի Այց
+                    Case 49 'Տեսուչի Այց
                         If CheckPermission("B3F5707273664E5CBEE4E710AD867D70") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nTesuchVisitWin")
                         Dim f As New TesuchVisitWin
                         AddChildForm("nTesuchVisitWin", f)
-                    Case 47 'Վերանորոգում
+                    Case 50 'Վերանորոգում
                         '////////////////////////////////////////////////////////////////////////
-                    Case 48 'Վերանորոգման Հայտ
+                    Case 51 'Վերանորոգման Հայտ
                         If CheckPermission("13AF25BD34BA470688C5378C64D356E9") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New EcrSelecterForRemake
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 49  'Մուտք Սրահ *
+                    Case 52  'Մուտք Սրահ *
                         If CheckPermission("EE5A3A3242B24DD6915882185C604C79") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New EnterBranchClicker
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 50   'Մուտք Սրահ
+                    Case 53   'Մուտք Սրահ
                         If CheckPermission("815F5E89D1434871AB287276F07CB0C5") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New EnterCenterClicker
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 51 'Մուտք Արհեստանոց
+                    Case 54 'Մուտք Արհեստանոց
                         If CheckPermission("BFC3B50AE7F84FDABEA6C2B3943F8844") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New EnterCenterWorkshop
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 52 'Մուտք Արհեստանոց *
+                    Case 55 'Մուտք Արհեստանոց *
                         If CheckPermission("54580B6EEC224AD3BA318F54720CF0E9") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New EnterBranchWorkshop
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 53 'Ելք Արհեստանոցից *
+                    Case 56 'Ելք Արհեստանոցից *
                         If CheckPermission("3771982E439449E29027A84714962052") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New CloseBranchWorkshopWindow
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 54     'Ելք Արհեստանոցից
+                    Case 57     'Ելք Արհեստանոցից
                         If CheckPermission("CB67607887E84912A6D6751E71D73064") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New CloseCenterWorkshopWindow
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 55  'Ելք Սրահից
+                    Case 58  'Ելք Սրահից
                         If CheckPermission("938E9275863E4AFFB634DFDA81EAD3E4") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New CloseCenterWindow
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 56 'Ելք Սրահից *
+                    Case 59 'Ելք Սրահից *
                         If CheckPermission("83C069B500D243A1837D67A6AF35AE66") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New CloseBranchWindow
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 57 'Արհեստանոց
+                    Case 60 'Արհեստանոց
                         '////////////////////////////////////////////////////////////////////////
-                    Case 58 'Արհեստանոցի Հայտ
+                    Case 61 'Արհեստանոցի Հայտ
                         If CheckPermission("B2924575445C43D7A15E3FD546FBF214") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New WorkShopProposalWindow
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 59 'GPRS
+                    Case 62 'GPRS
                         '////////////////////////////////////////////////////////////////////////
-                    Case 60 'GPRS Նոր Քարտ
+                    Case 63 'GPRS Նոր Քարտ
                         If CheckPermission("01F5295314404972B73AB8905D2DF7AE") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nNewGprs")
                         Dim f As New NewGprs
                         AddChildForm("nNewGprs", f)
-                    Case 61 'GPRS Քարտ Ներբեռնել EXCEL-ից
+                    Case 64 'GPRS Քարտ Ներբեռնել EXCEL-ից
                         If CheckPermission("3AA18BBFB06244C893F4F637E9B03B27") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New GprsFileSelecter
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 62 'Ջնջել GPRS-ը
+                    Case 65 'Ջնջել GPRS-ը
                         If CheckPermission("9D5A719035B341A083696B17E61D5627") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nDeleteGPRSWindow")
                         Dim f As New DeleteGPRSWindow
                         AddChildForm("nDeleteGPRSWindow", f)
-                    Case 63 'Արխիվացնել Orange GPRS Հարցումները
+                    Case 66 'Արխիվացնել Orange GPRS Հարցումները
                         If CheckPermission("6680F94061EE45969FD2A361A73A3469") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call ArchiveOrangeData()
-                    Case 64 'Տարիֆ
+                    Case 67 'Տարիֆ
                         '////////////////////////////////////////////////////////////////////////
-                    Case 65 'Փոխել Գործընկերոջ Տարիֆը
+                    Case 68 'Փոխել Գործընկերոջ Տարիֆը
                         If CheckPermission("39C84C2EB6C14990B74164C1A7D3A8AF") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Dim fm As New changeTarifWindow
                         fm.ShowDialog()
                         fm.Dispose()
-                    Case 66 'Գործընկերոջ Ընթացիկ Տարիֆ
+                    Case 69 'Գործընկերոջ Ընթացիկ Տարիֆ
                         If CheckPermission("CDD8026AB52D4D80AC4331393DEF3A73") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nListOfCurrentTarifWindow")
                         Dim f As New ListOfCurrentTarifWindow
                         AddChildForm("nListOfCurrentTarifWindow", f)
-                    Case 67 'Տարիֆի Պատմություն
+                    Case 70 'Տարիֆի Պատմություն
                         If CheckPermission("AB0E3EB722B948D8AB84F1F32E42C960") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nTarifHistoryWindow")
                         Dim f As New TarifHistoryWindow
                         AddChildForm("nTarifHistoryWindow", f)
-                    Case 68 'Փոփոխման Ենթակա Տարիֆ
+                    Case 71 'Փոփոխման Ենթակա Տարիֆ
                         If CheckPermission("DB24BF62FA9E4589BBCD8DD9AE3F358C") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nUpcomingTarifWindow")
                         Dim f As New UpcomingTarifWindow
                         AddChildForm("nUpcomingTarifWindow", f)
-                    Case 69 'Տարիֆ Ըստ ՊՈԱԿ-ի
+                    Case 72 'Տարիֆ Ըստ ՊՈԱԿ-ի
                         If CheckPermission("3164C25231034131AAAB2AE858FEBE61") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nPoakTariff")
                         Dim f As New PoakTariff
                         AddChildForm("nPoakTariff", f)
-                    Case 70
+                    Case 73
                         If CheckPermission("B9AB14A979A54C5D8A5EE9679135C130") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nMissedTariff")
                         Dim f As New MissedTariff
                         AddChildForm("nMissedTariff", f)
-                    Case 71
+                    Case 74
                         If CheckPermission("3F3048CF83C0421D9FB08174FE163B03") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nCheckPoakTariff")
                         Dim f As New CheckPoakTariff
                         AddChildForm("nCheckPoakTariff", f)
-                    Case 72 'POS
+                    Case 75 'POS
                         '////////////////////////////////////////////////////////////////////////
-                    Case 73 'Լիցենզիա
+                    Case 76 'Լիցենզիա
                         If CheckPermission("57E6BB4B20B341EDA77D847BC5A0E824") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nLicWin")
                         Dim f As New LicWin
                         AddChildForm("nLicWin", f)
-                    Case 74 'Բանկ
+                    Case 77 'Բանկ
                         If CheckPermission("D47955C2018E4E6F837779CE26403838") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nBankWin")
                         Dim f As New BankWin
                         AddChildForm("nBankWin", f)
-                    Case 75 'ՊՈԱԿ-ից Ստացված ՀԴՄ
+                    Case 78 'ՊՈԱԿ-ից Ստացված ՀԴՄ
                         '////////////////////////////////////////////////////////////////////////
-                    Case 76 'Ստացված ՀԴՄ-ներ
+                    Case 79 'Ստացված ՀԴՄ-ներ
                         If CheckPermission("2384E622118D4FF4AA680ADA98813BED") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
                         Call CloseWindow("nPoakToOffice")
                         Dim f As New PoakToOffice
@@ -2677,9 +2689,11 @@ Public Class MainWindow
                         AddChildForm("nnOpenPropListSellEcr", f)
                     Case 13  'Հդմ վաճառքի Փակ Հայտեր 
                         If CheckPermission("A944BA07C90846CF89FE2CB08C2AF7AC") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
-                        Call CloseWindow("nClosedPropListSellEcr")
-                        Dim f As New ClosedPropListSellEcr
-                        AddChildForm("nClosedPropListSellEcr", f)
+                        'Call CloseWindow("nClosedPropListSellEcr")
+                        Dim f As New SellEcrClosedPropSelect
+                        f.ShowDialog()
+                        f.Dispose()
+                        'AddChildForm("nClosedPropListSellEcr", f)
                 End Select
             End If
 
@@ -3603,336 +3617,351 @@ Public Class MainWindow
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 10 Then
-            If CheckPermission("D27CC6444B21482C81A87AB79ACD3CDF") = False Then
+            If CheckPermission("77B200BBD84F4DADB4FFFDA4377B035C") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 11 Then
-            If CheckPermission("874DF27A12054E17A5B6DB8D8AC750FE") = False Then
+            If CheckPermission("77B200BBD84F4DADB4FFFDA4377B035C") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 12 Then
-            If CheckPermission("2B6B1113D956414796E53F2A1647A56A") = False Then
+            If CheckPermission("77B200BBD84F4DADB4FFFDA4377B035C") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 13 Then
-            If CheckPermission("45BBCE23E1E446C69CE00AEDF5BC4B44") = False Then
+            If CheckPermission("D27CC6444B21482C81A87AB79ACD3CDF") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 14 Then
-            If CheckPermission("DCBD85BE9F6A43159F68B64B72222F33") = False Then
+            If CheckPermission("874DF27A12054E17A5B6DB8D8AC750FE") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 15 Then
-            If CheckPermission("0FE2E3E794CE438681BE8267F0B7F410") = False Then
+            If CheckPermission("2B6B1113D956414796E53F2A1647A56A") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 16 Then
-            If CheckPermission("05FB334E5AF84A908C864F2CA9413B29") = False Then
+            If CheckPermission("45BBCE23E1E446C69CE00AEDF5BC4B44") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 17 Then
-            If CheckPermission("99E1C38807234D36A30F7148BA074DB2") = False Then
+            If CheckPermission("DCBD85BE9F6A43159F68B64B72222F33") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 18 Then
-            If CheckPermission("9360823FDE4746A294FBF349759BFEC0") = False Then
+            If CheckPermission("0FE2E3E794CE438681BE8267F0B7F410") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 19 Then
-            If CheckPermission("9132657EF0A045FF80433E6E0DC3E9ED") = False Then
+            If CheckPermission("05FB334E5AF84A908C864F2CA9413B29") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 20 Then
-            If CheckPermission("9360823FDE4746A294FBF349759BFEC0") = False Then
+            If CheckPermission("99E1C38807234D36A30F7148BA074DB2") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 21 Then
-            If CheckPermission("70326A9271804018A5F894A7117817F3") = False Then
+            If CheckPermission("9360823FDE4746A294FBF349759BFEC0") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 22 Then
-            If CheckPermission("282DB48D53424BF4AF73481CE093B3C9") = False Then
+            If CheckPermission("9132657EF0A045FF80433E6E0DC3E9ED") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 23 Then
-            If CheckPermission("22171AEB3646406691BC382AB49AC145") = False Then
+            If CheckPermission("9360823FDE4746A294FBF349759BFEC0") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 24 Then
-            If CheckPermission("B2F89BF559744C1D95F8A47996A3D350") = False Then
+            If CheckPermission("70326A9271804018A5F894A7117817F3") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 25 Then
-            If CheckPermission("B2F89BF559744C1D95F8A47996A3D359") = False Then
+            If CheckPermission("282DB48D53424BF4AF73481CE093B3C9") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 26 Then
-            If CheckPermission("B3BD5DB582574469A049C9C2B57F33B0") = False Then
+            If CheckPermission("22171AEB3646406691BC382AB49AC145") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 27 Then
-            If CheckPermission("34BF90D3C1D84BB69586FFDA1FE389A4") = False Then
+            If CheckPermission("B2F89BF559744C1D95F8A47996A3D350") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 28 Then
-            If CheckPermission("835C5DAD85F14F9192BE753F9F9D3134") = False Then
+            If CheckPermission("B2F89BF559744C1D95F8A47996A3D359") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 29 Then
-            If CheckPermission("2BE4D16252A241E9BEBBC5BE6B46E37C") = False Then
+            If CheckPermission("B3BD5DB582574469A049C9C2B57F33B0") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 30 Then
-            If CheckPermission("B620D1EE214F4768AF96286F5CB3E281") = False Then
+            If CheckPermission("34BF90D3C1D84BB69586FFDA1FE389A4") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 31 Then
-            If CheckPermission("4BF939352BB44D7A853D9CD7C4EA72AE") = False Then
+            If CheckPermission("835C5DAD85F14F9192BE753F9F9D3134") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 32 Then
-            If CheckPermission("FFCB6B904E8E41939D2CCA5187B43AD9") = False Then
+            If CheckPermission("2BE4D16252A241E9BEBBC5BE6B46E37C") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 33 Then
-            If CheckPermission("A982D7FBED2A45F2AE9CD2B57F6F8F44") = False Then
+            If CheckPermission("B620D1EE214F4768AF96286F5CB3E281") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 34 Then
-            If CheckPermission("2B6BAE83388B4C8AAC3FA07C0ABC5416") = False Then
+            If CheckPermission("4BF939352BB44D7A853D9CD7C4EA72AE") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 35 Then
-            If CheckPermission("7D1FC7CFFCF44A50BB3543F6021FCB4D") = False Then
+            If CheckPermission("FFCB6B904E8E41939D2CCA5187B43AD9") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 36 Then
-            If CheckPermission("AA7ABFF5766B46DFB03432178C0A22FB") = False Then
+            If CheckPermission("A982D7FBED2A45F2AE9CD2B57F6F8F44") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 37 Then
-            If CheckPermission("A68E621DA9604C9A8F68EFAC7531774D") = False Then
+            If CheckPermission("2B6BAE83388B4C8AAC3FA07C0ABC5416") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 38 Then
-            If CheckPermission("5BD10D090F7C454CB6E80A15474E81CE") = False Then
+            If CheckPermission("7D1FC7CFFCF44A50BB3543F6021FCB4D") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 39 Then
-            If CheckPermission("7C7D395B41B647E398D265A5B5E1AC20") = False Then
+            If CheckPermission("AA7ABFF5766B46DFB03432178C0A22FB") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 40 Then
-            If CheckPermission("026606C89C9449DBBBB864007DF90C57") = False Then
+            If CheckPermission("A68E621DA9604C9A8F68EFAC7531774D") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 41 Then
-            If CheckPermission("79ED7339409148A49324712C84ED707E") = False Then
+            If CheckPermission("5BD10D090F7C454CB6E80A15474E81CE") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 42 Then
-            If CheckPermission("AB2A040842F441BB8A578C0F3C33A7EE") = False Then
+            If CheckPermission("7C7D395B41B647E398D265A5B5E1AC20") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 43 Then
-            If CheckPermission("858A3BDA099344B2812384918418B619") = False Then
+            If CheckPermission("026606C89C9449DBBBB864007DF90C57") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 44 Then
-            If CheckPermission("032886C945DB4C958FF3EE3043E24840") = False Then
+            If CheckPermission("79ED7339409148A49324712C84ED707E") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 45 Then
-            If CheckPermission("5DCB4504BC0640EBBC37996DA9FAC4DE") = False Then
+            If CheckPermission("AB2A040842F441BB8A578C0F3C33A7EE") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 46 Then
-            If CheckPermission("B3F5707273664E5CBEE4E710AD867D70") = False Then
+            If CheckPermission("858A3BDA099344B2812384918418B619") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 47 Then
-            If CheckPermission("0DA27756076844F79EB565F4C4D520B6") = False Then
+            If CheckPermission("032886C945DB4C958FF3EE3043E24840") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 48 Then
-            If CheckPermission("13AF25BD34BA470688C5378C64D356E9") = False Then
+            If CheckPermission("5DCB4504BC0640EBBC37996DA9FAC4DE") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 49 Then
-            If CheckPermission("EE5A3A3242B24DD6915882185C604C79") = False Then
+            If CheckPermission("B3F5707273664E5CBEE4E710AD867D70") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 50 Then
-            If CheckPermission("815F5E89D1434871AB287276F07CB0C5") = False Then
+            If CheckPermission("0DA27756076844F79EB565F4C4D520B6") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 51 Then
-            If CheckPermission("BFC3B50AE7F84FDABEA6C2B3943F8844") = False Then
+            If CheckPermission("13AF25BD34BA470688C5378C64D356E9") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 52 Then
-            If CheckPermission("54580B6EEC224AD3BA318F54720CF0E9") = False Then
+            If CheckPermission("EE5A3A3242B24DD6915882185C604C79") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 53 Then
-            If CheckPermission("3771982E439449E29027A84714962052") = False Then
+            If CheckPermission("815F5E89D1434871AB287276F07CB0C5") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 54 Then
-            If CheckPermission("CB67607887E84912A6D6751E71D73064") = False Then
+            If CheckPermission("BFC3B50AE7F84FDABEA6C2B3943F8844") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 55 Then
-            If CheckPermission("938E9275863E4AFFB634DFDA81EAD3E4") = False Then
+            If CheckPermission("54580B6EEC224AD3BA318F54720CF0E9") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 56 Then
-            If CheckPermission("83C069B500D243A1837D67A6AF35AE66") = False Then
+            If CheckPermission("3771982E439449E29027A84714962052") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 57 Then
-            If CheckPermission("FA00CA307CB04DAB8FF935026D0D5266") = False Then
+            If CheckPermission("CB67607887E84912A6D6751E71D73064") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 58 Then
-            If CheckPermission("B2924575445C43D7A15E3FD546FBF214") = False Then
+            If CheckPermission("938E9275863E4AFFB634DFDA81EAD3E4") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 59 Then
-            If CheckPermission("78F8ED206D1044EEA1F461D7F231E345") = False Then
+            If CheckPermission("83C069B500D243A1837D67A6AF35AE66") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 60 Then
-            If CheckPermission("01F5295314404972B73AB8905D2DF7AE") = False Then
+            If CheckPermission("FA00CA307CB04DAB8FF935026D0D5266") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 61 Then
-            If CheckPermission("3AA18BBFB06244C893F4F637E9B03B27") = False Then
+            If CheckPermission("B2924575445C43D7A15E3FD546FBF214") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 62 Then
-            If CheckPermission("9D5A719035B341A083696B17E61D5627") = False Then
+            If CheckPermission("78F8ED206D1044EEA1F461D7F231E345") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 63 Then
-            If CheckPermission("6680F94061EE45969FD2A361A73A3469") = False Then
+            If CheckPermission("01F5295314404972B73AB8905D2DF7AE") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 64 Then
-            If CheckPermission("B5D0A3F215A54CD6B54441149E5DBA54") = False Then
+            If CheckPermission("3AA18BBFB06244C893F4F637E9B03B27") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 65 Then
-            If CheckPermission("39C84C2EB6C14990B74164C1A7D3A8AF") = False Then
+            If CheckPermission("9D5A719035B341A083696B17E61D5627") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 66 Then
-            If CheckPermission("CDD8026AB52D4D80AC4331393DEF3A73") = False Then
+            If CheckPermission("6680F94061EE45969FD2A361A73A3469") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 67 Then
-            If CheckPermission("AB0E3EB722B948D8AB84F1F32E42C960") = False Then
+            If CheckPermission("B5D0A3F215A54CD6B54441149E5DBA54") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 68 Then
-            If CheckPermission("DB24BF62FA9E4589BBCD8DD9AE3F358C") = False Then
+            If CheckPermission("39C84C2EB6C14990B74164C1A7D3A8AF") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 69 Then
-            If CheckPermission("3164C25231034131AAAB2AE858FEBE61") = False Then
+            If CheckPermission("CDD8026AB52D4D80AC4331393DEF3A73") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 70 Then
-            If CheckPermission("B9AB14A979A54C5D8A5EE9679135C130") = False Then
+            If CheckPermission("AB0E3EB722B948D8AB84F1F32E42C960") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 71 Then
-            If CheckPermission("3F3048CF83C0421D9FB08174FE163B03") = False Then
+            If CheckPermission("DB24BF62FA9E4589BBCD8DD9AE3F358C") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 72 Then
-            If CheckPermission("9B9E041073E84DD5A3CCBAAF244CE10C") = False Then
+            If CheckPermission("3164C25231034131AAAB2AE858FEBE61") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 73 Then
-            If CheckPermission("57E6BB4B20B341EDA77D847BC5A0E824") = False Then
+            If CheckPermission("B9AB14A979A54C5D8A5EE9679135C130") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 74 Then
-            If CheckPermission("D47955C2018E4E6F837779CE26403838") = False Then
+            If CheckPermission("3F3048CF83C0421D9FB08174FE163B03") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 75 Then
-            If CheckPermission("E28EDB75F4EF43C7885A3D5171A0563E") = False Then
+            If CheckPermission("9B9E041073E84DD5A3CCBAAF244CE10C") = False Then
                 e.Node.Visible = False
                 e.Handled = True
             End If
         ElseIf e.Node.Id = 76 Then
+            If CheckPermission("57E6BB4B20B341EDA77D847BC5A0E824") = False Then
+                e.Node.Visible = False
+                e.Handled = True
+            End If
+        ElseIf e.Node.Id = 77 Then
+            If CheckPermission("D47955C2018E4E6F837779CE26403838") = False Then
+                e.Node.Visible = False
+                e.Handled = True
+            End If
+        ElseIf e.Node.Id = 78 Then
+            If CheckPermission("E28EDB75F4EF43C7885A3D5171A0563E") = False Then
+                e.Node.Visible = False
+                e.Handled = True
+            End If
+        ElseIf e.Node.Id = 79 Then
             If CheckPermission("2384E622118D4FF4AA680ADA98813BED") = False Then
                 e.Node.Visible = False
                 e.Handled = True

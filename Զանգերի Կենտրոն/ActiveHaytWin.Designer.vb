@@ -54,7 +54,7 @@ Partial Class ActiveHaytWin
         Me.Controls.Add(Me.GridControl1)
         Me.Name = "ActiveHaytWin"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Ակտիվացման Հայտեր"
+        Me.Text = "Բաց հայտերի ամփոփ վերլուծություն"
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

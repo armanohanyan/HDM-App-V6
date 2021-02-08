@@ -406,13 +406,10 @@ Public Class mustBeDisabledEcrWindow
             e.Handled = True
         End If
     End Sub
-
-
     Private Sub mustBeDisabledEcrWindow_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtEcr.Enabled = False
         btnDisableEcr.Enabled = False
     End Sub
-
     Private Sub txtEcr_TextChanged(sender As Object, e As EventArgs) Handles txtEcr.TextChanged
         If txtEcr.Text.Trim.Length = 1 Then
             If Microsoft.VisualBasic.Left(txtEcr.Text, 1).ToLower = "v" Then txtEcr.Text = "V90413" : txtEcr.SelectionStart = Len(txtEcr.Text)
@@ -422,7 +419,6 @@ Public Class mustBeDisabledEcrWindow
         End If
 
     End Sub
-
     Private Sub cbEcr_CheckedChanged(sender As Object, e As EventArgs) Handles cbEcr.CheckedChanged
         If cbEcr.Checked Then
             txtEcr.Enabled = True
@@ -432,7 +428,6 @@ Public Class mustBeDisabledEcrWindow
             btnDisableEcr.Enabled = False
         End If
     End Sub
-
     Private Sub btnEnableEcr_Click(sender As Object, e As EventArgs) Handles btnDisableEcr.Click
 
         If CheckPermission2("EE4F139B2D444A3A8F03BAE87CA7C600") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
@@ -460,12 +455,12 @@ Public Class mustBeDisabledEcrWindow
         For Each pair In groupedDictionary
 
             Select Case pair.Key
-                Case HdmType.Ucom
-                    iDB.BlockGprsByEcr2(pair.Value)
                 Case HdmType.Vivacell
                     iDB.BlockGprsByEcr(pair.Value)
                 Case HdmType.Beeline
                     iDB.BlockGprsByEcr(pair.Value)
+                Case HdmType.Ucom
+                    iDB.BlockGprsByEcr2(pair.Value)
                 Case HdmType.Android
                     iDB.BlockGprsByEcr3(pair.Value)
                 Case HdmType.Pax

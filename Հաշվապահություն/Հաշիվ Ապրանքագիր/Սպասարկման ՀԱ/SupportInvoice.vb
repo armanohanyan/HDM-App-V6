@@ -48,7 +48,8 @@ Public Class SupportInvoice
                     xw.WriteStartElement("DealInfo")
                     xw.WriteEndElement()
                     'End DealInfo
-                    xw.WriteElementString("AdditionalData", dt.Rows(i)("BuyerInfoDeliveryLocation"))
+                    'xw.WriteElementString("AdditionalData", dt.Rows(i)("BuyerInfoDeliveryLocation"))
+                    xw.WriteElementString("AdditionalData", "")
                     xw.WriteEndElement()
                     'End GeneralInfo
 
@@ -188,7 +189,8 @@ Public Class SupportInvoice
                     xw.WriteStartElement("DealInfo")
                     xw.WriteEndElement()
                     'End DealInfo
-                    xw.WriteElementString("AdditionalData", dt.Rows(i)("BuyerInfoDeliveryLocation"))
+                    'xw.WriteElementString("AdditionalData", dt.Rows(i)("BuyerInfoDeliveryLocation"))
+                    xw.WriteElementString("AdditionalData", "")
                     xw.WriteEndElement()
                     'End GeneralInfo
 

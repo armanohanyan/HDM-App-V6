@@ -65,7 +65,7 @@ Public Class TesuchWindow
             GridControl1.EndUpdate()
 
             With GridView1
-                .Columns("ՀՀ").Visible = False
+                '.Columns("ՀՀ").Visible = False
                 .OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.False
                 .OptionsBehavior.AllowDeleteRows = DevExpress.Utils.DefaultBoolean.False
                 .OptionsBehavior.Editable = False

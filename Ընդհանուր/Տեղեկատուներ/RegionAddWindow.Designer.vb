@@ -32,7 +32,7 @@ Partial Class RegionAddWindow
         'txtRegion
         '
         Me.txtRegion.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtRegion.Location = New System.Drawing.Point(101, 17)
+        Me.txtRegion.Location = New System.Drawing.Point(100, 12)
         Me.txtRegion.Name = "txtRegion"
         Me.txtRegion.Size = New System.Drawing.Size(189, 21)
         Me.txtRegion.TabIndex = 0
@@ -41,7 +41,7 @@ Partial Class RegionAddWindow
         '
         Me.btnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnAdd.Image = CType(resources.GetObject("btnAdd.Image"), System.Drawing.Image)
-        Me.btnAdd.Location = New System.Drawing.Point(171, 54)
+        Me.btnAdd.Location = New System.Drawing.Point(170, 53)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(119, 27)
         Me.btnAdd.TabIndex = 1
@@ -49,7 +49,7 @@ Partial Class RegionAddWindow
         '
         'LabelControl1
         '
-        Me.LabelControl1.Location = New System.Drawing.Point(12, 20)
+        Me.LabelControl1.Location = New System.Drawing.Point(12, 12)
         Me.LabelControl1.Name = "LabelControl1"
         Me.LabelControl1.Size = New System.Drawing.Size(74, 13)
         Me.LabelControl1.TabIndex = 5
@@ -60,7 +60,7 @@ Partial Class RegionAddWindow
         Me.AcceptButton = Me.btnAdd
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(312, 101)
+        Me.ClientSize = New System.Drawing.Size(301, 93)
         Me.Controls.Add(Me.LabelControl1)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.txtRegion)

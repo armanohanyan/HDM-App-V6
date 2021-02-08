@@ -149,7 +149,7 @@ Public Class CloseBranchWindow
 
         If txtEcr.Text.Trim.Length <> 12 Then Exit Sub
 
-        If Not (Microsoft.VisualBasic.Left(txtEcr.Text.Trim, 1).ToString.ToLower = "v" OrElse Microsoft.VisualBasic.Left(txtEcr.Text.Trim, 1).ToString.ToLower = "q" OrElse Microsoft.VisualBasic.Left(txtEcr.Text.Trim, 1).ToString.ToLower = "s") Then Exit Sub
+        If Not (Microsoft.VisualBasic.Left(txtEcr.Text.Trim, 1).ToString.ToLower = "v" OrElse Microsoft.VisualBasic.Left(txtEcr.Text.Trim, 1).ToString.ToLower = "q" OrElse Microsoft.VisualBasic.Left(txtEcr.Text.Trim, 1).ToString.ToLower = "s" OrElse Microsoft.VisualBasic.Left(txtEcr.Text.Trim, 1).ToString.ToLower = "a") Then Exit Sub
         Try
             Call AddEnterClick()
             If cWorkIsDone.Checked = True Then Call SendSmsToCenter(txtEcr.Text.Trim)

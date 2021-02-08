@@ -45,6 +45,8 @@ Public Class EditActivateHayt
                 .Columns("ՀայտիԱմսաթիվ").DisplayFormat.FormatString = "dd.MM.yyyy HH:mm:ss"
                 .Columns("ԸնդունմանԱմսաթիվ").DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
                 .Columns("ԸնդունմանԱմսաթիվ").DisplayFormat.FormatString = "dd.MM.yyyy HH:mm:ss"
+                .Columns("Տևողություն").DisplayFormat.FormatType = DevExpress.Utils.FormatType.None
+                '.Columns("Տևողություն").DisplayFormat.FormatString = "HH:mm"
                 If .RowCount > 0 Then
                     If .Columns("ՀԴՄ").Summary.ActiveCount = 0 Then
                         Dim item As GridColumnSummaryItem = New GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "ՀԴՄ", "{0}")

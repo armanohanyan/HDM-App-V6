@@ -62,7 +62,7 @@ Partial Class RepNoSupport
         '
         Me.mnuContext.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuSelectAll, Me.mnuSelectRows, Me.mnuDeselect, Me.ToolStripMenuItem1, Me.mnuEnable, Me.ToolStripMenuItem2, Me.mnuExportToExcel})
         Me.mnuContext.Name = "mnuContext"
-        Me.mnuContext.Size = New System.Drawing.Size(238, 126)
+        Me.mnuContext.Size = New System.Drawing.Size(238, 148)
         '
         'mnuSelectAll
         '

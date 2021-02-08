@@ -111,8 +111,8 @@ Public Class changeGeneralHaytInfo
     Private Sub btnChange_Click(sender As Object, e As EventArgs) Handles btnChange.Click
         Try
             If haytHDM <> txtEcr.Text.Trim OrElse haytHVHH <> txtHvhh.Text.Trim OrElse HaytCompany <> txtClient.Text.Trim _
-                OrElse haytTel <> txtTel.Text.Trim OrElse haytAddress <> txtAddress.Text.Trim OrElse haytSpasarkox <> cbSupporter.Text.Trim OrElse _
-                haytXndir <> txtProblem.Text.Trim OrElse haytRegion <> cbRegion.Text.Trim OrElse problem <> cProb.SelectedIndex Then
+                OrElse haytTel <> txtTel.Text.Trim OrElse haytSpasarkox <> cbSupporter.Text.Trim OrElse _
+                haytXndir <> txtProblem.Text.Trim OrElse problem <> cProb.SelectedIndex Then
                 If iDB.IsProposalEquipmentSold(haytID) = True Then Throw New Exception("Հայտը խմբագրման ենթակա չէ, քանի որ վաճառքն արդեն իսկ իրականացված է։")
             End If
 

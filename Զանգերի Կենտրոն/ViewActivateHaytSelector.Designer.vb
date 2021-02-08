@@ -64,10 +64,9 @@ Partial Class ViewActivateHaytSelector
         '
         'ckOpen
         '
-        Me.ckOpen.EditValue = True
         Me.ckOpen.Location = New System.Drawing.Point(9, 80)
         Me.ckOpen.Name = "ckOpen"
-        Me.ckOpen.Properties.Caption = "Միայն Բաց Հայտերը"
+        Me.ckOpen.Properties.Caption = "Ռեգիոն"
         Me.ckOpen.Size = New System.Drawing.Size(134, 19)
         Me.ckOpen.TabIndex = 10
         '
@@ -117,7 +116,7 @@ Partial Class ViewActivateHaytSelector
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Ակտիվացման Հայտ"
+        Me.Text = "Պարամետրեր"
         Me.GroupBox1.ResumeLayout(False)
         CType(Me.ckOpen.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.eDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()

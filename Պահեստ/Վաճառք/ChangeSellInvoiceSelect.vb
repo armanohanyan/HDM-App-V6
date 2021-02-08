@@ -83,43 +83,43 @@ Public Class ChangeSellInvoiceSelect
         End Try
     End Sub
     Private Sub mnuChange_Click(sender As Object, e As EventArgs) Handles mnuChange.Click
-        Try
-            If GridView1.SelectedRowsCount = 0 Then Exit Sub
+        'Try
+        If GridView1.SelectedRowsCount = 0 Then Exit Sub
 
-            If isLocal = False Then
-                Dim SellID As Integer = GridView1.GetFocusedDataRow.Item("CustomSellHeaderID").ToString
-                Dim ClientID As Integer = GridView1.GetFocusedDataRow.Item("ClientID").ToString
-                Dim SupporterID As Byte = GridView1.GetFocusedDataRow.Item("SupporterID").ToString
-                Dim hvhh As String = GridView1.GetFocusedDataRow.Item("ՀՎՀՀ").ToString
+        If isLocal = False Then
+            Dim SellID As Integer = GridView1.GetFocusedDataRow.Item("CustomSellHeaderID").ToString
+            Dim ClientID As Integer = GridView1.GetFocusedDataRow.Item("ClientID").ToString
+            Dim SupporterID As Byte = GridView1.GetFocusedDataRow.Item("SupporterID").ToString
+            Dim hvhh As String = GridView1.GetFocusedDataRow.Item("ՀՎՀՀ").ToString
 
-                Dim f As New SellWindow With {.IsLocalSell = False, .ClientHVHH = hvhh,
-                                              .SupporterID = SupporterID, .ClientID = ClientID, .sellID = SellID}
-                f.LoadDataByClient()
-                f.ShowDialog()
-                f.Dispose()
-            Else
-                Dim SellID As Integer = GridView1.GetFocusedDataRow.Item("CustomSellHeaderID").ToString
-                Dim ClientID As Integer = GridView1.GetFocusedDataRow.Item("ClientID").ToString
-                Dim SupporterID As Byte = GridView1.GetFocusedDataRow.Item("SupporterID").ToString
-                Dim hvhh As String = GridView1.GetFocusedDataRow.Item("ՀՎՀՀ").ToString
+            Dim f As New SellWindow With {.IsLocalSell = False, .ClientHVHH = hvhh,
+                                          .SupporterID = SupporterID, .ClientID = ClientID, .sellID = SellID}
+            f.LoadDataByClient()
+            f.ShowDialog()
+            f.Dispose()
+        Else
+            Dim SellID As Integer = GridView1.GetFocusedDataRow.Item("CustomSellHeaderID").ToString
+            Dim ClientID As Integer = GridView1.GetFocusedDataRow.Item("ClientID").ToString
+            Dim SupporterID As Byte = GridView1.GetFocusedDataRow.Item("SupporterID").ToString
+            Dim hvhh As String = GridView1.GetFocusedDataRow.Item("ՀՎՀՀ").ToString
 
-                Dim f As New SellWindow With {.IsLocalSell = True, .ClientHVHH = hvhh,
-                                              .SupporterID = SupporterID, .ClientID = ClientID, .sellID = SellID}
+            Dim f As New SellWindow With {.IsLocalSell = True, .ClientHVHH = hvhh,
+                                          .SupporterID = SupporterID, .ClientID = ClientID, .sellID = SellID}
 
-                f.LoadDataByClient()
-                f.ShowDialog()
-                f.Dispose()
+            f.LoadDataByClient()
+            f.ShowDialog()
+            f.Dispose()
 
-            End If
+        End If
 
-            Me.Close()
+        Me.Close()
 
-        Catch ex As ExceptionClass
-        Catch ex As System.Data.SqlClient.SqlException
-            Call SQLException(ex)
-        Catch ex As Exception
-            Call SoftException(ex)
-        End Try
+        'Catch ex As ExceptionClass
+        'Catch ex As System.Data.SqlClient.SqlException
+        '    Call SQLException(ex)
+        'Catch ex As Exception
+        '    Call SoftException(ex)
+        'End Try
     End Sub
     Private Sub GridControl1_KeyDown(sender As Object, e As KeyEventArgs) Handles GridControl1.KeyDown
         On Error Resume Next

@@ -102,7 +102,7 @@ Partial Class DeleteSellInvoiceSelect
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuDelete})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(195, 48)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(195, 26)
         '
         'mnuDelete
         '

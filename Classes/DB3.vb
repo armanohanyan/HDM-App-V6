@@ -822,15 +822,17 @@ Partial Public Class DB
     End Function
 
     'GetClosedPropDetailsSellEcr
-    Friend Function GetClosedPropDetailsSellEcr(ByVal isRegion As Boolean) As DataTable
+    Friend Function GetClosedPropDetailsSellEcr(ByVal isRegion As Boolean, sDate As Date, eDate As Date) As DataTable
         Dim dt As DataTable
         Using cnn As New SqlConnection(SQLString)
             cnn.Open()
             Using cmd As New SqlCommand
                 cmd.Connection = cnn
                 cmd.CommandType = CommandType.Text
-                cmd.CommandText = "EXEC Client.GetClosedPropDetailsSellEcr @isRegion"
+                cmd.CommandText = "EXEC Client.GetClosedPropDetailsSellEcr @isRegion,@sDate,@eDate"
                 cmd.Parameters.Add("@isRegion", SqlDbType.Bit).Value = isRegion
+                cmd.Parameters.Add("@sDate", SqlDbType.Date).Value = sDate
+                cmd.Parameters.Add("@eDate", SqlDbType.Date).Value = eDate
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)

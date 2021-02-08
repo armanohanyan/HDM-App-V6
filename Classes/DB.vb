@@ -175,7 +175,7 @@ Partial Public Class DB
             Using cmd As New SqlCommand
                 cmd.Connection = cnn
                 cmd.CommandType = CommandType.Text
-                cmd.CommandText = "SELECT ՀՀ,Տեսուչ,Կարգավիճակ,ԷլՓոստ,Հեռախոս FROM Tesuch.GetTesuchList()"
+                cmd.CommandText = "SELECT * FROM Tesuch.GetTesuchList()"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)
@@ -294,6 +294,65 @@ Partial Public Class DB
                 cmd.Connection = cnn
                 cmd.CommandType = CommandType.Text
                 cmd.CommandText = "SELECT * FROM tesuch.ExtRepEcr()"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+
+        Return dt
+    End Function
+
+    'GetTarajamket
+    Friend Function GetTarajamket(Optional ByVal equipmentId As Int16 = 0) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT * FROM Client.GetTarajamket(@equipmentId)"
+                cmd.Parameters.Add("@equipmentId", SqlDbType.SmallInt).Value = equipmentId
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    'GetTarajamketByTarajamketId
+    Friend Function GetTarajamketByTarajamketId(ByVal tarajamketId As Integer) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT * FROM Client.GetTarajamketByTarajamketId(@tarajamketId)"
+                cmd.Parameters.Add("@tarajamketId", SqlDbType.SmallInt).Value = tarajamketId
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    'GetTarajamketGraphiks
+    Friend Function GetTarajamketGraphiks(Optional ByVal tarajamketId As Integer = 0) As DataTable
+        Dim dt As DataTable
+
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT * FROM Client.GetTarajamketGraphiks(@tarajamketId)"
+                cmd.Parameters.Add("@tarajamketId", SqlDbType.Int).Value = tarajamketId
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)
@@ -1157,6 +1216,60 @@ Partial Public Class DB
         End Using
         Return dt
     End Function
+
+    'GetPayTypes
+    Friend Function GetPayTypes() As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT * FROM payment.GetPayTypes()"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    'GetEquipments
+    Friend Function GetEquipments() As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT * FROM Client.GetEquipments()"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
+    ''GetEquipments
+    'Friend Function GetTarajamket() As DataTable
+    '    Dim dt As DataTable
+    '    Using cnn As New SqlConnection(SQLString)
+    '        cnn.Open()
+    '        Using cmd As New SqlCommand
+    '            cmd.Connection = cnn
+    '            cmd.CommandType = CommandType.Text
+    '            cmd.CommandText = "SELECT * FROM Client.GetEquipments()"
+    '            Using da As New SqlDataAdapter(cmd)
+    '                dt = New System.Data.DataTable
+    '                da.Fill(dt)
+    '            End Using
+    '        End Using
+    '    End Using
+    '    Return dt
+    'End Function
 
     'GetSMSTitles
     Friend Function GetSMSTitles(SupporterID As Byte) As DataTable
@@ -4669,6 +4782,22 @@ Partial Public Class DB
         Return b
     End Function
 
+    'IsClientNotSuported
+    Friend Function IsClientNotSuported(ByVal hvhh As String) As Boolean
+        Dim b
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT Client.IsClientNotSuported(@HVHH)"
+                cmd.Parameters.Add("@HVHH", SqlDbType.VarChar).Value = hvhh
+                b = cmd.ExecuteScalar()
+            End Using
+        End Using
+        Return b
+    End Function
+
     'IsHamadzaynagirPrinted
     Friend Function IsHamadzaynagirPrinted(ByVal hvhh As String) As Boolean
         Dim b
@@ -4793,7 +4922,7 @@ Partial Public Class DB
     End Function
 
     'GetCustomSellByClient
-    Friend Function GetCustomSellByClient(ByVal sellID As Int16) As DataTable
+    Friend Function GetCustomSellByClient(ByVal sellID As Int32) As DataTable
         Dim dt As DataTable
         Using cnn As New SqlConnection(SQLString)
             cnn.Open()
@@ -4812,7 +4941,7 @@ Partial Public Class DB
     End Function
 
     'GetCustomSellByClientFiz
-    Friend Function GetCustomSellByClientFiz(ByVal sellID As Int16) As DataTable
+    Friend Function GetCustomSellByClientFiz(ByVal sellID As Int32) As DataTable
         Dim dt As DataTable
         Using cnn As New SqlConnection(SQLString)
             cnn.Open()
@@ -5744,6 +5873,27 @@ Partial Public Class DB
         Return dt
     End Function
 
+    'PropAnalysis
+    Friend Function PropAnalysis(isRegion As Boolean, sd As Date, ed As Date) As DataTable
+        Dim dt As DataTable
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.Parameters.Add("@isRegion", SqlDbType.Bit).Value = isRegion
+                cmd.Parameters.Add("@sDate", SqlDbType.Date).Value = sd
+                cmd.Parameters.Add("@eDate", SqlDbType.Date).Value = ed
+                cmd.CommandText = "EXEC Client.PropAnalysis @isRegion, @sDate, @eDate"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+        Return dt
+    End Function
+
     'ActivateHaytByOpen
     Friend Function ActivateHaytByOpen(isOpen As Boolean) As DataTable
         Dim dt As DataTable
@@ -5928,6 +6078,47 @@ Partial Public Class DB
             Dim cmdSQLcom As New SqlCommand("EXEC tesuch.InsertTesuchInfo @TesuchID,@RegionID", connection)
             cmdSQLcom.Parameters.Add("@TesuchID", Data.SqlDbType.SmallInt).Value = TesuchID
             cmdSQLcom.Parameters.Add("@RegionID", Data.SqlDbType.SmallInt).Value = RegionID
+            connection.Open()
+            cmdSQLcom.ExecuteNonQuery()
+            connection.Close()
+        End Using
+    End Sub
+
+    'Insert Tarajamket
+    Friend Sub InsertTarajamket(ByVal equipmentId As Integer, price As Decimal, months As Byte, isActive As Boolean, name As String)
+        Using connection As New SqlConnection(SQLString)
+            Dim cmdSQLcom As New SqlCommand("EXEC Payment.InsertTarajamket @equipmentId, @price, @months, @isActive, @name", connection)
+            cmdSQLcom.Parameters.Add("@equipmentId", Data.SqlDbType.Int).Value = equipmentId
+            cmdSQLcom.Parameters.Add("@price", Data.SqlDbType.Decimal).Value = price
+            cmdSQLcom.Parameters.Add("@months", Data.SqlDbType.TinyInt).Value = months
+            cmdSQLcom.Parameters.Add("@isActive", Data.SqlDbType.Bit).Value = isActive
+            cmdSQLcom.Parameters.Add("@name", Data.SqlDbType.NVarChar).Value = name
+
+            connection.Open()
+            cmdSQLcom.ExecuteNonQuery()
+            connection.Close()
+        End Using
+    End Sub
+
+    'Insert TarajamketGraphik
+    Friend Sub InsertTarajamketGraphik(ByVal tarajamketId As Integer, Optional price1 As Decimal = 0, Optional price2 As Decimal = 0, Optional price3 As Decimal = 0 _
+        , Optional price4 As Decimal = 0, Optional price5 As Decimal = 0, Optional price6 As Decimal = 0, Optional price7 As Decimal = 0, Optional price8 As Decimal = 0 _
+        , Optional price9 As Decimal = 0, Optional price10 As Decimal = 0, Optional price11 As Decimal = 0, Optional price12 As Decimal = 0)
+        Using connection As New SqlConnection(SQLString)
+            Dim cmdSQLcom As New SqlCommand("EXEC Payment.TarajamketGraphik @tarajamketId, @price1, @price2, @price3, @price4, @price5, @price6 , @price7, @price8, @price9, @price10, @price11, @price12", connection)
+            cmdSQLcom.Parameters.Add("@tarajamketId", Data.SqlDbType.Int).Value = tarajamketId
+            cmdSQLcom.Parameters.Add("@price1", Data.SqlDbType.Decimal).Value = price1
+            cmdSQLcom.Parameters.Add("@price2", Data.SqlDbType.Decimal).Value = price2
+            cmdSQLcom.Parameters.Add("@price3", Data.SqlDbType.Decimal).Value = price3
+            cmdSQLcom.Parameters.Add("@price4", Data.SqlDbType.Decimal).Value = price4
+            cmdSQLcom.Parameters.Add("@price5", Data.SqlDbType.Decimal).Value = price5
+            cmdSQLcom.Parameters.Add("@price6", Data.SqlDbType.Decimal).Value = price6
+            cmdSQLcom.Parameters.Add("@price7", Data.SqlDbType.Decimal).Value = price7
+            cmdSQLcom.Parameters.Add("@price8", Data.SqlDbType.Decimal).Value = price8
+            cmdSQLcom.Parameters.Add("@price9", Data.SqlDbType.Decimal).Value = price9
+            cmdSQLcom.Parameters.Add("@price10", Data.SqlDbType.Decimal).Value = price10
+            cmdSQLcom.Parameters.Add("@price11", Data.SqlDbType.Decimal).Value = price11
+            cmdSQLcom.Parameters.Add("@price12", Data.SqlDbType.Decimal).Value = price12
             connection.Open()
             cmdSQLcom.ExecuteNonQuery()
             connection.Close()
@@ -7124,6 +7315,22 @@ Partial Public Class DB
         End Using
     End Sub
 
+    'Update Tarajamket
+    Friend Sub UpdateTarajamket(ByVal id As Short, tarajamket As String, equipmentId As Integer, months As Byte, price As Decimal, isActive As Boolean)
+        Using connection As New SqlConnection(SQLString)
+            Dim cmdSQLcom As New SqlCommand("EXEC Payment.UpdateTarajamket @id, @equipmentId, @price, @months, @isActive, @name", connection)
+            cmdSQLcom.Parameters.Add("@id", Data.SqlDbType.SmallInt).Value = id
+            cmdSQLcom.Parameters.Add("@name", Data.SqlDbType.NVarChar).Value = tarajamket
+            cmdSQLcom.Parameters.Add("@equipmentId", Data.SqlDbType.Int).Value = equipmentId
+            cmdSQLcom.Parameters.Add("@months", Data.SqlDbType.TinyInt).Value = months
+            cmdSQLcom.Parameters.Add("@price", Data.SqlDbType.Decimal).Value = price
+            cmdSQLcom.Parameters.Add("@isActive", Data.SqlDbType.Bit).Value = isActive
+            connection.Open()
+            cmdSQLcom.ExecuteNonQuery()
+            connection.Close()
+        End Using
+    End Sub
+
     'Update Contract
     Friend Sub UpdateContract(ByVal strContract As String, ByVal ContractID As Integer)
         Using connection As New SqlConnection(SQLString)
@@ -7642,10 +7849,11 @@ Partial Public Class DB
     End Sub
 
     'SetRemakePropSoldByPropID
-    Friend Sub SetRemakePropSoldByPropID(ByVal ID As Integer)
+    Friend Sub SetRemakePropSoldByPropID(ByVal ID As Integer, Optional serials As String = "")
         Using connection As New SqlConnection(SQLString)
-            Dim cmdSQLcom As New SqlCommand("EXEC Client.SetRemakePropSoldByPropID @ID", connection)
+            Dim cmdSQLcom As New SqlCommand("EXEC Client.SetRemakePropSoldByPropID @ID,@serials", connection)
             cmdSQLcom.Parameters.Add("@ID", Data.SqlDbType.Int).Value = ID
+            cmdSQLcom.Parameters.Add("@serials", Data.SqlDbType.NVarChar).Value = serials
             connection.Open()
             cmdSQLcom.ExecuteNonQuery()
             connection.Close()

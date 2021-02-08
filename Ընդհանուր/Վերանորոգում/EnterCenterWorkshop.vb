@@ -33,7 +33,7 @@ Public Class EnterCenterWorkshop
 
         If txtEcr.Text.Trim.Length <> 12 Then Exit Sub
 
-        If Not (Microsoft.VisualBasic.Left(txtEcr.Text.Trim, 1).ToString.ToLower = "v" OrElse Microsoft.VisualBasic.Left(txtEcr.Text.Trim, 1).ToString.ToLower = "q" OrElse Microsoft.VisualBasic.Left(txtEcr.Text.Trim, 1).ToString.ToLower = "s") Then Exit Sub
+        If Not (Microsoft.VisualBasic.Left(txtEcr.Text.Trim, 1).ToString.ToLower = "v" OrElse Microsoft.VisualBasic.Left(txtEcr.Text.Trim, 1).ToString.ToLower = "q" OrElse Microsoft.VisualBasic.Left(txtEcr.Text.Trim, 1).ToString.ToLower = "s" OrElse Microsoft.VisualBasic.Left(txtEcr.Text.Trim, 1).ToString.ToLower = "a") Then Exit Sub
         Try
             If iUser.DB <> 5 Then Throw New Exception("Գործողությունը արգելվում է")
             Call AddEnterClick()

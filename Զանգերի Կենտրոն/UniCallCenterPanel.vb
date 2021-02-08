@@ -309,8 +309,14 @@ Public Class UniCallCenterPanel
 
         If CheckPermission("2B6BAE83388B4C8AAC3FA07C0ABC5416") = False Then Throw New Exception("Գործողությունը կատարելու համար դուք իրավասություն չունեք")
 
+        Dim hvhh As String = lhvhh.Text.Substring(lhvhh.Text.Length - 9).Trim
+
+        If iDB.IsClientNotSuported(hvhh) = True Then
+            iDB.ActivateClient(hvhh, iUser.LoginName)
+        End If
+
         Call CloseWindow("nEnableSIMByHVHH")
-        Dim f As New enagleSIMByHvhhWindow With {.simHVHH = lhvhh.Text.Substring(lhvhh.Text.Length - 9).Trim}
+        Dim f As New enagleSIMByHvhhWindow With {.simHVHH = hvhh}
         AddChildForm("nEnableSIMByHVHH", f)
 
     End Sub
