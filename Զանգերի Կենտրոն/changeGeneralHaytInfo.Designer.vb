@@ -46,6 +46,8 @@ Partial Class changeGeneralHaytInfo
         Me.cbRegion = New System.Windows.Forms.ComboBox()
         Me.cProb = New System.Windows.Forms.ComboBox()
         Me.Label15 = New System.Windows.Forms.Label()
+        Me.cbAdditional = New System.Windows.Forms.ComboBox()
+        Me.Label10 = New System.Windows.Forms.Label()
         CType(Me.ApprDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ApprDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -127,16 +129,16 @@ Partial Class changeGeneralHaytInfo
         '
         'txtAddress
         '
-        Me.txtAddress.Location = New System.Drawing.Point(330, 39)
+        Me.txtAddress.Location = New System.Drawing.Point(330, 62)
         Me.txtAddress.Multiline = True
         Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(178, 105)
+        Me.txtAddress.Size = New System.Drawing.Size(178, 82)
         Me.txtAddress.TabIndex = 7
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(279, 42)
+        Me.Label5.Location = New System.Drawing.Point(279, 62)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(39, 13)
         Me.Label5.TabIndex = 16
@@ -242,7 +244,7 @@ Partial Class changeGeneralHaytInfo
         '
         Me.cProb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cProb.FormattingEnabled = True
-        Me.cProb.Items.AddRange(New Object() {"Այլ", "Վերագրանցում", "Ապաակտիվացում", "Հարկատեսակի փոփոխում", "Բաժին ավելացնել", "Համաձայնագիր", "Պայմանագիր", "Վերանորոգման Հայտ", "Վաճառք", "ՀԴՄ վաճառք", "ՀԴՄ վաճառք ապառիկ", "ՀԴՄ վաճառք ֆիզ անձ"})
+        Me.cProb.Items.AddRange(New Object() {"Այլ", "Վերագրանցում", "Ապաակտիվացում", "Հարկատեսակի փոփոխում", "Բաժին ավելացնել", "Համաձայնագիր", "Պայմանագիր", "Վերանորոգման Հայտ", "Վաճառք", "ՀԴՄ Վաճառք Իրավ․ Անձ", "Ապառիկ ՀԴՄ Վաճառք Իրավ․ Անձ", "ՀԴՄ Վաճառք Ֆիզ Անձ", "Ապառիկ ՀԴՄ Վաճառք Ֆիզ Անձ"})
         Me.cProb.Location = New System.Drawing.Point(92, 153)
         Me.cProb.Name = "cProb"
         Me.cProb.Size = New System.Drawing.Size(181, 21)
@@ -251,11 +253,30 @@ Partial Class changeGeneralHaytInfo
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(43, 161)
+        Me.Label15.Location = New System.Drawing.Point(43, 159)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(41, 13)
         Me.Label15.TabIndex = 59
         Me.Label15.Text = "Խնդիր"
+        '
+        'cbAdditional
+        '
+        Me.cbAdditional.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbAdditional.FormattingEnabled = True
+        Me.cbAdditional.ItemHeight = 13
+        Me.cbAdditional.Location = New System.Drawing.Point(330, 35)
+        Me.cbAdditional.Name = "cbAdditional"
+        Me.cbAdditional.Size = New System.Drawing.Size(178, 21)
+        Me.cbAdditional.TabIndex = 3
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(278, 38)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(48, 13)
+        Me.Label10.TabIndex = 18
+        Me.Label10.Text = "Լրացում"
         '
         'changeGeneralHaytInfo
         '
@@ -272,6 +293,7 @@ Partial Class changeGeneralHaytInfo
         Me.Controls.Add(Me.btnChange)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.cbSupporter)
+        Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.txtAddress)
         Me.Controls.Add(Me.Label5)
@@ -283,6 +305,7 @@ Partial Class changeGeneralHaytInfo
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.txtEcr)
         Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.cbAdditional)
         Me.Controls.Add(Me.cbTesuch)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.MaximizeBox = False
@@ -322,4 +345,6 @@ Partial Class changeGeneralHaytInfo
     Friend WithEvents cbRegion As System.Windows.Forms.ComboBox
     Friend WithEvents cProb As System.Windows.Forms.ComboBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
+    Friend WithEvents cbAdditional As System.Windows.Forms.ComboBox
+    Friend WithEvents Label10 As System.Windows.Forms.Label
 End Class

@@ -206,6 +206,26 @@ Partial Public Class DB
         Return dt
     End Function
 
+    'GetAdditionalsList
+    Friend Function GetAdditionalsList() As DataTable
+        Dim dt As DataTable
+
+        Using cnn As New SqlConnection(SQLString)
+            cnn.Open()
+            Using cmd As New SqlCommand
+                cmd.Connection = cnn
+                cmd.CommandType = CommandType.Text
+                cmd.CommandText = "SELECT * FROM Client.GetAdditionalsList()"
+                Using da As New SqlDataAdapter(cmd)
+                    dt = New System.Data.DataTable
+                    da.Fill(dt)
+                End Using
+            End Using
+        End Using
+
+        Return dt
+    End Function
+
     'GetWorkingTesuchListForRemake
     Friend Function GetWorkingTesuchListForRemake() As DataTable
         Dim dt As DataTable
@@ -7849,11 +7869,12 @@ Partial Public Class DB
     End Sub
 
     'SetRemakePropSoldByPropID
-    Friend Sub SetRemakePropSoldByPropID(ByVal ID As Integer, Optional serials As String = "")
+    Friend Sub SetRemakePropSoldByPropID(ByVal ID As Integer, Optional serials As String = "", Optional payType As String = "")
         Using connection As New SqlConnection(SQLString)
-            Dim cmdSQLcom As New SqlCommand("EXEC Client.SetRemakePropSoldByPropID @ID,@serials", connection)
+            Dim cmdSQLcom As New SqlCommand("EXEC Client.SetRemakePropSoldByPropID @ID,@serials,@payType", connection)
             cmdSQLcom.Parameters.Add("@ID", Data.SqlDbType.Int).Value = ID
             cmdSQLcom.Parameters.Add("@serials", Data.SqlDbType.NVarChar).Value = serials
+            cmdSQLcom.Parameters.Add("@payType", Data.SqlDbType.NVarChar).Value = payType
             connection.Open()
             cmdSQLcom.ExecuteNonQuery()
             connection.Close()

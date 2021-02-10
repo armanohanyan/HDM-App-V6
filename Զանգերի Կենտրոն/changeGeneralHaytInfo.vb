@@ -79,15 +79,32 @@ Public Class changeGeneralHaytInfo
             Call SoftException(ex)
         End Try
     End Sub
+    Private Sub LoadAdditional()
+        Try
+            Dim dt As DataTable = iDB.GetAdditionalsList()
+            With cbAdditional
+                .DataSource = dt
+                .DisplayMember = "Լրացում"
+                .ValueMember = "ՀՀ"
+            End With
+        Catch ex As ExceptionClass
+        Catch ex As System.Data.SqlClient.SqlException
+            Call SQLException(ex)
+        Catch ex As Exception
+            Call SoftException(ex)
+        End Try
+    End Sub
     Private Sub haytchangetesuch_Load(sender As Object, e As System.EventArgs) Handles Me.Load
         Call LoadTesuch()
         Call LoadSupporter()
         Call LoadRegion()
+        Call LoadAdditional()
 
         cbTesuch.Text = haytTesuch
         cbSupporter.Text = haytSpasarkox
         cbRegion.Text = haytRegion
         cProb.SelectedIndex = problem
+        cbAdditional.Text = ""
 
         txtEcr.Text = haytHDM
         txtHvhh.Text = haytHVHH
@@ -117,7 +134,7 @@ Public Class changeGeneralHaytInfo
             End If
 
 
-            iDB.UpdateProposalGeneral(txtEcr.Text.Trim, txtHvhh.Text.Trim, txtClient.Text.Trim, cbTesuch.Text, txtTel.Text.Trim, txtAddress.Text.Trim, cbSupporter.SelectedValue, haytID, txtProblem.Text.Trim, ApprDate.DateTime, cbRegion.SelectedValue, cProb.SelectedIndex)
+            iDB.UpdateProposalGeneral(txtEcr.Text.Trim, txtHvhh.Text.Trim, txtClient.Text.Trim, cbTesuch.Text, txtTel.Text.Trim, txtAddress.Text.Trim, cbSupporter.SelectedValue, haytID, txtProblem.Text.Trim, ApprDate.DateTime, cbRegion.SelectedValue, cProb.SelectedIndex, cbAdditional.Text.Trim)
 
             'If haytEditTime <> ApprDate.DateTime Then
             '    clientTel = haytTel

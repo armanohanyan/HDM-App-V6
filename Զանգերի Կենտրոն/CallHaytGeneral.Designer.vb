@@ -309,7 +309,7 @@ Partial Class CallHaytGeneral
         '
         Me.cProb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cProb.FormattingEnabled = True
-        Me.cProb.Items.AddRange(New Object() {"Այլ", "Վերագրանցում", "Ապաակտիվացում", "Հարկատեսակի փոփոխում", "Բաժին ավելացնել", "Համաձայնագիր", "Պայմանագիր", "Վերանորոգման Հայտ", "Վաճառք", "ՀԴՄ վաճառք", "ՀԴՄ վաճառք ապառիկ", "ՀԴՄ վաճառք ֆիզ անձ"})
+        Me.cProb.Items.AddRange(New Object() {"Այլ", "Վերագրանցում", "Ապաակտիվացում", "Հարկատեսակի փոփոխում", "Բաժին ավելացնել", "Համաձայնագիր", "Պայմանագիր", "Վերանորոգման Հայտ", "Վաճառք", "ՀԴՄ Վաճառք Իրավ․ Անձ", "Ապառիկ ՀԴՄ Վաճառք Իրավ․ Անձ", "ՀԴՄ Վաճառք Ֆիզ Անձ", "Ապառիկ ՀԴՄ Վաճառք Ֆիզ Անձ"})
         Me.cProb.Location = New System.Drawing.Point(82, 275)
         Me.cProb.Name = "cProb"
         Me.cProb.Size = New System.Drawing.Size(199, 21)

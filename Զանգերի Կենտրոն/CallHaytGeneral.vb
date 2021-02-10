@@ -468,7 +468,7 @@ Public Class CallHaytGeneral
                 If iDB.IsProposalOpenExist(txtHVHH.Text.Trim) = True Then Throw New Exception("Գործողությունն արգելված է, քանի որ այս կազմակերպության համար առկա է ՀԴՄ վաճառքի բաց հայտ։")
             End If
 
-            If (cProb.SelectedIndex = 9 OrElse cProb.SelectedIndex = 10 OrElse cProb.SelectedIndex = 11) AndAlso cbSupporter.SelectedValue = 5 Then Throw New Exception("ՀԴՄ-ն չի կարող վաճառել Անորոշ կազմակերպություն")
+            If (cProb.SelectedIndex = 9 OrElse cProb.SelectedIndex = 10 OrElse cProb.SelectedIndex = 11 OrElse cProb.SelectedIndex = 12) AndAlso cbSupporter.SelectedValue = 5 Then Throw New Exception("ՀԴՄ-ն չի կարող վաճառել Անորոշ կազմակերպություն")
 
             Dim Loc As String = "0,0"
 
@@ -625,15 +625,19 @@ Public Class CallHaytGeneral
                 cbRemProblem.Enabled = False
                 Label3.ForeColor = Color.Red
                 sDate.DateTime = DateAdd(DateInterval.Hour, 1, Now)
-            Case 9  'ՀԴՄ Վաճառք
+            Case 9  'ՀԴՄ Վաճառք Իրավ․ անձ
                 txtProblem.Text = "ՀԴՄ քանակ՝ "
                 cbRemProblem.Enabled = False
                 sDate.DateTime = DateAdd(DateInterval.Day, 1, Now)
-            Case 10  'ՀԴՄ Վաճառք ապառիկ
+            Case 10  'ՀԴՄ Վաճառք Իրավ․ անձ ապառիկ
                 txtProblem.Text = "ՀԴՄ քանակ՝ "
                 cbRemProblem.Enabled = False
                 sDate.DateTime = DateAdd(DateInterval.Day, 3, Now)
             Case 11  'ՀԴՄ Վաճառք Ֆիզ անձ
+                txtProblem.Text = "ՀԴՄ քանակ՝ "
+                cbRemProblem.Enabled = False
+                sDate.DateTime = DateAdd(DateInterval.Day, 1, Now)
+            Case 12  'ՀԴՄ Վաճառք Ֆիզ անձ ապառիկ
                 txtProblem.Text = "ՀԴՄ քանակ՝ "
                 cbRemProblem.Enabled = False
                 sDate.DateTime = DateAdd(DateInterval.Day, 3, Now)
