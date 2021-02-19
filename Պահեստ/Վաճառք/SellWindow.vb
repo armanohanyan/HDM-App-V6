@@ -303,7 +303,7 @@ Public Class SellWindow
                 If SupporterID = 2 Then
                     dt = iDB.CustomSellForClientNoNDS(txtShtrikhCode.Text.Trim, SupporterID, sellID, ClientID, EquipmentID, txtPrice.Text)
                 Else
-                    dt = iDB.CustomSellForClient(txtShtrikhCode.Text.Trim, SupporterID, sellID, ClientID, EquipmentID, txtPrice.Text, txtAraqmanAddress.Text)
+                    dt = iDB.CustomSellForClient(txtShtrikhCode.Text.Trim, SupporterID, sellID, ClientID, EquipmentID, txtPrice.Text, txtAraqmanAddress.Text, SellPropID)
                 End If
 
                 If sellID = 0 Then sellID = dt.Rows(0)(0)

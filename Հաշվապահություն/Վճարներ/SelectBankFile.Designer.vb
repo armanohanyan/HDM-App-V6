@@ -27,12 +27,12 @@ Partial Class SelectBankFile
         Me.btnQuery = New DevExpress.XtraEditors.SimpleButton()
         Me.btnClose = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.tp = New System.Windows.Forms.RadioButton()
+        Me.ss = New System.Windows.Forms.RadioButton()
         Me.tm = New System.Windows.Forms.RadioButton()
         Me.mk = New System.Windows.Forms.RadioButton()
         Me.te = New System.Windows.Forms.RadioButton()
         Me.hs = New System.Windows.Forms.RadioButton()
-        Me.tp = New System.Windows.Forms.RadioButton()
-        Me.ss = New System.Windows.Forms.RadioButton()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -68,6 +68,26 @@ Partial Class SelectBankFile
         Me.GroupBox1.TabIndex = 7
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Սպասարկող Կազմակերպություն"
+        '
+        'tp
+        '
+        Me.tp.AutoSize = True
+        Me.tp.Location = New System.Drawing.Point(6, 135)
+        Me.tp.Name = "tp"
+        Me.tp.Size = New System.Drawing.Size(72, 17)
+        Me.tp.TabIndex = 5
+        Me.tp.Text = "Թորփայս"
+        Me.tp.UseVisualStyleBackColor = True
+        '
+        'ss
+        '
+        Me.ss.AutoSize = True
+        Me.ss.Location = New System.Drawing.Point(6, 112)
+        Me.ss.Name = "ss"
+        Me.ss.Size = New System.Drawing.Size(107, 17)
+        Me.ss.TabIndex = 4
+        Me.ss.Text = "Սմարթ Սոլուշնս"
+        Me.ss.UseVisualStyleBackColor = True
         '
         'tm
         '
@@ -110,26 +130,6 @@ Partial Class SelectBankFile
         Me.hs.TabStop = True
         Me.hs.Text = "ՀԴՄ Շտրիխ"
         Me.hs.UseVisualStyleBackColor = True
-        '
-        'tp
-        '
-        Me.tp.AutoSize = True
-        Me.tp.Location = New System.Drawing.Point(6, 135)
-        Me.tp.Name = "tp"
-        Me.tp.Size = New System.Drawing.Size(72, 17)
-        Me.tp.TabIndex = 5
-        Me.tp.Text = "Թորփայս"
-        Me.tp.UseVisualStyleBackColor = True
-        '
-        'ss
-        '
-        Me.ss.AutoSize = True
-        Me.ss.Location = New System.Drawing.Point(6, 112)
-        Me.ss.Name = "ss"
-        Me.ss.Size = New System.Drawing.Size(107, 17)
-        Me.ss.TabIndex = 4
-        Me.ss.Text = "Սմարթ Սոլուշնս"
-        Me.ss.UseVisualStyleBackColor = True
         '
         'SelectBankFile
         '

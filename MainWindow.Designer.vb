@@ -24,7 +24,7 @@ Partial Class MainWindow
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainWindow))
-        Dim PushTransition1 As DevExpress.Utils.Animation.PushTransition = New DevExpress.Utils.Animation.PushTransition()
+        Dim PushTransition2 As DevExpress.Utils.Animation.PushTransition = New DevExpress.Utils.Animation.PushTransition()
         Me.FormAssistant1 = New DevExpress.XtraBars.FormAssistant()
         Me.RibbonPanel = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.MainMenu = New DevExpress.XtraBars.Ribbon.BackstageViewControl()
@@ -3553,7 +3553,7 @@ Partial Class MainWindow
         'WorkspaceManager1
         '
         Me.WorkspaceManager1.TargetControl = Me.RibbonPanel
-        Me.WorkspaceManager1.TransitionType = PushTransition1
+        Me.WorkspaceManager1.TransitionType = PushTransition2
         '
         'WTimer
         '

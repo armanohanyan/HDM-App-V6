@@ -5200,7 +5200,7 @@ Partial Public Class DB
     End Function
 
     'CustomSellForClient
-    Friend Function CustomSellForClient(ByVal ShtrikhCode As String, ByVal SupporterID As Byte, ByVal SELLID As Integer, ByVal ClientID As Integer, ByVal EquipmentID As Short, ByVal Price As Decimal, ByVal AraqmanAddress As String) As DataTable
+    Friend Function CustomSellForClient(ByVal ShtrikhCode As String, ByVal SupporterID As Byte, ByVal SELLID As Integer, ByVal ClientID As Integer, ByVal EquipmentID As Short, ByVal Price As Decimal, ByVal AraqmanAddress As String, ByVal SellEcrPropID As Integer) As DataTable
         Dim dt As DataTable
         Using cnn As New SqlConnection(SQLString)
             cnn.Open()
@@ -5214,7 +5214,8 @@ Partial Public Class DB
                 cmd.Parameters.Add("@EquipmentID", SqlDbType.SmallInt).Value = EquipmentID
                 cmd.Parameters.Add("@Price", SqlDbType.Decimal).Value = Price
                 cmd.Parameters.Add("@AraqmanAddress", SqlDbType.NVarChar).Value = AraqmanAddress
-                cmd.CommandText = "EXEC warehouse.CustomSellForClient @ShtrikhCode,@SupporterID,@SELLID,@ClientID,@EquipmentID,@Price,@AraqmanAddress"
+                cmd.Parameters.Add("@SellEcrPropID", SqlDbType.Int).Value = SellEcrPropID
+                cmd.CommandText = "EXEC warehouse.CustomSellForClient @ShtrikhCode,@SupporterID,@SELLID,@ClientID,@EquipmentID,@Price,@AraqmanAddress,@SellEcrPropID"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)
@@ -5225,7 +5226,7 @@ Partial Public Class DB
     End Function
 
     'CustomSellForClientFiz
-    Friend Function CustomSellForClientFiz(ByVal ShtrikhCode As String, ByVal SupporterID As Byte, ByVal SELLID As Integer, ByVal ClientID As Integer, ByVal EquipmentID As Short, ByVal Price As Decimal, ByVal AraqmanAddress As String) As DataTable
+    Friend Function CustomSellForClientFiz(ByVal ShtrikhCode As String, ByVal SupporterID As Byte, ByVal SELLID As Integer, ByVal ClientID As Integer, ByVal EquipmentID As Short, ByVal Price As Decimal, ByVal AraqmanAddress As String, ByVal SellEcrPropID As Integer) As DataTable
         Dim dt As DataTable
         Using cnn As New SqlConnection(SQLString)
             cnn.Open()
@@ -5239,7 +5240,8 @@ Partial Public Class DB
                 cmd.Parameters.Add("@EquipmentID", SqlDbType.SmallInt).Value = EquipmentID
                 cmd.Parameters.Add("@Price", SqlDbType.Decimal).Value = Price
                 cmd.Parameters.Add("@AraqmanAddress", SqlDbType.NVarChar).Value = AraqmanAddress
-                cmd.CommandText = "EXEC warehouse.CustomSellForClientFiz @ShtrikhCode,@SupporterID,@SELLID,@ClientID,@EquipmentID,@Price,@AraqmanAddress"
+                cmd.Parameters.Add("@SellEcrPropID", SqlDbType.Int).Value = SellEcrPropID
+                cmd.CommandText = "EXEC warehouse.CustomSellForClientFiz @ShtrikhCode,@SupporterID,@SELLID,@ClientID,@EquipmentID,@Price,@AraqmanAddress,@SellEcrPropID"
                 Using da As New SqlDataAdapter(cmd)
                     dt = New System.Data.DataTable
                     da.Fill(dt)
